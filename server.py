@@ -25,6 +25,10 @@ from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from requests.adapters import HTTPAdapter
+from slowapi import Limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
+from starlette.responses import JSONResponse
 from urllib3.util.retry import Retry
 
 BASE_UI = "https://or.justice.cz/ias/ui/"
@@ -2341,6 +2345,17 @@ app.add_middleware(
     allow_headers=["Accept", "Content-Type"],
 )
 
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+
+
+@app.exception_handler(RateLimitExceeded)
+async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
+    return JSONResponse(
+        status_code=429,
+        content={"detail": "Příliš mnoho požadavků. Zkuste to později."},
+    )
+
 
 @app.get("/api/health")
 def health() -> dict[str, str]:
@@ -2348,7 +2363,8 @@ def health() -> dict[str, str]:
 
 
 @app.get("/api/search")
-def api_search(q: str = Query(..., min_length=2)) -> dict[str, Any]:
+@limiter.limit("30/minute")
+def api_search(request: Request, q: str = Query(..., min_length=2)) -> dict[str, Any]:
     results = search_companies(q)
     return {"query": q, "count": len(results), "results": results}
 
@@ -2360,6 +2376,7 @@ def api_history(request: Request) -> dict[str, Any]:
 
 
 @app.get("/api/company")
+@limiter.limit("10/minute")
 def api_company(request: Request, subjekt_id: str = Query(..., alias="subjektId"), q: str | None = Query(None), refresh: bool = Query(False)) -> dict[str, Any]:
     subjekt_id = subjekt_id.strip()
     if not subjekt_id or not subjekt_id.isdigit():
@@ -2381,7 +2398,8 @@ def inline_pdf_filename(label: str | None, index: int) -> str:
 
 
 @app.get("/api/document/resolve")
-def api_document_resolve(detail_url: str = Query(..., alias="detailUrl"), index: int = Query(0, ge=0), prefer_pdf: bool = Query(True)) -> FileResponse:
+@limiter.limit("10/minute")
+def api_document_resolve(request: Request, detail_url: str = Query(..., alias="detailUrl"), index: int = Query(0, ge=0), prefer_pdf: bool = Query(True)) -> FileResponse:
     parsed_url = urlparse(detail_url)
     if parsed_url.scheme != "https" or parsed_url.hostname != "or.justice.cz":
         raise HTTPException(status_code=400, detail="Neplatná URL dokumentu.")
@@ -2404,6 +2422,7 @@ def api_document_resolve(detail_url: str = Query(..., alias="detailUrl"), index:
 
 
 @app.get("/api/company/stream")
+@limiter.limit("10/minute")
 def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="subjektId"), q: str | None = Query(None), refresh: bool = Query(False)) -> StreamingResponse:
     subjekt_id = subjekt_id.strip()
     if not subjekt_id or not subjekt_id.isdigit():
