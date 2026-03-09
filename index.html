@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <!--
+       ______                            __
+      / ____/___  ____ ___  ____  __  __/ /____  _____
+     / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+    / /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+    \____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                        /_/
+            Created with Perplexity Computer
+            https://www.perplexity.ai/computer
+    -->
+
+    <!-- Perplexity Computer Attribution — SEO Meta Tags -->
+    <meta name="generator" content="Perplexity Computer">
+    <meta name="author" content="Perplexity Computer">
+    <meta property="og:see_also" content="https://www.perplexity.ai/computer">
+    <link rel="author" href="https://www.perplexity.ai/computer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+    <title>Justice Práskač</title>
+    <meta name="description" content="Jednoduchý screening českých firem z justice.cz, Sbírky listin a veřejných PDF podkladů.">
+    <meta property="og:title" content="Justice Práskač">
+    <meta property="og:description" content="Veřejný screening českých firem z justice.cz a Sbírky listin.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#f4f7fb">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%230b6b58' stroke-width='1.8' d='M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z'/%3E%3Cpath fill='none' stroke='%230b6b58' stroke-width='1.8' stroke-linecap='round' d='M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5'/%3E%3C/svg%3E">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Justice Práskač","applicationCategory":"BusinessApplication","operatingSystem":"Web","creator":{"@type":"SoftwareApplication","name":"Perplexity Computer","url":"https://www.perplexity.ai/computer"},"description":"Webová aplikace pro veřejný screening českých firem z justice.cz a Sbírky listin."}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Přeskočit na obsah</a>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Justice Práskač logo">
+                <path d="M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z" stroke="currentColor" stroke-width="1.6"></path>
+                <path d="M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div class="brand-copy">
+              <strong>Justice Práskač</strong>
+              <span>Veřejný screening českých firem</span>
+            </div>
+          </div>
+          <p class="small-note sidebar-intro">
+            Praktický screening z justice.cz a Sbírky listin. Sdílená historie všech prověřených firem pro rychlý návrat a porovnání.
+          </p>
+        </div>
+
+        <section class="sidebar-section history-section">
+          <div class="section-head">
+            <h3>Historie prověření</h3>
+            <span class="section-note">sdílené pro všechny</span>
+          </div>
+          <div id="history-list" class="history-list" aria-live="polite"></div>
+        </section>
+
+        <section class="sidebar-section">
+          <h3>Poznámka</h3>
+          <p class="small-note">
+            Tohle není definitivní due diligence. Čísla jdou hlavně z veřejných PDF. Když je listina jen sken, může čtení chvíli trvat.
+          </p>
+        </section>
+      </aside>
+
+      <header class="main-header">
+        <div class="header-row">
+          <div class="header-copy">
+            <h1>Profil firmy z veřejných rejstříků</h1>
+            <p>Justice.cz jako hlavní zdroj. Základní info hned, finance a signály průběžně.</p>
+          </div>
+          <div class="header-actions">
+            <div id="status-pill" class="status-pill">Připraveno</div>
+            <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true">Historie</button>
+          </div>
+        </div>
+
+        <form id="search-form" class="search-panel top-search-panel">
+          <label class="label" for="query-input">Název firmy nebo IČO</label>
+          <div class="top-search-grid">
+            <input id="query-input" name="query" type="text" placeholder="např. Škoda Auto nebo 00177041" autocomplete="off">
+            <button id="submit-btn" type="submit">Prověřit</button>
+          </div>
+          <p class="helper-text">
+            Když bude více shod, nabídnu výběr správné firmy. Při scrollu se horní lišta schová, při návratu zase vyjede.
+          </p>
+        </form>
+      </header>
+
+      <main id="content" class="main" tabindex="-1"></main>
+    </div>
+  </body>
+</html>
