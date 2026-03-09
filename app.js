@@ -143,10 +143,10 @@ function autocompleteHtml(results) {
       <button type="button" data-pick-id="${esc(m.subject_id)}" data-pick-query="${esc(m.name || m.ico || "")}"
         class="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors text-left group border-b border-slate-50 last:border-0">
         <div class="min-w-0">
-          <div class="text-sm font-medium text-slate-900 group-hover:text-teal-700 truncate">${esc(m.name)}</div>
+          <div class="text-sm font-medium text-slate-900 group-hover:text-neutral-700 truncate">${esc(m.name)}</div>
           <div class="text-xs text-slate-400 mt-0.5 truncate">IČO ${esc(m.ico_display || m.ico)}${m.address ? " · " + esc(m.address) : ""}</div>
         </div>
-        <svg class="w-4 h-4 text-slate-300 group-hover:text-teal-500 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        <svg class="w-4 h-4 text-slate-300 group-hover:text-neutral-500 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
       </button>`).join("")}
   </div>`;
 }
@@ -223,22 +223,13 @@ function handleScroll() {
 // ============================================================
 
 function heroView() {
-  const chips = [
-    { label: "Škoda Auto", query: "Škoda Auto" },
-    { label: "ČEZ", query: "ČEZ" },
-    { label: "Agrofert", query: "Agrofert" },
-    { label: "IČO 25788001", query: "25788001" },
-  ];
-
   const recent = state.history.slice(0, 3);
 
   return `
   <div class="hero-centered px-4 sm:px-6">
     <div class="w-full max-w-xl mx-auto">
       <div class="text-center mb-8">
-        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 text-teal-700 mb-4">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
+        <img src="./praskac-icon.png" alt="Justice Práskač" class="w-20 h-20 rounded-2xl mb-4 mx-auto">
         <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Justice Práskač</h1>
         <p class="mt-2 text-sm text-slate-500">Prověř firmu z veřejných rejstříků</p>
       </div>
@@ -249,9 +240,9 @@ function heroView() {
             <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
           </div>
           <input id="hero-input" type="text" placeholder="Název firmy nebo IČO..." autocomplete="off"
-            class="block w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-24 text-base text-slate-900 ring-1 ring-inset ring-slate-200 shadow-sm placeholder:text-slate-400 focus:ring-2 focus:ring-teal-500 transition-colors">
+            class="block w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-24 text-base text-slate-900 ring-1 ring-inset ring-slate-200 shadow-sm placeholder:text-slate-400 focus:ring-2 focus:ring-neutral-500 transition-colors">
           <div class="absolute inset-y-0 right-0 flex items-center pr-2">
-            <button type="submit" class="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors">
+            <button type="submit" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 transition-colors">
               Prověřit
             </button>
           </div>
@@ -259,22 +250,14 @@ function heroView() {
         <!-- Autocomplete dropdown renders here -->
         <div id="hero-autocomplete" class="absolute left-0 right-0 top-full mt-1 z-50"></div>
       </form>
-      <!-- Suggestion chips -->
-      <div class="flex flex-wrap justify-center gap-2 mt-4">
-        ${chips.map((c) => `
-          <button type="button" data-chip-query="${esc(c.query)}"
-            class="px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white ring-1 ring-slate-200 hover:bg-slate-50 hover:text-teal-700 transition-colors">
-            ${esc(c.label)}
-          </button>`).join("")}
-      </div>
       ${recent.length ? `
-      <div class="mt-10 pt-6 border-t border-slate-100">
+      <div class="mt-8 pt-6 border-t border-slate-100">
         <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3 text-center">Poslední prověření</div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
           ${recent.map((item) => `
             <button type="button" data-pick-id="${esc(item.subject_id)}" data-pick-query="${esc(item.query || item.ico || item.name || "")}"
               class="text-left px-3.5 py-3 rounded-xl bg-white ring-1 ring-slate-200/60 shadow-sm hover:ring-slate-300 hover:shadow transition-all group">
-              <div class="text-sm font-medium text-slate-800 truncate group-hover:text-teal-700">${esc(item.name || "Firma")}</div>
+              <div class="text-sm font-medium text-slate-800 truncate group-hover:text-neutral-700">${esc(item.name || "Firma")}</div>
               <div class="text-[11px] text-slate-400 mt-0.5">${esc(item.ico || "")}${item.updated_at ? " · " + fmtRelative(item.updated_at) : ""}</div>
             </button>`).join("")}
         </div>
@@ -294,9 +277,7 @@ function loadingView(previewOrText, log) {
       ${preview ? `
       <div class="px-5 py-4 border-b border-slate-100">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-700 flex-shrink-0">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
+          <img src="./praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
           <div>
             <div class="text-sm font-semibold text-slate-900">${esc(preview.name || "Načítaná firma")}</div>
             <div class="text-xs text-slate-400">IČO ${esc(preview.ico || "—")}</div>
@@ -304,9 +285,7 @@ function loadingView(previewOrText, log) {
         </div>
       </div>` : `
       <div class="px-5 py-4 border-b border-slate-100 flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-700 flex-shrink-0">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
+        <img src="./praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
         <div>
           <div class="text-sm font-semibold text-slate-900">Analyzuji firmu</div>
           <div class="text-xs text-slate-400">Veřejné rejstříky</div>
@@ -318,8 +297,8 @@ function loadingView(previewOrText, log) {
           return `
           <div class="flex items-start gap-2.5 thinking-line" style="animation-delay: ${i * 30}ms">
             ${isLast
-              ? '<div class="w-4 h-4 mt-0.5 flex-shrink-0 border-2 border-teal-400 border-t-transparent rounded-full animate-spin"></div>'
-              : '<svg class="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>'}
+              ? '<div class="w-4 h-4 mt-0.5 flex-shrink-0 border-2 border-neutral-400 border-t-transparent rounded-full animate-spin"></div>'
+              : '<svg class="w-4 h-4 text-neutral-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>'}
             <span class="text-sm ${isLast ? "text-slate-700" : "text-slate-400"}">${esc(item)}</span>
           </div>`;
         }).join("")}
@@ -1099,6 +1078,10 @@ async function handlePick(id, opts = {}) {
     state.preview = null;
     state.statusLog = [];
     state.history = await loadHistoryData();
+    // Update URL to shareable link
+    const url = new URL(window.location);
+    url.searchParams.set("subjektId", id);
+    history.pushState({ subjektId: id }, "", url);
     render();
   } catch (e) {
     state.loading = false;
@@ -1224,6 +1207,8 @@ function handleNewCheck() {
   state.expandedPanels.clear();
   clearAutocomplete();
   $input.value = "";
+  // Reset URL to root
+  history.pushState(null, "", "/");
   render();
   const heroInput = document.getElementById("hero-input");
   if (heroInput) heroInput.focus();
@@ -1236,18 +1221,6 @@ function handleNewCheck() {
 function initEvents() {
   // Global click delegation
   document.addEventListener("click", (e) => {
-    // Suggestion chip
-    const chip = e.target.closest("[data-chip-query]");
-    if (chip) {
-      const q = chip.dataset.chipQuery;
-      if (q) {
-        clearAutocomplete();
-        $input.value = q;
-        handleSearch(q);
-      }
-      return;
-    }
-
     // Pick company (match or history)
     const pick = e.target.closest("[data-pick-id]");
     if (pick) {
@@ -1386,6 +1359,29 @@ function initEvents() {
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024 && state.drawerOpen) closeDrawer();
   });
+
+  // Browser back/forward
+  window.addEventListener("popstate", () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("subjektId");
+    if (id) {
+      handlePick(id);
+    } else {
+      // Back to home
+      state.query = "";
+      state.loading = false;
+      state.error = null;
+      state.profile = null;
+      state.preview = null;
+      state.statusLog = [];
+      state.selectedMatch = null;
+      state.expandedAccordions.clear();
+      state.expandedPanels.clear();
+      clearAutocomplete();
+      $input.value = "";
+      render();
+    }
+  });
 }
 
 // ============================================================
@@ -1405,11 +1401,23 @@ function init() {
   $drawer = document.getElementById("history-drawer");
 
   initEvents();
-  render();
+
+  // Check URL for direct company link
+  const params = new URLSearchParams(window.location.search);
+  const urlSubjektId = params.get("subjektId");
+  if (urlSubjektId) {
+    handlePick(urlSubjektId);
+  } else {
+    render();
+  }
 
   loadHistoryData().then((items) => {
     state.history = items;
     renderHistory();
+    // Re-render hero if on empty state so recent history shows
+    if (!state.loading && !state.profile && !state.error) {
+      render();
+    }
   });
 }
 
