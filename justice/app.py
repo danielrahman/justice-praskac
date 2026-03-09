@@ -300,12 +300,17 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
     return StreamingResponse(iterator(), media_type="text/event-stream")
 
 
-from fastapi.staticfiles import StaticFiles
-
 _static_dir = Path(__file__).resolve().parent.parent
+_STATIC_FILES = {"app.js", "style.css", "base.css"}
+
 
 @app.get("/")
 def serve_index():
     return FileResponse(_static_dir / "index.html")
 
-app.mount("/", StaticFiles(directory=str(_static_dir)), name="static")
+
+@app.get("/{filename}")
+def serve_static(filename: str):
+    if filename not in _STATIC_FILES:
+        raise HTTPException(status_code=404)
+    return FileResponse(_static_dir / filename)

@@ -16,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Railway sets PORT env var
-CMD uvicorn justice.app:app --host 0.0.0.0 --port ${PORT:-8000}
+CMD ["sh", "-c", "exec uvicorn justice.app:app --host 0.0.0.0 --port ${PORT:-8000}"]
