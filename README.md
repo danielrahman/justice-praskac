@@ -95,20 +95,22 @@ Projekt po zadání názvu firmy nebo IČO:
 
 ## Architektura repozitáře
 
-- `server.py`  
-  Hlavní FastAPI backend, scraping, parsing, OCR, finanční extrakce, AI vrstva i API endpointy.
-- `app.js`  
-  Frontend stav, volání API, SSE stream, render celé aplikace a grafů.
-- `index.html`  
-  Základní shell aplikace.
-- `base.css`  
-  Design tokeny a základní globální styly.
-- `style.css`  
-  Layout a komponentové styly UI.
-- `app_state.db`  
-  SQLite databáze pro sdílenou historii prověřených firem.
-- `cache/`  
-  Lokální cache JSON, PDF a extrahovaných textů.
+- `server.py` — vstupní bod (entry point), spouští uvicorn
+- `justice/` — hlavní Python balíček
+  - `app.py` — FastAPI aplikace, endpointy, CORS, statické soubory
+  - `ai.py` — Anthropic AI integrace, analýza, shrnutí
+  - `db.py` — SQLite helpery (init, historie)
+  - `documents.py` — zpracování PDF, OCR, parsing listin
+  - `extraction.py` — extrakce finančních metrik z textu
+  - `scraping.py` — HTTP stahování, parsing HTML z justice.cz
+  - `utils.py` — parsování dat, normalizace textu, cachování
+- `app.js` — frontend: stav, volání API, SSE stream, rendering
+- `index.html` — HTML shell aplikace
+- `base.css` — design tokeny a globální styly
+- `style.css` — layout a komponentové styly
+- `Dockerfile` — Docker image pro deployment na Railway
+- `.env.example` — dokumentace všech environment proměnných
+- `tests/` — pytest unit testy
 
 ## API endpointy
 
@@ -129,10 +131,8 @@ Projekt po zadání názvu firmy nebo IČO:
 
 ### 1. Python závislosti
 
-Projekt nemá zamčený `requirements.txt`, ale podle importů potřebuje minimálně:
-
 ```bash
-pip install fastapi uvicorn requests beautifulsoup4 anthropic urllib3
+pip install -r requirements.txt
 ```
 
 ### 2. Systémové utility
@@ -147,60 +147,45 @@ tesseract
 
 Pro OCR je potřeba mít nainstalované jazykové balíčky pro češtinu a angličtinu.
 
-### 3. Spuštění backendu
+#### macOS (Homebrew)
 
 ```bash
-cd /Users/danielrahman/Desktop/justice-praskac
-python server.py
+brew install poppler tesseract tesseract-lang
 ```
 
-Nebo:
+#### Ubuntu / Debian
 
 ```bash
-uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+sudo apt-get install poppler-utils tesseract-ocr tesseract-ocr-ces tesseract-ocr-eng
 ```
 
-### 4. Spuštění frontendu
-
-Frontend je statický. Může běžet z jednoduchého static serveru.
-
-Například:
+### 3. Spuštění
 
 ```bash
-cd /Users/danielrahman/Desktop/justice-praskac
-python -m http.server 3000
+cd justice-praskac
+.venv/bin/uvicorn justice.app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Pak otevři:
+Aplikace běží na `http://localhost:8000` — frontend i API.
 
-- frontend: `http://localhost:3000`
-- backend API: `http://localhost:8000`
-
-Poznámka: v aktuální verzi je base URL API zadané přímo v `app.js`, takže pro lokální běh může být potřeba upravit `const API` na správnou adresu backendu.
-
-Poznámka: backend má v `server.py` aktuálně natvrdo zadané cesty:
-
-- `CACHE_DIR = /home/user/workspace/justice-praskac/cache`
-- `DB_PATH = /home/user/workspace/justice-praskac/app_state.db`
-
-Pokud projekt spouštíš jinde, uprav tyto cesty nebo si připrav odpovídající adresářovou strukturu.
+Cesty jsou relativní k projektu a konfigurovatelné přes environment proměnné (`JUSTICE_CACHE_DIR`, `JUSTICE_DB_PATH`). Viz `.env.example`.
 
 ## Environment proměnné
 
-Backend používá tyto proměnné:
+Kompletní seznam s výchozími hodnotami viz `.env.example`. Povinná je pouze `ANTHROPIC_API_KEY`.
 
-- `JUSTICE_PROFILE_CACHE_TTL_SECONDS`  
-  TTL JSON cache profilů. Výchozí hodnota jsou 3 dny.
-- `JUSTICE_AI_MODEL`  
-  Název modelu pro AI shrnutí. Výchozí: `claude_sonnet_4_5`.
-- `JUSTICE_ENABLE_AI`  
-  `1` nebo `0` pro zapnutí / vypnutí AI vrstvy.
-- `JUSTICE_AI_TIMEOUT_SECONDS`  
-  Timeout pro volání AI.
+## Deployment na Railway
 
-Pro Anthropic SDK je v praxi potřeba také standardní autentizační proměnná:
+1. Repozitář pushni na GitHub.
+2. V [Railway](https://railway.com) vytvoř nový projekt a propoj s GitHub repem.
+3. Railway automaticky detekuje `Dockerfile` a buildne image.
+4. V Railway dashboard nastav environment proměnné:
+   - `ANTHROPIC_API_KEY` (povinné)
+   - Ostatní viz `.env.example`
+5. V Settings → Networking přidej custom doménu (např. `praskac.xyz`).
+6. Nastav DNS: CNAME záznam pro doménu směřující na Railway.
 
-- `ANTHROPIC_API_KEY`
+Railway automaticky nastaví `PORT` a HTTPS.
 
 ## Co uživatel po prověření dostane
 
