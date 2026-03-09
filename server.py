@@ -2330,10 +2330,14 @@ def build_company_profile(subjekt_id: str, visitor_id: str | None = None, query:
 
 
 app = FastAPI(title="Justice Práskač API")
+
+_cors_origins_env = os.environ.get("JUSTICE_CORS_ORIGINS", "http://localhost:3000")
+_cors_origins = [o.strip() for o in _cors_origins_env.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=_cors_origins,
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 
