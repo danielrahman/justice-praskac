@@ -1,105 +1,128 @@
 <!DOCTYPE html>
 <html lang="cs">
   <head>
-    <!--
-       ______                            __
-      / ____/___  ____ ___  ____  __  __/ /____  _____
-     / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-    / /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-    \____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                        /_/
-            Created with Perplexity Computer
-            https://www.perplexity.ai/computer
-    -->
-
-    <!-- Perplexity Computer Attribution — SEO Meta Tags -->
-    <meta name="generator" content="Perplexity Computer">
-    <meta name="author" content="Perplexity Computer">
-    <meta property="og:see_also" content="https://www.perplexity.ai/computer">
-    <link rel="author" href="https://www.perplexity.ai/computer">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
     <title>Justice Práskač</title>
     <meta name="description" content="Jednoduchý screening českých firem z justice.cz, Sbírky listin a veřejných PDF podkladů.">
-    <meta property="og:title" content="Justice Práskač">
-    <meta property="og:description" content="Veřejný screening českých firem z justice.cz a Sbírky listin.">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#f4f7fb">
+    <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%230b6b58' stroke-width='1.8' d='M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z'/%3E%3Cpath fill='none' stroke='%230b6b58' stroke-width='1.8' stroke-linecap='round' d='M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5'/%3E%3C/svg%3E">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Justice Práskač","applicationCategory":"BusinessApplication","operatingSystem":"Web","creator":{"@type":"SoftwareApplication","name":"Perplexity Computer","url":"https://www.perplexity.ai/computer"},"description":"Webová aplikace pro veřejný screening českých firem z justice.cz a Sbírky listin."}</script>
+    <link rel="icon" href="./praskac-icon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#content">Přeskočit na obsah</a>
-    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
-    <div class="app-shell" id="app-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-top">
-          <div class="brand">
-            <div class="brand-mark" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Justice Práskač logo">
-                <path d="M4 17.5V6.5L12 3l8 3.5v11L12 21l-8-3.5Z" stroke="currentColor" stroke-width="1.6"></path>
-                <path d="M8.5 9.5h7M8.5 12h7M8.5 14.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
-              </svg>
+  <body class="bg-slate-50 font-sans text-slate-900 antialiased">
+    <a class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-slate-900 focus:text-white focus:font-semibold" href="#content">Přeskočit na obsah</a>
+
+    <!-- Mobile History Drawer -->
+    <div id="history-drawer" class="fixed inset-0 z-50 hidden is-closed" role="dialog">
+      <div id="drawer-backdrop" class="fixed inset-0 bg-slate-900/20 backdrop-blur-sm"></div>
+      <aside class="fixed inset-y-0 left-0 w-[300px] max-w-[85vw] bg-white shadow-2xl flex flex-col">
+        <div class="px-4 py-3 border-b border-slate-100">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <img src="./praskac-icon.svg" alt="Justice Práskač" class="w-7 h-7 rounded-md">
+              <span class="font-semibold text-sm tracking-tight">Práskač</span>
             </div>
-            <div class="brand-copy">
-              <strong>Justice Práskač</strong>
-              <span>Veřejný screening českých firem</span>
-            </div>
+            <button id="drawer-close" type="button" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
           </div>
-          <p class="small-note sidebar-intro">
-            Praktický screening z justice.cz a Sbírky listin. Sdílená historie všech prověřených firem pro rychlý návrat a porovnání.
-          </p>
+          <button id="new-check-btn-mobile" type="button" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 ring-1 ring-slate-200 transition-colors">
+            <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            Nové prověření
+          </button>
         </div>
+        <div id="drawer-history" class="flex-1 overflow-y-auto p-2 space-y-0.5"></div>
+        <div class="px-4 py-3 border-t border-slate-100 text-[11px] text-slate-400 leading-relaxed">
+          Veřejná data z justice.cz. Není to právní doporučení.
+        </div>
+      </aside>
+    </div>
 
-        <section class="sidebar-section history-section">
-          <div class="section-head">
-            <h3>Historie prověření</h3>
-            <span class="section-note">sdílené pro všechny</span>
+    <!-- App Shell -->
+    <div id="app-shell" class="flex min-h-screen">
+      <!-- Desktop History Rail -->
+      <aside id="history-rail" class="hidden lg:flex flex-col w-[260px] flex-shrink-0 border-r border-slate-200/80 bg-white">
+        <div class="px-3 pt-4 pb-2">
+          <div class="flex items-center gap-2.5 px-1">
+            <img src="./praskac-icon.svg" alt="Justice Práskač" class="w-8 h-8 rounded-lg">
+            <div>
+              <div class="font-semibold text-sm text-slate-900 tracking-tight leading-tight">Justice Práskač</div>
+              <div class="text-[11px] text-slate-400">Screening českých firem</div>
+            </div>
           </div>
-          <div id="history-list" class="history-list" aria-live="polite"></div>
-        </section>
-
-        <section class="sidebar-section">
-          <h3>Poznámka</h3>
-          <p class="small-note">
-            Tohle není definitivní due diligence. Čísla jdou hlavně z veřejných PDF. Když je listina jen sken, může čtení chvíli trvat.
-          </p>
-        </section>
+        </div>
+        <div class="px-3 pb-2">
+          <button id="new-check-btn" type="button" class="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 ring-1 ring-slate-200 transition-colors">
+            <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            Nové prověření
+          </button>
+        </div>
+        <div class="px-3 pb-1">
+          <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider px-1">Historie</div>
+        </div>
+        <div id="rail-history" class="flex-1 overflow-y-auto px-2 pb-4 space-y-0.5"></div>
+        <div class="px-3 py-2.5 border-t border-slate-100 text-[11px] text-slate-400 leading-relaxed">
+          Veřejná data z justice.cz.
+        </div>
       </aside>
 
-      <header class="main-header">
-        <div class="header-row">
-          <div class="header-copy">
-            <h1>Profil firmy z veřejných rejstříků</h1>
-            <p>Justice.cz jako hlavní zdroj. Základní info hned, finance a signály průběžně.</p>
+      <!-- Main Column -->
+      <div class="flex-1 flex flex-col min-w-0">
+        <!-- Sticky Header -->
+        <header id="app-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200 hidden">
+          <div class="px-4 sm:px-6 py-2.5">
+            <div class="flex items-center gap-3">
+              <!-- Mobile menu button -->
+              <button id="mobile-menu-btn" type="button" class="lg:hidden p-1.5 -ml-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+              </button>
+              <!-- Search -->
+              <form id="search-form" class="flex-1 flex items-center gap-2 min-w-0">
+                <div class="relative flex-1 max-w-xl">
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                  </div>
+                  <input id="query-input" name="query" type="text" placeholder="Firma nebo IČO..." autocomplete="off"
+                    class="block w-full rounded-lg border-0 bg-slate-50 py-2 pl-9 pr-3 text-sm text-slate-900 ring-1 ring-inset ring-slate-200 placeholder:text-slate-400 focus:bg-white focus:ring-2 focus:ring-teal-500 transition-colors">
+                  <!-- Header autocomplete dropdown -->
+                  <div id="header-autocomplete" class="absolute left-0 right-0 top-full mt-1 z-50"></div>
+                </div>
+                <button id="submit-btn" type="submit"
+                  class="flex-shrink-0 rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 disabled:opacity-50 disabled:cursor-wait transition-colors">
+                  Prověřit
+                </button>
+              </form>
+              <!-- Status pill -->
+              <div id="status-pill" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-slate-50 text-slate-500 ring-1 ring-inset ring-slate-200/80 whitespace-nowrap select-none">
+                <span id="status-dot" class="w-1.5 h-1.5 rounded-full bg-slate-300 flex-shrink-0"></span>
+                <span id="status-text">Připraveno</span>
+              </div>
+            </div>
           </div>
-          <div class="header-actions">
-            <div id="status-pill" class="status-pill">Připraveno</div>
-            <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true">Historie</button>
-          </div>
-        </div>
+        </header>
 
-        <form id="search-form" class="search-panel top-search-panel">
-          <label class="label" for="query-input">Název firmy nebo IČO</label>
-          <div class="top-search-grid">
-            <input id="query-input" name="query" type="text" placeholder="např. Škoda Auto nebo 00177041" autocomplete="off">
-            <button id="submit-btn" type="submit">Prověřit</button>
-          </div>
-          <p class="helper-text">
-            Když bude více shod, nabídnu výběr správné firmy.
-          </p>
-        </form>
-      </header>
-
-      <main id="content" class="main" tabindex="-1"></main>
+        <!-- Main Content -->
+        <main id="content" class="flex-1 min-w-0" tabindex="-1"></main>
+      </div>
     </div>
   </body>
 </html>
