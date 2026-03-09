@@ -9,6 +9,7 @@ import os
 import re
 import sqlite3
 import subprocess
+import sys
 import tempfile
 import time
 import unicodedata
@@ -50,7 +51,7 @@ class JsonFormatter(logging.Formatter):
 
 
 _log_level = os.environ.get("JUSTICE_LOG_LEVEL", "INFO").upper()
-_handler = logging.StreamHandler()
+_handler = logging.StreamHandler(sys.stdout)
 _handler.setFormatter(JsonFormatter())
 logging.basicConfig(level=getattr(logging, _log_level, logging.INFO), handlers=[_handler])
 logger = logging.getLogger("justice")
