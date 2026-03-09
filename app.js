@@ -1079,9 +1079,7 @@ async function handlePick(id, opts = {}) {
     state.statusLog = [];
     state.history = await loadHistoryData();
     // Update URL to shareable link
-    const url = new URL(window.location);
-    url.searchParams.set("subjektId", id);
-    history.pushState({ subjektId: id }, "", url);
+    history.pushState({ subjektId: id }, "", `/firma/${id}`);
     render();
   } catch (e) {
     state.loading = false;
@@ -1362,8 +1360,8 @@ function initEvents() {
 
   // Browser back/forward
   window.addEventListener("popstate", () => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("subjektId");
+    const match = window.location.pathname.match(/^\/firma\/(\d+)$/);
+    const id = match ? match[1] : null;
     if (id) {
       handlePick(id);
     } else {
@@ -1402,9 +1400,9 @@ function init() {
 
   initEvents();
 
-  // Check URL for direct company link
-  const params = new URLSearchParams(window.location.search);
-  const urlSubjektId = params.get("subjektId");
+  // Check URL for direct company link (/firma/123)
+  const urlMatch = window.location.pathname.match(/^\/firma\/(\d+)$/);
+  const urlSubjektId = urlMatch ? urlMatch[1] : null;
   if (urlSubjektId) {
     handlePick(urlSubjektId);
   } else {

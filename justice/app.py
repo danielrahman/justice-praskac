@@ -301,11 +301,16 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
     return StreamingResponse(iterator(), media_type="text/event-stream")
 
 
-_STATIC_FILES = {"app.js", "style.css", "base.css"}
+_STATIC_FILES = {"app.js", "style.css", "base.css", "praskac-icon.png"}
 
 
 @app.get("/")
 def serve_index():
+    return FileResponse(ROOT_DIR / "index.html")
+
+
+@app.get("/firma/{subjekt_id}")
+def serve_company_page(subjekt_id: str):
     return FileResponse(ROOT_DIR / "index.html")
 
 
