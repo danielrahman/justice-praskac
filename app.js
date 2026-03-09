@@ -8,7 +8,6 @@ const API = "";
 const state = {
   query: "",
   loading: false,
-  matches: [],
   profile: null,
   preview: null,
   history: [],
@@ -18,7 +17,6 @@ const state = {
   autocompleteResults: [],
   autocompleteOpen: false,
   autocompleteLoading: false,
-  railOpen: window.innerWidth >= 1024,
   drawerOpen: false,
   headerHidden: false,
   lastScrollY: 0,
@@ -28,7 +26,7 @@ const state = {
 
 // ---- DOM refs (populated on DOMContentLoaded) ----
 let $content, $form, $input, $submit, $statusDot, $statusText, $header,
-    $railHistory, $drawerHistory, $drawer, $historyRail;
+    $railHistory, $drawerHistory, $drawer;
 
 let _acTimer = null;
 let _acController = null;
@@ -1098,7 +1096,6 @@ async function handlePick(id, opts = {}) {
       state.profile = await loadCompanySnapshot(id, refresh);
     }
     state.loading = false;
-    state.matches = [];
     state.preview = null;
     state.statusLog = [];
     state.history = await loadHistoryData();
@@ -1222,7 +1219,6 @@ function handleNewCheck() {
   state.profile = null;
   state.preview = null;
   state.statusLog = [];
-  state.matches = [];
   state.selectedMatch = null;
   state.expandedAccordions.clear();
   state.expandedPanels.clear();
@@ -1407,7 +1403,6 @@ function init() {
   $railHistory = document.getElementById("rail-history");
   $drawerHistory = document.getElementById("drawer-history");
   $drawer = document.getElementById("history-drawer");
-  $historyRail = document.getElementById("history-rail");
 
   initEvents();
   render();
