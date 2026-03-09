@@ -229,7 +229,7 @@ function heroView() {
   <div class="hero-centered px-4 sm:px-6">
     <div class="w-full max-w-xl mx-auto">
       <div class="text-center mb-8">
-        <img src="./praskac-icon.png" alt="Justice Práskač" class="w-20 h-20 rounded-2xl mb-4 mx-auto">
+        <img src="/praskac-icon.png" alt="Justice Práskač" class="w-20 h-20 rounded-2xl mb-4 mx-auto">
         <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">Justice Práskač</h1>
         <p class="mt-2 text-sm text-slate-500">Prověř firmu z veřejných rejstříků</p>
       </div>
@@ -277,7 +277,7 @@ function loadingView(previewOrText, log) {
       ${preview ? `
       <div class="px-5 py-4 border-b border-slate-100">
         <div class="flex items-center gap-3">
-          <img src="./praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
+          <img src="/praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
           <div>
             <div class="text-sm font-semibold text-slate-900">${esc(preview.name || "Načítaná firma")}</div>
             <div class="text-xs text-slate-400">IČO ${esc(preview.ico || "—")}</div>
@@ -285,7 +285,7 @@ function loadingView(previewOrText, log) {
         </div>
       </div>` : `
       <div class="px-5 py-4 border-b border-slate-100 flex items-center gap-3">
-        <img src="./praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
+        <img src="/praskac-icon.png" alt="" class="w-9 h-9 rounded-xl flex-shrink-0">
         <div>
           <div class="text-sm font-semibold text-slate-900">Analyzuji firmu</div>
           <div class="text-xs text-slate-400">Veřejné rejstříky</div>
