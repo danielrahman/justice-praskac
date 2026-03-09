@@ -1,0 +1,47 @@
+
+--- PAGE 1 ---
+Ic: 24694401
+
+Rozvaha pro podnikatele, ve zkracenem rozsahu pro
+malou ucetni jednotku, ktera nema povinnost mit
+ucetni zaverku overenou auditorem
+ke dni 31.12.2023
+
+(v celych tisicich CZK)
+
+bezne ucetni obdobi minule
+AKTIVA obdobi
+brutto korekce netto netto
+1 2 3 4
+
+AKTIVA CELKEM 51729 21150 30579 25493
+A. Pohledavky za upsany zakladni kapital 0 0 0 0
+B. Stala aktiva 32970 21150 11820 7968
+C. Obezna aktiva 18486 0 18486 17280
+
+--- PAGE 2 ---
+bezne ucetni minule ucetni
+
+PASIVA obdobi obdobi
+1 2
+
+PASIVA CELKEM 30579 25493
+A. Vlastni kapital 6745 7339
+B.+C. Cizi zdroje 5016 3397
+C. Zavazky 5016 3397
+
+--- PAGE 3 ---
+Vykaz zisku a ztraty pro podnikatele
+ke dni 31.12.2023
+
+(v celych tisicich CZK)
+
+bezne ucetni minule ucetni
+Nazev polozky obdobi obdobi
+1 2
+
+I. Trzby z prodeje vyrobku a sluzeb 12953 17433
+A. Vykonova spotreba 10699 14920
+D. Osobni naklady 1299 3511
+* Provozni vysledek hospodareni (+/-) 480 -817
+** Vysledek hospodareni za ucetni obdobi (+/-) 272 -1025
