@@ -186,33 +186,34 @@ def now_ts() -> float:
 def init_db() -> None:
     """Create tables and indexes once at startup."""
     conn = sqlite3.connect(str(DB_PATH), timeout=10)
-    conn.execute("PRAGMA journal_mode=WAL")
-    conn.execute(
-        """
-        CREATE TABLE IF NOT EXISTS shared_company_history (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            subject_id TEXT NOT NULL UNIQUE,
-            ico TEXT,
-            name TEXT,
-            query TEXT,
-            payload_json TEXT NOT NULL,
-            created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-            updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
-            last_visitor_id TEXT
+    try:
+        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute(
+            """
+            CREATE TABLE IF NOT EXISTS shared_company_history (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                subject_id TEXT NOT NULL UNIQUE,
+                ico TEXT,
+                name TEXT,
+                query TEXT,
+                payload_json TEXT NOT NULL,
+                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                updated_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                last_visitor_id TEXT
+            )
+            """
         )
-        """
-    )
-    conn.execute(
-        "CREATE INDEX IF NOT EXISTS idx_shared_company_history_updated ON shared_company_history(updated_at DESC)"
-    )
-    conn.commit()
-    conn.close()
+        conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_shared_company_history_updated ON shared_company_history(updated_at DESC)"
+        )
+        conn.commit()
+    finally:
+        conn.close()
 
 
 def get_db() -> sqlite3.Connection:
     """Open a database connection. Caller must close it."""
     conn = sqlite3.connect(str(DB_PATH), timeout=10)
-    conn.execute("PRAGMA journal_mode=WAL")
     conn.row_factory = sqlite3.Row
     return conn
 
