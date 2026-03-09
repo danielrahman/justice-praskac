@@ -29,7 +29,8 @@ from urllib3.util.retry import Retry
 
 BASE_UI = "https://or.justice.cz/ias/ui/"
 BASE_SITE = "https://or.justice.cz"
-CACHE_DIR = Path("/home/user/workspace/justice-praskac/cache")
+ROOT_DIR = Path(__file__).resolve().parent
+CACHE_DIR = Path(os.getenv("JUSTICE_CACHE_DIR", str(ROOT_DIR / "cache")))
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 PDF_DIR = CACHE_DIR / "pdfs"
 PDF_DIR.mkdir(exist_ok=True)
@@ -37,7 +38,8 @@ TEXT_DIR = CACHE_DIR / "text"
 TEXT_DIR.mkdir(exist_ok=True)
 JSON_DIR = CACHE_DIR / "json"
 JSON_DIR.mkdir(exist_ok=True)
-DB_PATH = Path("/home/user/workspace/justice-praskac/app_state.db")
+DB_PATH = Path(os.getenv("JUSTICE_DB_PATH", str(ROOT_DIR / "app_state.db")))
+DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",

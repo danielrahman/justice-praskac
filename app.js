@@ -1,4 +1,4 @@
-const API = "port/8000";
+const API = `http://${window.location.hostname || "localhost"}:8000`;
 
 const state = {
   query: "",
