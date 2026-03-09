@@ -200,6 +200,11 @@ def search_companies(query: str) -> list[dict[str, Any]]:
 
 
 def is_section_label(label: str, value: str, extra: str = "") -> bool:
+    """A section label is a row with a non-empty label and no value.
+
+    The guard ``not label or value`` reads as ``(not label) or (value)`` —
+    i.e. reject when the label is empty OR when a value is present.
+    """
     label_n = norm_key(label)
     if not label or value:
         return False
