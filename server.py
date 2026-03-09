@@ -2361,7 +2361,8 @@ def api_history(request: Request) -> dict[str, Any]:
 
 @app.get("/api/company")
 def api_company(request: Request, subjekt_id: str = Query(..., alias="subjektId"), q: str | None = Query(None), refresh: bool = Query(False)) -> dict[str, Any]:
-    if not subjekt_id or not subjekt_id.strip().isdigit():
+    subjekt_id = subjekt_id.strip()
+    if not subjekt_id or not subjekt_id.isdigit():
         raise HTTPException(status_code=400, detail="Neplatné ID subjektu.")
     visitor_id = request.headers.get("X-Visitor-Id")
     try:
@@ -2381,8 +2382,8 @@ def inline_pdf_filename(label: str | None, index: int) -> str:
 
 @app.get("/api/document/resolve")
 def api_document_resolve(detail_url: str = Query(..., alias="detailUrl"), index: int = Query(0, ge=0), prefer_pdf: bool = Query(True)) -> FileResponse:
-    allowed_prefixes = ("https://or.justice.cz/",)
-    if not any(detail_url.startswith(p) for p in allowed_prefixes):
+    parsed_url = urlparse(detail_url)
+    if parsed_url.scheme != "https" or parsed_url.hostname != "or.justice.cz":
         raise HTTPException(status_code=400, detail="Neplatná URL dokumentu.")
     detail = parse_document_detail(detail_url, force_refresh=True)
     downloads = detail.get("download_links") or []
@@ -2404,7 +2405,8 @@ def api_document_resolve(detail_url: str = Query(..., alias="detailUrl"), index:
 
 @app.get("/api/company/stream")
 def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="subjektId"), q: str | None = Query(None), refresh: bool = Query(False)) -> StreamingResponse:
-    if not subjekt_id or not subjekt_id.strip().isdigit():
+    subjekt_id = subjekt_id.strip()
+    if not subjekt_id or not subjekt_id.isdigit():
         raise HTTPException(status_code=400, detail="Neplatné ID subjektu.")
     visitor_id = request.headers.get("X-Visitor-Id")
 
