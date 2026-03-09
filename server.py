@@ -2354,6 +2354,7 @@ async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
     return JSONResponse(
         status_code=429,
         content={"detail": "Příliš mnoho požadavků. Zkuste to později."},
+        headers={"Retry-After": "60"},
     )
 
 
