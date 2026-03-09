@@ -1,1 +1,17 @@
+# macOS
 .DS_Store
+
+# Runtime data
+cache/
+*.log
+app_state.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
