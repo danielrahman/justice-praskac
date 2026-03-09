@@ -183,9 +183,10 @@ def now_ts() -> float:
     return time.time()
 
 
-def get_db() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
+def init_db() -> None:
+    """Create tables and indexes once at startup."""
+    conn = sqlite3.connect(str(DB_PATH), timeout=10)
+    conn.execute("PRAGMA journal_mode=WAL")
     conn.execute(
         """
         CREATE TABLE IF NOT EXISTS shared_company_history (
@@ -205,6 +206,14 @@ def get_db() -> sqlite3.Connection:
         "CREATE INDEX IF NOT EXISTS idx_shared_company_history_updated ON shared_company_history(updated_at DESC)"
     )
     conn.commit()
+    conn.close()
+
+
+def get_db() -> sqlite3.Connection:
+    """Open a database connection. Caller must close it."""
+    conn = sqlite3.connect(str(DB_PATH), timeout=10)
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.row_factory = sqlite3.Row
     return conn
 
 
@@ -2334,6 +2343,12 @@ def build_company_profile(subjekt_id: str, visitor_id: str | None = None, query:
 
 
 app = FastAPI(title="Justice Práskač API")
+
+
+@app.on_event("startup")
+def on_startup():
+    init_db()
+
 
 _cors_origins_env = os.environ.get("JUSTICE_CORS_ORIGINS", "http://localhost:3000")
 _cors_origins = [o.strip() for o in _cors_origins_env.split(",") if o.strip()]
