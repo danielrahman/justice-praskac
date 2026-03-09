@@ -1,0 +1,22 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871274&subjektId=921321&spis=1006549",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+  "pdf_name": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+  "pdf_candidates": [
+    {
+      "label": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+      "url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+      "is_pdf": true,
+      "page_hint": 1,
+      "candidate_score": 122,
+      "pdf_index": 0
+    }
+  ],
+  "download_links": [
+    {
+      "label": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+      "url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+      "is_pdf": true
+    }
+  ]
+}

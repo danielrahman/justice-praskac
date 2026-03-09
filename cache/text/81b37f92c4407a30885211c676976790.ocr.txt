@@ -1,0 +1,289 @@
+
+
+--- PAGE 1 ---
+dle vyhlasky 50/2002 Sb.
+ve znéni pozd. piedpisit
+
+Obchodni firma nebo jiny nazev ietni jednotky
+ROZVAHA ‘SAMSON, 8.1.0.
+v piném rozsahu
+
+k 31/12/2020
+(v tisicich Ké )
+
+Sidlo nebo bydll8t8 Géetni jednotky
+
+a misto podnikani ligtll se od bydli8t8
+Zakosteli 190
+67971 Lysice
+
+Heo; = 4saz028i Tel, 516472190
+zn, AKTIVA vad| — Brutto Korekce Netto Min.obdobi
+a b c 1 2 3 4
+
+[AKTIVA CELKEM 001 5 388) 3535] 7 853] 2017]
+A Pohledavky za upsany zakladni kapital 02 0 0 a Ql
+8. Stata aktiva 003 3790) 3.535) 255| 358
+Bi. [Diouhodoby nehmotny majetek 004 o| 0 | d
+B11. [Nehmotné vysledky vjvoje 005 o| o | d
+2. [Oceniteina prava 006 o| 0 | d
+2.1, [Software 007 | 0 | d
+2.2.  [Ostatni oceniteina prava 08 | 0 | d
+| 3 [Goodwitt 009) | 0 0 dl
+| 4. [Ostatni dlouhodoby nehmotny majetek 010) | Ol o ol
+5. [Poskytnuté zalohy na diouh, nehmot. maj. a nedok. dl. [014 al 0 Ol a
+5.1. [Poskytnuté zalohy na dlouh.nehmotny maj. 012 | 0 0 a
+5.2._[Nedokonéeny dlouhodoby nehmotny majetek 013 o| 0 | Q
+Bil. [Dlouhodoby hmotny majetek 014 3790] 3.535] 255 358
+Bul.1. [Pozemky a stavby 015 2914 2763) 151 151
+1.1. [Pozemky O16 108 0 108] 108]
+1.2. [Stavby 017 2.806) 2763 43 43
+2. [Hmotné movité véci a jejich soubory o18 a76| 772 404] 207
+3. |Ocefiovaci rozdil k nabytému majethu 019 | 0 | Q
+4. [Ostatnf dlouhodoby hmotny majetek 020 | 0 | dl
+| 4.1. [Péstitelské celky trvalych porostt 024 | 0 0 |
+4.2. [Dospélé zvifata a jejich skupiny 022 | 0 | Q
+4.3. [Jiny dlouhodoby hmotny majetek 023 | 0 ol Q
+| 5. [Poskytnuté zélohy na dlouh.hmotny maj. a nedok.dih [024 Ol 0 0 o
+| 5:1. [Poskytnuté zalohy na dlouh. hmotny maj 025 0 0 0 q
+5.2. [Nedokonéeny dlounodoby hmotny majetek 026 | 0 al a
+Bull, [Diouhodoby finanéni majetek 027 | 0 o| Q
+|B.0L1. [Podily - ovladana nebo ovlddajici osoba 028 | 0 | d
+| 2. [Zaptiéky a very - oviédand nebo ovladajfcf osoba 029 | oO | |
+| 3. [Podily-podstatny viv 030) | 0 | A
+| 4. [Zaptjeky a vary - podstatny viv 031 0 0 0| |
+5, [Ostaini dlouhodabé cenné papiry a podily 032 | 0 | Q
+6. |Zaptjéky a dvéry- ostatni 033 o| 0 | Q
+7. [statni dlounodoby finanéni majetek 034 | Q | d
+7.1. [Jing dlounodoby finanéni majetek 036) | 0 ol Q
+7.2. [Poskytnuté zalohy na dlouhodobj fin. maj 036) | 0 0 Qj
+
+
+--- PAGE 2 ---
+zn. AKTIVA tad] Brutto Korekoe Netto Min.obdobt
+a b e 1 2 3 4
+
+¢. [Obezna aktiva 037 1598 | 7598 71659]
+Ci. [Zasoby 038] 1118 o| 1118 1189
+cua. [Material 039) Q | 0 1
+2. _ [Nedokondena vjraba a polotovary 040 0 | 0 d
+3, [Wyrobky a zbozi 041 1118 Q 1118 1182]
+| 3.4. [Wyrobky 042 270) | 270) 288|
+| 3.2. [zbozi 043 248] 0 e48| 894]
+4, [Mlad& a ostani zvifata a jejich skupiny 044 ol o 0 d
+5, _[Poskytnuté zalohy na zasoby 045 ol ol 0 d
+Cul. [Pohledavky 046 46 o| 46 21
+c.1L1,  [Diouhodobé pohledavay 047 o| | o| Q
+| 1.4. [Pohledavky z obchodnich vataha 048 Q Q | Q|
+| 1.2. [Pontedaviy-ovlddana nebo ovladalici osoba 049 o 0 Q| Ql
+| 1.3. [Pohlecavky-podstatny viv 050] | o 0 |
+1.4. [Odlozené datiova pohledavka 054 Q | 0 Q
+1.5. [Pohledavay - ostatni 052 @ o| 0 Q
+1.5.1|Pohledavky za spoletniky 053 0 | 0 0
+| 1.8.2[Diouhodobe poskytnuté zélohy 064 | o Ol Q
+| 1.8.3[Dohadne wety aktivnt 055; | 0 0 dl
+| 1.8.4|Jiné pohtedaviy 056° | o | 0
+| 2. [Kratkodobé pohledaviy 087 46 o 46| 24
+| 2.1. [Pobledavky 2 obchodnich vztahii 058 38| 0 38 24
+| 2.2. [Pohledavky-oviadand nebo ovlédajic! osoba 059) o 0 o |
+2.3, [Pohledavky-podstatny viiv 060) 0 o 0 Q
+2.4, [Pohledavky ostatni 061 8 ol 8 Q
+2.4.1 |Pohledavky za spoletniky 062 0 | 0 0
+2.4.2|Sociaini zabezpeéent a zdrav. pojisténi 063 0 | ol |
+2.4.3 | Stat- dafiové pohledavky 064 ol o ol |
+| 2.4.4] Kratkodobe poskytnuté zalohy 065] o ol 0) |
+| 2.4.5[Dohaane idty aktivni 066] | 0 | |
+| 2.4.8 |Jiné pohtedaviy 067 8 0 8 d
+| 3. [Casové rozligeni aktiv 068 | o| 9) o|
+| 3.1. [Naklagy pristich obdobi 069) 0 0| oO |
+| 3.2. [Komplexni naklady pfigtich obdob! 070) | 0 o al
+3.3. |Priimy pristich obdobi o74 0 0 ° 0
+Cilll. _ [Kratkodoby finanéni majetek 72 o | | ol
+cuit. [Podily - ovlddana nebo ovladalici osoba 073 0 | ol |
+2. [Ostatni krakodoby finanéni majetek 074 0 ol o| Ql
+C.v._ [Pendzni prostfedky O75 434 ol 434] 485|
+c.v.t, [Pendent prostfedky v pokladné 076 47 ol 47 34
+2.__[Penééni prostfedky na uétech or? 387 ol 387 361
+D. [Gasové rozligeni aktiv 078 0 o| 0 d
+DiI. _ [Nakiady pristich obdobi 078 ° | 0 Q
+2. [Komplexni naklady pristich obdobi 080 0 ol 0 Q
+[_3.__|Primy pfistich obdobi 081 0 o) ° Q
+
+
+--- PAGE 3 ---
+zn PASIVA vd | B8zné obdobi | Min.obdobi
+[a > c 5 6 —
+PASIVA CELKEM 082 1853 2017|
+A VViastni Kapital 083 760| 896|
+Al [Zaktadni kapital 024 100] 100
+Jait.  [Zakladni kapital 085 100| 100)
+| 2. [Mastni poatly () 086 a dl
+|_3.__[Zmény zakladniho kapitalu 087 | 0 0
+All, [Adio a kapitélové fondy 088 o| a
+All1. |Azio 089 0 9
+2. [Kapitélové fondy 090 0 ol
+2.1. [Ostatni kapitalove fondy 094 0 0
+2.2. [Ocehiovaci rozd. z prec, maj. a zav.(+/-) 092 ol 0
+| 23. [Ocetovaci rozd. z pfec. phi pfemanach obeh.Korp.(+/-) | 083 Q| ol
+| 24. [Rozaily 2 piemén obch.korp.(+/-) 094 ol 0|
+2.8. |Rozaily 2 ocenéni pli preménach obch korp.(+/-) 095 0 |
+‘lll, [Fondy ze zisku 096 10 10)
+Ja.mt. [Ostatni rezervni fondy 097 10) i)
+2,_[Statutémi a ostatni fondy 098 | ol
+Alv. _ |[Vysledek hospodafeni minuljch let (+/-) 099 786| 906)
+Alv.1. [Nerozdéleny zisk nebo neuhrazena ztrata min. let (¥/-) [100 788 906:
+2. [inj wsledek hospodatent minulych let (+/-) 401 ol |
+‘AV. __ |Vysledek hospodafeni bé2.0¢.obd.(+/-) 102 = 136 = 120)
+AVI [Rozhodnuto 0 zélohové vyplaté podilu na zisku(-)__| 103] a 9
+B40. |Cizi zdroje ‘104 4093, 1121
+[B. Rezervy 105 o| 0
+B11. [Rezerva na duchody a podobné zavazky 108 al 0
+| 2 [Rezerva na dai z piiima 107 0 0)
+3. [Rezervy podle v1. prav. pfedpist 708 0 0
+4, [Ostatni rezervy 409 Q 0
+c Zavazky 110 4093 1121
+1. [Diouhodobé zavazky 114 | |
+Jeu. [Wydané dluhopisy 112 | al
+1.1. [yméniteing dlunopisy 113 | ol
+1.2. [Ostatni dluhopisy 114 ol ol
+| 2 [Zavazky k uvérowjm institucim 415 0 °
+3. _ [Diouhodobé pijaté zalohy 116 0 0
+4, [Zavazky 2 obchodnich vztahi 17 al a
+5, _ [Dlouhodobé smenky k uhradé 118 | |
+6. _ [Zavazky-ovlddana nebo ovlddajici osoba 119 ol 0
+| 7. [Zévazky-podstatny viv 120| o| oO
+| 8. [Odlozeny datovy zavazek 121 ol ol
+| 9. [Zavazky - ostatni 122, 9 ol
+| 9.1. [Zavazky ke spoleéniktim 123 | Q
+| 9.2. [Dohadne déty pasivni 124 0 )
+[93._[ving zavazky 125 O 0]
+
+
+--- PAGE 4 ---
+ee PASIVA rad | Beene obdobi | _Min.obdob!
+a b e 5 6
+Cl. [Krétkodobé zavazky 126 1093 1421
+cult. [Vydané dluhopisy 127 0 0
+| 1.1. [Vyméniteing aluhopisy 128 0 Q
+1.2, [Ostatni dluhopisy 129) 0 ol
+2. [Zavazky k tivérovym institucim 130) 0 al
+| 3. [kratiodobé prjaté zalohy 131 0 0|
+4, [Zavazky z obchodnich vztaht 132 3 al
+5. [Kratkodobé sménky k uhradé 133 ol |
+6. |Zavazky - ovladana nebo ovlddajici osoba 134 o |
+| 7. [Zavazky - podstatny vliv 135 oO 0
+| 8. [Zavazky - ostatnt 136 1.080] 4113)
+| 8.1. [Zavazky ke spoleeniiim 137, 1.025] 1025
+8.2. |Kratkodobé finanéni vypomoci 138 o| ol
+8.3. |Zavazky k zaméstnancim 139 19 17]
+| 84. [Zavazky ze soc.zabezp. a zdrav. pojist 140 "1 8
+| 25. [stat-daove zavazky a dotace 141 20| 41
+| 8.6. [Dohadne uety pasivni 142 15 22
+8.7. {Jing zavazky 143 | 0
+C.lll, | Casové rozligeni pasiv 144 o| t)
+[eums. [Wdaje piistich obdobt 145| | 0
+2._[Vynosy pfistich obdobi 146 ol 0
+D. (Gasové roziigeni pasiv 147 5 0
+[0.1 [Wdaie prfétich obgobi 148 | Q
+L2 \Vnosy piistich obdobi 149 | 0
+Rozahowy den Podpisony zdznam statutir. orG9ja]déetni jednotky
+‘nebo podis.zaznam fyz.osoby fterh Je véetn Jen.
+31/12/2020 Mh |
+ly
+Spolegnost s ruéenim omezenjm toxtiint vyroba
+08/02/2021
+‘obchodni éinnost
+
+
+--- PAGE 5 ---
+Obecné tidaje:
+
+P¥edmét tinnost
+
+Statutarni z4stupee:
+
+ZAkladni kapital:
+
+Spoleéni
+
+1, Zpisob oceiovani:
+
+Priloha k iéetni zavérce
+
+SAMSON, s.t.0.
+Zakostelni 190, 679 71 Lysice
+spoleénost s rugenim omezenym
+3. 12. 1991
+
+= textilni vyroba
+
+- obchodni ginnost
+
+Alois Adamek - jednatel
+100 000,- K&
+
+Alois Adamek, podil na zakladnim kapitilu 100 %,
+tj. 100 000,- KE
+
+a) nakupované zasoby v potizovacich cendch
+b) dlouhodoby hmotny a nehmotny investitni majetek v pofizovacich cendch
+
+2. Zplisob stanovent reprodukéni poFizovaci ceny:
+
+netyka se firmy
+
+3. Vedlej§i poFizovact naklady:
+
+zejména ptepravné, clo, sluZby
+
+4. Zmény zpiisoba oceiovani, odepisovani a postupu détovani:
+
+nedoslo ke zménam.
+
+5. Zpiisob stanoveni opravnych polozek:
+
+netyka se firmy
+
+
+--- PAGE 6 ---
+6. Zpitsob sestaveni odpisovgch plind:
+
+majetek se odepisuje rovnomémé dle stanovengho rotniho procentniho odpisu, od poddtku
+prvniho mésice nasledujictho po zatazeni majetku do uzivani, do konce mésice, ve kterém byl
+plné odepsin
+
+7. Uplatnéni zpiisob u p¥epottu vidajii v zabraniénich ménéch:
+dle platngho kurzu v den uskutetnéni déetntho pripadu
+8. Oceiiovni redlnou hodnotou
+
+netyka se firmy
+
+Doplinujict informace k rozvaze a v¥kazu ziskti a ztrat:
+
+- firma nema majetek zatiZeny zastavnim pravem ani Zadné zavazky neuvedené v tiéetnictvi
+firmy.
+
+- firma nema nesplacené pohledavky po Ihiité splatnosti dels{ jak 180 dni
+
+- firma nemé nesplacené zavazky po Ihité splatnosti deli jak 180 dni
+
+- firma evidovala k 31. 12. 2020 tyto zavazky viéi FU, OSSZ a zdravotnim
+
+pojistovnam:
+Finanéni ufad: DPH 17225,- Ke
+DPFOZC
+
+OSSZ:
+
+Zaravotni pojistovny: 3383,-Ké
+
+V Lysicich dne 8. tinora 2021
+
+Alois Adimek
+jednatel
+
+dl SON spoi. s
+Akosteli 190,678 71 Lysic
+Lysi
+'60:42420201 Die: coassones
+tel./fax:516 472 199

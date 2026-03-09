@@ -1,0 +1,115 @@
+
+
+--- PAGE 1 ---
+[Ic: [24694401 |
+
+Rozvaha pro podnikatele, ve zkraceném rozsahu pro
+malou ucetni jednotku, ktera nema povinnost mit
+uéetni zavérku ovéfenou auditorem
+ke dni 31.12.2024
+
+(v celych tisicich CZK)
+
+bézné tiéetni obdobi | MUNN’
+AKTIVA obdobi
+brutto | korekce | netto
+netto
+1 2 3 4
+
+IAKTIVA CELKEM 4620 1836 2784 2545
+B. Stala aktiva 1023 1022 1 30
+B.I. Dlouhodoby nehmotny majetek 890 890 0 0
+B.II. Dlouhodoby hmotny majetek 132 132 0 29
+Cc. Obézna aktiva 3597 814 2783 2515
+C.IL Pohledavky 1038 22 1016 663
+C.IL2. Kratkodobé pohledavky 974 22 952 597
+C.IL3. Casové rozligeni aktiv 64 64 66
+C.IV. PenéZni prostiedky 505 505 267
+BI. Dlouhodoby finanéni majetek 1 1 1
+
+CI. Zasoby 2054 792 1262 1585
+
+
+--- PAGE 2 ---
+béZné ucetni | minulé iéetni
+
+PASIVA obdobi obdobi
+1 2
+PASIVA CELKEM 2784 2545
+A. Vlastni kapital -1306 -1578
+ALL. Zakladni kapital 400 400
+A.V. Vysledek hospodateni minulych let (+/-) -1978 -953
+A.V Vysledek hospodareni bézného téetniho obdobi (+/-) 272 -1025
+B.+C. Cizi zdroje 4090 4123
+Cc Zavazky 4090 4123
+
+C.IL Kratkodobé zavazky 4090 4123
+
+
+--- PAGE 3 ---
+Ic: [24694401
+
+Vykaz zisku a ztraty pro podnikatele - druhové Clenéni,
+v pIném rozsahu
+ke dni 31.12.2024
+
+(v celych tisicich CZK)
+
+béZné ucetni | minulé iéetni
+
+Nazey polozky obdobi obdobi
+1 2
+
+I. Trzby z prodeje vyrobkti a sluzeb 12953 17433
+A. Vykonova spotieba 10699 14920
+D. Osobni naklady 1299 3511
+A.2 Spotieba materialu a energie 518 491
+A.3 Sluzby 10181 14429
+D.1. Mzdové naklady 969 2666
+D2 Naklady na socialni zabezpeceni, zdravotni poji8téni a 330 845
+
+ostatni naklady
+D.2.1. Naklady na socialni zabezpeéeni a zdravotni pojiSténi 324 828
+D.2.2. Ostatni naklady 6 17
+E. Upravy hodnot v provozni oblasti 806 92
+El. Upravy hodnot dlouhodobého nehmotného a hmotného 14 100
+
+majetku
+Ell. Upravy hodnot dlouhodobeho nehmotného a hmotného 14 100
+
+majetku - trvalé
+II. Ostatni provozni vynosy 392 442
+F. Ostatni provozni naklady 61 169
+FS. Jiné provozni naklady 40 124
+* Provozni vysledek hospodaieni (+/-) 480 -817
+J. Nakladové troky a podobné naklady 167 206
+J.2. Ostatni nakladové troky a podobné naklady 167 206
+VI. Ostatni finanéni vynosy 4
+K. Ostatni finanéni naklady 41 26
+* Finanéni vysledek hospodaieni (+/-) -208 -208
+ee Vysledek hospodateni pred zdanénim (+/-) 272 -1025
+L. Dan z prijma 0 0
+ee Vysledek hospodateni po zdanéni (+/-) 272 -1025
+ek Vysledek hospodayeni za ucetni obdobi (+/-) 272 -1025
+
+Cisty obrat za ucetni obdobi = I. + HW. + IN. + IV. + V.+
+* VEL VIL 13345 17899
+E.3. Upravy hodnot pohledavek -8
+F3. Dané a poplatky 7 14
+I.1. Trzby z prodancho dlouhodobého majetku 364 442
+Fl. Zustatkova cena prodancho dlouhodobého majetku 14 31
+
+VIL2. Ostatni vynosové troky a podobné vynosy 20
+
+
+--- PAGE 4 ---
+ee ee
+obdobi obdobi
+
+a a
+
+Vi.______|VYnosové troky a podobné vynosy———SSSSSC~dSSCSCSC~tYSC‘“‘*C*«Y
+
+3. [ling provoznivynosy —SSCSC—~—SS~sSCSCSC~tR’CSCSC‘*C*d
+
+2. [Upravyhodnot zisob——SSSSSSCS—~—S—SYSCSSCC*d

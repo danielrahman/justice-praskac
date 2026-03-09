@@ -1,0 +1,599 @@
+Rozvaha podle Přílohy č. 1                                                                              Obchodní firma nebo jiný název účetní jednotky
+vyhlášky č. 500/2002 Sb.                                    ROZVAHA
+                                                         v plném rozsahu                                SPR Building s.r.o.
+
+Účetní jednotka doručí
+                                                                                                        Sídlo nebo bydliště účetní jednotky
+účetní závěrku současně                                  ke dni 31.12.2020                              a místo podnikání, liší-li se od bydliště
+s doručením daňového přiznání
+za daň z příjmů
+                                                         (v celých tisících Kč)
+                                                                                                        Rudná 2378/100
+1 x příslušnému finančnímu                                                                              Hrabůvka
+    úřadu                                         Rok     Měsíc               IČ                        700 30
+
+                                                  2020                     27830586
+
+
+
+                                                                    čís.                     Běžné účetní období                      Minulé úč. období
+Označení                         AKTIVA                             řád.
+                                                                              Brutto              Korekce               Netto                Netto
+         a                           b                               c          1                    2                   3                    4
+             AKTIVA CELKEM                        Součet A. až D.    1             78 975              8 542               70 433                   71 348
+
+A.           Pohledávky za upsaný základní kapitál                   2
+
+B.           Stálá aktiva                   Součet B.I. až B.III.    3             54 369              8 523               45 846                   49 504
+
+B.I.         Dlouhodobý nehmotný majetek Součet I.1. až I.5.         4                  21                  21                                          0
+
+B.I. 1.      Nehmotné výsledky vývoje                                5
+
+B.I. 2.      Ocenitelná práva                                        6
+
+B.I. 2.1.    Software                                                7
+
+B.I. 2.2.    Ostatní ocenitelná práva                                8
+
+B.I. 3.      Goodwill                                                9
+
+B.I. 4.      Ostatní dlouhodobý nehmotný majetek                    10                  21                  21                                          0
+
+B.I. 5.      Poskytnuté zálohy na dl. nehmotný                      11
+             majetek a nedokončený dl. nehmotný
+B.I. 5.1.    majetek
+             Poskytnuté zálohy na dlouhodobý                        12
+             nehmotný majetek
+B.I. 5.2.    Nedokončený dlouhodobý nehmotný                        13
+             majetek
+B.II.        Dlouhodobý hmotný majetek Součet II.1. až II.5.        14             44 282              8 502               35 780                   39 438
+
+B.II. 1.     Pozemky a stavby                                       15             39 108              7 564               31 544                   35 119
+
+B.II. 1.1.   Pozemky                                                16             20 349                                  20 349                   22 937
+
+B.II. 1.2.   Stavby                                                 17             18 759              7 564               11 195                   12 182
+
+B.II. 2.     Hmotné movité věci a jejich soubory                    18              1 286                938                    348                   431
+
+B.II. 3.     Oceňovací rozdíl k nabytému majetku                    19
+
+B.II. 4.     Ostatní dlouhodobý hmotný majetek                      20
+
+B.II. 4.1.   Pěstitelské celky trvalých porostů                     21
+
+B.II. 4.2.   Dospělá zvířata a jejich skupiny                       22
+
+B.II. 4.3.   Jiný dlouhodobý hmotný majetek                         23
+
+B.II. 5.     Poskytnuté zálohy na dl. hmotný majetek                24              3 888                                    3 888                   3 888
+             a nedokončený dl. hmotný majetek
+B.II. 5.1.   Poskytnuté zálohy na dlouhodobý hmotný                 25                 140                                      140                   140
+             majetek
+B.II. 5.2.   Nedokončený dlouhodobý hmotný majetek                  26              3 748                                    3 748                   3 748
+
+B.III.       Dlouhodobý finanční majetek Součet III.1. až III.7.    27             10 066                                  10 066                   10 066
+
+B.III. 1.    Podíly – ovládaná nebo ovládající osoba                28
+
+B.III. 2.    Zápůjčky a úvěry – ovládaná nebo                       29
+             ovládající osoba
+B.III. 3.    Podíly – podstatný vliv                                30
+                                                                       čís.                  Běžné účetní období                 Minulé úč. období
+Označení                           AKTIVA                              řád.
+                                                                              Brutto              Korekce          Netto              Netto
+        a                                b                              c       1                    2              3                  4
+B.III. 4.      Zápůjčky a úvěry – podstatný vliv                       31
+
+B.III. 5.      Ostatní dlouhodobé cenné papíry a podíly                32        10 066                              10 066              10 066
+
+B.III. 6.      Zápůjčky a úvěry – ostatní                              33
+
+B.III. 7.      Ostatní dlouhodobý finanční majetek                     34
+
+B.III. 7.1.    Jiný dlouhodobý finanční majetek                        35
+
+B.III. 7.2.    Poskytnuté zálohy na dlouhodobý finanční                36
+               majetek
+C.             Oběžná aktiva               Součet C.I. až C.IV.        37        24 323                     19       24 304              21 534
+
+C.I.           Zásoby                           Součet I.1. až I.5.    38        20 658                              20 658              17 457
+
+C.I. 1.        Materiál                                                39               19                                  19                 19
+
+C.I. 2.        Nedokončená výroba a polotovary                         40        20 639                              20 639              17 438
+
+C.I. 3.        Výrobky a zboží                                         41
+
+C.I. 3.1.      Výrobky                                                 42
+
+C.I. 3.2.      Zboží                                                   43
+
+C.I. 4.        Mladá a ostatní zvířata a jejich skupiny                44
+
+C.I. 5.        Poskytnuté zálohy na zásoby                             45
+
+C.II.          Pohledávky                      Součet II.1. až II.3.   46         2 478                     19        2 459               3 295
+
+C.II. 1.       Dlouhodobé pohledávky                                   47               77                                  77                 77
+
+C.II. 1.1.     Pohledávky z obchodních vztahů                          48
+
+C.II. 1.2.     Pohledávky – ovládaná nebo ovládající                   49
+               osoba
+C.II. 1.3.     Pohledávky – podstatný vliv                             50
+
+C.II. 1.4.     Odložená daňová pohledávka                              51
+
+C.II. 1.5.     Pohledávky – ostatní                                    52               77                                  77                 77
+
+C.II. 1.5.1.   Pohledávky za společníky                                53
+
+C.II. 1.5.2.   Dlouhodobé poskytnuté zálohy                            54
+
+C.II. 1.5.3.   Dohadné účty aktivní                                    55
+
+C.II. 1.5.4.   Jiné pohledávky                                         56               77                                  77                 77
+
+C.II. 2.       Krátkodobé pohledávky                                   57         2 401                     19        2 382               3 218
+
+C.II. 2.1.     Pohledávky z obchodních vztahů                          58         1 484                     19        1 465               1 872
+
+C.II. 2.2.     Pohledávky – ovládaná nebo ovládající                   59
+               osoba
+C.II. 2.3.     Pohledávky – podstatný vliv                             60
+
+C.II. 2.4.     Pohledávky – ostatní                                    61              917                                 917            1 346
+
+C.II. 2.4.1.   Pohledávky za společníky                                62
+
+C.II. 2.4.2.   Sociální zabezpečení a zdravotní pojištění              63
+
+C.II. 2.4.3.   Stát – daňové pohledávky                                64              281                                 281                293
+
+C.II. 2.4.4.   Krátkodobé poskytnuté zálohy                            65              636                                 636            1 053
+
+C.II. 2.4.5.   Dohadné účty aktivní                                    66
+
+C.II. 2.4.6.   Jiné pohledávky                                         67
+
+C.II. 3.       Časové rozlišení aktiv                                  144
+
+C.II. 3.1.     Náklady příštích období                                 145
+
+C.II. 3.2.     Komplexní náklady příštích období                       146
+                                                                   čís.                  Běžné účetní období                 Minulé úč. období
+Označení                          AKTIVA                           řád.
+                                                                          Brutto              Korekce          Netto              Netto
+         a                             b                            c       1                    2              3                  4
+C.II. 3.3.   Příjmy příštích období                                147
+
+C.III.       Krátkodobý finanční majetek Součet III.1. až III.2.   68
+
+C.III. 1.    Podíly – ovládaná nebo ovládající osoba               69
+
+C.III. 2.    Ostatní krátkodobý finanční majetek                   70
+
+C.IV.        Peněžní prostředky            Součet IV.1. až IV.2.   71         1 187                               1 187                   782
+
+C.IV. 1.     Peněžní prostředky v pokladně                         72              970                                 970                456
+
+C.IV. 2.     Peněžní prostředky na účtech                          73              217                                 217                326
+
+D.           Časové rozlišení aktiv         Součet D.1. až D.3.    74              283                                 283                310
+
+D. 1.        Náklady příštích období                               75               47                                  47                 74
+
+D. 2.        Komplexní náklady příštích období                     76
+
+D. 3.        Příjmy příštích období                                77              236                                 236                236
+                                                                                                  čís.   Stav v běžném      Stav v minulém
+Označení                                       PASIVA                                             řád.   účetním období     účetním období
+
+         a                                         b                                               c           5                  6
+             PASIVA CELKEM                                                   Součet A. až D.      78               70 433             71 348
+
+A.           Vlastní kapitál                                          Součet A.I. až A.VI.        79               41 534             44 353
+
+A.I.         Základní kapitál                                              Součet I.1. až I.3.    80                 200                200
+
+A.I. 1.      Základní kapitál                                                                     81                 200                200
+
+A.I. 2.      Vlastní podíly (-)                                                                   82
+
+A.I. 3.      Změny základního kapitálu                                                            83
+
+A.II.        Ážio a kapitálové fondy                                      Součet II.1. až II.2.   84               54 000             54 000
+
+A.II. 1.     Ážio                                                                                 85
+
+A.II. 2.     Kapitálové fondy                                                                     86               54 000             54 000
+
+A.II. 2.1.   Ostatní kapitálové fondy                                                             87               54 000             54 000
+
+A.II. 2.2.   Oceňovací rozdíly z přecenění majetku a závazků (+/-)                                88
+
+A.II. 2.3.   Oceňovací rozdíly z přecenění při přeměnách obchodních korporací                     89
+             (+/-)
+A.II. 2.4.   Rozdíly z přeměn obchodních korporací (+/-)                                          90
+
+A.II. 2.5.   Rozdíly z ocenění při přeměnách obchodních korporací (+/-)                           91
+
+A.III.       Fondy ze zisku                                          Součet III.1. až III.2.      92
+
+A.III. 1.    Ostatní rezervní fondy                                                               93
+
+A.III. 2.    Statutární a ostatní fondy                                                           94
+
+A.IV.        Výsledek hospodaření minulých let (+/-)                 Součet IV.1. až IV.2.        95               -9 847             -4 440
+
+A.IV. 1.     Nerozdělený zisk nebo neuhrazená ztráta minulých let (+/-)                           96               -9 847             -4 440
+
+A.IV. 2.     Jiný výsledek hospodaření minulých let (+/-)                                         98
+
+A.V.         Výsledek hospodaření běžného účetního období (+/-)                                   99               -2 819             -5 407
+
+A.VI.        Rozhodnuto o zálohové výplatě podílu na zisku (-)                                    100
+
+B. + C.      Cizí zdroje                                                      Součet B. + C.      101              28 874             26 931
+
+B.           Rezervy                                                  Součet B.1. až B.4.         102
+
+B. 1.        Rezerva na důchody a podobné závazky                                                 103
+
+B. 2.        Rezerva na daň z příjmů                                                              104
+
+B. 3.        Rezervy podle zvláštních právních předpisů                                           105
+
+B. 4.        Ostatní rezervy                                                                      106
+                                                                                                 čís.   Stav v běžném      Stav v minulém
+Označení                                      PASIVA                                             řád.   účetním období     účetním období
+
+        a                                         b                                               c           5                  6
+C.           Závazky                                                 Součet C.I. až C.III.       107              28 874             26 931
+
+C.I.         Dlouhodobé závazky                                           Součet I.1. až I.9.    108              24 581             23 180
+
+C.I. 1.      Vydané dluhopisy                                                                    109
+
+C.I. 1.1.    Vyměnitelné dluhopisy                                                               110
+
+C.I. 1.2.    Ostatní dluhopisy                                                                   111
+
+C.I. 2.      Závazky k úvěrovým institucím                                                       112              15 743             22 541
+
+C.I. 3.      Dlouhodobé přijaté zálohy                                                           113
+
+C.I. 4.      Závazky z obchodních vztahů                                                         114                388                639
+
+C.I. 5.      Dlouhodobé směnky k úhradě                                                          115
+
+C.I. 6.      Závazky – ovládaná nebo ovládající osoba                                            116
+
+C.I. 7.      Závazky – podstatný vliv                                                            117
+
+C.I. 8.      Odložený daňový závazek                                                             118
+
+C.I. 9.      Závazky – ostatní                                                                   119               8 450
+
+C.I. 9.1.    Závazky ke společníkům                                                              120               8 450
+
+C.I. 9.2.    Dohadné účty pasivní                                                                121
+
+C.I. 9.3.    Jiné závazky                                                                        122
+
+C.II.        Krátkodobé závazky                                          Součet II.1. až II.8.   123               4 293              3 751
+
+C.II. 1.     Vydané dluhopisy                                                                    124
+
+C.II. 1.1.   Vyměnitelné dluhopisy                                                               125
+
+C.II. 1.2.   Ostatní dluhopisy                                                                   126
+
+C.II. 2.     Závazky k úvěrovým institucím                                                       127                142                146
+
+C.II. 3.     Krátkodobé přijaté zálohy                                                           128                 87                475
+
+C.II. 4.     Závazky z obchodních vztahů                                                         129               3 774              2 987
+
+C.II. 5.     Krátkodobé směnky k úhradě                                                          130
+
+C.II. 6.     Závazky – ovládaná nebo ovládající osoba                                            131
+
+C.II. 7.     Závazky – podstatný vliv                                                            132
+
+C.II. 8.     Závazky ostatní                                                                     133                290                143
+
+C.II. 8.1.   Závazky ke společníkům                                                              134
+
+C.II. 8.2.   Krátkodobé finanční výpomoci                                                        135
+
+C.II. 8.3.   Závazky k zaměstnancům                                                              136                 28                 37
+
+C.II. 8.4.   Závazky ze sociálního zabezpečení a zdravotního pojištění                           137                 13                 28
+
+C.II. 8.5.   Stát – daňové závazky a dotace                                                      138                  6                  7
+
+C.II. 8.6.   Dohadné účty pasivní                                                                139
+
+C.II. 8.7.   Jiné závazky                                                                        140                243                 71
+                                                                                     čís.    Stav v běžném           Stav v minulém
+Označení                               PASIVA                                        řád.    účetním období          účetním období
+
+         a                               b                                            c              5                          6
+C.III.        Časové rozlišení pasiv                       Součet III.1. až III.2.   148
+
+C.III. 1.     Výdaje příštích období                                                 149
+
+C.III. 2.     Výnosy příštích období                                                 150
+
+D.            Časové rozlišení pasiv                       Součet D.1. až D.2.       141                  25                        64
+
+D. 1.         Výdaje příštích období                                                 142                  25                        64
+
+D. 2.         Výnosy příštích období                                                 143
+
+
+
+
+  Sestaveno dne:                                                Podpisový záznam statutárního orgánu účetní jednotky
+                                                                nebo podpisový vzor fyzické osoby, která je účetní jednotkou:
+     30.05.2021
+
+
+
+
+  Právní forma účetní jednotky:          Předmět podnikání:                                 Pozn.:
+                                         Výstavba bytových a nebytových budov
+     s.r.o.
+Výkaz zisku a ztráty ve druhovém                                                                                         Obchodní firma nebo jiný název účetní jednotky
+členění podle Přílohy č. 2
+vyhlášky č. 500/2002 Sb.                                  VÝKAZ ZISKU A ZTRÁTY                                           SPR Building s.r.o.
+                                                             v plném rozsahu
+Účetní jednotka doručí
+účetní závěrku současně                                         ke dni 31.12.2020                                        Sídlo nebo bydliště účetní jednotky
+s doručením daňového přiznání                                                                                            a místo podnikání, liší-li se od bydliště
+za daň z příjmů
+                                                                (v celých tisících Kč)
+                                                                                                                         Rudná 2378/100
+1 x příslušnému finančnímu                                                                                               Hrabůvka
+    úřadu                                                 Rok    Měsíc                     IČ
+                                                                                                                         700 30
+                                                        2020                         27830586
+
+
+
+                                                                                                                 číslo        Skutečnost v účetním období
+Označení                                                  TEXT                                                  řádku
+                                                                                                                             běžném                      minulém
+       a                                                    b                                                     c             1                           2
+       I.            Tržby z prodeje výrobků a služeb                                                             1                    693                           980
+       II.           Tržby za prodej zboží                                                                        2
+
+ A.                  Výkonová spotřeba                                              Součet A.1. až A.3.           3                  2 703                       2 024
+ A.           1.     Náklady vynaložené na prodané zboží                                                          4
+
+ A.           2.     Spotřeba materiálu a energie                                                                 5                    407                           629
+ A.           3.     Služby                                                                                       6                  2 296                       1 395
+ B.                  Změna stavu zásob vlastní činnosti (+/-)                                                     7                  1 029                       4 475
+ C.                  Aktivace (-)                                                                                 8
+
+ D.                  Osobní náklady                                                 Součet D.1. až D.2.           9                    354                           398
+ D.           1.     Mzdové náklady                                                                              10                    286                           328
+ D.           2.     Náklady na sociální zabezpečení, zdravotní pojištění a ostatní náklady                      11                      68                           70
+ D.           2.1.   Náklady na sociální zabezpečení a zdravotní pojištění                                       12                      68                           70
+ D.           2.2.   Ostatní náklady                                                                             13
+
+ E.                  Úpravy hodnot v provozní oblasti                               Součet E.1. až E.3.          14                  1 111                       1 111
+ E.           1.     Úpravy hodnot dlouhodobého nehmotného a hmotného majetku                                    15                  1 111                       1 111
+ E.           1.1.   - Úpravy hodnot dlouhodobého nehmotného a hmotného majetku – trvalé                         16                  1 111                       1 111
+ E.           1.2.   - Úpravy hodnot dlouhodobého nehmotného a hmotného majetku – dočasné                        17
+
+ E.           2.     Úpravy hodnot zásob                                                                         18
+
+ E.           3.     Úpravy hodnot pohledávek                                                                    19
+
+       III.          Ostatní provozní výnosy                                       Součet III.1. až III.3.       20                  2 333                       4 243
+       III. 1.       Tržby z prodaného dlouhodobého majetku                                                      21                  2 285                       4 168
+       III. 2.       Tržby z prodaného materiálu                                                                 22
+
+       III. 3.       Jiné provozní výnosy                                                                        23                      48                           75
+  F.                 Ostatní provozní náklady                                        Součet F.1. až F.5.         24                    155                           850
+  F.          1.     Zůstatková cena prodaného dlouhodobého majetku                                              25
+
+  F.          2.     Prodaný materiál                                                                            26
+
+  F.          3.     Daně a poplatky v provozní oblasti                                                          27                      24                           13
+  F.          4.     Rezervy v provozní oblasti a komplexní náklady příštích období                              28
+
+  F.          5.     Jiné provozní náklady                                                                       29                    131                           837
+        *            Provozní výsledek hospodaření (+/-)        I. + II. - A. - B. - C. - D. - E. + III. - F.    30                 -2 326                      -3 635
+                                                                                                            číslo            Skutečnost v účetním období
+Označení                                             TEXT                                                  řádku
+                                                                                                                             běžném              minulém
+       a                                                b                                                    c                  1                   2
+      IV.         Výnosy z dlouhodobého finančního majetku – podíly            Součet IV.1. až IV.2.        31
+
+      IV. 1.      Výnosy z podílů – ovládaná nebo ovládající osoba                                          32
+
+      IV. 2.      Ostatní výnosy z podílů                                                                   33
+
+G.                Náklady vynaložené na prodané podíly                                                      34
+
+      V.          Výnosy z ostatního dlouhodobého finančního majetku             Součet V.1. až V.2.        35
+
+      V. 1.       Výnosy z ostatního dlouhodobého finančního majetku – ovládaná nebo                        36
+                  ovládající osoba
+      V. 2.       Ostatní výnosy z ostatního dlouhodobého finančního majetku                                37
+
+H.                Náklady související s ostatním dlouhodobým finančním majetkem                             38
+
+      VI.         Výnosové úroky a podobné výnosy                              Součet VI.1. až VI.2.        39                        185                  185
+      VI. 1.      Výnosové úroky a podobné výnosy – ovládaná nebo ovládající osoba                          40                        185                  185
+      VI. 2.      Ostatní výnosové úroky a podobné výnosy                                                   41
+
+ I.               Úpravy hodnot a rezervy ve finanční oblasti                                               42
+
+ J.               Nákladové úroky a podobné náklady                              Součet J.1. až J.2.        43                        660              1 930
+ J.          1.   Nákladové úroky a podobné náklady – ovládaná nebo ovládající osoba                        44                        660              1 930
+ J.          2.   Ostatní nákladové úroky a podobné náklady                                                 45
+
+      VII.        Ostatní finanční výnosy                                                                   46                          8                    1
+K.                Ostatní finanční náklady                                                                  47                         26                   28
+       *          Finanční výsledek hospodaření (+/-)     IV. - G. + V. - H. + VI. - I. - J. + VII. - K.    48                     -493               -1 772
+      **          Výsledek hospodaření před zdaněním (+/-)                         * (ř. 30) + * (ř. 48)    49                   -2 819               -5 407
+ L.               Daň z příjmů                                                   Součet L.1. až L.2.        50
+
+ L.          1.   Daň z příjmů splatná                                                                      51
+
+ L.          2.   Daň z příjmů odložená (+/-)                                                               52
+
+      **          Výsledek hospodaření po zdanění (+/-)                                  ** (ř. 49) - L.    53                   -2 819               -5 407
+M.                Převod podílu na výsledku hospodaření společníkům (+/-)                                   54
+
+      ***         Výsledek hospodaření                                                  ** (ř. 53) - M.     55                   -2 819               -5 407
+                  za účetní období (+/-)
+       *          Čistý obrat za účetní období                   I. + II. + III. + IV. + V. + VI. + VII.    56                   3 219                 5 409
+
+
+
+
+ Sestaveno dne:                                                                     Podpisový záznam statutárního orgánu účetní jednotky
+                                                                                    nebo podpisový vzor fyzické osoby, která je účetní jednotkou:
+  30.05.2021
+
+
+ Právní forma účetní jednotky:                           Předmět podnikání:                                         Pozn.:
+  s.r.o.                                                Výstavba bytových a nebytových budov
+                  Příloha v účetní závěrce
+                   ve zkráceném rozsahu
+                        Korporace SPR HOLDING, s.r.o.
+
+                                              ke dni 31.12.2020
+
+
+
+
+Obsah přílohy
+Podle § 39 vyhlášky č. 500/2002 Sb.:
+
+
+1.     Popis účetní jednotky
+2.     Zaměstnanci společnosti, osobní náklady
+3.     Používané účetní metody, obecné účetní zásady a způsoby oceňování
+4.     Doplňující údaje k rozvaze a výkazu zisku a ztráty
+5.     Informace k položkám majetku a závazků
+6.     Charakter a obchodní účel operací účetní jednotky
+                                                                   Příloha v účetní závěrce v plném rozsahu
+
+                                                                               Korporace SPR Building s.r.o.
+
+                                                                                          ke dni 31.12.2020
+
+
+
+
+1. Popis účetní jednotky
+
+        Název:                                 SPR HOLDING, s.r.o.
+        Sídlo:                                 Rudná 2378/10, PSČ 700 30, Hrabůvka
+        Právní forma:                          s.r.o.
+        IČ:                                    27830586
+        Předmět podnikání:                     Výstavba bytových a nebytových budov
+        Den vzniku účetní jednotky:
+        Zdaňovací období:                      od 1.1.2020 do 31.12.2020
+        Rozvahový den:                         31.12.2020
+        Okamžik sestavení účetní závěrky:      30.5.2021
+
+
+1.1.   Osoby podílející se na základním kapitálu účetní jednotky více než 20 %:
+         Jméno fyzické osoby,                                         Sledované účetní období
+                                          Bydliště, sídlo
+        název právnické osoby                                          podíl            tj. %
+                                      Rudná 2378/100, 700 30
+           RT TORAX, s.r.o.                                         200.000,- Kč       100 %
+                                             Ostrava
+
+1.2.   Organizační struktura účetní jednotky a její zásadní změny v uplynulém účetním období:
+       ---------------------------------------
+
+1.3.   Členové statutárních a dozorčích orgánů k rozvahovému dni:
+                          Funkce                                  Jméno a příjmení
+                         Jednatel                                   Tomáš Häring
+
+2. Zaměstnanci společnosti, osobní náklady
+                                                                          Sledované účetní období
+       Průměrný přepočtený počet zaměstnanců                              2
+       z toho členů řídících orgánů                                       1
+       Osobní náklady                                                     353.841,- Kč
+       z toho členů řídících orgánů                                       172.671,- Kč
+       Odměny členům statutárních a dozorčích orgánů společnosti          0
+       Penzijní závazky bývalých členů statutárních a dozorčích orgánů    0
+
+3. Používané účetní metody, obecné účetní zásady a způsoby oceňování
+
+Předkládaná účetní závěrka společnosti byla zpracována na základě zákona č. 563/1991 Sb.,
+o účetnictví, ve znění pozdějších předpisů, na základě vyhlášky č. 500/2002 Sb. a dle opatření
+Ministerstva financí ČR, kterými se stanoví obsah účetní závěrky pro podnikatele.
+
+
+3.1.   Cizí měny
+       Použit roční kurz ČNB k 1.1.2020
+
+
+                                                                                                          2
+                                                                 Příloha v účetní závěrce v plném rozsahu
+
+                                                                             Korporace SPR Building s.r.o.
+
+                                                                                        ke dni 31.12.2020
+
+
+1.1.   K 31.12.2020 vypočteny a zaúčtovány kurzové rozdíly kurzem ČNB k 31.12.2020
+
+4. Doplňující údaje k rozvaze a výkazu zisku a ztráty
+
+4.1.   Splatné závazky pojistného na sociální zabezpečení a příspěvku na státní politiku
+       zaměstnanosti, výše splatných závazků veřejného zdravotního pojištění a splatné daňové
+       nedoplatky
+        Sociální pojištění                                                   0,- Kč
+        Zdravotní pojištění                                                4.578,- Kč
+
+5. Informace k položkám majetku a závazků
+
+5.1.   Pohledávky celkem 972.187,44 Kč z toho:
+                                             0,00 Kč                   do splatnosti
+                                             0,00 Kč                30 dní po splatnosti
+                                         1 870,00 Kč              30-90 dní po splatnosti
+                                      135 000,00 Kč               90-180 dní po splatnosti
+                                             0,00 Kč             180-360 dní po splatnosti
+                                      835 317,44 Kč              nad 360 dní po splatnosti
+
+5.2.   Závazky celkem 3 774 447,71 Kč z toho:
+                                     1 082 210,92 Kč                   do splatnosti
+                                        150 567,21 Kč               30 dní po splatnosti
+                                         35 162,88 Kč             30-90 dní po splatnosti
+                                          7 971,26 Kč             90-180 dní po splatnosti
+                                        176 626,25 Kč            180-360 dní po splatnosti
+                                     2 321 909,19 Kč             nad 360 dní po splatnosti
+
+5.3.   V roce 2020 byl prodám pozemek v k.ú. 619116 Čeladná – parcely 543/7 a 544/5
+
+6. Charakter a obchodní účel operací účetní jednotky
+   Výstavba rodinných domů v lokalitě Skalice u Frýdku – Místku a Rychvaldu.
+   Oprava a rekonstrukce RD v Bílovci, určeného k prodeji.
+   Realizace stavebních zakázek jako subdodavatel.
+   Pronájem rodinných domů v majetku společnosti.
+
+
+
+
+Sestaveno dne: 30.5.2021
+Sestavil: Mgr. Viktor Kojdecký
+
+
+
+
+                                                                                                        3
+

@@ -1,0 +1,40 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85827837&subjektId=1181710&spis=1328714",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=6a1f30e88d9a4e4087a5131eb7a550ed",
+  "pdf_name": "UZ-451100267180-20250402-171616.pdf (551 kB, počet stran: 7)",
+  "pdf_candidates": [
+    {
+      "label": "UZ-451100267180-20250402-171616.pdf (551 kB, počet stran: 7)",
+      "url": "https://or.justice.cz/ias/content/download?id=6a1f30e88d9a4e4087a5131eb7a550ed",
+      "is_pdf": true,
+      "page_hint": 7,
+      "candidate_score": 160,
+      "pdf_index": 1
+    },
+    {
+      "label": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+      "url": "https://or.justice.cz/ias/content/download?id=0506a6ffe4864ca8b6ef699aef0b561c",
+      "is_pdf": true,
+      "page_hint": 1,
+      "candidate_score": -92,
+      "pdf_index": 0
+    }
+  ],
+  "download_links": [
+    {
+      "label": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+      "url": "https://or.justice.cz/ias/content/download?id=0506a6ffe4864ca8b6ef699aef0b561c",
+      "is_pdf": true
+    },
+    {
+      "label": "UZ-451100267180-20250402-171616.xml (12 kB)",
+      "url": "https://or.justice.cz/ias/content/download?id=ae906f104a554fd18c4ed2aa68269e5b",
+      "is_pdf": false
+    },
+    {
+      "label": "UZ-451100267180-20250402-171616.pdf (551 kB, počet stran: 7)",
+      "url": "https://or.justice.cz/ias/content/download?id=6a1f30e88d9a4e4087a5131eb7a550ed",
+      "is_pdf": true
+    }
+  ]
+}

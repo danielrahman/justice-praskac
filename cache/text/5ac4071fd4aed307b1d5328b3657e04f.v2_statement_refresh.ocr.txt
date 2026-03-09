@@ -1,0 +1,93 @@
+
+
+--- PAGE 1 ---
+Obchodni firma nebo jiny nazev Uéetni jednotky
+
+PREHLED O PENEZNICH TOCICH
+(CASH FLOW)
+
+Sidlo nebo bydliSté Uéetni jednotky
+
+ke dni 31.12.2024 a misto podnikani, li8i-li se od bydlité
+(v celych tisicich Ké)
+
+SAMSON PRAHA, spol. s r.o.
+
+Stépanska 642/41
+7 Praha
+Rok | Mésic IC 110 00
+2024 48539589
+7 Stav v bézZném Stav v minulém
+Oznaé. TEXT Uéetnim obdobi Uéetnim obdobi
+P. Stav penéznich prostiedkt a penéznich ekvivalentd na zaéatku Uéetniho obdobi 38 794 88 018
+PenéZzni toky z hlavni vydéleéné Cinnosti (provozni cinnost)
+Zz Uéetni zisk nebo ztrata pred zdanénim
+: (do ukazatele nejsou zahrnuty prisluSné Ucty Uétové skupiny 59) 36 624 1035
+Al. Upravy 0 nepenézni operace 8912 9 343
+Odpisy stalych aktiv (+) s vyjimkou zUstatkové ceny prodanych stalych aktiv,
+A.1.1. | a dale umofovani oceftovaciho rozdilu k nabytému majetku a goodwillu (+/-) 10 252 8811
+A.1.2. | Zména stavu opravnych polozek, rezerv -206 206
+Zisk (ztrata) z prodeje stalych aktiv (-/+)
+A123. (vytétovani do vynosti "-", do nakladti "+") -193 360
+A.1.4. | Vynosy z podilti na zisku (-)
+MMS Vyuétované nakladové uroky (+) s vyjimkou urokti zahrnovanych do ocenéni
+“| dlouhodobého majetku, a vyUétované vynosové uroky (-) “941 “34
+A.1.6. | Pripadné upravy o ostatni nepenéZni operace
+As Cisty pen&Zni tok z provozni cinnosti pfed zdanénim a zménami pracovniho kapitalu 45 536 10 378
+A2. Zmény stavu nepenéznich slozek pracovniho kapitalu 97 974 -42 199
+Zména stavu pohledavek z provozni cinnosti (+/-),
+A2.1. | aktivnich Uéts Gasového rozlieni a dohadnych wet aktivnich -19 106 -2 576
+Zména stavu kratkodobych zavazku z provozni Cinnosti (+/-),
+2.2, | Zména stavu kratkodobych zavazku z provozni Cinnosti (+/") 116 832 -39 872
+pasivnich uét €asového rozliSeni a dohadnych uétt pasivnich
+A.2.3. | Zména stavu zasob (+/-) 248 249
+A24 Zména stavu kratkodobého finanéniho majetku
+“"* | nespadajiciho do penéznich prostfedkt a penéZnich ekvivalentu
+A* Cisty pen&Zni tok z provozni Ginnosti pred zdanénim 143 510 -31 821
+Vyplacené uroky s vyjimkou Urokt zahrnovanych do ocenéni
+A3. | dlouhodobého majetku (-)
+A4. Prijaté uroky (+) 941 34
+AS. Zaplacena dah z prijmu a za domérky dané za minula obdobi (-) -87 -28
+
+AT. Prijaté podily na zisku (+)
+
+As Cisty pen&zZni tok z provozni éinnosti 144 364 -31 815
+
+
+--- PAGE 2 ---
+~ Stav v bézném Stav v minulém
+Oznaé. TEXT Uéetnim obdobi uéetnim obdobi
+PenéZni toky z investiéni cinnosti Fo
+B.1. Vydaje spojené s nabytim stalych aktiv -12 532 -18 903
+B.2. Piijmy z prodeje stalych aktiv 1 494
+B.3. Zapujcky a Uvéry spriznénym osobam -3 205
+B.** | Cisty penézni tok vztahujici se k investiéni cinnosti -15011 -17 409
+Penézni toky z finanénich Cinnosti Fo
+
+Dopady zmén dlouhodobych zavazku, popripadé takovych kratkodobych zavazku,
+C.1. které spadaji do oblasti finanéni cinnosti (napr. nékteré provozni Uvéry) na penéZni
+
+prostfedky a penézni ekvivalent
+C.2. Dopady zmén vlastniho kapitalu na penéZni prostfedky a penézni ekvivalenty Fo
+
+ZvySeni penéZnich prostfedkt a penéZznich ekvivalentu z titulu zvySeni zakladniho
+C.2.1. eal) ase wen ay , ats elazenv neni
+
+kapitalu, azia, popripadé fondu ze zisku véetné slozenych zaloh na toto zvySeni (+)
+C.2.2. | Vyplaceni podilu na viastnim kapitalu spoleénikum (-) Fo
+C.2.3. | Dal&i vklady penéznich prostfedkt spoleénikt a akcionart (+) Fo
+C.2.4. | Uhrada ztraty spoleéniky (+) Fs
+C.2.5, | Primé platby na vrub fondd (-) Fo
+
+Vyplacené podily na zisku véetné zaplacené srazkové dané vztahujici se k témto
+C.2.6. | ndroktim a véetné finanéniho vyporadani se spoleéniky v.o.s. a komplementaii u k.s. (-)
+c.** | Cisty pen&zni tok vztahujici se k finanéni cinnosti Fo
+F. Cisté zvySeni nebo sniZeni penéZnich prostfedkt 129 353 -49 224
+R. Stav penéZnich prostfedku a penéZnich ekvivalentu na konci ucetniho obdobi 168 147 38 794
+
+,
+Sestaveno dne: Podpisovy zaznam statutarniho organu Uéetni jednotky
+nebo podpisovy vzor fyzické osoby, ktera je Uéetni jednotkou:
+25.06.2025
+Pravni forma Uéetni jednotky: Pfedmét podnikani: Pozn.:
+specializované stavebni Cinnosti

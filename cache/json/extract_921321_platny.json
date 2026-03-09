@@ -1,0 +1,183 @@
+{
+  "title": "Výpis z obchodního rejstříku",
+  "subtitle": "Fakturoid s.r.o. , C 250448 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "12. ledna 2016",
+    "Spisová značka": "C 250448 vedená u Městského soudu v Praze",
+    "Obchodní firma": "Fakturoid s.r.o.",
+    "Sídlo": "Na Perštýně 342/1, Staré Město, 110 00 Praha 1",
+    "Identifikační číslo": "046 56 679",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4 Den vzniku funkce: 12. ledna 2016",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim Den vzniku funkce: 12. ledna 2016",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Každý jednatel jedná za společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "150 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "12. ledna 2016",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 250448 vedená u Městského soudu v Praze",
+      "history": ""
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "Fakturoid s.r.o.",
+      "history": ""
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Na Perštýně 342/1, Staré Město, 110 00 Praha 1",
+      "history": ""
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "046 56 679",
+      "history": ""
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": ""
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona",
+      "history": ""
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4 Den vzniku funkce: 12. ledna 2016",
+      "history": ""
+    },
+    {
+      "label": "Jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim Den vzniku funkce: 12. ledna 2016",
+      "history": ""
+    },
+    {
+      "label": "Počet členů:",
+      "value": "2",
+      "history": ""
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Každý jednatel jedná za společnost samostatně.",
+      "history": ""
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+      "history": ""
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "150 000 ,- Kč",
+      "history": ""
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=921321&typVypisu=PLATNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=921321&typ=PLATNY"
+}

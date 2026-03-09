@@ -1,0 +1,361 @@
+{
+  "subject_id": "1181710",
+  "name": "MatMat Lab s.r.o.",
+  "ico": "17607248",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "MatMat Lab s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "176 07 248"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "5. října 2022"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 373820 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "U zeleného ptáka 1145/12, Kunratice, 148 00 Praha 4"
+    }
+  ],
+  "executives": [
+    {
+      "role": "Jednatel",
+      "name": "HA MI DO",
+      "birth_date": "21. října 2003",
+      "raw": "HA MI DO , dat. nar. 21. října 2003 Za kovárnou 422/17, Dolní Měcholupy, 111 01 Praha 10 Den vzniku funkce: 18. února 2026"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Jednatel zastupuje společnost samostatně.",
+      "birth_date": null,
+      "raw": "Jednatel zastupuje společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "HA MI DO , dat. nar. 21. října 2003 Za kovárnou 422/17, Dolní Měcholupy, 111 01 Praha 10",
+      "raw": "HA MI DO , dat. nar. 21. října 2003 Za kovárnou 422/17, Dolní Měcholupy, 111 01 Praha 10"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "HA MI DO , dat. nar. 21. října 2003 Za kovárnou 422/17, Dolní Měcholupy, 111 01 Praha 10 Den vzniku funkce: 18. února 2026",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel zastupuje společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "HA MI DO , dat. nar. 21. října 2003 Za kovárnou 422/17, Dolní Měcholupy, 111 01 Praha 10",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 10 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "10 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 373820/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77135632&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=4344b6b1c2e7413482321c315a8ee9fc",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 373820/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81559057&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=fb00fc10c3554bd4aa3e47c61005ea96",
+          "year": 2023
+        },
+        {
+          "document_number": "C 373820/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77135632&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=4344b6b1c2e7413482321c315a8ee9fc",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 373820/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85827837&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=336f21dab26f4342a7741b0215b3cdd7",
+          "year": 2024
+        },
+        {
+          "document_number": "C 373820/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81559057&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=fb00fc10c3554bd4aa3e47c61005ea96",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 373820/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85827837&subjektId=1181710&spis=1328714",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=336f21dab26f4342a7741b0215b3cdd7",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 373820/SL4/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 07.04.2025",
+      "created_date": "2025-04-07",
+      "received_date": "2025-04-07",
+      "filed_date": "2025-04-14",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85827837&subjektId=1181710&spis=1328714",
+      "document_id": "85827837",
+      "spis": "1328714",
+      "subjekt_id": "1181710",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=336f21dab26f4342a7741b0215b3cdd7",
+      "pdf_name": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+      "download_links": [
+        {
+          "label": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=336f21dab26f4342a7741b0215b3cdd7",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100267180-20250402-171616.xml (12 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=cea95f4e519a4ad9ab31be289b6c24a8",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100267180-20250402-171616.pdf (551 kB, počet stran: 7)",
+          "url": "https://or.justice.cz/ias/content/download?id=0cbdbc521c08486ebe99ec8372db87b6",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "ocr",
+      "page_count": 1,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 373820/SL3/MSPH",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 20.05.2024",
+      "created_date": "2024-05-20",
+      "received_date": "2024-05-20",
+      "filed_date": "2024-05-20",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81559057&subjektId=1181710&spis=1328714",
+      "document_id": "81559057",
+      "spis": "1328714",
+      "subjekt_id": "1181710",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=fb00fc10c3554bd4aa3e47c61005ea96",
+      "pdf_name": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+      "download_links": [
+        {
+          "label": "Opis prilohy ucetni zaverky.pdf (288 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=fb00fc10c3554bd4aa3e47c61005ea96",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100182554-20240515-151940.xml (12 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=2b5c20a41166492fafa0acbe12aea88c",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100182554-20240515-151940.pdf (551 kB, počet stran: 7)",
+          "url": "https://or.justice.cz/ias/content/download?id=4b4c98891c0f47b386909e1d6850b78a",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "ocr",
+      "page_count": 1,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 373820/SL2/MSPH",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 07.05.2023",
+      "created_date": "2023-05-07",
+      "received_date": "2023-05-30",
+      "filed_date": "2023-06-10",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77135632&subjektId=1181710&spis=1328714",
+      "document_id": "77135632",
+      "spis": "1328714",
+      "subjekt_id": "1181710",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=4344b6b1c2e7413482321c315a8ee9fc",
+      "pdf_name": "Opis prilohy ucetni zaverky.pdf (287 kB, počet stran: 1)",
+      "download_links": [
+        {
+          "label": "Opis prilohy ucetni zaverky.pdf (287 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=4344b6b1c2e7413482321c315a8ee9fc",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100095788-20230502-124352.xml (12 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=50bb8ba4d6c547e1848bfcd6e0d6fca9",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100095788-20230502-124352.pdf (551 kB, počet stran: 7)",
+          "url": "https://or.justice.cz/ias/content/download?id=f412391382cd494b8ff2d62603e769fc",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "ocr",
+      "page_count": 1,
+      "metrics_found": []
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 2036,
+    "output_tokens": 1088,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "MatMat Lab s.r.o. je mladá firma založená v říjnu 2022, vlastněná a řízená jediným společníkem HA MI DO (nar. 2003). Společnost pravidelně podává účetní závěrky (2022–2024), ale žádná z nich neobsahuje strojově čitelná finanční data. Firma nevykazuje změny v názvu, sídle ani vedení, což naznačuje stabilitu, ale absence konkrétních finančních metrik neumožňuje posoudit ekonomickou výkonnost.",
+  "data_quality_note": "Data jsou velmi omezená – účetní závěrky jsou podány, ale neobsahují vytěžitelné finanční metriky, analýza je proto pouze formální.",
+  "insight_summary": [
+    {
+      "title": "Velmi mladá firma",
+      "detail": "Společnost vznikla 5. října 2022, má tedy necelé 3 roky existence. Pravidelně plní povinnost podávat účetní závěrky (2022, 2023, 2024)."
+    },
+    {
+      "title": "Jednočlenná struktura",
+      "detail": "Jediný společník a jednatel HA MI DO (21 let při založení) drží 100% kontrolu. Žádné změny ve vedení ani vlastnické struktuře od založení."
+    },
+    {
+      "title": "Stabilní formální parametry",
+      "detail": "Bez změn názvu, sídla nebo vedení. Firma sídlí na adrese U zeleného ptáka 1145/12, Praha 4 – Kunratice."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Chybí finanční metriky",
+      "detail": "Všechny tři účetní závěrky (2022–2024) jsou v rejstříku evidovány, ale neobsahují strojově čitelná data o aktivech, výnosech, zisku ani zadlužení. Bez přístupu k PDF nelze posoudit reálnou ekonomickou situaci."
+    },
+    {
+      "title": "Budoucí datum funkce jednatele",
+      "detail": "V datech je uvedeno 'Den vzniku funkce: 18. února 2026' u jednatele HA MI DO – pravděpodobně chyba v zápisu nebo plánovaná změna, což je neobvyklé a může signalizovat administrativní nesrovnalost."
+    },
+    {
+      "title": "Pravidelnost podání",
+      "detail": "Účetní závěrky podávány včas prostřednictvím správce daně (2022 v květnu 2023, 2023 v květnu 2024, 2024 v dubnu 2025), což ukazuje na formální disciplínu."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Datum funkce jednatele v budoucnosti",
+      "detail": "Zápis uvádí vznik funkce jednatele k 18. únoru 2026, což je v budoucnosti. Může jít o překlep nebo nesprávný záznam v rejstříku – v každém případě nesrovnalost, která by měla být vysvětlena."
+    },
+    {
+      "title": "Nulová transparentnost financí",
+      "detail": "Přestože firma podává účetní závěrky, žádná neobsahuje čitelná čísla. Bez přístupu k PDF dokumentům nelze ověřit, zda firma vůbec generuje tržby, má majetek nebo dluhy."
+    },
+    {
+      "title": "Mladý jednatel s plnou kontrolou",
+      "detail": "HA MI DO měl při založení 19 let (nar. 2003, firma založena 2022), nyní 21 let, a drží 100% firmy. Samo o sobě není problém, ale v kombinaci s absencí finančních dat jde o rizikový profil pro potenciální partnery."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": {
+    "source_name": "Chytrý rejstřík",
+    "source_url": "https://www.chytryrejstrik.cz/ico-17607248/matmat-lab-s-r-o",
+    "employees_hint": null,
+    "checks": [],
+    "snapshot": {
+      "url": "https://www.chytryrejstrik.cz/ico-17607248/matmat-lab-s-r-o",
+      "assets_mil_czk": 0.1,
+      "profit_mil_czk": null,
+      "employees_hint": null
+    }
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1181710&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1181710&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=1181710",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1181710&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1181710&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": "https://www.chytryrejstrik.cz/ico-17607248/matmat-lab-s-r-o"
+  },
+  "generated_at": "2026-03-08T18:33:38.243299+00:00",
+  "cache_status": "fresh"
+}

@@ -1,0 +1,143 @@
+{
+  "title": "Výpis z obchodního rejstříku",
+  "subtitle": "Necktip s.r.o. , C 371468 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "12. srpna 2022",
+    "Spisová značka": "C 371468 vedená u Městského soudu v Praze",
+    "Obchodní firma": "Necktip s.r.o.",
+    "Sídlo": "Hořejší 59, 252 26 Třebotov",
+    "Identifikační číslo": "174 20 211",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 12. srpna 2022",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel jedná za společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 25 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "25 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "12. srpna 2022",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 371468 vedená u Městského soudu v Praze",
+      "history": ""
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "Necktip s.r.o.",
+      "history": ""
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Hořejší 59, 252 26 Třebotov",
+      "history": ""
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "174 20 211",
+      "history": ""
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": ""
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona - výroba textilií, textilních výrobků, oděvů a oděvních doplňků - výroba a opravy obuvi, brašnářského a sedlářského zboží - výroba, opravy a údržba sportovních potřeb, her, hraček a dětských kočárků - sklenářské práce, rámování a paspartování - zprostředkování obchodu a služeb - velkoobchod a maloobchod - skladování, balení zboží, manipulace s nákladem a technické činnosti v dopravě - zasilatelství a zastupování v celním řízení - poskytování software, poradenství v oblasti informačních technologií, zpracování dat, hostingové a související činnosti a webové portály - reklamní činnost, marketing, mediální zastoupení - návrhářská, designérská, aranžérská činnost a modeling - fotografické služby - provozování kulturních, kulturně-vzdělávacích a zábavních zařízení, pořádání kulturních produkcí, zábav, výstav, veletrhů, přehlídek, prodejních a obdobných akcí - provozování tělovýchovných a sportovních zařízení a organizování sportovní činnosti",
+      "history": ""
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 12. srpna 2022",
+      "history": ""
+    },
+    {
+      "label": "Počet členů:",
+      "value": "1",
+      "history": ""
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Jednatel jedná za společnost samostatně.",
+      "history": ""
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 25 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+      "history": ""
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "25 000 ,- Kč",
+      "history": ""
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1166851&typVypisu=PLATNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1166851&typ=PLATNY"
+}

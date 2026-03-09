@@ -1,0 +1,50 @@
+          IČ:                  4656679
+
+                Rozvaha pro podnikatele, ve zkráceném rozsahu pro
+                 malou účetní jednotku, která nemá povinnost mít
+                       účetní závěrku ověřenou auditorem
+                                 ke dni 31.12.2022
+                                     (v celých tisících Kč)
+
+                                                                běžné účetní období       minulé
+                                                                                          účetní
+                              AKTIVA
+                                                                                          období
+                                                              brutto   korekce   netto
+                                                                                           netto
+                                                               1         2        3          4
+            AKTIVA CELKEM                                      40315     14822    25493     19547
+A.          Pohledávky za upsaný základní kapitál                  0         0        0          0
+B.          Stálá aktiva                                       22790     14822     7968       5945
+B.I.        Dlouhodobý nehmotný majetek                        22790     14822     7968       5945
+B.II.       Dlouhodobý hmotný majetek                              0         0        0          0
+B.III.      Dlouhodobý finanční majetek                            0         0        0          0
+C.          Oběžná aktiva                                      17280         0    17280     13402
+C.I.        Zásoby                                                 0         0        0          0
+C.II.       Pohledávky                                            47         0       47        245
+C.II.1.     Dlouhodobé pohledávky                                 38         0       38        231
+C.II.2.     Krátkodobé pohledávky                                  9         0        9         14
+C.II.3.     Časové rozlišení aktiv                                 0         0        0          0
+C.III.      Krátkodobý finanční majetek                            0         0        0          0
+C.IV.       Peněžní prostředky                                 17233         0    17233     13157
+D.          Časové rozlišení aktiv                               245         0      245        200
+                                                              běžné účetní minulé účetní
+                                PASIVA
+                                                                období        období
+                                                                   1            2
+         PASIVA CELKEM                                               25493         19547
+A.       Vlastní kapitál                                              7339          6092
+A.I.     Základní kapitál                                              150           150
+A.II.    Ážio a kapitálové fondy                                          0            0
+A.III.   Fondy ze zisku                                                   0            0
+A.IV.    Výsledek hospodaření minulých let (+/-)                          0            0
+A.V      Výsledek hospodaření běžného účetního období (+/-)          15188         13232
+A.VI.    Rozhodnuto o zálohové výplatě podílu na zisku (-)           -7999         -7290
+B.+C.    Cizí zdroje                                                  3397          2911
+B.       Rezervy                                                          0            0
+C.       Závazky                                                      3397          2911
+C.I.     Dlouhodobé závazky                                            183            30
+C.II.    Krátkodobé závazky                                           3214          2881
+C.III.   Časové rozlišení pasiv                                           0            0
+D.       Časové rozlišení pasiv                                      14757         10544
+

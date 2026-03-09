@@ -1,0 +1,427 @@
+{
+  "subject_id": "255878",
+  "name": "SPR Building, s.r.o.",
+  "ico": "27830586",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "SPR Building, s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "278 30 586"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "14. ledna 2008"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 37031 vedená u Krajského soudu v Ostravě"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Rudná 2378/100, Zábřeh, 700 30 Ostrava"
+    }
+  ],
+  "executives": [
+    {
+      "role": "jednatel",
+      "name": "TOMÁŠ HÄRING",
+      "birth_date": "6. prosince 1973",
+      "raw": "TOMÁŠ HÄRING , dat. nar. 6. prosince 1973 Skalice 464, 738 01 Frýdek-Místek Den vzniku funkce: 20. listopadu 2013"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Jednatel zastupuje společnost ve všech věcech samostatně.",
+      "birth_date": null,
+      "raw": "Jednatel zastupuje společnost ve všech věcech samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "RT TORAX Development, a.s.",
+      "raw": "RT TORAX Development, a.s. , IČ: 177 33 561 Rudná 2378/100, Zábřeh, 700 30 Ostrava"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "TOMÁŠ HÄRING , dat. nar. 6. prosince 1973 Skalice 464, 738 01 Frýdek-Místek Den vzniku funkce: 20. listopadu 2013",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel zastupuje společnost ve všech věcech samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "RT TORAX Development, a.s. , IČ: 177 33 561 Rudná 2378/100, Zábřeh, 700 30 Ostrava",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 200 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "200 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2019,
+      "sources": [
+        {
+          "document_number": "C 37031/SL21/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631086&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=ba384582779840fb8205aa88435a33cd",
+          "year": 2020
+        }
+      ],
+      "assets": 71.35,
+      "equity": 44.35,
+      "liabilities": 26.93,
+      "revenue": 0.98,
+      "operating_profit": -3.63,
+      "debt": null,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 62.2,
+      "liability_ratio_pct": 37.7,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2020,
+      "sources": [
+        {
+          "document_number": "C 37031/SL22/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631087&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=4dc94be8e3994868b72ce7c4a7dec456",
+          "year": 2021
+        },
+        {
+          "document_number": "C 37031/SL21/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631086&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=ba384582779840fb8205aa88435a33cd",
+          "year": 2020
+        }
+      ],
+      "assets": 70.43,
+      "equity": 41.53,
+      "liabilities": 28.87,
+      "revenue": 0.69,
+      "operating_profit": -2.33,
+      "debt": null,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 59.0,
+      "liability_ratio_pct": 41.0,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 37031/SL23/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78482453&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=dfd7a4027c91435fbde5d4aff33508e3",
+          "year": 2022
+        },
+        {
+          "document_number": "C 37031/SL22/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631087&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=4dc94be8e3994868b72ce7c4a7dec456",
+          "year": 2021
+        }
+      ],
+      "assets": 66.46,
+      "equity": 51.9,
+      "liabilities": 14.53,
+      "revenue": 16.89,
+      "operating_profit": 10.57,
+      "debt": null,
+      "net_profit": 10.36,
+      "net_margin_pct": 61.3,
+      "equity_ratio_pct": 78.1,
+      "liability_ratio_pct": 21.9,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 37031/SL25/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81353593&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=df782b2794564eff83c3489a2c2c144f",
+          "year": 2023
+        },
+        {
+          "document_number": "C 37031/SL23/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78482453&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=dfd7a4027c91435fbde5d4aff33508e3",
+          "year": 2022
+        }
+      ],
+      "assets": 91.44,
+      "equity": 52.29,
+      "liabilities": 38.87,
+      "revenue": 6.9,
+      "operating_profit": 0.36,
+      "debt": null,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 57.2,
+      "liability_ratio_pct": 42.5,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 37031/SL26/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86534131&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=ce8696445701439eadc4d98e2603e05d",
+          "year": 2024
+        },
+        {
+          "document_number": "C 37031/SL25/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81353593&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=df782b2794564eff83c3489a2c2c144f",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 37031/SL26/KSOS",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86534131&subjektId=255878&spis=851861",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=ce8696445701439eadc4d98e2603e05d",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 37031/SL26/KSOS",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 17.05.2025",
+      "created_date": "2025-05-17",
+      "received_date": "2025-05-17",
+      "filed_date": "2025-05-23",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86534131&subjektId=255878&spis=851861",
+      "document_id": "86534131",
+      "spis": "851861",
+      "subjekt_id": "255878",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=ce8696445701439eadc4d98e2603e05d",
+      "pdf_name": "Priloha_v_uc.zaverce.docx (29 kB)",
+      "extraction_mode": "ocr",
+      "page_count": 0,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 37031/SL25/KSOS",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 08.05.2024",
+      "created_date": "2024-05-08",
+      "received_date": "2024-05-08",
+      "filed_date": "2024-05-08",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81353593&subjektId=255878&spis=851861",
+      "document_id": "81353593",
+      "spis": "851861",
+      "subjekt_id": "255878",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=df782b2794564eff83c3489a2c2c144f",
+      "pdf_name": "Priloha_v_uc.zaverce.docx (28 kB)",
+      "extraction_mode": "ocr",
+      "page_count": 0,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 37031/SL23/KSOS",
+      "type": "účetní závěrka [2022]",
+      "created_date": null,
+      "received_date": "2023-09-19",
+      "filed_date": "2023-09-25",
+      "pages": 12,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78482453&subjektId=255878&spis=851861",
+      "document_id": "78482453",
+      "spis": "851861",
+      "subjekt_id": "255878",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=dfd7a4027c91435fbde5d4aff33508e3",
+      "pdf_name": "2022 rejstřík.pdf (88 kB, počet stran: 12)",
+      "extraction_mode": "digital",
+      "page_count": 12,
+      "metrics_found": [
+        "assets",
+        "debt",
+        "equity",
+        "liabilities",
+        "net_profit",
+        "operating_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "C 37031/SL22/KSOS",
+      "type": "účetní závěrka [2021]",
+      "created_date": null,
+      "received_date": "2022-12-19",
+      "filed_date": "2022-12-20",
+      "pages": 12,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631087&subjektId=255878&spis=851861",
+      "document_id": "74631087",
+      "spis": "851861",
+      "subjekt_id": "255878",
+      "years": [
+        2021
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=4dc94be8e3994868b72ce7c4a7dec456",
+      "pdf_name": "2021 účetní závěrka.pdf (94 kB, počet stran: 12)",
+      "extraction_mode": "digital",
+      "page_count": 12,
+      "metrics_found": [
+        "assets",
+        "debt",
+        "equity",
+        "liabilities",
+        "net_profit",
+        "operating_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "C 37031/SL21/KSOS",
+      "type": "účetní závěrka [2020]",
+      "created_date": null,
+      "received_date": "2022-12-19",
+      "filed_date": "2022-12-20",
+      "pages": 11,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74631086&subjektId=255878&spis=851861",
+      "document_id": "74631086",
+      "spis": "851861",
+      "subjekt_id": "255878",
+      "years": [
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=ba384582779840fb8205aa88435a33cd",
+      "pdf_name": "2020 účetní závěrka.pdf (90 kB, počet stran: 11)",
+      "extraction_mode": "digital",
+      "page_count": 11,
+      "metrics_found": [
+        "assets",
+        "debt",
+        "equity",
+        "liabilities",
+        "net_profit",
+        "operating_profit",
+        "revenue"
+      ]
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_overview": "SPR Building, s.r.o. je od roku 2008 stavební společnost s jedním společníkem (RT TORAX Development, a.s.) a stabilním vedením od roku 2013. Firma vykazuje extrémně volatilní výsledky: v letech 2019–2020 minimální tržby a ztráty, v roce 2021 skok na 16,89 mil. Kč s čistým ziskem 10,36 mil. Kč (marže 61 %), v roce 2022 opět propad tržeb na 6,9 mil. Kč. Data za roky 2023 a 2024 nebyla strojově vytěžena, přestože účetní závěrky byly podány.",
+  "data_quality_note": "Finanční metriky jsou dostupné pouze do roku 2022, za roky 2023 a 2024 se nepodařilo data extrahovat, což výrazně omezuje aktuálnost analýzy.",
+  "insight_summary": [
+    {
+      "title": "Extrémní výkyvy tržeb",
+      "detail": "Tržby kolísají od 0,69 mil. Kč (2020) přes 16,89 mil. Kč (2021) zpět na 6,9 mil. Kč (2022). Firma zjevně pracuje na projektech s nepravidelným cash flow."
+    },
+    {
+      "title": "Ziskovost jen v roce 2021",
+      "detail": "V letech 2019–2020 provozní ztráty (-3,63 a -2,33 mil. Kč), v roce 2021 výrazný zisk 10,36 mil. Kč s marží 61 %, v roce 2022 opět jen 0,36 mil. Kč provozního zisku."
+    },
+    {
+      "title": "Stabilní vlastní kapitál",
+      "detail": "Vlastní kapitál se pohybuje mezi 41,53 a 52,29 mil. Kč, podíl na aktivech 57–78 %. Firma si udržuje solidní kapitálovou základnu i přes kolísavé výsledky."
+    },
+    {
+      "title": "Nárůst aktiv v roce 2022",
+      "detail": "Aktiva vzrostla z 66,46 mil. Kč (2021) na 91,44 mil. Kč (2022), současně narostly závazky z 14,53 na 38,87 mil. Kč – možný nový projekt nebo investice."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Projektový byznys model",
+      "detail": "Extrémní rozdíly v tržbách mezi roky naznačují, že firma realizuje jednotlivé větší zakázky spíše než kontinuální provoz. Rok 2021 byl zjevně rokem dokončení velkého projektu."
+    },
+    {
+      "title": "Stabilní vlastnická struktura",
+      "detail": "Jediný společník RT TORAX Development, a.s. a jednatel Tomáš Häring ve funkci od roku 2013 bez změn. Žádné změny názvu ani sídla – firma působí stabilně po organizační stránce."
+    },
+    {
+      "title": "Chybějící aktuální data",
+      "detail": "Účetní závěrky za 2023 a 2024 byly podány, ale metriky nebyly vytěženy. Není možné posoudit, zda firma pokračuje v trendu z roku 2022 nebo se vrátila k ziskovosti."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Extrémní zpoždění účetní závěrky za rok 2020",
+      "detail": "Podklady za rok 2020 byly založeny až v prosinci 2022, tedy téměř 2 roky po skončení účetního období. To je výrazné porušení zákonné lhůty."
+    },
+    {
+      "title": "Opakované pozdní podání",
+      "detail": "Závěrky za 2021 a 2022 byly také podány se zpožděním 10–12 měsíců. Firma systematicky nedodržuje lhůty pro zveřejnění účetních závěrek."
+    },
+    {
+      "title": "Dva roky ztrát bez vysvětlení",
+      "detail": "V letech 2019–2020 firma vykazovala minimální tržby (pod 1 mil. Kč) a provozní ztráty, přesto udržovala aktiva přes 70 mil. Kč. Není jasné, čím se firma zabývala a proč neměla příjmy."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=255878&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=255878&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=255878",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=255878&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=255878&typVypisu=UPLNY&full=false"
+  },
+  "generated_at": "2026-03-08T04:33:12.614074+00:00"
+}

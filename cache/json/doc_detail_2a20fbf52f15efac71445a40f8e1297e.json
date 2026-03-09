@@ -1,0 +1,22 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871275&subjektId=921321&spis=1006549",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+  "pdf_name": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+  "pdf_candidates": [
+    {
+      "label": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+      "url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+      "is_pdf": true,
+      "page_hint": 8,
+      "candidate_score": -12,
+      "pdf_index": 0
+    }
+  ],
+  "download_links": [
+    {
+      "label": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+      "url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+      "is_pdf": true
+    }
+  ]
+}

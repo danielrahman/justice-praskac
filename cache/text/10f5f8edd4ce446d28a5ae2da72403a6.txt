@@ -1,0 +1,95 @@
+          IČ:              24694401
+
+                Rozvaha pro podnikatele, ve zkráceném rozsahu pro
+                 malou účetní jednotku, která nemá povinnost mít
+                       účetní závěrku ověřenou auditorem
+                                 ke dni 31.12.2024
+                                 (v celých tisících CZK)
+
+                                                             běžné účetní období        minulé
+                                                                                        účetní
+                            AKTIVA
+                                                                                        období
+                                                           brutto    korekce   netto
+                                                                                         netto
+                                                             1         2        3          4
+            AKTIVA CELKEM                                     4620      1836     2784       2545
+B.          Stálá aktiva                                      1023      1022        1         30
+B.I.        Dlouhodobý nehmotný majetek                        890       890        0          0
+B.II.       Dlouhodobý hmotný majetek                          132       132        0         29
+C.          Oběžná aktiva                                     3597       814     2783       2515
+C.II.       Pohledávky                                        1038        22     1016        663
+C.II.2.     Krátkodobé pohledávky                              974        22      952        597
+C.II.3.     Časové rozlišení aktiv                              64                 64         66
+C.IV.       Peněžní prostředky                                 505                505        267
+B.III.      Dlouhodobý finanční majetek                          1                  1          1
+C.I.        Zásoby                                            2054       792     1262       1585
+                                                             běžné účetní minulé účetní
+                               PASIVA
+                                                               období        období
+                                                                  1            2
+        PASIVA CELKEM                                                2784          2545
+A.      Vlastní kapitál                                             -1306         -1578
+A.I.    Základní kapitál                                              400           400
+A.IV.   Výsledek hospodaření minulých let (+/-)                     -1978          -953
+A.V     Výsledek hospodaření běžného účetního období (+/-)            272         -1025
+B.+C.   Cizí zdroje                                                  4090          4123
+C.      Závazky                                                      4090          4123
+C.II.   Krátkodobé závazky                                           4090          4123
+         IČ:                  24694401
+
+               Výkaz zisku a ztráty pro podnikatele - druhové členění,
+                                  v plném rozsahu
+                                  ke dni 31.12.2024
+                                      (v celých tisících CZK)
+                                                                         běžné účetní minulé účetní
+                                 Název položky
+                                                                           období        období
+                                                                              1            2
+I.         Tržby z prodeje výrobků a služeb                                     12953         17433
+A.         Výkonová spotřeba                                                    10699         14920
+D.         Osobní náklady                                                        1299          3511
+A.2        Spotřeba materiálu a energie                                           518           491
+A.3        Služby                                                               10181         14429
+D.1.       Mzdové náklady                                                         969          2666
+           Náklady na sociální zabezpečení, zdravotní pojištění a
+D.2                                                                               330          845
+           ostatní náklady
+D.2.1.     Náklady na sociální zabezpečení a zdravotní pojištění                  324          828
+D.2.2.     Ostatní náklady                                                          6           17
+E.         Úpravy hodnot v provozní oblasti                                       806           92
+           Úpravy hodnot dlouhodobého nehmotného a hmotného
+E.1.                                                                               14          100
+           majetku
+           Úpravy hodnot dlouhodobého nehmotného a hmotného
+E.1.1.                                                                             14          100
+           majetku - trvalé
+III.       Ostatní provozní výnosy                                                392           442
+F.         Ostatní provozní náklady                                                61           169
+F.5.       Jiné provozní náklady                                                   40           124
+*          Provozní výsledek hospodaření (+/-)                                    480          -817
+J.         Nákladové úroky a podobné náklady                                      167           206
+J.2.       Ostatní nákladové úroky a podobné náklady                              167           206
+VII.       Ostatní finanční výnosy                                                                4
+K.         Ostatní finanční náklady                                                41            26
+*          Finanční výsledek hospodaření (+/-)                                   -208          -208
+**         Výsledek hospodaření před zdaněním (+/-)                               272         -1025
+L.         Daň z příjmů                                                             0             0
+**         Výsledek hospodaření po zdanění (+/-)                                  272         -1025
+***        Výsledek hospodaření za účetní období (+/-)                            272         -1025
+           Čistý obrat za účetní období = I. + II. + III. + IV. + V. +
+*                                                                              13345         17899
+           VI. + VII.
+E.3.       Úpravy hodnot pohledávek                                                             -8
+F.3.       Daně a poplatky                                                          7           14
+III.1.     Tržby z prodaného dlouhodobého majetku                                 364          442
+F.1.       Zůstatková cena prodaného dlouhodobého majetku                          14           31
+VI.2.      Ostatní výnosové úroky a podobné výnosy                                              20
+                                           běžné účetní minulé účetní
+                           Název položky
+                                             období        období
+                                                1            2
+VI.      Výnosové úroky a podobné výnosy               0           20
+III.3.   Jiné provozní výnosy                         28
+E.2.     Úpravy hodnot zásob                        792
+

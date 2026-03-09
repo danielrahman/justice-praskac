@@ -1,0 +1,63 @@
+{
+  "subject_id": "112777",
+  "name": ", vedená u",
+  "ico": "",
+  "basic_info": [
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "20. srpna 1998"
+    }
+  ],
+  "executives": [],
+  "owners": [],
+  "statutory_bodies": [],
+  "financial_timeline": [],
+  "financial_documents": [],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_overview": "Firma založená v srpnu 1998, ale z veřejných zdrojů justice.cz se nepodařilo vytěžit prakticky žádné použitelné údaje – chybí název společnosti, IČO, vedení, vlastníci i jakákoli finanční data. Bez těchto základních informací nelze provést smysluplnou analýzu stability, ziskovosti ani trendů. Jde o extrémně nekompletní datový záznam.",
+  "data_quality_note": "Data jsou zcela nedostatečná – chybí identifikace firmy, orgány, vlastnická struktura i finanční výkazy, analýza není možná.",
+  "insight_summary": [
+    {
+      "title": "Žádné identifikační údaje",
+      "detail": "Název firmy i IČO jsou prázdné, nelze ověřit, o jakou společnost se jedná."
+    },
+    {
+      "title": "Chybí vedení a vlastníci",
+      "detail": "Nejsou evidováni žádní jednatelé, statutární orgány ani společníci."
+    },
+    {
+      "title": "Nulová finanční data",
+      "detail": "Žádné účetní závěrky, výroční zprávy ani dokumenty ze Sbírky listin nejsou k dispozici."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Nelze hodnotit historii změn",
+      "detail": "Bez jmen a adres není možné sledovat obměny vedení, sídla ani názvu společnosti."
+    },
+    {
+      "title": "Absence trendů",
+      "detail": "Bez časové řady finančních dat nelze posoudit růst, zadlužení, ziskovost ani kapitálovou strukturu."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Prázdný záznam v rejstříku",
+      "detail": "Firma existuje od roku 1998, ale veřejný rejstřík neobsahuje téměř žádné údaje – buď jde o technickou chybu při stahování dat, nebo o společnost s minimální aktivitou a neplněním publikačních povinností. Bez dalších zdrojů nelze říct víc."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=112777&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=112777&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=112777",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=112777&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=112777&typVypisu=UPLNY&full=false"
+  },
+  "generated_at": "2026-03-08T04:47:31.309450+00:00"
+}

@@ -1,0 +1,877 @@
+
+
+--- PAGE 10 ---
+Ss. Stav v béZném Stav v minulém
+
+Oznaéent PASIVA fad.|  Uéeinim obdobi Uéetnim obdob{
+a b c 5 6
+Cc Zavazky Souéet C.I. az C.lll. | 107 50 554 90 002
+Cl. Dlouhodobé zAvazky Souéet I.1. aZ 1.9.) 108 2 870 2 432
+C.l.41. Vydané dluhopisy 109
+C44. Vyméniteiné dluhopisy 110
+C.1.1.2, Ostatn! dluhopisy 111
+C.I.2. Zavazky k Uvérovym institucim 12
+C.1.3. Dlouhodobé pfijaté zalohy 113
+C.L.4. Zavazky 2 obchodnich vztaht 114 82 51
+C5. Dlouhodobé sménky k thradé 415
+C.L.6. Zavazky - oviddana nebo ovladajici osoba 116
+C.L.7, Zavazky — podstatny viiv 117
+C.I1.8. OdloZeny dafiovy zavazek 118 2788 2 381
+C.1.9. Zavazky — ostatni 119
+C.9.1. Zavazky ke spoleénikim 120
+C.1.9.2. Dohadné téty pasivni 121
+C.1.9.3, Jiné zavazky 122
+Cull. Kratkodobé zévazky Souéet 11.1. az 1.8.) 123 47 684 87 570
+Cul. Vydané dluhopisy 124
+Cuil.1.4. Vyménitelné dluhopisy 125
+C.U1.2. Ostatn! dluhopisy 126
+C.ll.2, Zavazky k tivérovym institucim 127
+Cul.3. Kratkodobé phijaté zalohy 428
+CuIL4. Zavazky z obchodnich vztahi 129 30 576 62 839
+CAS. Kratkodobé sménky k Uhradé 130
+C.IL6, Zavazky — oviadana nebo ovlddalici osoba 131
+C.IL.7. Zavazky — podstatny viiv 132
+C.IL8. ZAvazky ostatn! 133 17 108 24 731
+C.IL.8.1. Zavazky ke spoletnikim 134
+C.IL8.2. Kratkodobé finanén{ vypomoci 135
+C.ll.8.3. Zavazky k zaméstnanctim 136 984 826
+C.IL8.4, Zavazky ze socialniho zabezpeéen! a zdravatntho pojistan! 137 559 467
+C.IL.8.5. Stat — dafiové zavazky a dotace 138 238 133
+C.1L.8.6. Dohadné wéty pasivni 139 15 327 23 305
+C.I1.8.7. Jiné zavazky 140
+
+get ski 0,
+
+RS Mg
+ict
+- KA >
+2 ~
+
+Ka
+
+<n Aaa eS
+
+
+--- PAGE 11 ---
+ofs. Stav v béZném Stav v minulém
+
+Oznazen! PASIVA Fad.] — d&etnim obdobi Giéetnim obdobt
+a b c 5 6
+Cll. Casové rozlieni pasiv Souéet 11.4. az ill.2. | 148
+Cult. Vydaje pfistich obdobf 149
+C.IN.2. Vynosy pFiStich obdobf 150
+D. Casové roziigeni pasiv Souéet D.1. a2 D.2.| 141
+D1. Vydaje piiStich obdob/ 142
+D.2. Vynosy pfl&tich obdobi 143
+
+Ss Pathe apele 00.8%
+oe
+
+| am con
+www. dshiearosonprata cz DIC CZ48539589
+
+SAMSON PRAHA, spol. s r.o.
+Stépanské 642/41, 110 00 Praha 1
+
+Sestaveno dne: 25.06.2024 Podpisovy zaznam statutémfho orgénu tidetni jednotky
+nebo podpisovy vzor fyzické osoby, které je Géetn{ jednotkou
+
+DEMM
+
+Pravn{ forma tidetnf jednotky PFedmét podnikant Pozn.:
+
+
+--- PAGE 12 ---
+Vykaz zisku a ztraty ve druhovém Obchodn! firma nebo jiny nazev uéetnI jednotky
+Slenénf podle PFllohy &. 2
+
+whlaBky & 00/2002 Sb. VYKAZ ZISKU A ZTRATY SAMSON PRAHA, spol. s 1.0.
+v plném rozsahu
+Uéetn! jednotka dorué! Sidlo nebo bydli&té U&etn{ jednotky
+U@etn{ zavérku soudasné ke dni 31.12.2023 a misto podnikanl, liS(-li se od bydlisté
+zdehe pin (v celych tisicich Ke) Stépénské 642/41
+1.x pfislu&nému finanénimu Praha 4
+Uifadu Rok | Mésic 1¢ 410 00
+2023 48539589
+Oznatent TEXT geo Skute&nost v uéetnim obdob!
+béZném minulém
+a b c 4 2
+t Tréby z prodeje vyrobkii a sluzeb 4 228 980 371 242
+u Tréby za prodej zboz! 2 150 4
+A. Vykonova spotfeba SouéetA.1.aZA3. | 3 211 089 355 449
+A. 1. | Néklady vynalozené na prodané zboz{ 4 249
+A. 2, | Spotfeba materidlu a energio 5 17772 18 473
+A, 3. | Sluzby 6 193 068 336 976
+B, Zména stavu zésob viastn! Ginnosti (+/-) t
+c. Aktivace (-) 8
+D. Osobni naklady Souéet D.1.a2D.2. | 9 6 343 6112
+D. 1. | Mzdové naklady 10 4900 4708
+D. 2. | N&klady na socialni zabezpeéent, zdravotn! pojiétén! a ostatni naklady 1 1 443 1 404
+D. 2.4.) Naklady na sociainf zabezpeten/ a zdravotn{ poji&tén! 12 1437 1 384
+D. = 2.2.) Ostatni naklady 13 6 20
+E. Upravy hodnot v provoznf oblasti Souéet E.1.aZE.3. | 14 9018 6 823
+E. 1. | Upravy hodnot dlouhodobého nehmotného a hmotného majetku 15 8811 6 823
+Ei 1A.) Upravy hodnot dlouhodobého nehmotného a hmotného majetku — trvalé 16 8811 6 823
+E. 1.2,| Upravy hodnot dlouhodobého nehmotného a hmotného majetku ~ doéasné 7
+—. 2, | Upravy hodnot zasob 18
+—. 3. | Upravy hodnot pohledavek 19 207
+Ne Ostatn! provozni vynosy Souéet Ill.1. az ll.3. | 20 1617 2429
+Ill. 1. | Tr2by z prodaného dlouhodobého majetku 24 1493 1013
+Wl. 2. | Tréby z prodaného materidlu 22 23 76
+lll. 3. | Jiné provoznf vynosy 23 401 1 340
+F; Ostatn! provoznf naéklady Souéet F.1.aZF.5. | 24 1795 630
+F. 1. | Zisstatkova cena prodaného dlouhodobého majetku 25 1402 269
+F. 2, | Prodany material 26
+F. 3. | Dané a poplatky 27 93 88
+F. 4. | Rezervy v provozni oblasti a komplexn{ naklady pfiStich obdobf 28
+F. 5. | Jiné provozni naklady 29 300 273
+* Provozn! vysledek hospodafent (+/-) L+lh-A.-B.-C.-D.-E.+ill-F. | 30 2 502 4661
+
+Kn oy,
+? KA %\
+Ke
+
+<n
+
+
+--- PAGE 13 ---
+Gislo i i A
+Oznaégeni TEXT Skuteénost v Uéetnim obdobi
+
+Fadkt
+béZném minulém
+a b c 4 2
+IV. Vynosy z dlouhodobého finanéntho majetku — podfly SouGet 1V.1. aZIV.2. | 34
+IV. 1. | Vynosy z podilti ~ ovlaédana nebo ovlddajici osoba 32
+lV. 2. | Ostatnf vynosy z podfic 33
+G. Naklady vynaloZené na prodané podily 34
+Vv. Vynosy z ostatniho dlouhodebého finanéniho majetku Souéet V.1,aZV.2. | 35
+V. 1. | V¥nosy z ostatniho dlouhodobého finanéntho majetku — ovlddand nebo oviddajic | 36
+|_asoha_
+Vi. 2; Ostatnl vynosy z ostatn(ho dlouhodobého finanéniho majetku 37
+H. Naklady souvisejfci s ostatnim dlouhodobym finanénim majetkem 38
+Vi. Vynosové uroky a podobné vynosy Souéet VI.1. aZ V1.2. | 39 34
+Vi. 1. | V¥nosové Uroky a podobné vynosy — oviddana nebo oviadajfcl osaba 40 34
+VI.2, | Ostatnl vynosové uroky a podabné vynosy 41
+I Upravy hodnot a rezervy ve finanén! oblasti 42
+J. Nakladové uroky a podobné naklady Souéet J.1,aZJ.2, | 43
+J. 1, | Nakladové troky a podobné naklady ~ ovlddand nebo oviddajici osoba 44
+J. 2. | Ostatni nakladové uroky a podobné néklady 45
+Vil, Ostatnf finanén! vynosy 46 5 16
+K. Ostatni finanénI naklady 47 1506 1 542
+. Finanénl vysledek hospodafent (+/-) V.-G.4+V.-H+VL-L-d.+VIL-K. | 48 -1 467 -1 526
+“ Vysledek hospodafen! pred zdanénim (+/-) *(F 30)+*(.48) | 49 1035 3 135
+Lk; Dai z pifima Souéet L.1.aZ1.2. | 50 494 642
+L, 1, | Daw zptlimt splatna 51 87 28
+L. 2. | Dai z pilimt odlozena (+/-) 52 407 614
+" Vysledek hospodafen! po zdanénl (+/-) ™(49)-L. | 53 541 2.493
+M. Pfevad podilu na vysledku hospodaten! spoleénikiim (+/-) 54
+a Vysledek hospodafenf ** (.53)-M. | 55 541 2 493
+2a titetn{ obdabl (+/-)
+* Cisty obrat za uéetn{ obdobi h+th+lh+M4+V.+Vi+Vi | 58 230 786 373 691
+art ka p by,
+Pralhas opalle 7 Cee
+
+CR aD anncson
+www.samsonpraha.cz DIC CZ48539589
+
+SAMSON PRAHA, spol. s ro.
+Stépanska 642/41, 110 00 Praha 1
+
+Sestaveno dne: 25.06.2024 Podpisovy zaéznam statutamtho organu Uéetn! jednotky
+nebo podpisovy vzor fyzické osoby, me xs Jednotkou
+
+MLL
+
+Pravni forma uéetn{ jednatky Pfedméat podnikan{ Pozn.:
+
+
+--- PAGE 14 ---
+P¥iloha déetni zavérky za rok 2023
+Obsah
+1 Oe cn inforMace.....ccccccscccsccsceseccsecsscseceessesesessscsecsessacsessesseeseseeecseentesendseeatenesvaassanesnsaeeesed
+11 Ubetrni jedmotha oc ccccccccssssescssssssncsececsusscsesessesncsecsesnsneansessesvesssnessensacsneansnsesssnenssennserensnsed
+1.2. Zménya dodatky v obchodnim rejsttiku v prGb@hu roku 2023 os seeeeteeeesresevevseereensD
+1.3 Zaméstnanci a OdMEny Organ ......cecccccsceseesccsccsceecceseecceeeeeeeceeceereseeseeeeesereeeenenseeessssesesessseD
+1.4 = Z&lohy, zavdavky, zapijéky a dvéry poskytnuté élentim Fidicich, kontrolnich prip. spravnich
+OFAN. cesecsssesccssesessesscsscsscssssesssseessceeeensecansassassecaccsessscaecasesesecesesassssssececceaceaseasesssacacesessessessesensse
+2 Ubetni zdsady a pouzité Udetnl mMetody ......ccceccecsessessessessssssstsanesressescssesnsensenssnssteseteeeerseteateneeeed
+2.1 Diouhodoby hmotny a nehmotny majetek nc. ccccccsseetessesesessessescsrseterssensssennanseereer A
+2.2 Dlouhodoby finanEnf majetek ........ ce eeeeessessessssecsecsseesssenepsesesstssesesssessiesstsssecsarstseeeaseeneres
+23 — LAS ODY essusscrsesscsscie men nncraanmareanasaonsnsemarr cies ieee er ER ONEET ENTE OND
+2.3.1 Nakupované zdsoby (material, SUTOVIMY) ..... ccc resterstsseseeersctsrsesstssssssteestessesstseageecssesed
+2.3.2 — ZdsOby Viastnl VVPODY...... ce seecsesssecsssesesssetserteeseseteseesesnearesssessenssepsseteaneesseesessseneaeeseeeessD
+2.3.3 ZbOZl Na SklAdE ssiesssnnesnccrnmannma ccna ancien aE
+2.3.4 Pfirtstky a piichovky 2vifatiscsccsnie.casrannnssamannnnmanmaamiiaaan nmin.
+2:4 ‘Krdtkodoby Tinanchl Majetek ...... scc.ssissiciasssacsscsenvevessevvavesicssacenntneacontscans coommverurerneennenns neta.
+2.5  Dlouhodobé a kratkodobé pohledavky vicisisscsesssssesssevsersessnsuvscveresseovesraennonsesnsronseerivaersraee
+2.6 Dlouhodobé a kratkodobé zavazky a piijaté UVErY. cesses eeeeeertesssneesseessssesseeetsenerssssreeesseerD
+2.7 —-" WiSttn Kapital sic. .ccvsasecscotassvsaceccatcnensscceonsenssnsssavaraecoiedbededdedadecaesneaceseranassvinrtvstiatevivenensereeD
+28 Dated Pill MG iesrseccencccsssinonincacvmninecanaveminannmennaesiamecnsnensmvirennaesncerriveenereeO
+2.9 VY MOSY a NSKIAMY ......ccsscasscserssenarencyroessurepestevasusanssasveassonsvedsnesab yas ieannssonsennrensuasenssevedadtedcieneceoO
+2.10 Odchylky od vySe uvedenych Udetnich Metod ........ccessseeeteeresresteceteeesssatesstsseensserseeeness®
+2.11  Zasady pro uréovani obsahu pfehledu o penéZnich tocich a pfehledu o zménach viastniho
+KAP ICAI «1. rrserssenresroverrsemnreeresuencsscurnseseresysenusesuesentneneenssuencanepestenivagunuaioupertehiediceatuiaiiend duh GveutedipierdnO
+2.12 Zplisob stanoveni opravnych polozek, opravek k majetku, zoUsob stanoveni rezerv, zpusob
+uplatnény pfi prepoétu udajd v cizich ménach a na éeskou ménu, zptisob stanoveni redlné hodnoty
+prisluSného majetku a zavazku, idaje o rozsahu, podstaté a druhu derivatt ....... cscs B
+2121. Zptisob stanoveni opravnych POlOZek....c.csccccscescsessssesssesesencsescessesscscatscetsneseetsseeeeeesO
+2.12.2 Zptsob stanovent odpisovych plant dlounodobého majetku .........cccesesseesereeeeeseeee 7
+2.12.3 ZPUSOb StANOVENL FEZELV.....ccesscecseescessecssesaceseeavensseeesssssessssesetersesseessesasseaseaeeesteseees D
+2.12.4 Zpusob uplatnény pri prepottu dajd v cizich m@nach a na Eeskou MENU «ose 7
+2.12.5 ZpUsob stanoveni reainé hodnoty u majetku a zavazkd, které se v souladu se
+ZAKONEM OCRAU! rEalMOU HOUMOLOU :, .asercrcransenicnrsonsrepsecdeldsosaerdubuonvenavedrtntevsia’ vacdiidcccdvanbivcniese gansieD
+2:13. SAIZEHl NOANGEY seessivecisxsvesivszssss.a.ersnorsererteenedour ar inrremaiiominar ana EManiEMAATTNEL
+2.14 Finanéni pronajem s ndslednou koupi najaté V6Ci ce eeeeeserereeneteeeeserssseenecsetecsetesaneeeee®
+2.15  Pouditl OdNAAU ......cccsccccesceserecseceearetsscensscsenseeseneavebvnsdaeadsiaaysoretenencneassidavddsesuansenrsaesasernenses®
+2.16 Nasledné UdalOSti ce sssseccccecceccsersscsenetsesssaseesseeassnssvseasssesessseuesensarsessessanensevsesasacseeee®
+3 Doplujici informace k rozvaze a vy¥kaZU ZiSKU a Ztraty..ecessesseseeesssesersseraseressressrssnvessresssesarenees®
+eg hea REAMGHY sscicwns sain amma naca aE
+c4 Bfayhodoby MMOtNY Majetek......ccccccccsessscssssescssssseeesessscsescessvsussesesseaceescerscereuesessersveanseeneneD)
+2 17; ie
+a
+-_ ad
+= —— >
+os
+&,
+y /
+Lory te
+
+
+--- PAGE 15 ---
+3.4  Nedoplatky z titulu dané z prijm&, pojistného na socidlnim pojigténim a zdravotnim
+POJISCOME :....sccccsscseorsntnerscesssovesnenrstsaracsecserstevesesevssasetessonesintinsbsnes sdiaiynephensbensbueseshabeadorevendngesensnevente] O)
+3.5 OdloZeny dafovy zavazek nebo pohledavka.........sssssscenscesessreesesesssresenestesesssreneassnsseeressrsee LO
+3.6 Dlouhodobé,/ ktatkodobé bankOVnl VEN) ssicusscworanecommmanienmutionnmmanatnnyancies 10
+3.7 Prijaté dotace na investién{ a provoznt UCEly .....c.cccessesssesesestsscseseasseersseseseseeeressssasseeeseseee LO
+3.8 Pohledavky uréené k obchodovani ocenéné realnou hOdNOtoU....ccsecsesessseeeeeeee LO
+3.9  Celkové vydaje vynalozZené za Uitetni obdobi 2a VYZKUM a VYVOJ...eeessetsseteesteteeeeetseeteeseeree LO
+3.10 Kvoty a limity, o kterych spoleénost neviétovala na rozvahovych ani vysledkovych uétech..10
+3.11 Vlastnictvi, pravo nebo piislusnost k hospodafeni k vice nezZ 10 ha lesnich pozemkdi s lesnim
+POP OSES Misc carcoraecaneavacvemravancisissnncenescossersenerseneselicadhasebessepsThnedaiesscasepernngsenspayetresepigesvesneayesvastenserdeute LO
+B12 ZZOVAC NYAS Orctcsiersmsransveecrmamrararprneansmmarimnmaenrninnmm ma nene LL
+3.13 Pohledavky azavazky po INUté:splatnOstl sain cnonmesenmoiscammaimmmnmonsonancod LL
+3.14  Ostatni pohledavky a zavazky.......ccceecccessescssscsecsesecscsceeeesseseserseseressesesssaseeterstestieereerereeeee Dd
+3.15 Pohledavky a zavazky neuvedené V rO2ZVaZE w.eccecccsscscscesessescscsssstsssessssessssuescstssesveesseseseveveae LZ
+4 Ostatni doplfujfel informace oo... cc ee cecccsesssecseessessvaesovsesesuesssesssnevseussvsessscsseucvavseseavseseeevesee L2
+4.1 Udelové Glen@ni nakladts .....scccccsscsssssssssessecsscssssssesssesscssvsssvsvsessssesasensvesvssseasusssveayeavsanusavesene L2
+4.2 Informace, které nejsou vykazany V rOZVAZE ......esecesessecseesessessreuesrersnsnesessacerssnessassvavsnsnsseree L2
+4.3 Vymosy z bEZn4 CINNOSti oo. eee cece ce ccs ceecseseseeecsecuerseeseesesuscistsessesevsevseesessessvasesseaperesseee
+44  — Naklady 2 D&Zé CHNOStl sccscascesccasaesanncinvicisnsearnisesedesessnneasdaeneroenensoncereuseracsenatereeseerncanessnscer LD
+4.5 Zakladni kapital.. ccs csseceessscseccsescsseseecsssceeesvecuensestessssssssaneesesasavsvsvseetsvessesresenser LD
+4.6 — Transakce se spFizm€nymi stramami.....ccsssssssssscescsssscessseseeesscescsserssssscersesscssssssesssssatseceees LO
+4.7 Vyznamné udalosti mezi rozvahovym dnem a okamzikem sestavenf Uéetni zavérky...........13
+4.8 Problematika moZné nesrovnalosti informaci minulého a béZného uéetniho obdoby..........13
+4.9 — Informaci o (navrhovaném) rozdélenf zisku nebo vypoFadant ztraty cscs essed
+4.10 Pfedpoklad nepfetrZitého trvani Uéetni jedmotky ........cccsesessessessssesesessvseseeseseeseesetseesveeseres LS
+4.11 Mimofadnd udalostiv... cc ccccccccessccseseesssescassessssesssennececsssseseesscstissvscacsterscessevsvecsvessevan
+BAweske ayy)
+PS Gop x
+2 %\
+= od
+: ie :)
+Sp se / 2
+ae NS
+orrar ¢O
+
+
+--- PAGE 16 ---
+1 Obecné informace
+Uéetni jednotka: SAMSON PRAHA, spol. s r.o.
+Uéetni obdobi: 1. 1. 2023 -— 31, 12. 2023
+Rozvahovy den: 31. 12. 2023
+Okamiik sestaveni KUZ: 25. 6. 2024
+1.1 Uéetnijednotka
+Nazev spoletnosti: SAMSON PRAHA, spol. s r.o.
+Sidlo spolecnosti: Stépanské 642/41, Nové Mésto, 110 00 Praha 1
+1€O: 48539589
+bic: CZ48539589
+Pravni forma: spolecnost s ruéenim omezenym
+Datum zapisu do OR: 15. dubna 1993
+Spisova znatka: C 19476 vedena u Méstského soudu v Praze
+PFedmét podnikani: Hostinska Ginnost
+Vykon zeméméfickych Cinnosti
+Provadéni staveb, jejich zmén a odstrafovani
+Projektova Cinnost ve vystavbé
+Geologické prace
+Provadéni pyrotechnického prizkumu
+Vyroba, obchod a sluzby neuvedené v pfilohach 1 az 3
+Zivnostenského zdkona
+Poskytovani sluzeb v oblasti bezpeénosti a ochrany zdravi pii praci
+Pronajem nemovitosti, byt a nebytovych prostor
+Elenové statut. organu k 31. prosinci 2023: Ing. Eva Kolafova - jednatelka
+Ing. Marcel Riickl — jednatel
+Ing. Zuzana Hrdliékova - prokuristka
+Zakladni kapital uéetni jednotky: 100 000 Ké -
+Osoby podilejici se vice nezZ 20 % na zakladnim kapitdlu: MARCEL RUCKL - 100 %
+1.2. Zmény a dodatky v obchodnim rejstiiku v probéhu roku 2023
+V roce 2023 nedoSlo k ZAdnym zménam v obchodnim rejstiiku.
+1.3. Zaméstnanci a odmény organi
+Primérny prepotteny stav zaméstnancti k 31. 12. 2023: 18
+ztoho administrativni pracovnici: 4
+geotechnici: 3
+konstruktéfi: 2
+obchodnici: 2
+projektanti: 3
+stavebni technici: 4
+<oe te, .
+a %\
+2 o
+Lng)
+
+
+--- PAGE 17 ---
+Osobni naklady celkem v tis, Ké: 6 343
+
+ztoho Madové naklady: 4899
+Zakonné socidlni pojistén/: 1437
+Ostatni socialni pojisténi: 0
+Zakonné socialni ndklady: 0
+Ostatni socidlni néklady: 6
+
+14 Zalohy, zdvdavky, zdpijéky a dvéry poskytnuté élenam fidicich, kontroInich
+piip. spravnich organi
+
+V roce 2023 nebyly clentim t&chto organ poskytnuty Zadné zalohy, zavdavky, zdptijéky a uvéry.
+
+2  —_Uéetni zdsady a pouzité uéetni metody
+
+Uéetn{ zavérka za rok 2023 Je sestavena v souladu se zakonem & 563/1991 Sb., 0 ucetnictvi, vyhlaskou
+
+€. 500/2002 Sb., kterou se provadéji nékterd ustanoveni zdkona o Uéetnictvi a €eskymi déetnimi
+standardy.
+
+Uéetnictwi uéetni Jednotky respektuje obecné uéetni zdsady, predevsim zasadu historickych cen,
+zdsadu vécné a éasové souvislosti, zdsadu opatrnosti a predpoklad schopnosti déetni jednotky
+pokra€ovat ve svych aktivitéch v dohledné budoucnosti.
+
+Uéetni zavérka je sestavena v méné CZK. Udaje v této uéetni zavérce jsou vyjadreny v tisfcich korundch
+Eeskych (v tis. Ké), neni-li uvedeno jinak.
+
+2.1 Dilouhodoby hmotny a nehmotny majetek
+
+Diouhodobym hmotnym, resp. nehmotnym majetkem se rozumi majetek, jeho% ocenéni je vys& nez
+80 tis. Ké v jednotlivém p¥fpadé a doba pouiZitelnosti je del8f nez jeden rok.
+
+Dlouhodoby nehmotny majetek se ocefuje pofizovaci cenou, kterd obsahuje cenu pofizent a naklady
+s pofizenim souvisejici.
+
+Drobny nehmotny majetek v ocenéni jedné polozky niz&i nez 80 tis. Ké se uetuje pii pofizeni jako nékup
+sluzeb a sleduje se v operativni evidenci.
+
+Dlouhodoby hmotny majetek je ocefovan v pofizovacich cenach, které zahrnuji cenu pofizeni, naklady
+na dopravu, clo a dal§f naklady s pofizenim souvisejici. Uroky a dal&f finanén{ vydaje souvisejici
+s potizenim dlouhodobého majetku Jsou, do doby uvedeni pofizovaného majetku do uZivdni, rovnéz
+aktivovény do pofizovaci ceny tohoto majetku.
+
+Hmotny majetek nabyty darovdnim se oceriuje reprodukén{ pofizovaci cenou a Uttuje se ve prospéch
+Uétu ostatnich kapitalovych fonda.
+
+Reprodukén/ pofizovaci cenou se ocefiuje rovnéz majetek nové zjistény v déetnictvi, ktery se Uctuje se
+souvztaznym zapisem na pfislusny iéet opravek. Reprodukéni pofizovaci cena takovéhoto majetku je
+stanovena na zdkladé odborného odhadu.
+
+Drobny hmotny majetek do 80 tis. Ké je Uétovan primo do nadkladt jako spotfeba materidlu a sleduje
+se v operativni evidenci.
+
+Technické zhodnoceni, pokud pfevygilo u jednotlivého majetku v dhrnu za zdafovaci obdobi &dstku
+80 tis. Ke zvySuje pofizovaci cenu investi¢niho majetku.
+
+Pozemky.a nedokonéeny dlouhodoby majetek se neodpisujf.
+xr uo
+} ‘ay ~
+
+x CN
+fe %
+fos ~
+= bad
+.——< a.
+&
+\e 7 4
+
+
+--- PAGE 18 ---
+2.2. Dilouhodoby finanéni majetek
+Spolecnost neeviduje zadny dlouhodoby finanéni majetek.
+2.3 Zasoby
+
+2.3.1 Nakupované zdsoby (material, suroviny)
+Nakupované zasoby jsou oceniovany pofizovacimi cenami s pouzitim metody primérnych cen.
+
+2.3.2 Zasoby viastni vyroby
+Viastni vyrobky a nedokonéend vyroba se ocefiuji skuteénymi primymi naklady. Viastni vyrobky
+a nedokonéena vyroba se oceruji skuteénymi pFimymi naklady.
+
+2.3.3 Zbozina skladé
+
+Jedna se o produkty, které jsou skladovany a dale prodavany v nezménéném stavu.
+
+Pofizovaci cena zdsob zahrnuje naklady na jejich pofizeni véetné nakladi s pofizenim souvisejicich
+(naklady na prepravu, provize atd.)
+
+2.3.4 Piirdstky a prichovky zvifat
+Spoletnost neeviduje v zasobach ani dlouhodobém majetku Zadna zvifata.
+
+2.4 Kratkodoby finanéni majetek
+Kratkodoby finanéni majetek tvoff ceniny, penize v hotovosti a na bankovnich uétech.
+
+2.5 Dlouhodobé a kratkodobé pohledavky
+
+Pohledavky se vykazujf ve jmenovité hodnoté, resp. v cené pofizovaci na piislusnych rozvahovych
+uétech. Pochybné pohledavky se individudlné posuzuji a jejich hodnota se piipadné snizi opravnou
+polozkou, Uctovanou na vrub naklada.
+
+Pohledavky nabyté postoupenim se ocefuji pofizovaci cenou.
+
+2.6 Dlouhodobé a kratkodobé zavazky a piijaté uvéry
+
+Vykazuji se ve jmenovité hodnoté na prisluSnych rozvahovych uétech. Za kratkodobé zavazky a Uvéry
+se ve vykaznictvi povazuji polozky, které jsou splatné do jednoho roku od data Uéetni zavérky.
+
+Za kratkodoby uvér se povazuje i é4st dlouhodobych uvérd, kterd je splatnd do jednoho roku
+od rozvahového dne. Jako kratkodoby bankovni tivér je v rozvaze vykazovan i pripadny pasivni zistatek
+kontokorentniho uétu.
+
+Dohadné Ucty pasivni jsou ocefiovany na zakladé odbornych odhadt a propottt. Zavazky a dohadné
+uéty pasivni se rozdéluji na kratkodobé a dlouhodobé.
+
+2.7. —_—~Viastni kapital
+
+Zakladni kapital Géetni jednotky se vykazuje ve vysi zapsané v obchodnim rejstFiku krajského soudu.
+Pripadné zvyseni nebo snizeni zakladniho kapitalu na zdkladé rozhodnuti valné hromady, které nebylo
+ke dni Uéetni zavérky zaregistrovano, se vykazuje jako zmény zakladniho kapitalu.
+
+Ostatni Kapitdlové fondy jsou tvofeny penézitymi vklady.
+
+AS i yj y penazity y
+
+7
+= %,\
+2 oo
+2 hia
+
+il
+see :
+we ~
+
+
+--- PAGE 19 ---
+2.8 Dafizpifjmu
+Naklad na dai z prijma se pogita za pomoci platné dattové sazby z Uéetniho zisku zvySeného nebo
+snizeného otrvale nebo dogasné dafiové neuznatelné naklady a nezdafiované vynosy (napf. tvorba
+a zuctovani ostatnich rezerv a opravnych polozek, naklady na reprezentaci, rozdil mezi Uéetnimi
+a dafovymi odpisy atd.). Dale se zohlediuji polozky snizujici zdklad dané (dary), odéitatelné polozky
+(dafiova ztrata, naklady na realizaci projekt& vyzkumu a vyvoje) a slevy na daniz prijma.
+Odlozend datiova povinnost odrazi dafovy dopad pFechodnych rozdilé mezi ztistatkovymi hodnotami
+aktiv a pasiv z hlediska Uéetnictvi a stanoveni zakladu dané z prijmu s prihlédnutim k obdobf realizace.
+2.9 Vynosy a naklady
+Vynosy a naéklady se uétuji €asové rozli$ené, tj. do obdobi, s nimi vécné i éasové souviseji.
+Vynosy z¢innosti jsou zatttovany v hodnoté pfijatého pinénf nebo plnéni, které bude prijato,
+a pfedstavuji zejména pohledavky za zbo#! poskytnuté v priibéhu b&zné éinnosti, po odeéteni slev,
+dané z pfidané hodnoty a dal8ich dani souvisejicich s prodeji.
+Trzby zprodeje zbozi jsou zatctovany vokamdiku, kdy dojde k doruteni zboz{ a pfevedeni prav
+vztahujicich se k tomuto zboi3i.
+2.10 Odchylky od v¥Se uvedenych déetnich metod
+Spoleénost se v pribéhu roku 2023 neodchylila od vySe uvedenych metod.
+2.11 Zadsady pro uréovani obsahu piehledu o penéZnich tocich a pfehledu
+0 zménach viastniho kapitalu
+Soucasti Utetni zavérky neni pfehled o pen&Znich tocich a prehled o zménach viastniho kapitdlu.
+2.12 Zptsob stanoveni opravnych polozek, opravek k majetku, zptsob stanoveni
+rezerv, zptsob uplatnény pri prepoctu Udaji v cizich méndch a na éeskou ménu,
+zpisob stanoveni rediné hodnoty prislusného majetku a zavazkd, udaje o rozsahu,
+podstaté a druhu derivatt
+2.12.1 Zptsob stanovenf opravnych polozek
+Opravné polozky k dlouhodobému majetku
+Uéetni jednotka k 31.12.2023 nevytvarf opravné polozky k majetku.
+Opravné polozky k zAsobam
+Nebyly v Uéetnim obdobf tvofeny.
+Opravné polozky k pohledavkam ,
+VySe udetnich opravnych polozek se urcuje na zdékladé vékové struktury a pravdépodobné miry
+dobytnosti (vymahatelnosti) pohledavek, K pohledavkém svysokou mifrou dobytnosti
+(vymahatelnosti) se opravné polozky netvoti, v opatném pfipadé jsou tvoFeny opravné polozky
+indivi alnim zptisobem.
+puerta "ty,
+Ka?)
+: =|
+> CHR | 6
+“nfl
+
+
+--- PAGE 20 ---
+Druh opravné polozky | Zptisob staveni OP Zdroj informaci k uréeni vySe OP
+§ 8, § 8a, § 8c zdkona &. 593/1992 | Seznam pohledavek dle splatnosti a
+Zakonné Sb., 0 rezervach a § 55 Vyhlagky & | jednotlivych dlugnikG a vyjadfeni
+500/2002 Sb. k soudnim sportim
+Seznam pohledavek dle splatnosti a
+jednotlivych diuznika
+
+Ostatni § 55 Vyhlasky ¢. 500/2002 Sb.
+
+2.12.2. Zpdisob stanoveni odpisovych plan dlouhodobého majetku
+
+Odpisovy plan Uéetnich odpist: dlouhodobého hmotného a nehmotného majetku sestavila Ugetni
+jednotka tak, Ze Uéetni odpisy dlouhodobého hmotného a nehmotného majetku jsou vypotteny
+na zakladé pofizovaci ceny a pfedpokladané doby Zivotnosti pfislusného majetku. Pro vypocet
+dahovych odpiséi byl zvolen linearni i zrychleny zptisob odepisovani. Dafiové a Uéetni odpisy se
+nerovnaji.
+
+2.12.3 Zptisob stanoveni rezerv
+
+Rezervy jsou vytvaéfeny k pokryti budoucich rizik a vydaja, u nich? je znam Uéel, je pravdépodobné,
+%e nastanou, avsak neni jist €Astka nebo datum, v némz budou pinény. Rezervy nebyly k 31. 12. 2023
+tvofeny.
+
+2.12.4 Zpisob uplatnény pi prepoctu ddaji v cizich ménach a na €eskou ménu
+
+Uéetni operace v cizich ménach provadéné béhem roku jsou vétovany dennim kurzem.
+
+Pohledavky, zdvazky, uvéry, finanéni vypomoci a finanénf investice v cizi méné jsou k datu ucetni
+zavérky p¥epotteny dle platného kurzu vyhlaeného Ceskou narodni bankou k tomuto datu a zjisténé
+kurzové rozdily jsou prouétovany do finanénich nadkladdi nebo vynosi.
+
+Finanéni majetek v cizi méné je k datu uéetni zavérky prepoéten die platného kurzu vyhlaSeného
+€eskou ndrodni bankou k tomuto datu a zjist&né kurzové rozdily jsou provétovany do finanénich
+nakladt nebo vynostt.
+
+2.12.5 Zptsob stanoveni rediné hodnoty u majetku a zavazkd, které se vsouladu se zakonem
+ocejiuji realnou hodnotou
+
+Uéetni jednotka nestanovuje realnou hodnotu u majetku a zavazkd.
+
+Uéetni jednotka nevlastni Z4dné derivaty a Z4dny majetek, ani zavazky nejsou zajistény derivaty.
+
+2.13 Snizeni hodnoty
+
+Ke kaZdému rozvahovému dni Uéetni jednotka provéruje uéetni hodnotu svého majetku, aby byly
+objeveny naznaky toho, zda nedoSlo ke ztraté ze snizeni hodnoty majetku. Existuji-li takoveé signaly,
+je odhadnuta realizovatelna hodnota majetku a uréen pripadny rozsah ztraty ze snizeni hodnoty. Neni-
+li mozno realizovatelnou hodnotu jednotlivych polozek majetku odhadnout, uréi uéetni jednotky
+realizovatelnou hodnotu vynosové jednotky, ke které majetek patti.
+
+Realizovatelné hodnota piedstavuje vyS3i zhodnot ¢cisté prodejni ceny a hodnoty z udivani.
+P¥i posuzovani hodnoty z uzZivani jsou odhadované budouci penézni toky diskontovany na svou
+souéasnou hodnotu prostiednictvim diskontni sazby pfed zdanénim, ktera zohledfuje soucasny trZni
+fo) acreneqye hodnoty penéza rizik konkrétné souvisejicich s danym aktivem.
+
+(gokud je podi@pdhadu realizovatelna hodnota majetku (nebo vynosoveé jednotky) niz8inez jeho uéetni
+sho a iéetal\hodnota majetku (vynosové jednotky) snizena na hodnotu realizovatelnou.
+
+a i
+4 5
+
+
+--- PAGE 21 ---
+2.14 Finanéni pronéjem s ndslednou koupi najaté véci
+
+V pfipadé finanéniho pronajmu s naéslednou koupi najaté véci jsou leasingové splatky uctovany
+do obdobi, s nimz vécné a éasové souviseji. V okamziku odkupu najaté véci je takto poiizeny majetek
+zalictovan na prislugny déet hmotného investiéniho majetku v jeho odkupnf cené.
+
+2.15 PouZziti odhadt
+
+Sestaveni Ucetni zdvérky vyzaduje, aby spoletnost pouzivala odhady a predpoklady, jez maji vliv
+na vykazované hodnoty majetku a zdvazkt k datu Uéetni zavérky a na vykazovanou vygi vynosti
+a naéklad& za sledované obdobi. Byly stanoveny odhady a pfedpoklady na zdékladé vSech dostupnych
+
+relevantnich informacf. Nicméné, jak vyplyva z podstaty odhadu, skuteéné hodnoty v budoucnu se
+mohou od téchto odhadti odli¥ovat,
+
+2.16 Ndasledné udadlosti
+
+Dopad udélosti, které nastaly mezi rozvahovym dnem a dnem sestavenj uéetni zavérky, je zachycen
+
+v uéetnich vykazech v pripadé, ze tyto udalosti poskytly dopliujicf informace o skute€nostech, které
+existovaly k rozvahovému dni.
+
+V pripadé, ze mezi rozvahovym dnem a dnem sestaveni Uetni zévérky do8lo k vyznamnym udélostem
+zohledhujicim skuteénosti, které nastaly po rozvahovém dni, jsou dusledky téchto udélosti popsany
+
+V p¥floze éetni zavérky, ale nejsou zalttovany v Uéetnich vykazech.
+
+3 Doplhujici informace k rozvaze a vykazu zisku a ztraty
+3.1 Dlouhodoby nehmotny
+Pofizovact cena (udaje v tis. Ké)
+
+. . Pofizovaci cena
+Dlouhodoby nehmotny majetek
+
+Minulé obdobi Prirdstky Ubytky B&Zné obdobi
+
+Zrizovaci vydaje
+
+Nehmotné wysledky vyzkumu a
+vyvoje
+
+Software
+
+Ocenitelna prava
+Jiny DNM
+Nedokonéeny DNM
+Zalohy na DNM
+CELKEM
+
+
+--- PAGE 22 ---
+Zistatkova cena Opravky
+Béiné obdobi | Minulé obdobi | Bézné obdobi | Minulé obdobi
+
+Dlouhodoby nehmotny majetek
+
+Zrizovaci vydaje waeeenccenie scctaiswait
+Nehmotné vysledky vyzkumu a eannnnneeene i ieee
+
+vyvoje
+
+3.2. Dlouhodoby hmotny majetek
+Pofizovacf cena (tidaje v tis. K¢)
+
+Pofizovaci cena
+
+Dlouhodoby hmotny majetek
+
+Minulé obdob/ Prirtistky Ubytky Béiné obdobi
+Pozemky 111, - - 111
+Stavby 15 068 oe 15 068
+Samostatné movité véci 45 452 18 453 3.195 60 710
+
+Péstitelské celky trvalych porosta
+
+Zakladn{ stado a tazna zvitata
+
+Jiny DHM
+
+Nedokonéeny DHM
+
+Zalohy na DHM menaoescass
+
+Opravna polozka k nabytému Scasestans
+
+majetku
+CELKEM 60 631 18453 3195 75 889
+Dlouhodoby hmotny majetek Bistathows cone Opravky
+
+Bézné obdobi | Minulé obdobi | Bézné obdobi | Minulé obdobi
+Pozemky 111 111 a | rr
+Stavby 8 353 8 646 6 422 6 422
+Samostatné movité véci 36 266 27 733 24 444 17 719
+
+Ocenitelna prava
+
+Zalohy na DNM
+
+CELKEM  ————— eee eee
+
+Zakladni stado a taZna zvifata
+
+Jiny DHM
+
+Opravnd polozka k nabytému rn sist fcbonana cneennennnee
+afgetttt UL
+
+Software rene a -
+Jiny DNM = . into
+Nedokonceny DHM
+
+a9: 44 730 36 490 30 866 24141
+
+Nedokonéeny DNM i soncmamsess
+P&stitelské celky trvalych porost ee asin
+Zalohy na DHM
+9
+ean is &
+
+
+--- PAGE 23 ---
+3.3. Opravné polozky k pohledévkam
+V roce 2023 byly vytvofeny uéetni a dariové opravné polozky k pohleddvk4m:
+
+Zustatek Zistatek
+Opravna polozka v tis. k prvnimu teu ee k poslednimu
+
+. 7 Tvorba Zuctovani ay ge
+Kék dni déetniho dni Géetniho
+
+obdobi obdobi
+Dlouhodobému majetku 0 0 0 0
+Zasobam 0 0 0 0
+Finanénimu majetku 0 0 0 0
+Pohledavkam (zékonné) 0 207 0 207
+Pohledavkam (ostatni) 0 0 0 0
+
+3.4 Nedoplatky z titulu dané zprijma, pojistného na socidinim pojisténim
+a zdravotnim pojisténi
+
+Vroce 2023 Uéetni jednotka nevykazuje nedoplatky dané z pifjma a zavazky na zdravotni a socidlni
+pojisténi po !haté splatnosti.
+
+3.5  Odlozeny dahovy z4vazek nebo pohledavka
+
+Uéetni jednotka k 31.12.2023 eviduje tituly, které vedou ke vzniku odlozené dané — Uéetni a dahova ZC
+dlouhodobého majetku. Uéetni jednotka eviduje odlozeny dafovy zdvazek ve vy$i 2 787 tis. Ké.
+
+3.6 Dlouhodobé / kratkodobé bankovni tvéry
+V roce 2023 spoleénost neterpala ani nesplacela Z4dné bankovni véry.
+
+3.7 P¥ijaté dotace na investiéni a provozni téely
+V roce 2023 spoleénost negerpala z4dné dotace. :
+
+3.8 Pohleddvky urtéené k obchodovani ocenéné redlnou hodnotou
+Uéetni jednotka nema pohledavky uréené k obchodovani.
+
+3.9  Celkové vydaje vynalozené za Uéetni obdobi za vyzkum a vyvoj
+Naklady vynalozené za uéetni obdobi na vyzkum a vyvoj nejsou.
+
+3.10 Kvoty a limity,
+vysledkovych détech
+Uéetni jednotka nema ptidéleny Z4dné kvéty ani limity.
+
+0 kterych spoleénost nedétovala na rozvahovych ani
+
+3.11 Vlastnictvi, pravo nebo piislugnost k hospodayeni k vice neZ 10 ha lesnich
+pozemkd s lesnim porostem
+
+Tgetni*fédgstka nema viastnictvi, pravo nebo piislugnosti k hospodafeni s vice nez 10 ha lesnich
+t legal porostem.
+4
+
+CR = / 10
+
+
+--- PAGE 24 ---
+3.12 Zf¥izovaci vydaje
+Uéetni jednotka nevykazuje k 31.12.2023 zadné zfizovaci vydaje.
+
+3.13 Pohledavky a zavazky po lhaté splatnosti
+Struktura pohledavek z obchodnich vztahti podle splatnosti:
+
+Uéetni hodnota v tis. Ké
+
+Pohledavky celkem 31774
+
+Ve lhaté splatnosti 19 236
+Do 90 dni po Ihité splatnosti 532
+91 - 180 dni po lhuté splatnosti 923
+180 — 360 dni po Ihité splatnosti 0
+Vice neZ 360 dni po Ihtté splatnosti 1083
+Vice nez 5 let po splatnosti 0
+
+Struktura zavazkt z obchodnich vztaht podle splatnosti:
+
+Uéetni hodnota v tis. Ké
+
+Zavazky celkem 30576
+
+|
+
+Ve Ihité splatnosti 28 900
+Do 90 dni po Ihiité splatnosti 1403
+91 - 180 dni po Iht&rté splatnosti 273
+180 — 360 dni po [hiité splatnosti 0
+Vice nez 360 dni po lhaté splatnosti 0
+Vice neZ 5 let po splatnosti 0
+
+3.14 Ostatni pohledavky a zavazky
+Souhrnna vySe pohledavek z titulu pujéek
+-  nejsou
+Pohledavky za statutarnim organem
+- nejsou
+Pronajaty majetek
+_-——spaletnost nema Zadny pronajaty majetek
+“ants ka & .
+Any mafétek spoleénosti
+KA si pronajima pozemky jako skladové prostory
+
+— Py
+2
+anf he
+
+
+--- PAGE 25 ---
+Majetek zatizeny zdstavnim pravem nebo vécnym bitemenem k rozvahovému dni
+-  Zadny majetek spoleénosti nenj zatiZen zdstavnim pravem nebo vécnym biremenem
+Souhrnné vySe zavazkii z titulu pujéek
+- nejsou pijéky
+PFevedené nebo poskytnuté zajisténi k rozvahovému dni
+-  spoleénost nemé takové zajisténi
+Penzijni zavazky
+-  nejsou penzijni zavazky
+
+3.15 Pohledavky a zdvazky neuvedené v rozvaze
+Nejsou pohledavky a zavazky neuvedené v rozvaze.
+
+4 Ostatni doplfujici informace
+4.1 Utelové élenéni naklada
+Pro sestaveni utetni zdvérky je pouzito druhové élen&ni ve vykazu zisku a ztraty.
+
+4.2 Informace, které nejsou vykazany v rozvaze
+VeSkery majetek éetni jednotky je vykazovan v rozvaze.
+
+4.3 Vynosy z béZné Zinnosti
+Udaje v tis. Ké
+
+B&Zné obdobi Minuié obdobi
+Trzby z prodeje zbozi
+
+150 0
+
+Trzby z prodeje sluzeb a vyrobkt 228 980 371 246
+
+Celkem 230 786 371 246
+
+Pri prodeji zbozi, vyrobké a slu%eb nedochazi k rozd{lim v organizovani prodeje a poskytovan{ sluzeb
+v ramci rdznych kategorii innosti a v ramci élen&ni zemépisnych trhd.
+
+4.4 Naklady z bézné éinnosti
+Udaje v tis. Ké
+
+Béiné obdobi Minulé obdobi
+Spotieba materialu 17 492 18 118
+Spoti'eba energie 155 113
+Ostatn/ sluZby 193 068 334995
+
+229 839 353 226
+
+12
+
+
+--- PAGE 26 ---
+4.5 Zakladni kapital
+V déetnim obdob/ 2023 nedoSlo ke zméné zakladniho kapitalu Uéetni jednotky.
+4.6 Transakce se spfiznénymi stranami
+Za spfiznéné strany ve vztahu k Uéetni jednotce jsou pro uéely u¢etni zavérky povazovany:
+-  spoletnosti ovladané, spoluovladané a pod podstatnym vlivem,
+-  spoletnici, kte¥i pfimo nebo nepiimo mohou uplatiovat podstatny, spoletny nebo rozhodujici
+vliv u Ucetni jednotky,
+- €lenové statutarnich, dozoréich a Fidicich organd spoleénosti a osoby blizké témto osobam,
+-  spoleénosti, ve kterych vySe uvedené strany maji podstatny, spoleény nebo rozhodujici vliv,
+-  spoleénosti, které maji spoleéného Elena vrcholového Fizeni s Uéetni jednotkou.
+Vsouladu svySe uvedenym vymezenim jsou za spriznéné strany povazovany vroce 2023 clenové
+statutarniho organu a spoleénik Uéetni jednotky a spolecnosti jimi ovlddané a Fizené.
+V roce 2023 nebyly Z4dné vyznamné transakce s vySe uvedenymi spriznénymi stranami.
+4.7. Vyznamné udalosti mezi rozvahovym dnem a okamizikem sestaveni uéetni
+zavérky
+Mezi rozvahovym dnem a okamiikem sestaveni Géetn{ zavérky nenastaly Z4dné vyznamné udalosti.
+4.8 Problematika mozZné nesrovnalosti informaci minulého a béZného déetniho
+obdobi
+V Uéetni zavérce nedoSlo k nesrovnalostem informacf minulého a béZného téetniho obdobi.
+4.9  Informaci o (navrhovaném) rozdéleni zisku nebo vypoyadani ztraty
+Zisk spole€nosti za rok 2023 bude preuttovan na Uéet nerozdéleného zisku minulych let.
+4.10 Predpoklad nepyetrzitého trvani véetni jednotky
+Neexistuje vyznamna nejistota tykajici se budouciho trvani uéetni jednotky.
+4.11 Mimofddné udalosti
+V roce 2023 nenastaly Zadné mimo/ddné udalosti.
+Sestaveno v Praze dne 25. €ervna 2024
+i aaa
+Ss en, .
+=
+WWW.samsar;: sh ! It corag
+SAMSOR Brecure (2 81589589
+S LZ, Wee Saeed [oO Eraina 4
+— AIL
+quorsks .~- 7
+a> 4y, . UNO ee eT
+eS 3. Ing. Marcel Riickl
+S KA % \ jednatel
+. eh 13
+4
+won

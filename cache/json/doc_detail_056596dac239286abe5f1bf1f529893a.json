@@ -1,0 +1,22 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81508312&subjektId=1010289&spis=1120254",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=20986d50dc47447ca18008f2371cc302",
+  "pdf_name": "Příloha_Skate of Mind_2023.pdf (54 kB, počet stran: 5)",
+  "download_links": [
+    {
+      "label": "Příloha_Skate of Mind_2023.pdf (54 kB, počet stran: 5)",
+      "url": "https://or.justice.cz/ias/content/download?id=20986d50dc47447ca18008f2371cc302",
+      "is_pdf": true
+    },
+    {
+      "label": "UZ-452100040889-20240506-064530.xml (0 kB)",
+      "url": "https://or.justice.cz/ias/content/download?id=f63525dce85549ea89157bfb931ba164",
+      "is_pdf": false
+    },
+    {
+      "label": "UZ-452100040889-20240506-064530.pdf (84 kB, počet stran: 2)",
+      "url": "https://or.justice.cz/ias/content/download?id=42aa39a6fa584dc3ad2b322aee6e2160",
+      "is_pdf": true
+    }
+  ]
+}

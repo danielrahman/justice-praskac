@@ -1,0 +1,75 @@
+
+
+--- PAGE 1 ---
+Jméno a prijmeni, obchodni firma nebo jiny
+nazev uéetni jednotky
+
+manGoweb, s.r.o.
+
+ke dni 31.12.2021
+
+Sidlo nebo bydli8té Uéetni jednotky
+
+a misto podnikani liSi-li se od bydlisté
+K Rovinam 538/17
+
+158 00 Praha 5
+
+24694401
+
+Oznaé. AKTIVA Cislo Bézné Uéetni obdobi Minulé Ué. obdobi
+fadku Brutto Korekce Netto Netto
+a b c 1 2 3 4
+IAKTIVA CELKEM 1
+
+A. Pohledavky za upsany zakladni kapital 2 0 0 0 0
+B. Dlouhodoby majetek 3 2472 -2 035 437 839
+B.I. Dlouhodoby nehmotny majetek 4 890 -890 0 0
+Bull. Dlouhodoby hmotny majetek 5 1 566 -1 145 421 838
+B.Ill. Dlouhodoby finanéni majetek 6 16 0 16 1
+Cc. \ObéZna aktiva 7 6 428 -332 6 097 6 260
+C.l. \Zasoby 8 928 0 928 0
+Cull. Pohledavky 9 3931 -332 3 600 3 768
+C.Il.1. Dlouhodobé pohledavky 10 0 0 0 0
+C.IL.2. Kratkodobé pohledavky 11 3 821 -332 3 489 2 202
+C.IL3. Casové rozli8eni aktiv 12 111 0 111 1 566
+Cull. Kratkodoby finanéni majetek 13 0 0 0 0
+CIV. Penézni prostfedky 14 1 569 0 1 569 2492
+D. Casové rozli8eni aktiv 15 0 0 0 0
+
+software Altus Vario - www.vario.cz
+
+
+--- PAGE 2 ---
+Oznaé. PASIVA Cislo Stav v bézném uéetnim obdobi Stav v minulém uéetnim obdobi
+
+fadku
+a b c 5 6
+
+PASIVA CELKEM 1
+A. \Vlastni kapital 2 2 485 2078
+AI. Zakladni kapital 3 400 400
+All. \Azio a kapitalové fondy 4 0 0
+A. IIL. Fondy ze zisku 5 0 0
+A.V. \Vysledek hospodaieni minulych let(+/-) 6 1678 2 260
+A.V. \Vysledek hospodaieni béZného uéetniho 7
+
+lobdobi (+-)
+A.VI. Rozhodnuto o zalohove vyplaté podilu na 8 0 0
+
+zisku (-)
+B.+C. ICizi zdroje 9 4049 5021
+B. Rezervy 10 0 0
+Cc. Zavazky 11 4049 5021
+Cul. Dlouhodobé zavazky 12 0 0
+Cull. Kratkodobé zavazky 13 4049 5021
+(onlle Casové rozliSeni pasiv 14 0 0
+D Casové rozliSeni pasiv 15 0 0
+Sestaveno dne: 1.2.2022
+
+Pravni forma uéetni jednotky:
+Predmét podnikani Uéetni jednotky:
+
+Podpisovy zaznam :
+
+software Altus Vario - www.vario.cz

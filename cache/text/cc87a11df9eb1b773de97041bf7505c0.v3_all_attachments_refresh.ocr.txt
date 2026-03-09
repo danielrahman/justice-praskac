@@ -1,0 +1,57 @@
+
+
+--- PAGE 1 ---
+[Ic: [4656679 |
+
+Rozvaha pro podnikatele, ve zkraceném rozsahu pro
+malou ucetni jednotku, ktera nema povinnost mit
+uéetni zavérku ovéfenou auditorem
+ke dni 31.12.2022
+
+(v celych tisicich Ké)
+
+bézné tiéetni obdobi | MUNN’
+AKTIVA obdobi
+brutto | korekce | netto netto
+1 2 3 4
+
+IAKTIVA CELKEM 40315 14822} 25493 19547
+A. Pohledavky za upsany zakladni kapital 0 0 0 0
+B. Stala aktiva 22790 14822 7968 5945
+B.I. Dlouhodoby nehmotny majetek 22790 14822 7968 5945
+B.II. Dlouhodoby hmotny majetek 0 0 0 0
+BI. Dlouhodoby finanéni majetek 0 0 0 0
+Cc. Obézna aktiva 17280 0 17280 13402
+CI. Zasoby 0 0 0 0
+C.IL Pohledavky 47 0 47 245
+C.IL1. Dlouhodobé pohledavky 38 0 38 231
+C.IL2. Kratkodobé pohledavky 9 0 9 14
+C.IL3. Casové rozligeni aktiv 0 0 0 0
+CHI. Kratkodoby finanéni majetek 0 0 0 0
+C.IV. PenéZni prostiedky 17233 0 17233 13157
+
+D. Casové rozligeni aktiv 245 0 245 200
+
+
+--- PAGE 2 ---
+béZné ucetni | minulé iéetni
+
+PASIVA obdobi obdobi
+1 2
+
+PASIVA CELKEM 25493 19547
+A. Vlastni kapital 7339 6092
+ALL. Zakladni kapital 150 150
+ALIL. |AZio a kapitalové fondy 0 0
+ATT. Fondy ze zisku 0 0
+A.V. Vysledek hospodateni minulych let (+/-) 0 0
+A.V Vysledek hospodareni bézného téetniho obdobi (+/-) 15188 13232
+A.VI. Rozhodnuto o zalohové vyplaté podilu na zisku (-) -7999 -7290
+B.+C. Cizi zdroje 3397 2911
+B. Rezervy 0 0
+Cc. Zavazky 3397 2911
+CI. Dlouhodobé zavazky 183 30
+C.IL Kratkodobé zavazky 3214 2881
+CHI. Casové rozligeni pasiv 0 0
+
+D. Casové rozligeni pasiv 14757 10544

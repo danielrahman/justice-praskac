@@ -1,0 +1,357 @@
+{
+  "subject_id": "1166851",
+  "name": "Necktip s.r.o.",
+  "ico": "17420211",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "Necktip s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "174 20 211"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "12. srpna 2022"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 371468 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Hořejší 59, 252 26 Třebotov"
+    }
+  ],
+  "executives": [
+    {
+      "role": "Jednatel",
+      "name": "DANIEL RAHMAN",
+      "birth_date": "29. prosince 1997",
+      "raw": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 12. srpna 2022"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Jednatel jedná za společnost samostatně.",
+      "birth_date": null,
+      "raw": "Jednatel jedná za společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+      "raw": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 12. srpna 2022",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel jedná za společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 25 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "25 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 371468/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77085376&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 371468/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81565935&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=73fa04ae03a745aab8ff063a0be2ef81",
+          "year": 2023
+        },
+        {
+          "document_number": "C 371468/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77085376&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 371468/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86618684&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b1c8ecc227ac42cb9b0e111d27b1b531",
+          "year": 2024
+        },
+        {
+          "document_number": "C 371468/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81565935&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=73fa04ae03a745aab8ff063a0be2ef81",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 371468/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86618684&subjektId=1166851&spis=1312898",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b1c8ecc227ac42cb9b0e111d27b1b531",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 371468/SL4/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 21.05.2025",
+      "created_date": "2025-05-21",
+      "received_date": "2025-05-21",
+      "filed_date": "2025-05-28",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86618684&subjektId=1166851&spis=1312898",
+      "document_id": "86618684",
+      "spis": "1312898",
+      "subjekt_id": "1166851",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=b1c8ecc227ac42cb9b0e111d27b1b531",
+      "pdf_name": "Příloha_Necktip_2024.pdf (53 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha_Necktip_2024.pdf (53 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=b1c8ecc227ac42cb9b0e111d27b1b531",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-452100071935-20250516-105349.xml (0 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=d5b6e7b2a8c64c7ba74bdc869772bb29",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-452100071935-20250516-105349.pdf (78 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=5d25d4b9b03e4b7c974a5811434ad836",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 371468/SL3/MSPH",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 21.05.2024",
+      "created_date": "2024-05-21",
+      "received_date": "2024-05-21",
+      "filed_date": "2024-05-21",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81565935&subjektId=1166851&spis=1312898",
+      "document_id": "81565935",
+      "spis": "1312898",
+      "subjekt_id": "1166851",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=73fa04ae03a745aab8ff063a0be2ef81",
+      "pdf_name": "Příloha k účetní závěrce_Necktip_2023.pdf (53 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha k účetní závěrce_Necktip_2023.pdf (53 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=73fa04ae03a745aab8ff063a0be2ef81",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-452100040100-20240516-144437.xml (0 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=020245cf2bc240239cb8c5b9cd8e146c",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-452100040100-20240516-144437.pdf (78 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=330f97802ba4473d9f2499211ff84d02",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 371468/SL2/MSPH",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 29.05.2023",
+      "created_date": "2023-05-29",
+      "received_date": "2023-05-29",
+      "filed_date": "2023-06-07",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77085376&subjektId=1166851&spis=1312898",
+      "document_id": "77085376",
+      "spis": "1312898",
+      "subjekt_id": "1166851",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+      "pdf_name": "Příloha k účetní závěrce_Necktip_2022.pdf (53 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha k účetní závěrce_Necktip_2022.pdf (53 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-452100026383-20230524-064412.xml (0 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=9f17ae21e392495990e3b73d28ec9efd",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-452100026383-20230524-064412.pdf (107 kB, počet stran: 3)",
+          "url": "https://or.justice.cz/ias/content/download?id=5a41b39eaaf34d6cbff77e62799608c5",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 2021,
+    "output_tokens": 907,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "Necktip s.r.o. je mladá firma založená v srpnu 2022 s jediným společníkem a jednatelem Danielem Rahmanem (nar. 1997). Společnost pravidelně podává účetní závěrky za roky 2022–2024, ale z veřejných dokumentů se nepodařilo vytěžit konkrétní finanční metriky. Firma nemá za sebou žádné změny ve vedení, sídle ani názvu, což naznačuje stabilitu, ale absence číselných dat neumožňuje posoudit ekonomickou výkonnost.",
+  "data_quality_note": "Účetní závěrky jsou podávány včas, ale z PDF dokumentů se nepodařilo extrahovat konkrétní finanční údaje – analýza je proto omezena na formální signály z rejstříku.",
+  "insight_summary": [
+    {
+      "title": "Mladá firma s kontinuitou",
+      "detail": "Společnost existuje od srpna 2022, za tři roky neproběhla žádná změna ve vedení, vlastnické struktuře ani sídle."
+    },
+    {
+      "title": "Pravidelné podávání účetních závěrek",
+      "detail": "Účetní závěrky za 2022, 2023 a 2024 byly podány prostřednictvím správce daně v květnu následujícího roku, což odpovídá standardním lhůtám."
+    },
+    {
+      "title": "Jednočlenná struktura",
+      "detail": "Daniel Rahman je jediným společníkem i jednatelem s právem jednat samostatně, což je typické pro malé s.r.o."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Chybí číselné finanční údaje",
+      "detail": "Přestože jsou účetní závěrky formálně v pořádku, z veřejných dokumentů nelze vyčíst aktiva, tržby, zisk ani zadlužení – nelze tedy posoudit rentabilitu ani solventnost."
+    },
+    {
+      "title": "Žádné historické turbulence",
+      "detail": "Od založení nedošlo k žádné změně jména, sídla ani managementu, což může signalizovat stabilitu, ale u tak mladé firmy je to spíše normální stav než výjimečný přínos."
+    },
+    {
+      "title": "Sídlo v Třebotově",
+      "detail": "Firma sídlí na adrese v malé obci u Prahy, což může být reálné sídlo nebo jen administrativní adresa – bez dalších dat nelze posoudit provozní realitu."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Žádný varovný signál v rejstříku",
+      "detail": "V záznamech justice.cz není vidět opožděné podání, dluh vůči rejstříku ani změny naznačující problémy. Absence finančních metrik ale brání hlubšímu posouzení."
+    },
+    {
+      "title": "Mladá firma bez track recordu",
+      "detail": "Společnost má za sebou teprve tři účetní období – nelze posoudit dlouhodobou stabilitu, růstový potenciál ani schopnost překonat krizi."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": {
+    "source_name": "Chytrý rejstřík",
+    "source_url": "https://www.chytryrejstrik.cz/ico-17420211/necktip-s-r-o",
+    "employees_hint": null,
+    "checks": [],
+    "snapshot": {
+      "url": "https://www.chytryrejstrik.cz/ico-17420211/necktip-s-r-o",
+      "assets_mil_czk": 0.18,
+      "profit_mil_czk": null,
+      "employees_hint": null
+    }
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1166851&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1166851&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=1166851",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1166851&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1166851&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": "https://www.chytryrejstrik.cz/ico-17420211/necktip-s-r-o"
+  },
+  "generated_at": "2026-03-08T15:23:54.953762+00:00",
+  "cache_status": "fresh"
+}

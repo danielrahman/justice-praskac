@@ -1,0 +1,615 @@
+{
+  "subject_id": "450321",
+  "name": "SAMSON PRAHA, spol. s r.o.",
+  "ico": "48539589",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "SAMSON PRAHA, spol. s r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "485 39 589"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "15. dubna 1993"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 19476 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Štěpánská 642/41, Nové Město, 110 00 Praha 1"
+    }
+  ],
+  "executives": [
+    {
+      "role": "jednatel",
+      "name": "Ing. EVA KOLÁŘOVÁ",
+      "birth_date": "13. srpna 1978",
+      "raw": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Tomanova 1982/30, Břevnov, 169 00 Praha 6 Den vzniku funkce: 3. prosince 2007"
+    },
+    {
+      "role": "jednatel",
+      "name": "Ing. MARCEL RÜCKL",
+      "birth_date": "6. června 1967",
+      "raw": "Ing. MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Každý jednatel společnosti jedná za společnost samostatně.",
+      "birth_date": null,
+      "raw": "Každý jednatel společnosti jedná za společnost samostatně."
+    },
+    {
+      "role": "Prokura",
+      "name": "Ing. ZUZANA HRDLIČKOVÁ",
+      "birth_date": "5. května 1989",
+      "raw": "Ing. ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10"
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1",
+      "raw": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Tomanova 1982/30, Břevnov, 169 00 Praha 6 Den vzniku funkce: 3. prosince 2007",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Každý jednatel společnosti jedná za společnost samostatně.",
+          "history": ""
+        },
+        {
+          "role": "Prokura",
+          "text": "Ing. ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100% Druh podílu: základní Kmenový list: nevydán",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "100 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Datum uzavření společenské smlouvy: 13. 4. 1993.",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Počet členů statutárního orgánu: 2",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2019,
+      "sources": [
+        {
+          "document_number": "C 19476/SL60/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67096974&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=56b0d454d21e48589944fd890892c35c",
+          "year": 2020
+        }
+      ],
+      "revenue": 183.19,
+      "operating_profit": 15.97,
+      "net_profit": 12.33,
+      "net_margin_pct": 6.7,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2020,
+      "sources": [
+        {
+          "document_number": "C 19476/SL62/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73445136&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=3c705a20e5444f65a90f6aceafc10cc3",
+          "year": 2021
+        },
+        {
+          "document_number": "C 19476/SL60/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67096974&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=56b0d454d21e48589944fd890892c35c",
+          "year": 2020
+        }
+      ],
+      "liabilities": 0.36,
+      "revenue": 153.26,
+      "operating_profit": 3.45,
+      "net_profit": 2.08,
+      "net_margin_pct": 1.4,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 19476/SL62/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73445136&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=3c705a20e5444f65a90f6aceafc10cc3",
+          "year": 2021
+        }
+      ],
+      "liabilities": 0.18,
+      "revenue": 169.14,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 19476/SL64/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82423591&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66bd48f61cb349a4986bf49656751423",
+          "year": 2023
+        }
+      ],
+      "revenue": 371.25,
+      "liabilities": 0.27,
+      "net_profit": 2.49,
+      "net_margin_pct": 0.7,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 19476/SL66/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87949582&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=35ea6935d5c6499781a4be87bc1ff82b",
+          "year": 2024
+        },
+        {
+          "document_number": "C 19476/SL65/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87455107&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=64165084b04a4456acb306366f983779",
+          "year": 2024
+        },
+        {
+          "document_number": "C 19476/SL64/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82423591&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66bd48f61cb349a4986bf49656751423",
+          "year": 2023
+        }
+      ],
+      "assets": 113.83,
+      "equity": 63.28,
+      "liabilities": 50.55,
+      "revenue": 228.98,
+      "operating_profit": 2.5,
+      "net_profit": 0.54,
+      "net_margin_pct": 0.2,
+      "equity_ratio_pct": 55.6,
+      "liability_ratio_pct": 44.4,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 19476/SL66/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87949582&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=35ea6935d5c6499781a4be87bc1ff82b",
+          "year": 2024
+        },
+        {
+          "document_number": "C 19476/SL65/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87455107&subjektId=450321&spis=108844",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=64165084b04a4456acb306366f983779",
+          "year": 2024
+        }
+      ],
+      "assets": 265.22,
+      "equity": 79.94,
+      "liabilities": 182.96,
+      "revenue": 392.72,
+      "operating_profit": 0.55,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 30.1,
+      "liability_ratio_pct": 69.0,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 19476/SL66/MSPH",
+      "type": "účetní závěrka [2024] , výroční zpráva [2024] , zpráva o vztazích [2024] , zpráva auditora [2024]",
+      "created_date": "2024-12-31",
+      "received_date": "2025-08-27",
+      "filed_date": "2025-08-28",
+      "pages": 37,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87949582&subjektId=450321&spis=108844",
+      "document_id": "87949582",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2024,
+        2024,
+        2024,
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=35ea6935d5c6499781a4be87bc1ff82b",
+      "pdf_name": "SAMSON Výroční zpráva.pdf (2093 kB, počet stran: 37)",
+      "download_links": [
+        {
+          "label": "SAMSON Výroční zpráva.pdf (2093 kB, počet stran: 37)",
+          "url": "https://or.justice.cz/ias/content/download?id=35ea6935d5c6499781a4be87bc1ff82b",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 194,
+      "extraction_mode": "ocr",
+      "page_count": 37,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "operating_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "C 19476/SL65/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 14.07.2025",
+      "created_date": "2025-07-14",
+      "received_date": "2025-07-15",
+      "filed_date": "2025-07-21",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=87455107&subjektId=450321&spis=108844",
+      "document_id": "87455107",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=64165084b04a4456acb306366f983779",
+      "pdf_name": "Přehled_o_peněžních_tocích.pdf (51 kB, počet stran: 2)",
+      "download_links": [
+        {
+          "label": "SAMSON - J.7a Příloha UZ 2024.docx (63 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=d29ac8eda52346f68418ec867cb5424a",
+          "is_pdf": false
+        },
+        {
+          "label": "Přehled_o_peněžních_tocích.pdf (51 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=64165084b04a4456acb306366f983779",
+          "is_pdf": true
+        },
+        {
+          "label": "Přehled_o_změnách_vlastního_kapitálu.pdf (47 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=98a152de006b40edaef903477a08b9b3",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100341383-20250709-133745.xml (5 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=3d0820088e9f499f86ce0c46aba70043",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100341383-20250709-133745.pdf (251 kB, počet stran: 4)",
+          "url": "https://or.justice.cz/ias/content/download?id=c6bb43be772f4983a3cb4fdb0bb8016e",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 2,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 19476/SL64/MSPH",
+      "type": "účetní závěrka [2023] , ostatní zpráva auditora + ÚZ",
+      "created_date": "2023-12-31",
+      "received_date": "2024-07-15",
+      "filed_date": "2024-07-31",
+      "pages": 26,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82423591&subjektId=450321&spis=108844",
+      "document_id": "82423591",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=66bd48f61cb349a4986bf49656751423",
+      "pdf_name": "Xerox Scan_15072024122854.PDF (13697 kB, počet stran: 26)",
+      "download_links": [
+        {
+          "label": "Xerox Scan_15072024122854.PDF (13697 kB, počet stran: 26)",
+          "url": "https://or.justice.cz/ias/content/download?id=66bd48f61cb349a4986bf49656751423",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 91,
+      "extraction_mode": "ocr",
+      "page_count": 26,
+      "metrics_found": [
+        "liabilities",
+        "net_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "C 19476/SL63/MSPH",
+      "type": "účetní závěrka [2022] , výroční zpráva [2022] , zpráva o vztazích [2022] , zpráva auditora [2022]",
+      "created_date": "2022-12-31",
+      "received_date": "2023-07-20",
+      "filed_date": "2023-07-26",
+      "pages": 32,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77705786&subjektId=450321&spis=108844",
+      "document_id": "77705786",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2022,
+        2022,
+        2022,
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=79e43de1fb814b72a4b99e1fb36325bf",
+      "pdf_name": "Výroční zpráva 2022_komplet.PDF (14304 kB, počet stran: 32)",
+      "download_links": [
+        {
+          "label": "Výroční zpráva 2022_komplet.PDF (14304 kB, počet stran: 32)",
+          "url": "https://or.justice.cz/ias/content/download?id=79e43de1fb814b72a4b99e1fb36325bf",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 189,
+      "extraction_mode": "unknown",
+      "page_count": 32,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 19476/SL62/MSPH",
+      "type": "účetní závěrka [2021] , zpráva auditora [2021]",
+      "created_date": "2021-12-31",
+      "received_date": "2022-09-21",
+      "filed_date": "2022-09-27",
+      "pages": 21,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73445136&subjektId=450321&spis=108844",
+      "document_id": "73445136",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2021,
+        2021
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=3c705a20e5444f65a90f6aceafc10cc3",
+      "pdf_name": "SAMSON PRAHA ZPRÁVA AUDITORA 2021A.PDF (8254 kB, počet stran: 21)",
+      "download_links": [
+        {
+          "label": "SAMSON PRAHA ZPRÁVA AUDITORA 2021A.PDF (8254 kB, počet stran: 21)",
+          "url": "https://or.justice.cz/ias/content/download?id=3c705a20e5444f65a90f6aceafc10cc3",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 98,
+      "extraction_mode": "ocr",
+      "page_count": 21,
+      "metrics_found": [
+        "liabilities",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "C 19476/SL59/MSPH",
+      "type": "účetní závěrka [2020] , výroční zpráva [2020]",
+      "created_date": "2020-12-31",
+      "received_date": "2021-06-21",
+      "filed_date": "2021-07-14",
+      "pages": 21,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67096973&subjektId=450321&spis=108844",
+      "document_id": "67096973",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2020,
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=c826844a9c154b7281aff97ce9727e80",
+      "pdf_name": "Samson - auditorská zpráva.PDF (8117 kB, počet stran: 21)",
+      "download_links": [
+        {
+          "label": "Samson - auditorská zpráva.PDF (8117 kB, počet stran: 21)",
+          "url": "https://or.justice.cz/ias/content/download?id=c826844a9c154b7281aff97ce9727e80",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 143,
+      "extraction_mode": "unknown",
+      "page_count": 21,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 19476/SL60/MSPH",
+      "type": "účetní závěrka [2020] VZaZ",
+      "created_date": "2020-12-31",
+      "received_date": "2021-06-21",
+      "filed_date": "2021-07-14",
+      "pages": 2,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67096974&subjektId=450321&spis=108844",
+      "document_id": "67096974",
+      "spis": "108844",
+      "subjekt_id": "450321",
+      "years": [
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=56b0d454d21e48589944fd890892c35c",
+      "pdf_name": "Výkaz zisku a ztráty 2020.PDF (1222 kB, počet stran: 2)",
+      "download_links": [
+        {
+          "label": "Výkaz zisku a ztráty 2020.PDF (1222 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=56b0d454d21e48589944fd890892c35c",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 52,
+      "extraction_mode": "ocr",
+      "page_count": 2,
+      "metrics_found": [
+        "net_profit",
+        "operating_profit",
+        "revenue"
+      ]
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 3534,
+    "output_tokens": 1614,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "SAMSON PRAHA, spol. s r.o. (IČO 48539589) působí od roku 1993 a v posledních letech prochází výrazným růstem tržeb, ale za cenu klesající ziskovosti a rostoucího zadlužení. Tržby vzrostly z 183 mil. Kč v roce 2019 na 393 mil. Kč v roce 2024, přičemž čistý zisk klesl z 12,3 mil. Kč (marže 6,7 %) na pouhých 0,55 mil. Kč provozního zisku (marže blízko nuly). Zadlužení vzrostlo z 0,36 mil. Kč v roce 2020 na 183 mil. Kč v roce 2024, což posunulo podíl cizích zdrojů na 69 % aktiv. Vedení je stabilní, společník Marcel Rückl je zároveň jednatelem od roku 2013.",
+  "data_quality_note": "Data jsou neúplná – chybí čistý zisk pro roky 2021 a 2024, provozní zisk pro rok 2021, a kompletní rozvaha pro roky 2019–2022, což omezuje hloubku analýzy.",
+  "insight_summary": [
+    {
+      "title": "Explozivní růst tržeb",
+      "detail": "Tržby vzrostly z 183 mil. Kč (2019) na 393 mil. Kč (2024), s výrazným skokem v roce 2022 na 371 mil. Kč. Meziroční růst 2023–2024 činí 71,5 %."
+    },
+    {
+      "title": "Kolaps ziskovosti",
+      "detail": "Čistá marže klesla z 6,7 % (2019) na 0,2 % (2023). Provozní zisk v roce 2024 jen 0,55 mil. Kč při tržbách 393 mil. Kč naznačuje téměř nulovou rentabilitu."
+    },
+    {
+      "title": "Dramatický nárůst zadlužení",
+      "detail": "Závazky vzrostly z 0,36 mil. Kč (2020) na 183 mil. Kč (2024). Podíl cizích zdrojů na aktivech vzrostl z 44,4 % (2023) na 69 % (2024)."
+    },
+    {
+      "title": "Stabilní vedení",
+      "detail": "Jednatelé Ing. Eva Kolářová (od 2007) a Ing. Marcel Rückl (od 2013, zároveň jediný společník) bez změn. Prokura udělena Ing. Zuzaně Hrdličkové."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Agresivní expanze na dluh",
+      "detail": "Aktiva vzrostla z 114 mil. Kč (2023) na 265 mil. Kč (2024), přičemž vlastní kapitál vzrostl jen z 63 na 80 mil. Kč. Nárůst o 151 mil. Kč byl financován téměř výhradně dluhem (nárůst závazků o 132 mil. Kč)."
+    },
+    {
+      "title": "Eroze kapitálové síly",
+      "detail": "Equity ratio klesl z 55,6 % (2023) na 30,1 % (2024), což signalizuje výrazné zhoršení finanční stability a zvýšené riziko při poklesu tržeb."
+    },
+    {
+      "title": "Neúplná data neumožňují plnou analýzu",
+      "detail": "Chybí čistý zisk pro 2021 a 2024, kompletní rozvaha pro 2019–2022. Není možné přesně vyhodnotit cash flow, ROE, nebo detailní strukturu závazků."
+    },
+    {
+      "title": "Pozdní podání za rok 2021",
+      "detail": "Účetní závěrka za rok 2021 byla podána až v září 2022, tedy cca 270 dní po konci účetního období, což je neobvykle dlouhá prodleva."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Růst bez zisku – červená vlajka",
+      "detail": "Firma zdvojnásobila tržby, ale zisk téměř zmizel. Buď jde o agresivní cenovou politiku pro získání zakázek, nebo o neefektivní řízení nákladů. Při marži 0,2 % stačí malý výkyv a firma je ve ztrátě."
+    },
+    {
+      "title": "Zadlužení 183 mil. Kč vs. zisk 0,55 mil. Kč",
+      "detail": "Při současné ziskovosti by splacení závazků trvalo desítky let. Firma je závislá na externím financování a jakýkoliv problém s cash flow nebo refinancováním může být kritický."
+    },
+    {
+      "title": "Chybějící čistý zisk za rok 2024",
+      "detail": "Nejnovější účetní závěrka neobsahuje čistý zisk, přestože je k dispozici provozní zisk. Není jasné, zda jde o chybu extrakce, nebo zda firma skutečně skončila ve ztrátě po finančních nákladech."
+    },
+    {
+      "title": "Opožděné podání 2021 bez vysvětlení",
+      "detail": "Prodleva 9 měsíců u podání účetní závěrky může naznačovat problémy s účetnictvím, auditem nebo vnitřní organizací. V kombinaci s klesající ziskovostí to vyvolává otázky."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": {
+    "source_name": "Chytrý rejstřík",
+    "source_url": "https://www.chytryrejstrik.cz/ico-48539589/samson-praha-spol-s-r-o",
+    "employees_hint": null,
+    "checks": [
+      {
+        "label": "Aktiva vs. Chytrý rejstřík",
+        "status": "warning",
+        "app_value": 265.22,
+        "external_value": 261.72,
+        "detail": "Hodnoty se rozcházejí, chce to ruční kontrolu PDF."
+      }
+    ],
+    "snapshot": {
+      "url": "https://www.chytryrejstrik.cz/ico-48539589/samson-praha-spol-s-r-o",
+      "assets_mil_czk": 261.72,
+      "profit_mil_czk": 28.9,
+      "employees_hint": null
+    }
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=450321&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=450321&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=450321",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=450321&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=450321&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": "https://www.chytryrejstrik.cz/ico-48539589/samson-praha-spol-s-r-o"
+  },
+  "generated_at": "2026-03-08T17:13:18.400127+00:00",
+  "cache_status": "fresh"
+}

@@ -1,0 +1,165 @@
+{
+  "subject_id": "1232787",
+  "name": "NEON HORT s.r.o.",
+  "ico": "21340005",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "NEON HORT s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "213 40 005"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "7. března 2024"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 400039 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Jungmannova 736/10, Nové Město, 110 00 Praha 1"
+    }
+  ],
+  "executives": [
+    {
+      "role": "Jednatel",
+      "name": "TADEÁŠ HORT",
+      "birth_date": "24. února 1998",
+      "raw": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1 Den vzniku funkce: 7. března 2024"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Jednatel zastupuje společnost samostatně.",
+      "birth_date": null,
+      "raw": "Jednatel zastupuje společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+      "raw": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1"
+    },
+    {
+      "role": "Společník",
+      "name": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+      "raw": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1 Den vzniku funkce: 7. března 2024",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel zastupuje společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 80 000 ,- Kč Splaceno: 100 % Obchodní podíl: 80 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 20 000 ,- Kč Splaceno: 100 % Obchodní podíl: 20 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "100 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [],
+  "financial_documents": [],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 1344,
+    "output_tokens": 700,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "NEON HORT s.r.o. je velmi mladá firma založená 7. března 2024, tedy existuje necelý rok. Jednatelem a společníkem je Tadeáš Hort (nar. 1998), druhým společníkem Pavel Fuchs. Žádná finanční data, účetní závěrky ani jiné dokumenty ze Sbírky listin nejsou k dispozici, což je u tak čerstvé firmy běžné.",
+  "data_quality_note": "Data jsou minimální – pouze základní registrační údaje z obchodního rejstříku, žádné finanční výkazy ani dokumenty nejsou dostupné.",
+  "insight_summary": [
+    {
+      "title": "Nově založená společnost",
+      "detail": "Firma vznikla v březnu 2024, nemá tedy ani rok existence. Nelze hodnotit žádné trendy, historii ani finanční výkonnost."
+    },
+    {
+      "title": "Jednoduchá vlastnická struktura",
+      "detail": "Dva společníci (Tadeáš Hort a Pavel Fuchs), jednatel Hort jedná samostatně. Žádné změny ve vedení ani sídle od založení."
+    },
+    {
+      "title": "Chybí jakákoliv finanční data",
+      "detail": "Ve Sbírce listin nejsou žádné účetní závěrky, výroční zprávy ani jiné dokumenty. První povinné výkazy lze očekávat až po uzavření prvního účetního období."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Příliš mladá na jakékoliv závěry",
+      "detail": "Společnost nemá ani roční historii. Bez účetních závěrek, obratů, zisku/ztráty nebo kapitálové struktury nelze provést smysluplnou finanční analýzu."
+    },
+    {
+      "title": "Stabilní start bez turbulencí",
+      "detail": "Od založení nedošlo k žádným změnám v sídle, názvu ani vedení, což naznačuje klidný rozjezd bez viditelných organizačních problémů."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Žádné varovné signály v rejstříku",
+      "detail": "V dostupných datech není nic neobvyklého – standardní zápis nové s.r.o. bez pozdních listin, exekucí nebo změn. Prostě čerstvá firma bez historie."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": null,
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1232787&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1232787&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=1232787",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1232787&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1232787&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": null
+  },
+  "generated_at": "2026-03-08T18:05:41.757427+00:00",
+  "cache_status": "fresh"
+}

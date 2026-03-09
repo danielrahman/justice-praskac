@@ -1,0 +1,373 @@
+{
+  "subject_id": "563341",
+  "name": "SAMSON, spol. s r.o.",
+  "ico": "43420231",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "SAMSON, spol. s r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "434 20 231"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "3. prosince 1991"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 3602 vedená u Krajského soudu v Brně"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Zákostelí 190, 679 71 Lysice"
+    }
+  ],
+  "executives": [
+    {
+      "role": "jednatel",
+      "name": "ALOIS ADÁMEK",
+      "birth_date": "14. prosince 1953",
+      "raw": "ALOIS ADÁMEK , dat. nar. 14. prosince 1953 Oulehla 528, 679 71 Lysice Den vzniku funkce: 21. září 1993"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Způsob zastupování: Za společnost jedná a podepisuje jednatel, každý samostatně.",
+      "birth_date": null,
+      "raw": "Způsob zastupování: Za společnost jedná a podepisuje jednatel, každý samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "ALOIS ADÁMEK , dat. nar. 14. prosince 1953 Oulehla 528, 679 71 Lysice",
+      "raw": "ALOIS ADÁMEK , dat. nar. 14. prosince 1953 Oulehla 528, 679 71 Lysice"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "ALOIS ADÁMEK , dat. nar. 14. prosince 1953 Oulehla 528, 679 71 Lysice Den vzniku funkce: 21. září 1993",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Způsob zastupování: Za společnost jedná a podepisuje jednatel, každý samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "ALOIS ADÁMEK , dat. nar. 14. prosince 1953 Oulehla 528, 679 71 Lysice",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 000 ,- Kč Obchodní podíl: 100 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "100 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2019,
+      "sources": [
+        {
+          "document_number": "C 3602/SL27/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65509283&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=a6718e1b880f4005ba050f54262778ba",
+          "year": 2020
+        }
+      ],
+      "assets": 7.85,
+      "liabilities": 1.12,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": 14.3,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2020,
+      "sources": [
+        {
+          "document_number": "C 3602/SL28/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74450728&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=2e8a59bbbbc84a2097dddee26894585d",
+          "year": 2021
+        },
+        {
+          "document_number": "C 3602/SL27/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65509283&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=a6718e1b880f4005ba050f54262778ba",
+          "year": 2020
+        }
+      ],
+      "assets": 3.54,
+      "liabilities": 4.09,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": 115.5,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 3602/SL29/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77132223&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=7f5197be949742358570de7a36ddc92e",
+          "year": 2022
+        },
+        {
+          "document_number": "C 3602/SL28/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74450728&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=2e8a59bbbbc84a2097dddee26894585d",
+          "year": 2021
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 3602/SL30/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=80984279&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66c6317f6db447afa61fcda4b66430ff",
+          "year": 2023
+        },
+        {
+          "document_number": "C 3602/SL29/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77132223&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=7f5197be949742358570de7a36ddc92e",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 3602/SL31/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85793216&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=604c0068bb084f869b8b4f6f77ab468f",
+          "year": 2024
+        },
+        {
+          "document_number": "C 3602/SL30/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=80984279&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66c6317f6db447afa61fcda4b66430ff",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 3602/SL31/KSBR",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85793216&subjektId=563341&spis=691458",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=604c0068bb084f869b8b4f6f77ab468f",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 3602/SL31/KSBR",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 06.04.2025",
+      "created_date": "2025-04-06",
+      "received_date": "2025-04-06",
+      "filed_date": "2025-04-11",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85793216&subjektId=563341&spis=691458",
+      "document_id": "85793216",
+      "spis": "691458",
+      "subjekt_id": "563341",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=604c0068bb084f869b8b4f6f77ab468f",
+      "pdf_name": "Samson příloha 2024.pdf (277 kB, počet stran: 2)",
+      "extraction_mode": "ocr",
+      "page_count": 2,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 3602/SL30/KSBR",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 07.04.2024",
+      "created_date": "2024-04-07",
+      "received_date": "2024-04-10",
+      "filed_date": "2024-04-14",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=80984279&subjektId=563341&spis=691458",
+      "document_id": "80984279",
+      "spis": "691458",
+      "subjekt_id": "563341",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=66c6317f6db447afa61fcda4b66430ff",
+      "pdf_name": "Samson s.r.o. příloha 2023.pdf (279 kB, počet stran: 2)",
+      "extraction_mode": "ocr",
+      "page_count": 2,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 3602/SL29/KSBR",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 08.04.2023",
+      "created_date": "2023-04-08",
+      "received_date": "2023-05-30",
+      "filed_date": "2023-06-10",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77132223&subjektId=563341&spis=691458",
+      "document_id": "77132223",
+      "spis": "691458",
+      "subjekt_id": "563341",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=7f5197be949742358570de7a36ddc92e",
+      "pdf_name": "Samson, s.r.o. příloha 2022.pdf (279 kB, počet stran: 2)",
+      "extraction_mode": "ocr",
+      "page_count": 2,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 3602/SL28/KSBR",
+      "type": "účetní závěrka [2021] - předána prostřednictvím správce daně z příjmů k 09.05.2022",
+      "created_date": "2022-05-09",
+      "received_date": "2022-08-03",
+      "filed_date": "2022-12-14",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=74450728&subjektId=563341&spis=691458",
+      "document_id": "74450728",
+      "spis": "691458",
+      "subjekt_id": "563341",
+      "years": [
+        2021
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=2e8a59bbbbc84a2097dddee26894585d",
+      "pdf_name": "UZ-461100001534-20220504-130608.xml (1 kB)",
+      "extraction_mode": "ocr",
+      "page_count": 0,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 3602/SL27/KSBR",
+      "type": "účetní závěrka [2020] rozvaha + příloha",
+      "created_date": "2021-02-08",
+      "received_date": "2021-03-09",
+      "filed_date": "2021-03-23",
+      "pages": 6,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65509283&subjektId=563341&spis=691458",
+      "document_id": "65509283",
+      "spis": "691458",
+      "subjekt_id": "563341",
+      "years": [
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=a6718e1b880f4005ba050f54262778ba",
+      "pdf_name": "Samson rozvaha, příloha 2020 pro KOS.pdf (1963 kB, počet stran: 6)",
+      "extraction_mode": "ocr",
+      "page_count": 6,
+      "metrics_found": [
+        "assets",
+        "liabilities"
+      ]
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_overview": "SAMSON, spol. s r.o. je stabilní rodinná firma založená v roce 1991, kterou od roku 1993 vede a vlastní Alois Adámek. Firma prošla dramatickým zhoršením finanční situace mezi roky 2019–2020, kdy zadluženost vyskočila z 14 % na 116 % a aktiva klesla z 7,85 mil. Kč na 3,54 mil. Kč. Od roku 2021 chybí kompletní finanční data, přestože účetní závěrky jsou formálně podávány – což znemožňuje posoudit, zda se firma z problémů dostala nebo dál klesá.",
+  "data_quality_note": "Data jsou velmi slabá – z let 2021–2024 nejsou dostupné žádné finanční metriky, pouze formální potvrzení o podání závěrek.",
+  "insight_summary": [
+    {
+      "title": "Stabilní vlastnická struktura",
+      "detail": "Firma je od roku 1993 vedena a vlastněna jedinou osobou (Alois Adámek), bez změn v názvu, sídle či vedení za celou dobu existence."
+    },
+    {
+      "title": "Dramatický propad v roce 2020",
+      "detail": "Aktiva klesla z 7,85 mil. Kč (2019) na 3,54 mil. Kč (2020), zatímco závazky vzrostly z 1,12 mil. Kč na 4,09 mil. Kč – firma se dostala do předlužení (115,5 %)."
+    },
+    {
+      "title": "Černá díra v datech 2021–2024",
+      "detail": "Účetní závěrky jsou formálně podávány, ale z dokumentů se nepodařilo vytěžit žádná čísla – nelze posoudit aktuální stav firmy."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Možný existenční problém v roce 2020",
+      "detail": "Zadluženost 115,5 % znamená, že závazky převyšovaly majetek – typický signál insolvence. Bez dat z následujících let nelze zjistit, zda firma sanovala, restrukturalizovala, nebo jen přežívá na minimálním provozu."
+    },
+    {
+      "title": "Opožděné podání závěrky za 2021",
+      "detail": "Dokument za rok 2021 byl založen do sbírky listin až 348 dní po konci účetního období (srpen 2022 místo jara), což může indikovat administrativní problémy nebo nedostatek kapacit."
+    },
+    {
+      "title": "Formální compliance bez transparentnosti",
+      "detail": "Firma formálně plní povinnost podávat účetní závěrky přes správce daně, ale dokumenty neobsahují čitelná data – buď jde o minimalistické výkazy, nebo technický problém při digitalizaci."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Předlužení v roce 2020 a pak ticho",
+      "detail": "Firma vykazovala technickou insolvenci (závazky 4,09 mil. vs. aktiva 3,54 mil.) a od té doby nejsou k dispozici žádná čísla. Buď se situace vyřešila mimo veřejné záznamy, nebo firma funguje v režimu \"zombie\" bez reálné sanace."
+    },
+    {
+      "title": "Neprůhledné výkazy 4 roky v řadě",
+      "detail": "Čtyři po sobě jdoucí roky (2021–2024) bez jediné vytěžitelné finanční metriky je neobvyklé – naznačuje buď minimalistické účetnictví na hraně zákona, nebo záměrnou netransparentnost."
+    },
+    {
+      "title": "Žádný signál oživení",
+      "detail": "Po propadu v roce 2020 není ve veřejných záznamech vidět žádná změna strategie, kapitálový vstup ani restrukturalizace – firma pokračuje se stejným vedením a strukturou, ale bez viditelných výsledků."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=563341&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=563341&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=563341",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=563341&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=563341&typVypisu=UPLNY&full=false"
+  },
+  "generated_at": "2026-03-08T04:37:02.039829+00:00"
+}

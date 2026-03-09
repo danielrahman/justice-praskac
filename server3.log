@@ -1,0 +1,57 @@
+INFO:     Started server process [6305]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:40658 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40674 - "GET /api/company?subjektId=450321&q=48539589 HTTP/1.1" 200 OK
+Syntax Warning: May not be a PDF file (continuing anyway)
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+Syntax Warning: May not be a PDF file (continuing anyway)
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+Syntax Warning: May not be a PDF file (continuing anyway)
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+INFO:     127.0.0.1:54692 - "GET /api/company?subjektId=450321&q=48539589 HTTP/1.1" 200 OK
+INFO:     10.12.35.66:59386 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:41856 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:44650 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:44656 - "GET /api/search?q=48539589 HTTP/1.1" 200 OK
+INFO:     10.12.10.194:44670 - "GET /api/company/stream?subjektId=450321&q=48539589 HTTP/1.1" 200 OK
+INFO:     10.12.10.194:43936 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:48650 - "GET /api/search?q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.10.194:48666 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.10.194:54594 - "GET /api/search?q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.10.194:54604 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.10.194:52228 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:57092 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:38944 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:42544 - "GET /api/search?q=Neon+hort HTTP/1.1" 200 OK
+INFO:     10.12.10.194:38744 - "GET /api/company/stream?subjektId=1232787&q=Neon+hort HTTP/1.1" 200 OK
+INFO:     10.12.10.194:39964 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:48484 - "GET /api/search?q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.10.194:48498 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.10.194:43882 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.10.194:54256 - "GET /api/search?q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.10.194:54266 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.168.70:38142 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.168.70:42700 - "GET /api/search?q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.168.70:42716 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.168.70:42722 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.168.70:39414 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.168.70:39426 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.168.70:39442 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.168.70:39446 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.163.20:48358 - "GET /api/search?q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.163.20:48368 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.163.20:48372 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59334 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59336 - "GET /api/search?q=Directcom HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6305]

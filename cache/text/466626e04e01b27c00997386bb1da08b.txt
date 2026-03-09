@@ -1,0 +1,298 @@
+            IČ:               17607248
+
+                       Rozvaha pro podnikatele, v plném rozsahu
+                                  ke dni 31.12.2024
+                                    (v celých tisících CZK)
+                                                                                                 minulé
+                                                                běžné účetní období
+                                                                                                 účetní
+                              AKTIVA
+                                                                                                 období
+                                                              brutto       korekce   netto
+                                                                                                  netto
+                                                                1            2        3             4
+              AKTIVA CELKEM                                         103          0        103         211
+A.            Pohledávky za upsaný základní kapitál                   0          0          0           0
+B.            Stálá aktiva                                            0          0          0           0
+B.I.          Dlouhodobý nehmotný majetek                             0          0          0           0
+B.I.1.        Nehmotné výsledky vývoje                                0          0          0           0
+B.I.2.        Ocenitelná práva                                        0          0          0           0
+B.I.2.1.      Software                                                0          0          0           0
+B.I.2.2.      Ostatní ocenitelná práva                                0          0          0           0
+B.I.3.        Goodwill                                                0          0          0           0
+B.I.4         Ostatní dlouhodobý nehmotný majetek                     0          0          0           0
+              Poskytnuté zálohy na dlouhodobý nehmotný
+B.I.5.        majetek a nedokončený dlouhodobý nehmotný                0         0           0         0
+              majetek
+              Poskytnuté zálohy na dlouhodobý nehmotný
+B.I.5.1.                                                               0         0           0         0
+              majetek
+B.I.5.2.      Nedokončený dlouhodobý nehmotný majetek                  0         0           0         0
+B.II.         Dlouhodobý hmotný majetek                                0         0           0         0
+B.II.1.       Pozemky a stavby                                         0         0           0         0
+B.II.1.1.     Pozemky                                                  0         0           0         0
+B.II.1.2.     Stavby                                                   0         0           0         0
+B.II.2.       Hmotné movité věci a jejich soubory                      0         0           0         0
+B.II.3.       Oceňovací rozdíl k nabytému majetku                      0         0           0         0
+B.II.4.       Ostatní dlouhodobý hmotný majetek                        0         0           0         0
+B.II.4.1.     Pěstitelské celky trvalých porostů                       0         0           0         0
+B.II.4.2.     Dospělá zvířata a jejich skupiny                         0         0           0         0
+B.II.4.3.     Jiný dlouhodobý hmotný majetek                           0         0           0         0
+              Poskytnuté zálohy na dlouhodobý hmotný
+B.II.5.       majetek a nedokončený dlouhodobý hmotný                  0         0           0         0
+              majetek
+              Poskytnuté zálohy na dlouhodobý hmotný
+B.II.5.1                                                               0         0           0         0
+              majetek
+B.II.5.2.     Nedokončený dlouhodobý hmotný majetek                    0         0           0         0
+B.III.        Dlouhodobý finanční majetek                              0         0           0         0
+B.III.1.      Podíly - ovládaná nebo ovládající osoba                  0         0           0         0
+                                                                                               minulé
+                                                              běžné účetní období
+                                                                                               účetní
+                                AKTIVA
+                                                                                               období
+                                                            brutto       korekce   netto
+                                                                                                netto
+                                                              1            2        3             4
+              Zápůjčky a úvěry - ovládaná nebo ovládající
+B.III.2.                                                             0         0           0            0
+              osoba
+B.III.3       Podíly - podstatný vliv                                0         0           0            0
+B.III.4.      Zápůjčky a úvěry - podstatný vliv                      0         0           0            0
+B.III.5.      Ostatní dlouhodobé cenné papíry a podíly               0         0           0            0
+B.III.6.      Zápůjčky a úvěry - ostatní                             0         0           0            0
+B.III.7.      Ostatní dlouhodobý finanční majetek                    0         0           0            0
+B.III.7.1.    Jiný dlouhodobý finanční majetek                       0         0           0            0
+              Poskytnuté zálohy na dlouhodobý finanční
+B.III.7.2.                                                           0         0           0            0
+              majetek
+C.            Oběžná aktiva                                       103          0        103        211
+C.I.          Zásoby                                                0          0          0          0
+C.I.1.        Materiál                                              0          0          0          0
+C.I.2.        Nedokončená výroba a polotovary                       0          0          0          0
+C.I.3         Výrobky a zboží                                       0          0          0          0
+C.I.3.1.      Výrobky                                               0          0          0          0
+C.I.3.2.      Zboží                                                 0          0          0          0
+C.I.4.        Mladá a ostatní zvířata a jejich skupiny              0          0          0          0
+C.I.5.        Poskytnuté zálohy na zásoby                           0          0          0          0
+C.II.         Pohledávky                                           96          0         96          8
+C.II.1.       Dlouhodobé pohledávky                                 3          0          3          0
+C.II.1.1.     Pohledávky z obchodních vztahů                        3          0          3          0
+C.II.1.2.     Pohledávky - ovládaná nebo ovládající osoba           0          0          0          0
+C.II.1.3.     Pohledávky - podstatný vliv                           0          0          0          0
+C.II.1.4.     Odložená daňová pohledávka                            0          0          0          0
+C.II.1.5.     Pohledávky - ostatní                                  0          0          0          0
+C.II.1.5.1.   Pohledávky za společníky                              0          0          0          0
+C.II.1.5.2.   Dlouhodobé poskytnuté zálohy                          0          0          0          0
+C.II.1.5.3.   Dohadné účty aktivní                                  0          0          0          0
+C.II.1.5.4.   Jiné pohledávky                                       0          0          0          0
+C.II.2.       Krátkodobé pohledávky                                93          0         93          8
+C.II.2.1.     Pohledávky z obchodních vztahů                        0          0          0          0
+C.II.2.2.     Pohledávky - ovládaná nebo ovládající osoba           0          0          0          0
+C.II.2.3.     Pohledávky - podstatný vliv                           0          0          0          0
+C.II.2.4.     Pohledávky - ostatní                                 93          0         93          8
+C.II.2.4.1.   Pohledávky za společníky                              0          0          0          0
+C.II.2.4.2.   Sociální zabezpečení a zdravotní pojištění            4          0          4          0
+C.II.2.4.3.   Stát - daňové pohledávky                              0          0          0          0
+C.II.2.4.4.   Krátkodobé poskytnuté zálohy                         89          0         89          8
+C.II.2.4.5.   Dohadné účty aktivní                                  0          0          0          0
+                                                          běžné účetní období              minulé
+                                                                                           účetní
+                                AKTIVA
+                                                                                           období
+                                                        brutto       korekce   netto
+                                                                                            netto
+                                                          1            2        3             4
+C.II.2.4.6.   Jiné pohledávky                                    0         0           0         0
+C.II.3.       Časové rozlišení aktiv                             0         0           0         0
+C.II.3.1.     Náklady příštích období                            0         0           0         0
+C.II.3.2.     Komplexní náklady příštích období                  0         0           0         0
+C.II.3.3.     Příjmy příštích období                             0         0           0         0
+C.III.        Krátkodobý finanční majetek                        0         0           0         0
+C.III.1.      Podíly - ovládaná nebo ovládající osoba            0         0           0         0
+C.III.2.      Ostatní krátkodobý finanční majetek                0         0           0         0
+C.IV.         Peněžní prostředky                                 7         0           7       203
+C.IV.1.       Peněžní prostředky v pokladně                      2         0           2       187
+C.IV.2.       Peněžní prostředky na účtech                       5         0           5        16
+D.            Časové rozlišení aktiv                             0         0           0         0
+D.1.          Náklady příštích období                            0         0           0         0
+D.2.          Komplexní náklady příštích období                  0         0           0         0
+D.3.          Příjmy příštích období                             0         0           0         0
+                                                                     běžné účetní minulé účetní
+                                   PASIVA
+                                                                       období        období
+                                                                          1            2
+            PASIVA CELKEM                                                      103          211
+A.          Vlastní kapitál                                                   -914         -181
+A.I.        Základní kapitál                                                    10           10
+A.I.1.      Základní kapitál                                                    10           10
+A.I.2.      Vlastní podíly (-)                                                   0            0
+A.I.3.      Změny základního kapitálu                                            0            0
+A.II.       Ážio a kapitálové fondy                                              0            0
+A.II.1.     Ážio                                                                 0            0
+A.II.2.     Kapitálové fondy                                                     0            0
+A.II.2.1.   Ostatní kapitálové fondy                                             0            0
+A.II.2.2.   Oceňovací rozdíly z přecenění majetku a závazků (+/-)                0            0
+            Oceňovací rozdíly z přecenění při přeměnách obchodních
+A.II.2.3.                                                                       0            0
+            korporací (+/-)
+A.II.2.4.   Rozdíly z přeměn obchodních korporací (+/-)                         0            0
+            Rozdíly z ocenění při přeměnách obchodních korporací
+A.II.2.5.                                                                       0            0
+            (+/-)
+A.III.      Fondy ze zisku                                                      0             0
+A.III.1.    Ostatní rezervní fondy                                              0             0
+A.III.2.    Statutární a ostatní fondy                                          0             0
+A.IV.       Výsledek hospodaření minulých let (+/-)                          -191           -20
+            Nerozdělený zisk nebo neuhrazená ztráta minulých let
+A.IV.1.                                                                      -191           -20
+            (+/-)
+A.IV.2.     Jiný výsledek hospodaření minulých let (+/-)                        0             0
+A.V         Výsledek hospodaření běžného účetního období (+/-)               -733          -171
+A.VI.       Rozhodnuto o zálohové výplatě podílu na zisku (-)                   0             0
+B.+C.       Cizí zdroje                                                      1017           392
+B.          Rezervy                                                             0             0
+B.1.        Rezerva na důchody a podobné závazky                                0             0
+B.2.        Rezerva na daň z příjmů                                             0             0
+B.3.        Rezervy podle zvláštních právních předpisů                          0             0
+B.4.        Ostatní rezervy                                                     0             0
+C.          Závazky                                                          1017           392
+C.I.        Dlouhodobé závazky                                                  0             0
+C.I.1.      Vydané dluhopisy                                                    0             0
+C.I.1.1.    Vyměnitelné dluhopisy                                               0             0
+C.I.1.2.    Ostatní dluhopisy                                                   0             0
+C.I.2.      Závazky k úvěrovým institucím                                       0             0
+C.I.3.      Dlouhodobé přijaté zálohy                                           0             0
+C.I.4.      Závazky z obchodních vztahů                                         0             0
+C.I.5.      Dlouhodobé směnky k úhradě                                          0             0
+C.I.6.      Závazky - ovládaná nebo ovládající osoba                            0             0
+                                                              běžné účetní minulé účetní
+                                   PASIVA
+                                                                období        období
+                                                                   1            2
+C.I.7.      Závazky - podstatný vliv                                      0            0
+C.I.8.      Odložený daňový závazek                                       0            0
+C.I.9.      Závazky - ostatní                                             0            0
+C.I.9.1.    Závazky ke společníkům                                        0            0
+C.I.9.2.    Dohadné účty pasivní                                          0            0
+C.I.9.3.    Jiné závazky                                                  0            0
+C.II.       Krátkodobé závazky                                         894           318
+C.II.1.     Vydané dluhopisy                                              0            0
+C.II.1.1.   Vyměnitelné dluhopisy                                         0            0
+C.II.1.2.   Ostatní dluhopisy                                             0            0
+C.II.2.     Závazky k úvěrovým institucím                                 0            0
+C.II.3.     Krátkodobé přijaté zálohy                                     0            0
+C.II.4.     Závazky z obchodních vztahů                                   0           39
+C.II.5.     Krátkodobé směnky k úhradě                                    0            0
+C.II.6.     Závazky - ovládaná nebo ovládající osoba                      0            0
+C.II.7.     Závazky - podstatný vliv                                      0            0
+C.II.8.     Závazky ostatní                                            894           279
+C.II.8.1.   Závazky ke společníkům                                     859           218
+C.II.8.2.   Krátkodobé finanční výpomoci                                  0            0
+C.II.8.3.   Závazky k zaměstnancům                                       34           51
+            Závazky ze sociálního zabezpečení a zdravotního
+C.II.8.4.                                                                0            9
+            pojištění
+C.II.8.5.   Stát - daňové závazky a dotace                               1            1
+C.II.8.6.   Dohadné účty pasivní                                         0            0
+C.II.8.7.   Jiné závazky                                                 0            0
+C.III.      Časové rozlišení pasiv                                     123           74
+C.III.1.    Výdaje příštích období                                     123           74
+C.III.2.    Výnosy příštích období                                       0            0
+D.          Časové rozlišení pasiv                                       0            0
+D.1.        Výdaje příštích období                                       0            0
+D.2.        Výnosy příštích období                                       0            0
+         IČ:                17607248
+
+               Výkaz zisku a ztráty pro podnikatele - druhové členění,
+                                  v plném rozsahu
+                                  ke dni 31.12.2024
+                                   (v celých tisících CZK)
+                                                                     běžné účetní minulé účetní
+                               Název položky
+                                                                       období        období
+                                                                          1            2
+I.         Tržby z prodeje výrobků a služeb                                  3889          2539
+II.        Tržby za prodej zboží                                                 0            0
+A.         Výkonová spotřeba                                                 3258          2145
+A.1        Náklady vynaložené na prodané zboží                                   0            0
+A.2        Spotřeba materiálu a energie                                      1496          1217
+A.3        Služby                                                            1762           928
+B.         Změna stavu zásob vlastní činnosti (+/-)                              0            0
+C.         Aktivace (-)                                                          0            0
+D.         Osobní náklady                                                    1335           521
+D.1.       Mzdové náklady                                                    1109           456
+           Náklady na sociální zabezpečení, zdravotní pojištění a
+D.2                                                                           226           65
+           ostatní náklady
+D.2.1.     Náklady na sociální zabezpečení a zdravotní pojištění              131           54
+D.2.2.     Ostatní náklady                                                     95           11
+E.         Úpravy hodnot v provozní oblasti                                     0            0
+           Úpravy hodnot dlouhodobého nehmotného a hmotného
+E.1.                                                                            0            0
+           majetku
+           Úpravy hodnot dlouhodobého nehmotného a hmotného
+E.1.1.                                                                          0            0
+           majetku - trvalé
+           Úpravy hodnot dlouhodobého nehmotného a hmotného
+E.1.2.                                                                          0            0
+           majetku - dočasné
+E.2.       Úpravy hodnot zásob                                                  0            0
+E.3.       Úpravy hodnot pohledávek                                             0            0
+III.       Ostatní provozní výnosy                                              0            0
+III.1.     Tržby z prodaného dlouhodobého majetku                               0            0
+III.2.     Tržby z prodaného materiálu                                          0            0
+III.3.     Jiné provozní výnosy                                                 0            0
+F.         Ostatní provozní náklady                                            29           34
+F.1.       Zůstatková cena prodaného dlouhodobého majetku                       0            0
+F.2.       Prodaný materiál                                                     0            0
+F.3.       Daně a poplatky                                                      0            0
+           Rezervy v provozní oblasti a komplexní náklady příštích
+F.4.                                                                            0            0
+           období
+F.5.       Jiné provozní náklady                                               29            34
+*          Provozní výsledek hospodaření (+/-)                               -733          -161
+                                                                      běžné účetní minulé účetní
+                             Název položky
+                                                                        období        období
+                                                                           1            2
+IV.     Výnosy z dlouhodobého finančního majetku - podíly                         0            0
+IV.1.   Výnosy z podílů - ovládaná nebo ovládající osoba                          0            0
+IV.2.   Ostatní výnosy z podílů                                                   0            0
+G.      Náklady vynaložené na prodané podíly                                      0            0
+V.      Výnosy z ostatního dlouhodobého finančního majetku                        0            0
+        Výnosy z ostatního dlouhodobého finančního majetku -
+V.1.                                                                             0            0
+        ovládaná nebo ovládající osoba
+        Ostatní výnosy z ostatního dlouhodobého finančního
+V.2.                                                                             0            0
+        majetku
+        Náklady související s ostatním dlouhodobým finančním
+H.                                                                               0            0
+        majetkem
+VI.     Výnosové úroky a podobné výnosy                                          0            0
+        Výnosové úroky a podobné výnosy - ovládaná nebo
+VI.1.                                                                            0            0
+        ovládající osoba
+VI.2.   Ostatní výnosové úroky a podobné výnosy                                  0            0
+I.      Úpravy hodnot a rezervy ve finanční oblasti                              0            0
+J.      Nákladové úroky a podobné náklady                                        0            0
+        Nákladové úroky a podobné náklady - ovládaná nebo
+J.1.                                                                             0            0
+        ovládající osoba
+J.2.    Ostatní nákladové úroky a podobné náklady                                0             0
+VII.    Ostatní finanční výnosy                                                  0             0
+K.      Ostatní finanční náklady                                                 0            10
+*       Finanční výsledek hospodaření (+/-)                                      0           -10
+**      Výsledek hospodaření před zdaněním (+/-)                              -733          -171
+L.      Daň z příjmů                                                             0             0
+L.1.    Daň z příjmů splatná                                                     0             0
+L.2.    Daň z příjmů odložená (+/-)                                              0             0
+**      Výsledek hospodaření po zdanění (+/-)                                 -733          -171
+M.      Převod podílu na výsledku hospodaření společníkům (+/-)                  0             0
+***     Výsledek hospodaření za účetní období (+/-)                           -733          -171
+        Čistý obrat za účetní období = I. + II. + III. + IV. + V. +
+*                                                                             3889         2539
+        VI. + VII.
+

@@ -1,0 +1,872 @@
+{
+  "subject_id": "921321",
+  "name": "Fakturoid s.r.o.",
+  "ico": "04656679",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "Fakturoid s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "046 56 679"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "12. ledna 2016"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 250448 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Na Perštýně 342/1, Staré Město, 110 00 Praha 1"
+    }
+  ],
+  "executives": [
+    {
+      "role": "Jednatel",
+      "name": "LUKÁŠ KONAROVSKÝ",
+      "birth_date": "18. dubna 1988",
+      "raw": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4 Den vzniku funkce: 12. ledna 2016"
+    },
+    {
+      "role": "Jednatel",
+      "name": "JAN KORBEL",
+      "birth_date": "14. srpna 1979",
+      "raw": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim Den vzniku funkce: 12. ledna 2016"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Každý jednatel jedná za společnost samostatně.",
+      "birth_date": null,
+      "raw": "Každý jednatel jedná za společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4",
+      "raw": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4"
+    },
+    {
+      "role": "Společník",
+      "name": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim",
+      "raw": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4 Den vzniku funkce: 12. ledna 2016",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim Den vzniku funkce: 12. ledna 2016",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Každý jednatel jedná za společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "LUKÁŠ KONAROVSKÝ , dat. nar. 18. dubna 1988 Závišova 1760/14c, Nusle, 140 00 Praha 4",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "JAN KORBEL , dat. nar. 14. srpna 1979 Okružní 1513, Chrudim IV, 537 01 Chrudim",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 75 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "150 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2019,
+      "sources": [
+        {
+          "document_number": "C 250448/SL10/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871274&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+          "year": 2020
+        },
+        {
+          "document_number": "C 250448/SL11/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871275&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+          "year": 2020
+        }
+      ],
+      "assets": 15.77,
+      "equity": 8.22,
+      "liabilities": 1.75,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 52.1,
+      "liability_ratio_pct": 11.1,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2020,
+      "sources": [
+        {
+          "document_number": "C 250448/SL13/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=75116695&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+          "year": 2021
+        },
+        {
+          "document_number": "C 250448/SL10/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871274&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+          "year": 2020
+        },
+        {
+          "document_number": "C 250448/SL11/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871275&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+          "year": 2020
+        }
+      ],
+      "assets": 20.16,
+      "equity": 10.25,
+      "liabilities": 1.91,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 50.8,
+      "liability_ratio_pct": 9.5,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 250448/SL14/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76990394&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+          "year": 2022
+        },
+        {
+          "document_number": "C 250448/SL13/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=75116695&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+          "year": 2021
+        }
+      ],
+      "assets": 19.55,
+      "equity": 6.09,
+      "liabilities": 2.91,
+      "net_profit": 13.23,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 31.2,
+      "liability_ratio_pct": 14.9,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 250448/SL15/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81052692&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+          "year": 2023
+        },
+        {
+          "document_number": "C 250448/SL14/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76990394&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+          "year": 2022
+        }
+      ],
+      "assets": 25.49,
+      "equity": 7.34,
+      "liabilities": 3.4,
+      "net_profit": 15.19,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 28.8,
+      "liability_ratio_pct": 13.3,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 250448/SL16/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85724609&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+          "year": 2024
+        },
+        {
+          "document_number": "C 250448/SL15/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81052692&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+          "year": 2023
+        }
+      ],
+      "assets": 30.58,
+      "equity": 6.75,
+      "liabilities": 5.02,
+      "net_profit": 20.39,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 22.1,
+      "liability_ratio_pct": 16.4,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 250448/SL16/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85724609&subjektId=921321&spis=1006549",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+          "year": 2024
+        }
+      ],
+      "assets": 40.06,
+      "equity": 12.95,
+      "liabilities": 6.72,
+      "net_profit": 24.8,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 32.3,
+      "liability_ratio_pct": 16.8,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 250448/SL16/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 06.04.2025",
+      "created_date": "2025-04-06",
+      "received_date": "2025-04-06",
+      "filed_date": "2025-04-09",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85724609&subjektId=921321&spis=1006549",
+      "document_id": "85724609",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+      "pdf_name": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+      "pdf_candidates": [
+        {
+          "label": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+          "is_pdf": true,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "pdf_index": 1
+        },
+        {
+          "label": "Příloha k závěrce 2024 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=bfb9d0128cc04e6c9887ff8ca7c1b573",
+          "is_pdf": true,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Příloha k závěrce 2024 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=bfb9d0128cc04e6c9887ff8ca7c1b573",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100252775-20250401-140057.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=b9aa25a7b20546d48b9c749546751688",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "candidate_file_count": 2,
+      "candidate_files": [
+        {
+          "label": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=c59afdc97fe34182973e1e4560e55f98",
+          "pdf_index": 1,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "page_count": 2,
+          "extraction_mode": "ocr",
+          "metrics_found": [
+            "assets",
+            "equity",
+            "liabilities",
+            "net_profit"
+          ]
+        },
+        {
+          "label": "Příloha k závěrce 2024 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=bfb9d0128cc04e6c9887ff8ca7c1b573",
+          "pdf_index": 0,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "page_count": 8,
+          "extraction_mode": "digital",
+          "metrics_found": []
+        }
+      ],
+      "combined_metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "page_count": 10,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "mixed"
+    },
+    {
+      "document_number": "C 250448/SL15/MSPH",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 08.04.2024",
+      "created_date": "2024-04-08",
+      "received_date": "2024-04-12",
+      "filed_date": "2024-04-17",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81052692&subjektId=921321&spis=1006549",
+      "document_id": "81052692",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+      "pdf_name": "UZ-451100147275-20240403-162910.pdf (140 kB, počet stran: 2)",
+      "pdf_candidates": [
+        {
+          "label": "UZ-451100147275-20240403-162910.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+          "is_pdf": true,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "pdf_index": 1
+        },
+        {
+          "label": "Příloha k závěrce 2023 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=e3ff70ff0aa946ae94ad2c3b43d699f3",
+          "is_pdf": true,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Příloha k závěrce 2023 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=e3ff70ff0aa946ae94ad2c3b43d699f3",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100147275-20240403-162910.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=feeba5dd2f9644aa9ed123dcdbfd4ffd",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100147275-20240403-162910.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "candidate_file_count": 2,
+      "candidate_files": [
+        {
+          "label": "UZ-451100147275-20240403-162910.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=cdca59fe06ff47f49c4612c594822d73",
+          "pdf_index": 1,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "page_count": 2,
+          "extraction_mode": "ocr",
+          "metrics_found": [
+            "assets",
+            "equity",
+            "liabilities",
+            "net_profit"
+          ]
+        },
+        {
+          "label": "Příloha k závěrce 2023 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=e3ff70ff0aa946ae94ad2c3b43d699f3",
+          "pdf_index": 0,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "page_count": 8,
+          "extraction_mode": "digital",
+          "metrics_found": []
+        }
+      ],
+      "combined_metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "page_count": 10,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "mixed"
+    },
+    {
+      "document_number": "C 250448/SL14/MSPH",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 10.04.2023",
+      "created_date": "2023-04-10",
+      "received_date": "2023-05-24",
+      "filed_date": "2023-06-01",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76990394&subjektId=921321&spis=1006549",
+      "document_id": "76990394",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+      "pdf_name": "UZ-451100059288-20230405-104425.pdf (140 kB, počet stran: 2)",
+      "pdf_candidates": [
+        {
+          "label": "UZ-451100059288-20230405-104425.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+          "is_pdf": true,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "pdf_index": 1
+        },
+        {
+          "label": "Příloha k závěrce 2022 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=f7ea472ed7804b5a95c9095c9ed65cd5",
+          "is_pdf": true,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Příloha k závěrce 2022 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=f7ea472ed7804b5a95c9095c9ed65cd5",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100059288-20230405-104425.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=2b6b004b41b64278992c68300d846eab",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100059288-20230405-104425.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "candidate_file_count": 2,
+      "candidate_files": [
+        {
+          "label": "UZ-451100059288-20230405-104425.pdf (140 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=6e92bdef394345a3aa8c5e9e6a21b3cb",
+          "pdf_index": 1,
+          "page_hint": 2,
+          "candidate_score": 190,
+          "page_count": 2,
+          "extraction_mode": "ocr",
+          "metrics_found": [
+            "assets",
+            "equity",
+            "liabilities",
+            "net_profit"
+          ]
+        },
+        {
+          "label": "Příloha k závěrce 2022 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=f7ea472ed7804b5a95c9095c9ed65cd5",
+          "pdf_index": 0,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "page_count": 8,
+          "extraction_mode": "digital",
+          "metrics_found": []
+        }
+      ],
+      "combined_metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities",
+        "net_profit"
+      ],
+      "page_count": 10,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "mixed"
+    },
+    {
+      "document_number": "C 250448/SL13/MSPH",
+      "type": "účetní závěrka [2021] - předána prostřednictvím správce daně z příjmů k 25.04.2022",
+      "created_date": "2022-04-25",
+      "received_date": "2022-09-03",
+      "filed_date": "2023-01-24",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=75116695&subjektId=921321&spis=1006549",
+      "document_id": "75116695",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2021
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+      "pdf_name": "UZ-451100009322-20220420-154432.pdf (93 kB, počet stran: 2)",
+      "pdf_candidates": [
+        {
+          "label": "UZ-451100009322-20220420-154432.pdf (93 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+          "is_pdf": true,
+          "page_hint": 2,
+          "candidate_score": 189,
+          "pdf_index": 1
+        },
+        {
+          "label": "Příloha k závěrce 2021 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=1adc0408556b42a5a00f8f57c836b969",
+          "is_pdf": true,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Příloha k závěrce 2021 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=1adc0408556b42a5a00f8f57c836b969",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100009322-20220420-154432.xml (0 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=db81faf60a954ca7a17c777004bb8220",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100009322-20220420-154432.pdf (93 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "candidate_file_count": 2,
+      "candidate_files": [
+        {
+          "label": "UZ-451100009322-20220420-154432.pdf (93 kB, počet stran: 2)",
+          "url": "https://or.justice.cz/ias/content/download?id=b8a1215d7929455988056d93203e7f79",
+          "pdf_index": 1,
+          "page_hint": 2,
+          "candidate_score": 189,
+          "page_count": 2,
+          "extraction_mode": "ocr",
+          "metrics_found": [
+            "assets",
+            "equity",
+            "liabilities"
+          ]
+        },
+        {
+          "label": "Příloha k závěrce 2021 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=1adc0408556b42a5a00f8f57c836b969",
+          "pdf_index": 0,
+          "page_hint": 8,
+          "candidate_score": -11,
+          "page_count": 8,
+          "extraction_mode": "digital",
+          "metrics_found": []
+        }
+      ],
+      "combined_metrics_found": [
+        "assets",
+        "equity",
+        "liabilities"
+      ],
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities"
+      ],
+      "page_count": 10,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "mixed"
+    },
+    {
+      "document_number": "C 250448/SL10/MSPH",
+      "type": "účetní závěrka [2020] rozvaha",
+      "created_date": "2020-12-31",
+      "received_date": "2021-04-04",
+      "filed_date": "2021-04-15",
+      "pages": 1,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871274&subjektId=921321&spis=1006549",
+      "document_id": "65871274",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+      "pdf_name": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+      "pdf_candidates": [
+        {
+          "label": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+          "is_pdf": true,
+          "page_hint": 1,
+          "candidate_score": 122,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 51,
+      "candidate_file_count": 1,
+      "candidate_files": [
+        {
+          "label": "Rozvaha_ve_zkráceném_rozsahu_(mikro_účetní_jednotka)_2020_fakturoid.pdf (50 kB, počet stran: 1)",
+          "url": "https://or.justice.cz/ias/content/download?id=33725d4782c24493aea4a08418d9007e",
+          "pdf_index": 0,
+          "page_hint": 1,
+          "candidate_score": 122,
+          "page_count": 1,
+          "extraction_mode": "ocr",
+          "metrics_found": [
+            "assets",
+            "equity",
+            "liabilities"
+          ]
+        }
+      ],
+      "combined_metrics_found": [],
+      "metrics_found": [
+        "assets",
+        "equity",
+        "liabilities"
+      ],
+      "page_count": 1,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "ocr"
+    },
+    {
+      "document_number": "C 250448/SL11/MSPH",
+      "type": "účetní závěrka [2020] příloha",
+      "created_date": "2020-12-31",
+      "received_date": "2021-04-04",
+      "filed_date": "2021-04-15",
+      "pages": 8,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=65871275&subjektId=921321&spis=1006549",
+      "document_id": "65871275",
+      "spis": "1006549",
+      "subjekt_id": "921321",
+      "years": [
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+      "pdf_name": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+      "pdf_candidates": [
+        {
+          "label": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+          "is_pdf": true,
+          "page_hint": 8,
+          "candidate_score": -12,
+          "pdf_index": 0
+        }
+      ],
+      "download_links": [
+        {
+          "label": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": 26,
+      "candidate_file_count": 1,
+      "candidate_files": [
+        {
+          "label": "Příloha k závěrce 2020 Fakturoid s.r.o.pdf (615 kB, počet stran: 8)",
+          "url": "https://or.justice.cz/ias/content/download?id=846830213a8341aea7cc37e3bbb481bf",
+          "pdf_index": 0,
+          "page_hint": 8,
+          "candidate_score": -12,
+          "page_count": 8,
+          "extraction_mode": "digital",
+          "metrics_found": []
+        }
+      ],
+      "combined_metrics_found": [],
+      "metrics_found": [],
+      "page_count": 8,
+      "extraction_scope": "all_candidate_files",
+      "extraction_mode": "digital"
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 4687,
+    "output_tokens": 1444,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "Fakturoid s.r.o. je stabilní dvouspolečnická firma založená v roce 2016 bez změn ve vedení. Firma vykazuje rostoucí zisky (2021: 13,2 mil. Kč → 2024: 24,8 mil. Kč) a rostoucí aktiva (2019: 15,8 mil. Kč → 2024: 40,1 mil. Kč). Vlastní kapitál kolísal – propad z 10,3 mil. Kč (2020) na 6,1 mil. Kč (2021), pak růst na 12,9 mil. Kč (2024), což naznačuje pravděpodobné výplaty zisku. Zadlužení zůstává nízké (16,8 % v roce 2024).",
+  "data_quality_note": "Data jsou kompletní za roky 2019–2024, čistý zisk chybí za 2019–2020, účetní závěrky jsou pravidelně podávány prostřednictvím správce daně.",
+  "insight_summary": [
+    {
+      "title": "Stabilní růst ziskovosti",
+      "detail": "Čistý zisk roste každoročně: 13,2 mil. Kč (2021) → 15,2 mil. Kč (2022) → 20,4 mil. Kč (2023) → 24,8 mil. Kč (2024), což představuje meziroční nárůst o 15–54 %."
+    },
+    {
+      "title": "Konzervativní kapitálová struktura",
+      "detail": "Vlastní kapitál klesl z 10,3 mil. Kč (2020) na 6,1 mil. Kč (2021), pak rostl na 12,9 mil. Kč (2024). Equity ratio kolísal mezi 22–52 %, v roce 2024 dosáhl 32,3 %."
+    },
+    {
+      "title": "Nízké zadlužení",
+      "detail": "Cizí zdroje tvoří stabilně 9–17 % aktiv, v roce 2024 konkrétně 16,8 % (6,7 mil. Kč). Firma není závislá na externím financování."
+    },
+    {
+      "title": "Růst aktiv",
+      "detail": "Aktiva rostou kontinuálně z 15,8 mil. Kč (2019) na 40,1 mil. Kč (2024), což je nárůst o 154 % za pět let."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Pravděpodobné výplaty zisku společníkům",
+      "detail": "Pokles vlastního kapitálu z 10,3 mil. Kč (2020) na 6,1 mil. Kč (2021) při zisku 13,2 mil. Kč naznačuje výplatu cca 17 mil. Kč. Podobně v letech 2022–2023 kapitál stagnoval/klesal navzdory ziskům 15–20 mil. Kč ročně."
+    },
+    {
+      "title": "Stabilní vlastnická a manažerská struktura",
+      "detail": "Dva společníci a jednatelé (Konarovský, Korbel) od založení v roce 2016 bez jediné změny. Žádné změny názvu ani sídla. Firma vykazuje extrémní kontinuitu."
+    },
+    {
+      "title": "Zrychlující se ziskovost",
+      "detail": "Tempo růstu zisku se zvyšuje: +15 % (2022), +34 % (2023), +22 % (2024). Firma zjevně škáluje svůj byznys model efektivněji."
+    },
+    {
+      "title": "Kapitálová efektivita",
+      "detail": "V roce 2024 firma generuje zisk 24,8 mil. Kč při vlastním kapitálu 12,9 mil. Kč (ROE cca 192 %), což je extrémně vysoká návratnost vlastního kapitálu typická pro softwarové firmy."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Opožděné podání účetní závěrky za rok 2021",
+      "detail": "Závěrka za 2021 byla předána správci daně 25.4.2022, ale do Sbírky listin založena až 24.1.2023 – tedy 389 dní po konci účetního období, což je výrazné zpoždění."
+    },
+    {
+      "title": "Zpoždění i u závěrky za 2022",
+      "detail": "Závěrka za 2022 předána správci 10.4.2023, do Sbírky listin založena až 1.6.2023 – zpoždění cca 52 dní oproti datu předání správci."
+    },
+    {
+      "title": "Kolísání equity ratio",
+      "detail": "Podíl vlastního kapitálu klesl z 52 % (2019) na 22 % (2023), pak vyskočil na 32 % (2024). Tato volatilita při rostoucích ziscích potvrzuje agresivní výplaty společníkům."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": {
+    "source_name": "Chytrý rejstřík",
+    "source_url": "https://www.chytryrejstrik.cz/ico-04656679/fakturoid-s-r-o",
+    "employees_hint": null,
+    "checks": [
+      {
+        "label": "Aktiva vs. Chytrý rejstřík",
+        "status": "ok",
+        "app_value": 40.06,
+        "external_value": 40.06,
+        "detail": "Rozdíl do 2 mil. Kč beru jako přijatelný kvůli zaokrouhlení."
+      },
+      {
+        "label": "Zisk vs. Chytrý rejstřík",
+        "status": "ok",
+        "app_value": 24.8,
+        "external_value": 24.8,
+        "detail": "Rozdíl do 2 mil. Kč beru jako přijatelný kvůli zaokrouhlení."
+      }
+    ],
+    "snapshot": {
+      "url": "https://www.chytryrejstrik.cz/ico-04656679/fakturoid-s-r-o",
+      "assets_mil_czk": 40.06,
+      "profit_mil_czk": 24.8,
+      "employees_hint": null
+    }
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=921321&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=921321&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=921321",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=921321&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=921321&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": "https://www.chytryrejstrik.cz/ico-04656679/fakturoid-s-r-o"
+  },
+  "generated_at": "2026-03-08T18:49:08.814429+00:00",
+  "cache_status": "fresh"
+}

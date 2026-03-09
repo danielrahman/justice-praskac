@@ -1,0 +1,293 @@
+{
+  "title": "Úplný výpis z obchodního rejstříku",
+  "subtitle": "Directcom, s.r.o. , C 148694 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "26. února 2009",
+    "Spisová značka": "C 148694 vedená u Městského soudu v Praze",
+    "Obchodní firma": "Directcom, s.r.o.",
+    "Sídlo": "Praha 2, Karlovo náměstí 17, PSČ 12000",
+    "Identifikační číslo": "285 36 061",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Písek, Třída Přátelství 1994, PSČ 39701 Den vzniku funkce: 26. února 2009",
+          "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice Den vzniku funkce: 26. února 2009",
+          "history": "zapsáno 13. listopadu 2013"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10 Den vzniku funkce: 8. října 2020",
+          "history": "zapsáno 3. listopadu 2020"
+        },
+        {
+          "role": "Počet členů",
+          "text": "2",
+          "history": "zapsáno 3. listopadu 2020"
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jménem společnosti jedná jednatel. Podepisování jménem společnosti činí jednatel tak, že k vypsané nebo vytištěné firmě společnosti připojí svůj podpis.",
+          "history": "zapsáno 26. února 2009 vymazáno 3. listopadu 2020"
+        },
+        {
+          "role": null,
+          "text": "Každý jednatel je oprávněn zastupovat obchodní společnost samostatně.",
+          "history": "zapsáno 3. listopadu 2020"
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Písek, Třída Přátelství 1994, PSČ 39701",
+          "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 200 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+          "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice",
+          "history": "zapsáno 13. listopadu 2013"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 200 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+          "history": "zapsáno 13. listopadu 2013 vymazáno 3. listopadu 2020"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": "zapsáno 3. listopadu 2020"
+        },
+        {
+          "role": "Společník",
+          "text": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10",
+          "history": "zapsáno 3. listopadu 2020"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": "zapsáno 3. listopadu 2020"
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "200 000 ,- Kč Splaceno: 100 %",
+          "history": "zapsáno 26. února 2009 vymazáno 28. dubna 2016"
+        },
+        {
+          "role": null,
+          "text": "200 000 ,- Kč",
+          "history": "zapsáno 28. dubna 2016"
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": "zapsáno 3. listopadu 2020"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "26. února 2009",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 148694 vedená u Městského soudu v Praze",
+      "history": "zapsáno 26. února 2009"
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "Directcom, s.r.o.",
+      "history": "zapsáno 26. února 2009"
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Praha 2, Karlovo náměstí 17, PSČ 12000",
+      "history": "zapsáno 26. února 2009 vymazáno 28. dubna 2016"
+    },
+    {
+      "label": "",
+      "value": "Lisabonská 799/8, Vysočany, 190 00 Praha 9",
+      "history": "zapsáno 28. dubna 2016 vymazáno 19. prosince 2018"
+    },
+    {
+      "label": "",
+      "value": "Rohanské nábřeží 670/19, Karlín, 186 00 Praha 8",
+      "history": "zapsáno 19. prosince 2018"
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "285 36 061",
+      "history": "zapsáno 26. února 2009"
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": "zapsáno 26. února 2009"
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "pronájem nemovitostí, bytů a nebytových prostor",
+      "history": "zapsáno 26. února 2009"
+    },
+    {
+      "label": "",
+      "value": "výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona",
+      "history": "zapsáno 17. března 2009"
+    },
+    {
+      "label": "",
+      "value": "montáž, opravy, revize a zkoušky elektrických zařízení",
+      "history": "zapsáno 14. září 2009"
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Písek, Třída Přátelství 1994, PSČ 39701 Den vzniku funkce: 26. února 2009",
+      "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice Den vzniku funkce: 26. února 2009",
+      "history": "zapsáno 13. listopadu 2013"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10 Den vzniku funkce: 8. října 2020",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Počet členů:",
+      "value": "2",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Jménem společnosti jedná jednatel. Podepisování jménem společnosti činí jednatel tak, že k vypsané nebo vytištěné firmě společnosti připojí svůj podpis.",
+      "history": "zapsáno 26. února 2009 vymazáno 3. listopadu 2020"
+    },
+    {
+      "label": "",
+      "value": "Každý jednatel je oprávněn zastupovat obchodní společnost samostatně.",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Písek, Třída Přátelství 1994, PSČ 39701",
+      "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 200 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+      "history": "zapsáno 26. února 2009 vymazáno 13. listopadu 2013"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice",
+      "history": "zapsáno 13. listopadu 2013"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 200 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+      "history": "zapsáno 13. listopadu 2013 vymazáno 3. listopadu 2020"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Společník:",
+      "value": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+      "history": "zapsáno 3. listopadu 2020"
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "200 000 ,- Kč Splaceno: 100 %",
+      "history": "zapsáno 26. února 2009 vymazáno 28. dubna 2016"
+    },
+    {
+      "label": "",
+      "value": "200 000 ,- Kč",
+      "history": "zapsáno 28. dubna 2016"
+    },
+    {
+      "label": "Ostatní skutečnosti:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+      "history": "zapsáno 3. listopadu 2020"
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=368257&typVypisu=UPLNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=368257&typ=UPLNY"
+}

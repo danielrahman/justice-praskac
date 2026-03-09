@@ -1,0 +1,126 @@
+Minimální závazný výčet informací                                                              Jméno a příjmení, obchodní firma nebo jiný
+podle vyhlášky č. 500/2002 Sb.,                         ROZVAHA                                název účetní jednotky
+ve znění pozdějších předpisů
+                                                    ve zkráceném rozsahu                       manGoweb, s.r.o.
+                                                       ke dni 31.12.2020
+                                                                                               Sídlo nebo bydliště účetní jednotky
+                                                        (v celých tisících Kč)                 a místo podnikání liší-li se od bydliště
+                                                                                               K Rovinám 538/17
+                                                                 IČ                            158 00 Praha 5
+                                                              24694401
+
+
+
+
+ Označ.                         AKTIVA                Číslo                          Běžné účetní období                         Minulé úč. období
+                                                      řádku           Brutto              Korekce               Netto                  Netto
+        a                             b                 c               1                    2                   3                       4
+            AKTIVA CELKEM                               1                      9 049             -1 950                 7 099                 6 452
+
+
+A.          Pohledávky za upsaný základní kapitál       2                         0                   0                     0                    0
+
+
+B.          Dlouhodobý majetek                          3                      2 457             -1 618                   839                  933
+
+
+B.I.        Dlouhodobý nehmotný majetek                 4                       890               -890                      0                    0
+
+
+B.II.       Dlouhodobý hmotný majetek                   5                      1 566              -729                    838                  814
+
+
+B.III.      Dlouhodobý finanční majetek                 6                         1                  0                      1                  119
+
+
+C.          Oběžná aktiva                               7                      6 591              -332                  6 260                5 519
+
+
+C.I.        Zásoby                                      8                         0                  0                      0                    0
+
+
+C.II.       Pohledávky                                  9                      4 100              -332                  3 768                4 198
+
+
+C.II.1.     Dlouhodobé pohledávky                      10                         0                   0                     0                    0
+
+
+C.II.2.     Krátkodobé pohledávky                      11                      2 534              -332                  2 202                4 075
+
+
+C.II.3.     Časové rozlišení aktiv                     12                      1 566                  0                 1 566                  123
+
+
+C.III.      Krátkodobý finanční majetek                13                         0                  0                      0                    0
+
+
+C.IV.       Peněžní prostředky                         14                      2 492                  0                 2 492                1 321
+
+
+D.          Časové rozlišení aktiv                     15                          0                  0                     0                     0
+
+
+
+
+software Altus Vario - www.vario.cz
+ Označ.                        PASIVA                 Číslo   Stav v běžném účetním období         Stav v minulém účetním období
+                                                      řádku
+        a                             b                 c                  5                                    6
+            PASIVA CELKEM                               1                               7 099                                  6 452
+
+
+A.          Vlastní kapitál                             2                               2 078                                  2 660
+
+
+A.I.        Základní kapitál                            3                                    400                                   400
+
+
+A.II.       Ážio a kapitálové fondy                     4                                     0                                     0
+
+
+A.III.      Fondy ze zisku                              5                                     0                                     0
+
+
+A.IV.       Výsledek hospodaření minulých let(+/-)      6                               2 260                                  2 255
+
+
+A.V.        Výsledek hospodaření běžného účetního       7                                -582                                       5
+            období (+-)
+A.VI.       Rozhodnuto o zálohové výplatě podílu na     8                                     0                                     0
+            zisku (-)
+B.+C.       Cizí zdroje                                 9                               5 021                                  3 793
+
+
+B.          Rezervy                                    10                                     0                                     0
+
+
+C.          Závazky                                    11                               5 021                                  3 793
+
+
+C.I.        Dlouhodobé závazky                         12                                     0                                     0
+
+
+C.II.       Krátkodobé závazky                         13                               5 021                                  3 793
+
+
+C.III.      Časové rozlišení pasiv                     14                                     0                                     0
+
+
+D           Časové rozlišení pasiv                     15                                     0                                     0
+
+
+
+
+Sestaveno dne:                            3.3.2021
+
+Právní forma účetní jednotky:
+
+Předmět podnikání účetní jednotky:
+
+Podpisový záznam :
+
+
+
+
+software Altus Vario - www.vario.cz
+

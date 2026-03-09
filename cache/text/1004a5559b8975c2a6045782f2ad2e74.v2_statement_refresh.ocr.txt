@@ -1,0 +1,65 @@
+
+
+--- PAGE 1 ---
+Jméno a prijmeni, obchodni firma nebo jiny
+nazev uéetni jednotky
+
+manGoweb, s.r.o.
+
+ke dni 31.12.2020 Sidlo nebo bydli&té Uéetni jednotky
+
+a misto podnikani liSi-li se od bydliSté
+
+K Rovinam 538/17
+158 00 Praha 5
+
+24694401 IC: 24694401, DIC: CZ24694401
+
+Oznaéeni TEXT Cislo Skuteénost v Uéetnim obdobi
+a b fadku beznem rinulém
+
+I. Trzby za prodeje vyrobku a sluzeb 1 23 882 25 182
+I. Trzby za prodej zbozi 2 0 0
+JA. \Vykonova spotieba 3 16 856 18 335
+B. Zména stavu zasob vlastni Cinnosti (+/-) 4 0 0
+IC. \Aktivace (-) 5 0 0
+D. [Osobni naklady 6 6 899 5 924
+E Upravy hodnot v provozni oblasti 7 689 651
+Il. (Ostatni provozni vynosy 8 251 14
+F. \Ostatni provozni naklady 9 175 96
+Provozni vysledek hospodafeni (+/-) 10 ee
+IV. \Vynosy z dlouhodobého finanéniho majetku - podily 11 0 0
+G. Naklady vynalozené na prodané podily 12 0 0
+Vv. \Vynosy z ostatniho dlouhodobého finanéniho majetku 13 0 0
+H. Naklady souvisejici s ostatnim dlouhodobym finanénim majetkem 14 0 0
+MI. \Vynosové Uroky a podobné vynosy 15 0 0
+I. Upravy hodnot a rezervy ve finanéni oblasti 16 0 0
+lJ. Nakladové Uroky a podobné naklady 17 96 33
+VIL. \Ostatni finanéni vynosy 18 15 3
+K. |Ostatni finanéni naklady 19 103 149
+* Finanéni vysledek hospodaieni (+/-) 20
+
+* \Vysledek hospodafeni pred zdanénim (+/-) 21
+
+software Altus Vario - www.vario.cz
+
+
+--- PAGE 2 ---
+Oznaéeni TEXT Cislo Skuteénost v Ucetnim obdobi
+
+a b fadku beznem rinulém
+L. Dan z prijmu 22 -88 7
+a \Vysledek hospodareni po zdanéni (+/-) 23 a aaa
+M. Prevod podilu na vysledku hospodafeni spoleéniktm (+/-) 24 0 0
+“** \Vysledek hospodafeni za Ucetni obdobi (+/-) 25
+* Cisty obrat za Uéetni obdobi = I.+ Il. + IIL + IV.4 V. + VL + VIL 26 24 148 25 200
+
+Sestaveno dne: 3.3.2021
+
+Pravni forma uéetni jednotky:
+
+Predmét podnikani Uéetni jednotky:
+
+Podpisovy zaznam :
+
+software Altus Vario - www.vario.cz

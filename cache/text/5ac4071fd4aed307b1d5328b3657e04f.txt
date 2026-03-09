@@ -1,0 +1,121 @@
+                                                                                             Obchodní firma nebo jiný název účetní jednotky
+
+                                          PŘEHLED O PENĚŽNÍCH TOCÍCH                         SAMSON PRAHA, spol. s r.o.
+                                                 (CASH FLOW)
+                                                                                             Sídlo nebo bydliště účetní jednotky
+                                                        ke dni 31.12.2024                    a místo podnikání, liší-li se od bydliště
+                                                         (v celých tisících Kč)
+                                                                                             Štěpánská 642/41
+                                                                                             Praha
+                                                 Rok     Měsíc               IČ              110 00
+                                                 2024                   48539589
+
+
+
+
+                                                                                             Stav v běžném                Stav v minulém
+Označ.                                            TEXT                                       účetním období               účetním období
+
+P.       Stav peněžních prostředků a peněžních ekvivalentů na začátku účetního období                     38 794                         88 018
+
+                       Peněžní toky z hlavní výdělečné činnosti (provozní činnost)
+
+         Účetní zisk nebo ztráta před zdaněním
+Z.                                                                                                        36 624                          1 035
+         (do ukazatele nejsou zahrnuty příslušné účty účtové skupiny 59)
+
+A.1.     Úpravy o nepeněžní operace                                                                        8 912                          9 343
+         Odpisy stálých aktiv (+) s výjimkou zůstatkové ceny prodaných stálých aktiv,
+A.1.1.   a dále umořování oceňovacího rozdílu k nabytému majetku a goodwillu (+/-)                        10 252                          8 811
+
+A.1.2.   Změna stavu opravných položek, rezerv                                                               -206                           206
+         Zisk (ztráta) z prodeje stálých aktiv (-/+)
+A.1.3.                                                                                                       -193                           360
+         (vyúčtování do výnosů "-", do nákladů "+")
+
+A.1.4.   Výnosy z podílů na zisku (-)
+
+         Vyúčtované nákladové úroky (+) s výjimkou úroků zahrnovaných do ocenění
+A.1.5.                                                                                                       -941                            -34
+         dlouhodobého majetku, a vyúčtované výnosové úroky (-)
+
+A.1.6.   Případné úpravy o ostatní nepeněžní operace
+
+
+A.*      Čistý peněžní tok z provozní činnosti před zdaněním a změnami pracovního kapitálu                45 536                         10 378
+
+A.2.     Změny stavu nepeněžních složek pracovního kapitálu                                               97 974                         -42 199
+         Změna stavu pohledávek z provozní činnosti (+/-),
+A.2.1.   aktivních účtů časového rozlišení a dohadných účtů aktivních                                    -19 106                          -2 576
+         Změna stavu krátkodobých závazků z provozní činnosti (+/-),
+A.2.2.                                                                                                  116 832                          -39 872
+         pasivních účtů časového rozlišení a dohadných účtů pasivních
+
+A.2.3.   Změna stavu zásob (+/-)                                                                              248                           249
+         Změna stavu krátkodobého finančního majetku
+A.2.4.
+         nespadajícího do peněžních prostředků a peněžních ekvivalentů
+
+A.**     Čistý peněžní tok z provozní činnosti před zdaněním                                            143 510                          -31 821
+         Vyplacené úroky s výjimkou úroků zahrnovaných do ocenění
+A.3.     dlouhodobého majetku (-)
+
+A.4.     Přijaté úroky (+)                                                                                    941                            34
+
+A.5.     Zaplacená daň z příjmů a za doměrky daně za minulá období (-)                                        -87                            -28
+
+A.7.     Přijaté podíly na zisku (+)
+
+A.***    Čistý peněžní tok z provozní činnosti                                                          144 364                          -31 815
+                                                                                                           Stav v běžném               Stav v minulém
+Označ.                                                 TEXT                                                účetním období              účetním období
+
+                                        Peněžní toky z investiční činnosti
+
+B.1.        Výdaje spojené s nabytím stálých aktiv                                                                     -12 532                   -18 903
+
+B.2.        Příjmy z prodeje stálých aktiv                                                                                  726                    1 494
+
+B.3.        Zápůjčky a úvěry spřízněným osobám                                                                           -3 205
+
+B.***       Čistý peněžní tok vztahující se k investiční činnosti                                                      -15 011                   -17 409
+
+                                       Peněžní toky z finančních činností
+            Dopady změn dlouhodobých závazků, popřípadě takových krátkodobých závazků,
+C.1.        které spadají do oblasti finanční činnosti (např. některé provozní úvěry) na peněžní
+            prostředky a peněžní ekvivalenty
+C.2.        Dopady změn vlastního kapitálu na peněžní prostředky a peněžní ekvivalenty
+
+            Zvýšení peněžních prostředků a peněžních ekvivalentů z titulu zvýšení základního
+C.2.1.
+            kapitálu, ážia, popřípadě fondů ze zisku včetně složených záloh na toto zvýšení (+)
+
+C.2.2.      Vyplacení podílu na vlastním kapitálu společníkům (-)
+
+C.2.3.      Další vklady peněžních prostředků společníků a akcionářů (+)
+
+C.2.4.      Úhrada ztráty společníky (+)
+
+
+C.2.5.      Přímé platby na vrub fondů (-)
+
+            Vyplacené podíly na zisku včetně zaplacené srážkové daně vztahující se k těmto
+C.2.6.      nárokům a včetně finančního vypořádání se společníky v.o.s. a komplementáři u k.s. (-)
+
+C.***       Čistý peněžní tok vztahující se k finanční činnosti
+
+F.          Čisté zvýšení nebo snížení peněžních prostředků                                                            129 353                   -49 224
+
+R.          Stav peněžních prostředků a peněžních ekvivalentů na konci účetního období                                 168 147                   38 794
+
+
+
+
+     Sestaveno dne:                                                              Podpisový záznam statutárního orgánu účetní jednotky
+                                                                                 nebo podpisový vzor fyzické osoby, která je účetní jednotkou:
+      25.06.2025
+
+
+     Právní forma účetní jednotky:                       Předmět podnikání:                                Pozn.:
+                                                         specializované stavební činnosti
+

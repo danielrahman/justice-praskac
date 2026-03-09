@@ -1,0 +1,22 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77085376&subjektId=1166851&spis=1312898",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+  "pdf_name": "Příloha k účetní závěrce_Necktip_2022.pdf (53 kB, počet stran: 5)",
+  "download_links": [
+    {
+      "label": "Příloha k účetní závěrce_Necktip_2022.pdf (53 kB, počet stran: 5)",
+      "url": "https://or.justice.cz/ias/content/download?id=21195f621f8449d3a579ab58cc26d26e",
+      "is_pdf": true
+    },
+    {
+      "label": "UZ-452100026383-20230524-064412.xml (0 kB)",
+      "url": "https://or.justice.cz/ias/content/download?id=9f17ae21e392495990e3b73d28ec9efd",
+      "is_pdf": false
+    },
+    {
+      "label": "UZ-452100026383-20230524-064412.pdf (107 kB, počet stran: 3)",
+      "url": "https://or.justice.cz/ias/content/download?id=5a41b39eaaf34d6cbff77e62799608c5",
+      "is_pdf": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs" class="ff ff45">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Veřejný rejstřík a Sbírka listin - Ministerstvo
+	spravedlnosti České republiky</title>
+
+<link rel="shortcut icon" href="../ui/resource/images/favicon.ico"	type="image/x-icon">
+	<style>
+		body{
+			font-family: Verdana,sans-serif;
+		}
+		.vypis-h {
+			background: #01551c none repeat scroll 0 0;
+			color: #fff;
+			min-height: 23px;
+			padding: 20px;
+		}
+		
+		.vypis-h h1 {
+		    font-size: 1.5em;
+		    margin-top: 0;
+		}
+		
+		.vypis-h h2 {
+		    font-size: 1.1667em;
+		    font-weight: normal;
+		    margin-right: 120px;
+		    margin-top: 8px;
+		}
+		h1, h2, h3 {
+		    font-weight: bold;
+		    margin-top: 1.5em;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="vypis-h">
+		<div class="inner">
+			<h1>Nenalezeno</h1>
+			<h2>Neplatný odkaz: Požadovaný odkaz je chybný, nebo vypršela
+				jeho časová platnost.</h2>
+
+		</div>
+	</div>
+</body>
+
+
+</html>

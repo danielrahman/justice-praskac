@@ -1,0 +1,40 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85724609&subjektId=921321&spis=1006549",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=b377109d276448c4b9962c093703afcd",
+  "pdf_name": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+  "pdf_candidates": [
+    {
+      "label": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+      "url": "https://or.justice.cz/ias/content/download?id=b377109d276448c4b9962c093703afcd",
+      "is_pdf": true,
+      "page_hint": 2,
+      "candidate_score": 180,
+      "pdf_index": 1
+    },
+    {
+      "label": "Příloha k závěrce 2024 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+      "url": "https://or.justice.cz/ias/content/download?id=3dcbddf179ed45769f15c5dac6e8f94f",
+      "is_pdf": true,
+      "page_hint": 8,
+      "candidate_score": -21,
+      "pdf_index": 0
+    }
+  ],
+  "download_links": [
+    {
+      "label": "Příloha k závěrce 2024 Fakturoid s.r.o.pdf (647 kB, počet stran: 8)",
+      "url": "https://or.justice.cz/ias/content/download?id=3dcbddf179ed45769f15c5dac6e8f94f",
+      "is_pdf": true
+    },
+    {
+      "label": "UZ-451100252775-20250401-140057.xml (2 kB)",
+      "url": "https://or.justice.cz/ias/content/download?id=a5e2c8625187464e9301ef6be0ebb9e6",
+      "is_pdf": false
+    },
+    {
+      "label": "UZ-451100252775-20250401-140057.pdf (140 kB, počet stran: 2)",
+      "url": "https://or.justice.cz/ias/content/download?id=b377109d276448c4b9962c093703afcd",
+      "is_pdf": true
+    }
+  ]
+}

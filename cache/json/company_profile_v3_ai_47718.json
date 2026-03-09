@@ -1,0 +1,635 @@
+{
+  "subject_id": "47718",
+  "name": "Škoda Auto a.s.",
+  "ico": "00177041",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "Škoda Auto a.s."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "001 77 041"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Akciová společnost"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "20. listopadu 1990"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "B 332 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "tř. Václava Klementa 869, Mladá Boleslav II, 293 01 Mladá Boleslav Doručovací číslo: 29360"
+    }
+  ],
+  "executives": [
+    {
+      "role": "předseda představenstva",
+      "name": "KLAUS ZELLMER",
+      "birth_date": "29. srpna 1967",
+      "raw": "KLAUS ZELLMER , dat. nar. 29. srpna 1967 70192 Stuttgart, Lenbachstr. 37, Spolková republika Německo Den vzniku funkce: 1. července 2022 Den vzniku členství: 1. července 2022"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "HOLGER PETERS",
+      "birth_date": "5. července 1968",
+      "raw": "HOLGER PETERS , dat. nar. 5. července 1968 71665 Vaihingen an der Enz, Gerokstraße 77, Spolková republika Německo Den vzniku členství: 1. června 2023"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "ANDREAS DICK",
+      "birth_date": "20. května 1971",
+      "raw": "ANDREAS DICK , dat. nar. 20. května 1971 26725 Emden, Arthur-Engler-Str. 40, Spolková republika Německo Den vzniku funkce: 1. září 2023 Den vzniku členství: 1. září 2023"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "KARSTEN SCHNAKE",
+      "birth_date": "21. února 1968",
+      "raw": "KARSTEN SCHNAKE , dat. nar. 21. února 1968 38102 Braunschweig, Jasperallee 38, Spolková republika Německo Den vzniku funkce: 1. července 2023 Den vzniku členství: 1. července 2023"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "JOHANNES NEFT",
+      "birth_date": "26. září 1969",
+      "raw": "JOHANNES NEFT , dat. nar. 26. září 1969 Braunschweig, Am Hasselteich 18, Spolková republika Německo Den vzniku členství: 1. ledna 2024"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "MAREN GRÄF",
+      "birth_date": "22. března 1969",
+      "raw": "MAREN GRÄF , dat. nar. 22. března 1969 Na Ořechovce 486/37, Střešovice, 162 00 Praha 6 Den vzniku členství: 1. března 2024"
+    },
+    {
+      "role": "člen představenstva",
+      "name": "MARTIN JAHN",
+      "birth_date": "21. ledna 1970",
+      "raw": "MARTIN JAHN , dat. nar. 21. ledna 1970 Kovriginova 1416/6, Braník, 147 00 Praha 4 Den vzniku členství: 1. března 2024"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Jménem společnosti jednají společně dva členové představenstva.",
+      "birth_date": null,
+      "raw": "Jménem společnosti jednají společně dva členové představenstva."
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "DANIELA CAVALLO",
+      "birth_date": "3. dubna 1975",
+      "raw": "DANIELA CAVALLO , dat. nar. 3. dubna 1975 38446 Wolfsburg, Kronekenberg 17, Spolková republika Německo Den vzniku členství: 1. května 2021"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "MELANIE LEONORE WENCKHEIM",
+      "birth_date": "3. června 1967",
+      "raw": "MELANIE LEONORE WENCKHEIM , dat. nar. 3. června 1967 1010 Wien, Michaellerplatz 6/31, Rakouská republika Den vzniku členství: 9. listopadu 2022"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "PETER DANIELL PORSCHE",
+      "birth_date": "17. září 1973",
+      "raw": "PETER DANIELL PORSCHE , dat. nar. 17. září 1973 A-5026 Salzburg, Gaisberg 34, Rakouská republika Den vzniku členství: 1. ledna 2023"
+    },
+    {
+      "role": "předseda dozorčí rady",
+      "name": "THOMAS SCHÄFER",
+      "birth_date": "1. dubna 1970",
+      "raw": "THOMAS SCHÄFER , dat. nar. 1. dubna 1970 29352 Adelheidsdorf, Auerstrasse 39, Spolková republika Německo Den vzniku funkce: 15. července 2022 Den vzniku členství: 1. července 2022"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "MARTIN LUSTYK",
+      "birth_date": "2. dubna 1965",
+      "raw": "MARTIN LUSTYK , dat. nar. 2. dubna 1965 č.p. 297, 517 02 Kvasiny Den vzniku členství: 15. ledna 2023"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "JAROSLAV POVŠÍK",
+      "birth_date": "15. února 1955",
+      "raw": "JAROSLAV POVŠÍK , dat. nar. 15. února 1955 Jiráskova 637/55, Mladá Boleslav II, 293 01 Mladá Boleslav Den vzniku členství: 15. ledna 2023"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "MILOŠ KOVÁŘ",
+      "birth_date": "2. února 1964",
+      "raw": "MILOŠ KOVÁŘ , dat. nar. 2. února 1964 Jemníky č.ev. 5, 293 01 Mladá Boleslav Den vzniku členství: 15. ledna 2023"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "DIRK GROSSE-LOHEIDE",
+      "birth_date": "20. dubna 1964",
+      "raw": "DIRK GROSSE-LOHEIDE , dat. nar. 20. dubna 1964 38442 Wolfsburg, Am Riedetal 9, Spolková republika Německo Den vzniku členství: 1. března 2023"
+    },
+    {
+      "role": "člen dozorčí rady",
+      "name": "DAVID POWELS",
+      "birth_date": "8. ledna 1962",
+      "raw": "DAVID POWELS , dat. nar. 8. ledna 1962 08008 Barcelona, Passeig de Gracia 88, Španělské království Den vzniku členství: 1. října 2024"
+    }
+  ],
+  "owners": [],
+  "statutory_bodies": [
+    {
+      "title": "Statutární orgán - představenstvo",
+      "items": [
+        {
+          "role": "předseda představenstva",
+          "text": "KLAUS ZELLMER , dat. nar. 29. srpna 1967 70192 Stuttgart, Lenbachstr. 37, Spolková republika Německo Den vzniku funkce: 1. července 2022 Den vzniku členství: 1. července 2022",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "HOLGER PETERS , dat. nar. 5. července 1968 71665 Vaihingen an der Enz, Gerokstraße 77, Spolková republika Německo Den vzniku členství: 1. června 2023",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "ANDREAS DICK , dat. nar. 20. května 1971 26725 Emden, Arthur-Engler-Str. 40, Spolková republika Německo Den vzniku funkce: 1. září 2023 Den vzniku členství: 1. září 2023",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "KARSTEN SCHNAKE , dat. nar. 21. února 1968 38102 Braunschweig, Jasperallee 38, Spolková republika Německo Den vzniku funkce: 1. července 2023 Den vzniku členství: 1. července 2023",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "JOHANNES NEFT , dat. nar. 26. září 1969 Braunschweig, Am Hasselteich 18, Spolková republika Německo Den vzniku členství: 1. ledna 2024",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "MAREN GRÄF , dat. nar. 22. března 1969 Na Ořechovce 486/37, Střešovice, 162 00 Praha 6 Den vzniku členství: 1. března 2024",
+          "history": ""
+        },
+        {
+          "role": "člen představenstva",
+          "text": "MARTIN JAHN , dat. nar. 21. ledna 1970 Kovriginova 1416/6, Braník, 147 00 Praha 4 Den vzniku členství: 1. března 2024",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jménem společnosti jednají společně dva členové představenstva.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Dozorčí rada",
+      "items": [
+        {
+          "role": "člen dozorčí rady",
+          "text": "DANIELA CAVALLO , dat. nar. 3. dubna 1975 38446 Wolfsburg, Kronekenberg 17, Spolková republika Německo Den vzniku členství: 1. května 2021",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "MELANIE LEONORE WENCKHEIM , dat. nar. 3. června 1967 1010 Wien, Michaellerplatz 6/31, Rakouská republika Den vzniku členství: 9. listopadu 2022",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "PETER DANIELL PORSCHE , dat. nar. 17. září 1973 A-5026 Salzburg, Gaisberg 34, Rakouská republika Den vzniku členství: 1. ledna 2023",
+          "history": ""
+        },
+        {
+          "role": "předseda dozorčí rady",
+          "text": "THOMAS SCHÄFER , dat. nar. 1. dubna 1970 29352 Adelheidsdorf, Auerstrasse 39, Spolková republika Německo Den vzniku funkce: 15. července 2022 Den vzniku členství: 1. července 2022",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "MARTIN LUSTYK , dat. nar. 2. dubna 1965 č.p. 297, 517 02 Kvasiny Den vzniku členství: 15. ledna 2023",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "JAROSLAV POVŠÍK , dat. nar. 15. února 1955 Jiráskova 637/55, Mladá Boleslav II, 293 01 Mladá Boleslav Den vzniku členství: 15. ledna 2023",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "MILOŠ KOVÁŘ , dat. nar. 2. února 1964 Jemníky č.ev. 5, 293 01 Mladá Boleslav Den vzniku členství: 15. ledna 2023",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "DIRK GROSSE-LOHEIDE , dat. nar. 20. dubna 1964 38442 Wolfsburg, Am Riedetal 9, Spolková republika Německo Den vzniku členství: 1. března 2023",
+          "history": ""
+        },
+        {
+          "role": "člen dozorčí rady",
+          "text": "DAVID POWELS , dat. nar. 8. ledna 1962 08008 Barcelona, Passeig de Gracia 88, Španělské království Den vzniku členství: 1. října 2024",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Jediný akcionář",
+      "items": [
+        {
+          "role": null,
+          "text": "VOLKSWAGEN FINANCE LUXEMBURG 8009 Strassen, route d´Arlon 19-21, Lucemburské velkovévodství Registrační číslo: B166745 Právní forma: S. A.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Akcie",
+      "items": [
+        {
+          "role": null,
+          "text": "1 670 885 ks akcie na jméno v zaknihované podobě ve jmenovité hodnotě 10 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "16 708 850 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Údaje o zřízení společnosti: Akciová společnost byla založena jednorázově dle ustanovení § 25 zák.č. 104/90 Sb., když zakladatelskou smlouvou uzavřenou dne 13. listopadu 1990 upraveno složení představenstva, dozorčí rady, byl jmenován revizor účtů, byly schváleny stanovy, ze 100 % upsaného akciového kapitálu bylo splaceno více, než-li 30 %.",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": ""
+        },
+        {
+          "role": "Označení odštěpného závodu",
+          "text": "Střední odborné učiliště strojírenské",
+          "history": ""
+        },
+        {
+          "role": "Sídlo nebo umístění",
+          "text": "tř. Václava Klementa 869, Mladá Boleslav II, 293 01 Mladá Boleslav",
+          "history": ""
+        },
+        {
+          "role": "Předmět podnikání",
+          "text": "výchova a vzdělávání ve Středním odborném učilišti strojírenském",
+          "history": ""
+        },
+        {
+          "role": "Vedoucí odštěpného závodu",
+          "text": "Ing. MARTIN SLABIHOUDEK , dat. nar. 24. října 1964 Krajní 305, Debř, 293 01 Mladá Boleslav",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2019,
+      "sources": [
+        {
+          "document_number": "B 332/SL187/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67623502&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=e171fe47bfaa4d048b2420a57a07196e",
+          "year": 2020
+        }
+      ],
+      "revenue": 0.04,
+      "assets": 31.33,
+      "equity": 28.43,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 90.7,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2020,
+      "sources": [
+        {
+          "document_number": "B 332/SL199/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73614829&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=fad19bc295614d4dac019ae833d075b5",
+          "year": 2021
+        },
+        {
+          "document_number": "B 332/SL187/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67623502&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=e171fe47bfaa4d048b2420a57a07196e",
+          "year": 2020
+        }
+      ],
+      "assets": 0.0,
+      "equity": null,
+      "revenue": 2.02,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "B 332/SL220/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78249642&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66a79a2912ea47538926744948d35d9a",
+          "year": 2022
+        },
+        {
+          "document_number": "B 332/SL199/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73614829&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=fad19bc295614d4dac019ae833d075b5",
+          "year": 2021
+        }
+      ],
+      "assets": 0.0,
+      "equity": null,
+      "revenue": 0.08,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "B 332/SL228/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82736021&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=83c7772b426a4885974e6d4ec83c695d",
+          "year": 2023
+        },
+        {
+          "document_number": "B 332/SL220/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78249642&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=66a79a2912ea47538926744948d35d9a",
+          "year": 2022
+        }
+      ],
+      "assets": 0.01,
+      "equity": null,
+      "revenue": 0.05,
+      "net_profit": null,
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "B 332/SL237/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=88375631&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b24cbe705f3c45098a31b54b778c4e63",
+          "year": 2024
+        },
+        {
+          "document_number": "B 332/SL228/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82736021&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=83c7772b426a4885974e6d4ec83c695d",
+          "year": 2023
+        }
+      ],
+      "equity": 4.13,
+      "assets": 294.11,
+      "revenue": null,
+      "net_profit": 8.82,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 1.4,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "B 332/SL237/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=88375631&subjektId=47718&spis=73153",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=b24cbe705f3c45098a31b54b778c4e63",
+          "year": 2024
+        }
+      ],
+      "equity": 4.14,
+      "assets": 312.84,
+      "revenue": null,
+      "net_profit": 15.43,
+      "net_margin_pct": null,
+      "equity_ratio_pct": 1.3,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "B 332/SL237/MSPH",
+      "type": "účetní závěrka [2024] , výroční zpráva [2024] , zpráva o vztazích [2024] , zpráva auditora [2024]",
+      "created_date": "2024-12-31",
+      "received_date": "2025-10-02",
+      "filed_date": "2025-10-06",
+      "pages": 677,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=88375631&subjektId=47718&spis=73153",
+      "document_id": "88375631",
+      "spis": "73153",
+      "subjekt_id": "47718",
+      "years": [
+        2024,
+        2024,
+        2024,
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=b24cbe705f3c45098a31b54b778c4e63",
+      "pdf_name": "VZ_VW_2024_CZ.pdf (23429 kB, počet stran: 677)",
+      "extraction_mode": "digital",
+      "page_count": 677,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "net_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "B 332/SL228/MSPH",
+      "type": "účetní závěrka [2023] , výroční zpráva [2023] , zpráva o vztazích [2023] , zpráva auditora [2023] konsolidovaná",
+      "created_date": "2023-12-31",
+      "received_date": "2024-08-09",
+      "filed_date": "2024-08-12",
+      "pages": 470,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=82736021&subjektId=47718&spis=73153",
+      "document_id": "82736021",
+      "spis": "73153",
+      "subjekt_id": "47718",
+      "years": [
+        2023,
+        2023,
+        2023,
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=83c7772b426a4885974e6d4ec83c695d",
+      "pdf_name": "VZ_VW_2023_CZ.pdf (9755 kB, počet stran: 470)",
+      "extraction_mode": "digital",
+      "page_count": 470,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "net_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "B 332/SL220/MSPH",
+      "type": "účetní závěrka [2022] , výroční zpráva [2022] , zpráva o vztazích [2022] , zpráva auditora [2022] konsolidovaná",
+      "created_date": "2022-12-31",
+      "received_date": "2023-09-05",
+      "filed_date": "2023-09-08",
+      "pages": 493,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=78249642&subjektId=47718&spis=73153",
+      "document_id": "78249642",
+      "spis": "73153",
+      "subjekt_id": "47718",
+      "years": [
+        2022,
+        2022,
+        2022,
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=66a79a2912ea47538926744948d35d9a",
+      "pdf_name": "VZ_VW_2022_CZ.pdf (14809 kB, počet stran: 493)",
+      "extraction_mode": "digital",
+      "page_count": 493,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "net_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "B 332/SL199/MSPH",
+      "type": "účetní závěrka [2021] , výroční zpráva [2021] , zpráva auditora [2021] konsolidovaná",
+      "created_date": "2021-12-31",
+      "received_date": "2022-10-05",
+      "filed_date": "2022-10-13",
+      "pages": 398,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=73614829&subjektId=47718&spis=73153",
+      "document_id": "73614829",
+      "spis": "73153",
+      "subjekt_id": "47718",
+      "years": [
+        2021,
+        2021,
+        2021
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=fad19bc295614d4dac019ae833d075b5",
+      "pdf_name": "VZ_VW_2021_CZ.pdf (11796 kB, počet stran: 398)",
+      "extraction_mode": "digital",
+      "page_count": 398,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "net_profit",
+        "revenue"
+      ]
+    },
+    {
+      "document_number": "B 332/SL187/MSPH",
+      "type": "účetní závěrka [2020] , výroční zpráva [2020] , zpráva auditora [2020] konsolidovaná",
+      "created_date": "2020-12-31",
+      "received_date": "2021-07-23",
+      "filed_date": "2021-09-01",
+      "pages": 363,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=67623502&subjektId=47718&spis=73153",
+      "document_id": "67623502",
+      "spis": "73153",
+      "subjekt_id": "47718",
+      "years": [
+        2020,
+        2020,
+        2020
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=e171fe47bfaa4d048b2420a57a07196e",
+      "pdf_name": "Souhrnná výroční zpráva koncernu Volkswagen a společnosti Volkswagen AG za rok 2020.pdf (20260 kB, počet stran: 363)",
+      "extraction_mode": "digital",
+      "page_count": 363,
+      "metrics_found": [
+        "assets",
+        "equity",
+        "net_profit",
+        "revenue"
+      ]
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_overview": "Škoda Auto a.s. je tradiční automobilka založená v roce 1990 s aktuálním vedením tvořeným převážně německými manažery (předseda Klaus Zellmer od července 2022, další členové nástupy 2023–2024). Finanční data z veřejných zdrojů jsou extrémně neúplná a nekonzistentní – tržby kolísají od 0,04 mld. (2019) přes 2,02 mld. (2020) až po 0,05 mld. (2022), aktiva skokově rostou z téměř nuly na 294 mld. (2023) a 313 mld. (2024), přičemž vlastní kapitál zůstává minimální (cca 4 mld.), což vede k equity ratio pouhých 1,3–1,4 %. Zisk v letech 2023–2024 je kladný (8,8 a 15,4 mld.), ale absence konzistentních údajů o tržbách a aktivech v předchozích letech znemožňuje smysluplnou analýzu trendů.",
+  "data_quality_note": "Data jsou silně nekompletní a nekonzistentní – chybí klíčové metriky v letech 2019–2022, hodnoty tržeb a aktiv vykazují nesmyslné skoky, což znemožňuje spolehlivé závěry o vývoji firmy.",
+  "insight_summary": [
+    {
+      "title": "Extrémně nízký podíl vlastního kapitálu",
+      "detail": "V letech 2023–2024 činí equity ratio jen 1,3–1,4 % při aktivech přes 300 mld. Kč, což naznačuje masivní financování cizím kapitálem typické pro koncernové struktury."
+    },
+    {
+      "title": "Skok v aktivech mezi 2022 a 2023",
+      "detail": "Aktiva vzrostla z prakticky nuly (0,01 mld. v 2022) na 294 mld. v roce 2023, což je s největší pravděpodobností artefakt nekompletních dat, nikoliv reálná změna."
+    },
+    {
+      "title": "Kladná ziskovost v posledních dvou letech",
+      "detail": "Čistý zisk 8,8 mld. (2023) a 15,4 mld. (2024) je pozitivní signál, ale bez údajů o tržbách nelze posoudit rentabilitu."
+    },
+    {
+      "title": "Německé vedení s nedávnými změnami",
+      "detail": "Představenstvo je tvořeno převážně německými manažery, většina nastoupila v letech 2022–2024, což odpovídá vazbě na mateřský koncern Volkswagen."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Nekonzistentní výkaz tržeb",
+      "detail": "Tržby skáčou chaoticky: 0,04 mld. (2019), 2,02 mld. (2020), 0,08 mld. (2021), 0,05 mld. (2022), pak chybí pro 2023–2024. To naznačuje buď chyby v extrakci, nebo reportování pouze dílčích segmentů."
+    },
+    {
+      "title": "Chybějící aktiva v letech 2020–2022",
+      "detail": "Aktiva jsou vykazována jako nulová nebo téměř nulová v letech 2020–2022, což je u výrobní firmy této velikosti nereálné a potvrzuje závažné mezery v datech."
+    },
+    {
+      "title": "Konzistentně pozdní podávání účetních závěrek",
+      "detail": "Dokumenty jsou podávány se zpožděním 244–286 dní po konci roku (2020–2024), což je sice v souladu s lhůtami pro akciové společnosti, ale na horní hranici."
+    },
+    {
+      "title": "Rozsáhlá dokumentace",
+      "detail": "Výroční zprávy mají 363–677 stran, obsahují konsolidované výkazy a zprávy auditora, což odpovídá komplexní koncernové struktuře."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Data jsou prakticky nepoužitelná pro analýzu",
+      "detail": "Extrahovaná finanční data vykazují tak zásadní mezery a nesrovnalosti, že jakékoliv závěry o zdraví firmy by byly čistou spekulací. Pro seriózní posouzení je nutné prostudovat plné PDF výročních zpráv."
+    },
+    {
+      "title": "Equity ratio 1,3 % vypadá alarmujícím, ale...",
+      "detail": "...u dceřiné společnosti velkého koncernu (Volkswagen Group) je běžné, že je silně zadlužena vůči mateřské firmě. Bez kontextu koncernového financování nelze říct, zda jde o problém nebo standard."
+    },
+    {
+      "title": "Konzistentně pozdní podávání listin",
+      "detail": "Všechny účetní závěrky za roky 2020–2024 byly podány s odstupem 8–9 měsíců po konci roku, což je sice legální, ale na samé hranici zákonných lhůt."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=47718&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=47718&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=47718",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=47718&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=47718&typVypisu=UPLNY&full=false"
+  },
+  "generated_at": "2026-03-08T04:29:38.635646+00:00"
+}

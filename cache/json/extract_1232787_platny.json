@@ -1,0 +1,163 @@
+{
+  "title": "Výpis z obchodního rejstříku",
+  "subtitle": "NEON HORT s.r.o. , C 400039 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "7. března 2024",
+    "Spisová značka": "C 400039 vedená u Městského soudu v Praze",
+    "Obchodní firma": "NEON HORT s.r.o.",
+    "Sídlo": "Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+    "Identifikační číslo": "213 40 005",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1 Den vzniku funkce: 7. března 2024",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Jednatel zastupuje společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 80 000 ,- Kč Splaceno: 100 % Obchodní podíl: 80 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 20 000 ,- Kč Splaceno: 100 % Obchodní podíl: 20 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "100 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "7. března 2024",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 400039 vedená u Městského soudu v Praze",
+      "history": ""
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "NEON HORT s.r.o.",
+      "history": ""
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+      "history": ""
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "213 40 005",
+      "history": ""
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": ""
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona - výroba kovových konstrukcí a kovodělných výrobků - povrchové úpravy a svařování kovů a dalších materiálů - výroba elektronických součástek, elektrických zařízení a výroba a opravy elektrických strojů, přístrojů a elektronických zařízení pracujících na malém napětí - přípravné a dokončovací stavební práce, specializované stavební činnosti - poskytování software, poradenství v oblasti informačních technologií, zpracování dat, hostingové a související činnosti a webové portály - poradenská a konzultační činnost, zpracování odborných studií a posudků - projektování pozemkových úprav - příprava a vypracování technických návrhů, grafické a kresličské práce - projektování elektrických zařízení - testování, měření, analýzy a kontroly - reklamní činnost, marketing, mediální zastoupení - návrhářská, designérská, aranžérská činnost a modeling",
+      "history": ""
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1 Den vzniku funkce: 7. března 2024",
+      "history": ""
+    },
+    {
+      "label": "Počet členů:",
+      "value": "1",
+      "history": ""
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Jednatel zastupuje společnost samostatně.",
+      "history": ""
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "TADEÁŠ HORT , dat. nar. 24. února 1998 Jungmannova 736/10, Nové Město, 110 00 Praha 1",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 80 000 ,- Kč Splaceno: 100 % Obchodní podíl: 80 %",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 20 000 ,- Kč Splaceno: 100 % Obchodní podíl: 20 %",
+      "history": ""
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "100 000 ,- Kč",
+      "history": ""
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1232787&typVypisu=PLATNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1232787&typ=PLATNY"
+}

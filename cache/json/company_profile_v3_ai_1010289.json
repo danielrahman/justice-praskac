@@ -1,0 +1,315 @@
+{
+  "subject_id": "1010289",
+  "name": "Skate of Mind s.r.o.",
+  "ico": "07023278",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "Skate of Mind s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "070 23 278"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "9. dubna 2018"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 293234 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Hořejší 59, 252 26 Třebotov"
+    }
+  ],
+  "executives": [
+    {
+      "role": "jednatel",
+      "name": "DANIEL RAHMAN",
+      "birth_date": "29. prosince 1997",
+      "raw": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 9. dubna 2018"
+    },
+    {
+      "role": "jednatel",
+      "name": "MAXIM HABANEC",
+      "birth_date": "13. února 1992",
+      "raw": "MAXIM HABANEC , dat. nar. 13. února 1992 Vojenova 2540/8, Libeň, 180 00 Praha 8 Den vzniku funkce: 9. dubna 2018"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Každý jednatel zastupuje společnost samostatně.",
+      "birth_date": null,
+      "raw": "Každý jednatel zastupuje společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+      "raw": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1"
+    },
+    {
+      "role": "Společník",
+      "name": "MAXIM HABANEC , dat. nar. 13. února 1992 Vojenova 2540/8, Libeň, 180 00 Praha 8",
+      "raw": "MAXIM HABANEC , dat. nar. 13. února 1992 Vojenova 2540/8, Libeň, 180 00 Praha 8"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1 Den vzniku funkce: 9. dubna 2018",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "MAXIM HABANEC , dat. nar. 13. února 1992 Vojenova 2540/8, Libeň, 180 00 Praha 8 Den vzniku funkce: 9. dubna 2018",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Každý jednatel zastupuje společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "DANIEL RAHMAN , dat. nar. 29. prosince 1997 Pařížská 1076/7, Staré Město, 110 00 Praha 1",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 50 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 % Druh podílu: základní Kmenový list: nepřipouští se",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "MAXIM HABANEC , dat. nar. 13. února 1992 Vojenova 2540/8, Libeň, 180 00 Praha 8",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 50 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 % Druh podílu: základní Kmenový list: nepřipouští se",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "100 000 ,- Kč",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 293234/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76896481&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=db68b8845d6c466783a84a47df10c67b",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 293234/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81508312&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=e6fd3b826e84490f9d6914d1a12139b7",
+          "year": 2023
+        },
+        {
+          "document_number": "C 293234/SL2/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76896481&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=db68b8845d6c466783a84a47df10c67b",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 293234/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86365984&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=dc79c79aaff44dc3b0d673e3168e3429",
+          "year": 2024
+        },
+        {
+          "document_number": "C 293234/SL3/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81508312&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=e6fd3b826e84490f9d6914d1a12139b7",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 293234/SL4/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86365984&subjektId=1010289&spis=1120254",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=dc79c79aaff44dc3b0d673e3168e3429",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 293234/SL4/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 10.05.2025",
+      "created_date": "2025-05-10",
+      "received_date": "2025-05-11",
+      "filed_date": "2025-05-15",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86365984&subjektId=1010289&spis=1120254",
+      "document_id": "86365984",
+      "spis": "1120254",
+      "subjekt_id": "1010289",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=dc79c79aaff44dc3b0d673e3168e3429",
+      "pdf_name": "Příloha_Skate of Mind_2024.pdf (54 kB, počet stran: 5)",
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 293234/SL3/MSPH",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 11.05.2024",
+      "created_date": "2024-05-11",
+      "received_date": "2024-05-11",
+      "filed_date": "2024-05-16",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81508312&subjektId=1010289&spis=1120254",
+      "document_id": "81508312",
+      "spis": "1120254",
+      "subjekt_id": "1010289",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=e6fd3b826e84490f9d6914d1a12139b7",
+      "pdf_name": "Příloha_Skate of Mind_2023.pdf (54 kB, počet stran: 5)",
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 293234/SL2/MSPH",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 07.05.2023",
+      "created_date": "2023-05-07",
+      "received_date": "2023-05-20",
+      "filed_date": "2023-05-28",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76896481&subjektId=1010289&spis=1120254",
+      "document_id": "76896481",
+      "spis": "1120254",
+      "subjekt_id": "1010289",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=db68b8845d6c466783a84a47df10c67b",
+      "pdf_name": "Příloha_Skate of Mind_2022.pdf (54 kB, počet stran: 5)",
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_overview": "Skate of Mind s.r.o. je mladá firma založená v dubnu 2018 se dvěma společníky a jednateli (Daniel Rahman a Maxim Habanec), kteří vedou společnost od začátku bez změn. Firma pravidelně podává účetní závěrky (2022–2024), ale z veřejných dokumentů se nepodařilo vytěžit konkrétní finanční metriky. Stabilita ve vedení a pravidelnost podávání listin jsou pozitivní signály, ale bez číselných dat nelze posoudit ekonomickou výkonnost.",
+  "data_quality_note": "Účetní závěrky jsou podávány pravidelně, ale konkrétní finanční metriky (tržby, zisk, aktiva) se z digitálních dokumentů nepodařilo extrahovat.",
+  "insight_summary": [
+    {
+      "title": "Stabilní vedení od založení",
+      "detail": "Oba jednatelé a společníci (Rahman, Habanec) jsou ve firmě od vzniku v roce 2018 bez jakýchkoli změn, což naznačuje kontinuitu a stabilní vlastnickou strukturu."
+    },
+    {
+      "title": "Pravidelné podávání účetních závěrek",
+      "detail": "Firma podává závěrky včas prostřednictvím správce daně (2022–2024), všechny dokumenty přijaty do 20 dnů od termínu, což svědčí o základní administrativní disciplíně."
+    },
+    {
+      "title": "Žádné změny v základních údajích",
+      "detail": "Od založení nedošlo ke změně názvu, sídla ani vedení – firma působí stabilně na stejné adrese v Třebotově."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Chybí finanční metriky pro hodnocení výkonnosti",
+      "detail": "Přestože jsou účetní závěrky k dispozici, z PDF dokumentů nebyly extrahovány konkrétní hodnoty aktiv, pasiv, tržeb ani zisku, což znemožňuje posouzení růstu, ziskovosti nebo zadlužení."
+    },
+    {
+      "title": "Mladá firma bez dlouhé historie",
+      "detail": "Společnost existuje od 2018, tedy necelých 7 let – chybí data za roky 2018–2021, což omezuje možnost sledovat dlouhodobé trendy a vývoj od založení."
+    },
+    {
+      "title": "Sídlo na adrese v Třebotově",
+      "detail": "Firma sídlí na adrese Hořejší 59 v malé obci, což může naznačovat buď reálné provozní zázemí, nebo administrativní sídlo – bez dalších dat nelze určit."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Bez finančních čísel nelze posoudit reálnou aktivitu",
+      "detail": "Firma podává závěrky, ale bez konkrétních metrik není jasné, zda generuje tržby, je zisková nebo jen formálně existuje. Pro seriózní posouzení je nutné nahlédnout do samotných PDF účetních závěrek."
+    },
+    {
+      "title": "Chybí data za první roky existence (2018–2021)",
+      "detail": "Pro roky 2018–2021 nejsou v systému dostupné účetní závěrky, což znemožňuje sledovat vývoj firmy od založení a posoudit, zda byla v počátcích aktivní."
+    },
+    {
+      "title": "Mladí společníci s potenciálně omezenými zkušenostmi",
+      "detail": "Daniel Rahman (nar. 1997) měl při založení firmy 20 let, Maxim Habanec (nar. 1992) 26 let – bez dalších informací nelze posoudit jejich podnikatelskou historii a zkušenosti v oboru."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1010289&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1010289&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=1010289",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1010289&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=1010289&typVypisu=UPLNY&full=false"
+  },
+  "generated_at": "2026-03-08T04:31:31.176891+00:00"
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "document_number": "C 293234/SL4/MSPH",
+    "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 10.05.2025",
+    "created_date": "2025-05-10",
+    "received_date": "2025-05-11",
+    "filed_date": "2025-05-15",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86365984&subjektId=1010289&spis=1120254",
+    "document_id": "86365984",
+    "spis": "1120254",
+    "subjekt_id": "1010289",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "document_number": "C 293234/SL3/MSPH",
+    "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 11.05.2024",
+    "created_date": "2024-05-11",
+    "received_date": "2024-05-11",
+    "filed_date": "2024-05-16",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81508312&subjektId=1010289&spis=1120254",
+    "document_id": "81508312",
+    "spis": "1120254",
+    "subjekt_id": "1010289",
+    "years": [
+      2023
+    ]
+  },
+  {
+    "document_number": "C 293234/SL2/MSPH",
+    "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 07.05.2023",
+    "created_date": "2023-05-07",
+    "received_date": "2023-05-20",
+    "filed_date": "2023-05-28",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=76896481&subjektId=1010289&spis=1120254",
+    "document_id": "76896481",
+    "spis": "1120254",
+    "subjekt_id": "1010289",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "document_number": "C 293234/SL1/MSPH",
+    "type": "notářský zápis [NZ 651/2018]",
+    "created_date": "2018-04-04",
+    "received_date": null,
+    "filed_date": "2018-04-09",
+    "pages": 6,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=52450837&subjektId=1010289&spis=1120254",
+    "document_id": "52450837",
+    "spis": "1120254",
+    "subjekt_id": "1010289",
+    "years": []
+  }
+]

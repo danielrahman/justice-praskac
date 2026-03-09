@@ -1,0 +1,26 @@
+[
+  {
+    "subject_id": "47718",
+    "name": "Škoda Auto a.s.",
+    "ico": "00177041",
+    "ico_display": "001 77 041",
+    "file_number": "B 332 vedená u Městského soudu v Praze",
+    "registration_date": "20. listopadu 1990",
+    "address": "tř. Václava Klementa 869, Mladá Boleslav II, 293 01 Mladá Boleslav Doručovací číslo: 29360",
+    "current_extract_url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=47718&typ=PLATNY&sp=H4sIAAAAAAAAAKtWykvMTU0JSCwCUiWpRcVKVtHVStmplUpWQJmq1DIlHaWyxJzSVCC%252FODs%252FJVEh%250D%250AsbQkX6lWB6YoKzUvICexJC8VSWGAj2OInyuSooL8nPyq1GwkJaYGSNIllQUeOakpiXmZSCqCQxyD%250D%250AQoLjwz1DPJRqY2sBPmM3o6kAAAA%253D%250D%250A",
+    "full_extract_url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=47718&typ=UPLNY&sp=H4sIAAAAAAAAAKtWykvMTU0JSCwCUiWpRcVKVtHVStmplUpWQJmq1DIlHaWyxJzSVCC%252FODs%252FJVEh%250D%250AsbQkX6lWB6YoKzUvICexJC8VSWGAj2OInyuSooL8nPyq1GwkJaYGSNIllQUeOakpiXmZSCqCQxyD%250D%250AQoLjwz1DPJRqY2sBPmM3o6kAAAA%253D%250D%250A",
+    "documents_url": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=47718"
+  },
+  {
+    "subject_id": "164930",
+    "name": "Škoda Auto Vysoká škola z.ú.",
+    "ico": "29142890",
+    "ico_display": "291 42 890",
+    "file_number": "U 1390 vedená u Městského soudu v Praze",
+    "registration_date": "1. ledna 2013",
+    "address": "Na Karmeli 1457, Mladá Boleslav II, 293 01 Mladá Boleslav",
+    "current_extract_url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=164930&typ=PLATNY&sp=H4sIAAAAAAAAAKtWykvMTU0JSCwCUiWpRcVKVtHVStmplUpWQJmq1DIlHaWyxJzSVCC%252FODs%252FJVEh%250D%250AsbQkX6lWB6YoKzUvICexJC8VSWGAj2OInyuSooL8nPyq1GwkJaYGSNIllQUeOakpiXmZSCqCQxyD%250D%250AQoLjwz1DPJRqY2sBPmM3o6kAAAA%253D%250D%250A",
+    "full_extract_url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=164930&typ=UPLNY&sp=H4sIAAAAAAAAAKtWykvMTU0JSCwCUiWpRcVKVtHVStmplUpWQJmq1DIlHaWyxJzSVCC%252FODs%252FJVEh%250D%250AsbQkX6lWB6YoKzUvICexJC8VSWGAj2OInyuSooL8nPyq1GwkJaYGSNIllQUeOakpiXmZSCqCQxyD%250D%250AQoLjwz1DPJRqY2sBPmM3o6kAAAA%253D%250D%250A",
+    "documents_url": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=164930"
+  }
+]

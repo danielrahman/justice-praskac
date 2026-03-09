@@ -1,0 +1,107 @@
+INFO:     Started server process [7874]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52448 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46364 - "GET /api/company?subjektId=368257&q=Directcom&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41946 - "GET /api/document/resolve?detailUrl=https%3A%2F%2For.justice.cz%2Fias%2Fui%2Fvypis-sl-detail%3Fdokument%3D86491044%26subjektId%3D368257%26spis%3D229577&index=0&prefer_pdf=true HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:39914 - "GET /api/company?subjektId=368257&q=Directcom&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41678 - "GET /api/document/resolve?detailUrl=https%3A%2F%2For.justice.cz%2Fias%2Fui%2Fvypis-sl-detail%3Fdokument%3D86491044%26subjektId%3D368257%26spis%3D229577&index=0&prefer_pdf=true HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:55854 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55870 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55884 - "GET /app.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55890 - "GET /style.css HTTP/1.1" 404 Not Found
+INFO:     10.12.67.144:59594 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.204.228:50204 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.204.228:38108 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.204.228:41724 - "GET /api/search?q=Samson+praha HTTP/1.1" 200 OK
+INFO:     10.12.204.228:59634 - "GET /api/company/stream?subjektId=450321&q=Samson+praha HTTP/1.1" 200 OK
+INFO:     10.12.204.228:59642 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.134.94:48400 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.134.94:47600 - "GET /api/search?q=17420211 HTTP/1.1" 200 OK
+INFO:     10.12.134.94:47610 - "GET /api/company/stream?subjektId=1166851&q=17420211 HTTP/1.1" 200 OK
+INFO:     10.12.149.118:59726 - "GET /api/search?q=17420211 HTTP/1.1" 200 OK
+INFO:     10.12.149.118:59738 - "GET /api/company/stream?subjektId=1166851&q=17420211 HTTP/1.1" 200 OK
+INFO:     10.12.149.118:59744 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.149.118:46110 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.149.118:33288 - "GET /api/company/stream?subjektId=1166851&q=17420211 HTTP/1.1" 200 OK
+INFO:     10.12.149.118:33298 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:60540 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:52974 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:53698 - "GET /api/search?q=Samson+praha HTTP/1.1" 200 OK
+INFO:     10.12.89.206:53700 - "GET /api/company/stream?subjektId=450321&q=Samson+praha HTTP/1.1" 200 OK
+INFO:     10.12.89.206:53706 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:41324 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:36818 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:35164 - "GET /api/search?q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.89.206:35176 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.89.206:35186 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:35194 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:40944 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     10.12.89.206:59442 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:59446 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:54156 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:58106 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:58116 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:44710 - "GET /api/company/stream?subjektId=450321&q=Samson+praha HTTP/1.1" 200 OK
+INFO:     10.12.89.206:44714 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:49872 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:48424 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:56118 - "GET /api/search?q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.89.206:56130 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.89.206:56146 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.89.206:53752 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58988 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58992 - "GET /api/search?q=Skate%20of%20Mind HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58996 - "GET /api/company?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58510 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58522 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33192 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33204 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     10.12.16.96:37250 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:48090 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:53816 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:49104 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:49114 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:52216 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.16.96:52228 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:52240 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     10.12.16.96:37620 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.16.96:59944 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.16.96:59960 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:56892 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.71.206:56896 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:56908 - "GET /api/company/stream?subjektId=368257&q=Directcom HTTP/1.1" 200 OK
+INFO:     10.12.71.206:56912 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:41930 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:35342 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55122 - "GET /api/search?q=Necktip HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55134 - "GET /api/company/stream?subjektId=1166851&q=Necktip HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55142 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55152 - "GET /api/search?q=SAMSON+PRAHA%2C+spol.+s+r.o. HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55162 - "GET /api/company/stream?subjektId=450321&q=SAMSON+PRAHA%2C+spol.+s+r.o. HTTP/1.1" 200 OK
+INFO:     10.12.71.206:55166 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:36356 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:46126 - "GET /api/search?q=Necktip HTTP/1.1" 200 OK
+INFO:     10.12.71.206:46134 - "GET /api/company/stream?subjektId=1166851&q=Necktip HTTP/1.1" 200 OK
+INFO:     10.12.71.206:46150 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46520 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     10.12.71.206:38980 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:42056 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:48562 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:48566 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind HTTP/1.1" 200 OK
+INFO:     10.12.71.206:48572 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     10.12.71.206:60556 - "GET /api/company/stream?subjektId=1010289&q=Skate+of+Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46532 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46538 - "GET /api/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46550 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46540 - "GET /api/company?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37050 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58750 - "GET /api/company/stream?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37040 - "GET /api/company?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58740 - "GET /api/company?subjektId=1010289&q=Skate%20of%20Mind&refresh=true HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7874]

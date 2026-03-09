@@ -1,0 +1,758 @@
+{
+  "title": "Úplný výpis z obchodního rejstříku",
+  "subtitle": "SAMSON PRAHA, spol. s r.o. , C 19476 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "15. dubna 1993",
+    "Spisová značka": "C 19476 vedená u Městského soudu v Praze",
+    "Obchodní firma": "SAMSON PRAHA, spol. s r.o.",
+    "Sídlo": "Praha 10, Škábova 16/3055",
+    "Identifikační číslo": "485 39 589",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "MAREK SINGER Praha 10, Škábova 6/3055",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARCEL RÜCKL Praha 1, Týnská 17/622 Den zániku funkce: 6. února 2003",
+          "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 622/17, PSČ 11000 Den vzniku funkce: 6. února 2003 Den zániku funkce: 18. srpna 2008",
+          "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Sušice - Mokrosuky 65, PSČ 34201 Den vzniku funkce: 3. prosince 2007",
+          "history": "zapsáno 31. prosince 2007 vymazáno 11. listopadu 2009"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. DANIELA ČERNUCKÁ , dat. nar. 20. srpna 1980 Teplice - Trnovany, Krušnohorská 1566/13, PSČ 41502 Den vzniku funkce: 18. srpna 2008 Den zániku funkce: 23. října 2009",
+          "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Praha 1 - Malá Strana, Pod Bruskou 147/3 Den vzniku funkce: 3. prosince 2007",
+          "history": "zapsáno 11. listopadu 2009 vymazáno 1. dubna 2016"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Tomanova 1982/30, Břevnov, 169 00 Praha 6 Den vzniku funkce: 3. prosince 2007",
+          "history": "zapsáno 1. dubna 2016"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. ŠÁRKA FROLÍKOVÁ , dat. nar. 7. ledna 1962 Praha 10 - Strašnice, Doubravčická 59/14 Den vzniku funkce: 23. října 2009 Den zániku funkce: 19. března 2013",
+          "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+          "history": "zapsáno 25. března 2013 vymazáno 14. října 2018"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+          "history": "zapsáno 14. října 2018 vymazáno 5. prosince 2018"
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+          "history": "zapsáno 5. prosince 2018"
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Za společnost jedná a podepisuje jednatel společnosti a to samostatně. Je-li jednatelů více, jednají a podepisují za společnost vždy dva společně. Podepisování za společnost se provádí tak, že k vytištěnému nebo napsanému obchodnímu jménu společnosti připojí svůj podpis jednatel nebo jednatelé.",
+          "history": "zapsáno 15. dubna 1993 vymazáno 11. června 2003"
+        },
+        {
+          "role": null,
+          "text": "Jednatel jedná a podepisuje jménem společnosti samostatně. Podepisování se provádí tak, že k vytištěné nebo napsané obchodní firmě společnosti připojí jednatel svůj podpis.",
+          "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+        },
+        {
+          "role": null,
+          "text": "Jménem společnosti jedná každý z jednatelů samostatně.",
+          "history": "zapsáno 20. srpna 2008 vymazáno 11. srpna 2014"
+        },
+        {
+          "role": null,
+          "text": "Každý jednatel společnosti jedná za společnost samostatně.",
+          "history": "zapsáno 11. srpna 2014"
+        },
+        {
+          "role": "Prokura",
+          "text": "JANA VYDROVÁ , dat. nar. 13. prosince 1985 Týnec 10, 294 41 Dobrovice",
+          "history": "zapsáno 24. června 2013 vymazáno 24. dubna 2014"
+        },
+        {
+          "role": "Prokura",
+          "text": "ZUZANA KUNZOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+          "history": "zapsáno 24. dubna 2014 vymazáno 21. června 2017"
+        },
+        {
+          "role": "Prokura",
+          "text": "ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+          "history": "zapsáno 21. června 2017 vymazáno 5. prosince 2018"
+        },
+        {
+          "role": "Prokura",
+          "text": "Ing. ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+          "history": "zapsáno 5. prosince 2018"
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "VÁCLAVA HUŠNEROVÁ Praha 1, Rybná 17/683",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 480 000 ,- Kč",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        },
+        {
+          "role": "Společník",
+          "text": "MAREK SINGER Praha 10, Škábova 16/3055",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 20 000 ,- Kč",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. MARCEL RÜCKL Praha 1, Týnská 17/622",
+          "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 20 000 ,- Kč Splaceno: 100 %",
+          "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 17/622",
+          "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 80 000 ,- Kč Splaceno: 100 %",
+          "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 17/622",
+          "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Praha 1 - Malá Strana, Pod Bruskou 147/3, PSČ 11800",
+          "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+          "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+        },
+        {
+          "role": "Společník",
+          "text": "Ing. ŠÁRKA FROLÍKOVÁ , dat. nar. 7. ledna 1962 Praha 10 - Strašnice, Doubravčická 59/14",
+          "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+          "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+        },
+        {
+          "role": "Společník",
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1",
+          "history": "zapsáno 25. března 2013 vymazáno 11. srpna 2014"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+          "history": "zapsáno 25. března 2013 vymazáno 11. srpna 2014"
+        },
+        {
+          "role": "Společník",
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1",
+          "history": "zapsáno 11. srpna 2014 vymazáno 14. října 2018"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100% Druh podílu: základní Kmenový list: nevydán",
+          "history": "zapsáno 11. srpna 2014 vymazáno 14. října 2018"
+        },
+        {
+          "role": "Společník",
+          "text": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1",
+          "history": "zapsáno 14. října 2018"
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100% Druh podílu: základní Kmenový list: nevydán",
+          "history": "zapsáno 14. října 2018"
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "500 000 ,- Kč",
+          "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+        },
+        {
+          "role": null,
+          "text": "100 000 ,- Kč",
+          "history": "zapsáno 15. listopadu 1995"
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Datum uzavření společenské smlouvy: 13. 4. 1993.",
+          "history": "zapsáno 15. dubna 1993"
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Počet členů statutárního orgánu: 2",
+          "history": "zapsáno 11. srpna 2014"
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": "zapsáno 11. srpna 2014"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "15. dubna 1993",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 19476 vedená u Městského soudu v Praze",
+      "history": "zapsáno 15. dubna 1993"
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "SAMSON PRAHA, spol. s r.o.",
+      "history": "zapsáno 15. dubna 1993"
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Praha 10, Škábova 16/3055",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "",
+      "value": "Praha 1, Týnská 17/622",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 31. října 2016"
+    },
+    {
+      "label": "",
+      "value": "Týnská 622/17, Staré Město, 110 00 Praha 1",
+      "history": "zapsáno 31. října 2016 vymazáno 5. prosince 2018"
+    },
+    {
+      "label": "",
+      "value": "Štěpánská 642/41, Nové Město, 110 00 Praha 1",
+      "history": "zapsáno 5. prosince 2018"
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "485 39 589",
+      "history": "zapsáno 15. dubna 1993"
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": "zapsáno 15. dubna 1993"
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "hostinská činnost (bez ubytovacích zařízení), vyjma prodeje nealkoholických nápojů, lahvového piva a doplňkového prodeje potravin na veřejných prostranstvích",
+      "history": "zapsáno 15. dubna 1993 vymazáno 11. června 2003"
+    },
+    {
+      "label": "",
+      "value": "hostinská činnost",
+      "history": "zapsáno 11. června 2003"
+    },
+    {
+      "label": "",
+      "value": "specializovaný maloobchod",
+      "history": "zapsáno 11. června 2003 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "přípravné práce pro stavby",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "inženýrská činnost v investiční výstavbě",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "zprostředkování obchodu a služeb",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "ubytovací služby",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "pronájem a půjčování věcí movitých",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "výzkum a vývoj v oblasti přírodních a technických věd nebo společenských věd",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "činnost technických poradců v oblasti stavebnictví a architektury",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "testování, měření, analýzy a kontroly",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "překladatelská a tlumočnická činnost",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "činnost informačních a zpravodajských kanceláří",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "geologické práce v oblasti inženýrské geologie, hydrogeologie a sanační geologie",
+      "history": "zapsáno 31. prosince 2007 vymazáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "výkon zeměměřických činností",
+      "history": "zapsáno 31. prosince 2007"
+    },
+    {
+      "label": "",
+      "value": "provádění staveb, jejich změn a odstraňování",
+      "history": "zapsáno 31. prosince 2007"
+    },
+    {
+      "label": "",
+      "value": "projektová činnost ve výstavbě",
+      "history": "zapsáno 31. prosince 2007"
+    },
+    {
+      "label": "",
+      "value": "geologické práce",
+      "history": "zapsáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "provádění pyrotechnického průzkumu",
+      "history": "zapsáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona",
+      "history": "zapsáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "poskytování služeb v oblasti bezpečnosti a ochrany zdraví při práci",
+      "history": "zapsáno 23. dubna 2009"
+    },
+    {
+      "label": "",
+      "value": "Pronájem nemovitostí, bytů a nebytových prostor",
+      "history": "zapsáno 11. srpna 2014"
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "MAREK SINGER Praha 10, Škábova 6/3055",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. MARCEL RÜCKL Praha 1, Týnská 17/622 Den zániku funkce: 6. února 2003",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 622/17, PSČ 11000 Den vzniku funkce: 6. února 2003 Den zániku funkce: 18. srpna 2008",
+      "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Sušice - Mokrosuky 65, PSČ 34201 Den vzniku funkce: 3. prosince 2007",
+      "history": "zapsáno 31. prosince 2007 vymazáno 11. listopadu 2009"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. DANIELA ČERNUCKÁ , dat. nar. 20. srpna 1980 Teplice - Trnovany, Krušnohorská 1566/13, PSČ 41502 Den vzniku funkce: 18. srpna 2008 Den zániku funkce: 23. října 2009",
+      "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Praha 1 - Malá Strana, Pod Bruskou 147/3 Den vzniku funkce: 3. prosince 2007",
+      "history": "zapsáno 11. listopadu 2009 vymazáno 1. dubna 2016"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Tomanova 1982/30, Břevnov, 169 00 Praha 6 Den vzniku funkce: 3. prosince 2007",
+      "history": "zapsáno 1. dubna 2016"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. ŠÁRKA FROLÍKOVÁ , dat. nar. 7. ledna 1962 Praha 10 - Strašnice, Doubravčická 59/14 Den vzniku funkce: 23. října 2009 Den zániku funkce: 19. března 2013",
+      "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+      "history": "zapsáno 25. března 2013 vymazáno 14. října 2018"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+      "history": "zapsáno 14. října 2018 vymazáno 5. prosince 2018"
+    },
+    {
+      "label": "jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Ing. MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1 Den vzniku funkce: 19. března 2013",
+      "history": "zapsáno 5. prosince 2018"
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Za společnost jedná a podepisuje jednatel společnosti a to samostatně. Je-li jednatelů více, jednají a podepisují za společnost vždy dva společně. Podepisování za společnost se provádí tak, že k vytištěnému nebo napsanému obchodnímu jménu společnosti připojí svůj podpis jednatel nebo jednatelé.",
+      "history": "zapsáno 15. dubna 1993 vymazáno 11. června 2003"
+    },
+    {
+      "label": "",
+      "value": "Jednatel jedná a podepisuje jménem společnosti samostatně. Podepisování se provádí tak, že k vytištěné nebo napsané obchodní firmě společnosti připojí jednatel svůj podpis.",
+      "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+    },
+    {
+      "label": "",
+      "value": "Jménem společnosti jedná každý z jednatelů samostatně.",
+      "history": "zapsáno 20. srpna 2008 vymazáno 11. srpna 2014"
+    },
+    {
+      "label": "",
+      "value": "Každý jednatel společnosti jedná za společnost samostatně.",
+      "history": "zapsáno 11. srpna 2014"
+    },
+    {
+      "label": "Prokura:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "JANA VYDROVÁ , dat. nar. 13. prosince 1985 Týnec 10, 294 41 Dobrovice",
+      "history": "zapsáno 24. června 2013 vymazáno 24. dubna 2014"
+    },
+    {
+      "label": "",
+      "value": "ZUZANA KUNZOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+      "history": "zapsáno 24. dubna 2014 vymazáno 21. června 2017"
+    },
+    {
+      "label": "",
+      "value": "ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+      "history": "zapsáno 21. června 2017 vymazáno 5. prosince 2018"
+    },
+    {
+      "label": "",
+      "value": "Ing. ZUZANA HRDLIČKOVÁ , dat. nar. 5. května 1989 náměstí Protifašistických bojovníků 143/2, Uhříněves, 104 00 Praha 10",
+      "history": "zapsáno 5. prosince 2018"
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "VÁCLAVA HUŠNEROVÁ Praha 1, Rybná 17/683",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 480 000 ,- Kč",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "Společník:",
+      "value": "MAREK SINGER Praha 10, Škábova 16/3055",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 20 000 ,- Kč",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. MARCEL RÜCKL Praha 1, Týnská 17/622",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 20 000 ,- Kč Splaceno: 100 %",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 17/622",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 80 000 ,- Kč Splaceno: 100 %",
+      "history": "zapsáno 15. listopadu 1995 vymazáno 11. června 2003"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. VÁCLAVA RÜCKLOVÁ , dat. nar. 15. dubna 1971 Praha 1, Týnská 17/622",
+      "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+      "history": "zapsáno 11. června 2003 vymazáno 20. srpna 2008"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. EVA KOLÁŘOVÁ , dat. nar. 13. srpna 1978 Praha 1 - Malá Strana, Pod Bruskou 147/3, PSČ 11800",
+      "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+      "history": "zapsáno 20. srpna 2008 vymazáno 11. listopadu 2009"
+    },
+    {
+      "label": "Společník:",
+      "value": "Ing. ŠÁRKA FROLÍKOVÁ , dat. nar. 7. ledna 1962 Praha 10 - Strašnice, Doubravčická 59/14",
+      "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100 %",
+      "history": "zapsáno 11. listopadu 2009 vymazáno 25. března 2013"
+    },
+    {
+      "label": "Společník:",
+      "value": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1",
+      "history": "zapsáno 25. března 2013 vymazáno 11. srpna 2014"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100%",
+      "history": "zapsáno 25. března 2013 vymazáno 11. srpna 2014"
+    },
+    {
+      "label": "Společník:",
+      "value": "MARCEL RÜCKL , dat. nar. 6. června 1967 Týnská 622/17, Staré Město, 110 00 Praha 1",
+      "history": "zapsáno 11. srpna 2014 vymazáno 14. října 2018"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100% Druh podílu: základní Kmenový list: nevydán",
+      "history": "zapsáno 11. srpna 2014 vymazáno 14. října 2018"
+    },
+    {
+      "label": "Společník:",
+      "value": "MARCEL RÜCKL , dat. nar. 6. června 1967 Štěpánská 642/41, Nové Město, 110 00 Praha 1",
+      "history": "zapsáno 14. října 2018"
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 100% Druh podílu: základní Kmenový list: nevydán",
+      "history": "zapsáno 14. října 2018"
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "500 000 ,- Kč",
+      "history": "zapsáno 15. dubna 1993 vymazáno 15. listopadu 1995"
+    },
+    {
+      "label": "",
+      "value": "100 000 ,- Kč",
+      "history": "zapsáno 15. listopadu 1995"
+    },
+    {
+      "label": "Ostatní skutečnosti:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Datum uzavření společenské smlouvy: 13. 4. 1993.",
+      "history": "zapsáno 15. dubna 1993"
+    },
+    {
+      "label": "",
+      "value": "Počet členů statutárního orgánu: 2",
+      "history": "zapsáno 11. srpna 2014"
+    },
+    {
+      "label": "",
+      "value": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+      "history": "zapsáno 11. srpna 2014"
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=450321&typVypisu=UPLNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=450321&typ=UPLNY"
+}

@@ -1,0 +1,38 @@
+
+
+--- PAGE 1 ---
+[Ic:
+
+[4656679 |
+
+Rozvaha pro podnikatele, ve zkraceném rozsahu pro
+mikro uéetni jednotku, ktera nema povinnost mit uéetni
+zavérku ovérenou auditorem
+ke dni 31.12.2021
+
+(v celych tisicich Ké)
+
+béZné titetni obdobi mou
+AKTIVA obdobi
+brutto | korekce | netto netto
+1 2 3 4
+IAKTIVA CELKEM 29845 10298 19547 20165
+Pohledavky za upsany zakladni kapital 0 0 0 0
+Stala aktiva 16243 10298 5945 4484
+Obézna aktiva 13402 0 13402 15514
+Casové rozligeni aktiv 200 0 200 167
+
+
+--- PAGE 2 ---
+béZné uéetni
+
+minulé uéetni
+
+PASIVA obdobi obdobi
+1 2
+PASIVA CELKEM 19547 20165
+A. Vlastni kapital 6092 10253
+B.+C. Cizi zdroje 2911 1911
+B. Rezervy 0 0
+Cc. Zavazky 2911 1911
+D. Casové rozligeni pasiv 10544 8001

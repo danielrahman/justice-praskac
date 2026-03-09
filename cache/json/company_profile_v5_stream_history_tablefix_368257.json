@@ -1,0 +1,393 @@
+{
+  "subject_id": "368257",
+  "name": "Directcom, s.r.o.",
+  "ico": "28536061",
+  "basic_info": [
+    {
+      "label": "Obchodní firma",
+      "value": "Directcom, s.r.o."
+    },
+    {
+      "label": "Identifikační číslo",
+      "value": "285 36 061"
+    },
+    {
+      "label": "Právní forma",
+      "value": "Společnost s ručením omezeným"
+    },
+    {
+      "label": "Datum vzniku a zápisu",
+      "value": "26. února 2009"
+    },
+    {
+      "label": "Spisová značka",
+      "value": "C 148694 vedená u Městského soudu v Praze"
+    },
+    {
+      "label": "Sídlo",
+      "value": "Rohanské nábřeží 670/19, Karlín, 186 00 Praha 8"
+    }
+  ],
+  "executives": [
+    {
+      "role": "jednatel",
+      "name": "Ing. MARTIN SMOLA",
+      "birth_date": "3. února 1970",
+      "raw": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice Den vzniku funkce: 26. února 2009"
+    },
+    {
+      "role": "jednatel",
+      "name": "RADEK VÁCLAVÍK",
+      "birth_date": "18. listopadu 1966",
+      "raw": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10 Den vzniku funkce: 8. října 2020"
+    },
+    {
+      "role": "Způsob jednání",
+      "name": "Každý jednatel je oprávněn zastupovat obchodní společnost samostatně.",
+      "birth_date": null,
+      "raw": "Každý jednatel je oprávněn zastupovat obchodní společnost samostatně."
+    }
+  ],
+  "owners": [
+    {
+      "role": "Společník",
+      "name": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice",
+      "raw": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice"
+    },
+    {
+      "role": "Společník",
+      "name": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10",
+      "raw": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10"
+    }
+  ],
+  "statutory_bodies": [
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice Den vzniku funkce: 26. února 2009",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10 Den vzniku funkce: 8. října 2020",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Každý jednatel je oprávněn zastupovat obchodní společnost samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "Ing. MARTIN SMOLA , dat. nar. 3. února 1970 Druhá 62, Jánská, 267 12 Loděnice",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "RADEK VÁCLAVÍK , dat. nar. 18. listopadu 1966 Božecká 334/2, Malešice, 108 00 Praha 10",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 100 000 ,- Kč Splaceno: 100 % Obchodní podíl: 50 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "200 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "financial_timeline": [
+    {
+      "year": 2021,
+      "sources": [
+        {
+          "document_number": "C 148694/SL5/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77208557&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cba0b0bd1921400ca7211e5b1a9bda60",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2022,
+      "sources": [
+        {
+          "document_number": "C 148694/SL6/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81542468&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cfa42d72490c4229bf272f7e3255f3b8",
+          "year": 2023
+        },
+        {
+          "document_number": "C 148694/SL5/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77208557&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cba0b0bd1921400ca7211e5b1a9bda60",
+          "year": 2022
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2023,
+      "sources": [
+        {
+          "document_number": "C 148694/SL7/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86491044&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=f88925011b834f52882521cf956fb4f3",
+          "year": 2024
+        },
+        {
+          "document_number": "C 148694/SL6/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81542468&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=cfa42d72490c4229bf272f7e3255f3b8",
+          "year": 2023
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    },
+    {
+      "year": 2024,
+      "sources": [
+        {
+          "document_number": "C 148694/SL7/MSPH",
+          "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86491044&subjektId=368257&spis=229577",
+          "pdf_url": "https://or.justice.cz/ias/content/download?id=f88925011b834f52882521cf956fb4f3",
+          "year": 2024
+        }
+      ],
+      "net_margin_pct": null,
+      "equity_ratio_pct": null,
+      "liability_ratio_pct": null,
+      "debt_to_revenue_pct": null
+    }
+  ],
+  "financial_documents": [
+    {
+      "document_number": "C 148694/SL7/MSPH",
+      "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 12.05.2025",
+      "created_date": "2025-05-12",
+      "received_date": "2025-05-13",
+      "filed_date": "2025-05-22",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86491044&subjektId=368257&spis=229577",
+      "document_id": "86491044",
+      "spis": "229577",
+      "subjekt_id": "368257",
+      "years": [
+        2024
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=f88925011b834f52882521cf956fb4f3",
+      "pdf_name": "Příloha_Directcom_2024.pdf (54 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha_Directcom_2024.pdf (54 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=f88925011b834f52882521cf956fb4f3",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100274166-20250507-163758.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=3a19e0cc735c4ccaa19863c353074369",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100274166-20250507-163758.pdf (152 kB, počet stran: 3)",
+          "url": "https://or.justice.cz/ias/content/download?id=a21678ae346b44c08119a11f0942a061",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 148694/SL6/MSPH",
+      "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 19.05.2024",
+      "created_date": "2024-05-19",
+      "received_date": "2024-05-19",
+      "filed_date": "2024-05-19",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81542468&subjektId=368257&spis=229577",
+      "document_id": "81542468",
+      "spis": "229577",
+      "subjekt_id": "368257",
+      "years": [
+        2023
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=cfa42d72490c4229bf272f7e3255f3b8",
+      "pdf_name": "Příloha_Directcom_2023.pdf (54 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha_Directcom_2023.pdf (54 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=cfa42d72490c4229bf272f7e3255f3b8",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100172642-20240514-114809.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=3baceb9f603743f3ae5775d184efba72",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100172642-20240514-114809.pdf (158 kB, počet stran: 4)",
+          "url": "https://or.justice.cz/ias/content/download?id=5cfd3f32b28143aca9765b2d9343f01f",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    },
+    {
+      "document_number": "C 148694/SL5/MSPH",
+      "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 21.05.2023",
+      "created_date": "2023-05-21",
+      "received_date": "2023-06-02",
+      "filed_date": "2023-06-14",
+      "pages": 0,
+      "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77208557&subjektId=368257&spis=229577",
+      "document_id": "77208557",
+      "spis": "229577",
+      "subjekt_id": "368257",
+      "years": [
+        2022
+      ],
+      "pdf_url": "https://or.justice.cz/ias/content/download?id=cba0b0bd1921400ca7211e5b1a9bda60",
+      "pdf_name": "Příloha_Directcom_2022.pdf (54 kB, počet stran: 5)",
+      "download_links": [
+        {
+          "label": "Příloha_Directcom_2022.pdf (54 kB, počet stran: 5)",
+          "url": "https://or.justice.cz/ias/content/download?id=cba0b0bd1921400ca7211e5b1a9bda60",
+          "is_pdf": true
+        },
+        {
+          "label": "UZ-451100077624-20230516-110352.xml (2 kB)",
+          "url": "https://or.justice.cz/ias/content/download?id=47352f1701884dbb90f56e68b58f1985",
+          "is_pdf": false
+        },
+        {
+          "label": "UZ-451100077624-20230516-110352.pdf (158 kB, počet stran: 4)",
+          "url": "https://or.justice.cz/ias/content/download?id=877669d4874541a59d5688b32a6f62ca",
+          "is_pdf": true
+        }
+      ],
+      "doc_quality_score": -90,
+      "extraction_mode": "digital",
+      "page_count": 5,
+      "metrics_found": []
+    }
+  ],
+  "analysis_engine": "ai",
+  "analysis_model": "claude_sonnet_4_5",
+  "analysis_usage": {
+    "provider": "anthropic",
+    "input_tokens": 2251,
+    "output_tokens": 1002,
+    "cache_creation_input_tokens": null,
+    "cache_read_input_tokens": null,
+    "credits": null,
+    "credits_note": "Přesné kredity nejsou z API dostupné."
+  },
+  "analysis_overview": "Directcom, s.r.o. je stabilní společnost založená v roce 2009, kterou od počátku vede Ing. Martin Smola. V roce 2020 přibyl druhý jednatel a společník Radek Václavík, jinak firma nevykazuje žádné změny v názvu, sídle ani vedení. Účetní závěrky za roky 2022–2024 jsou podávány pravidelně prostřednictvím správce daně, ale bez strojově čitelných finančních metrik nelze hodnotit ekonomickou výkonnost.",
+  "data_quality_note": "Data z justice.cz jsou kompletní po formální stránce, ale chybí konkrétní finanční metriky – nelze hodnotit ziskovost, zadlužení ani růst.",
+  "insight_summary": [
+    {
+      "title": "Stabilní vlastnická a řídící struktura",
+      "detail": "Od založení v roce 2009 vede firmu Ing. Martin Smola, v říjnu 2020 přibyl druhý jednatel Radek Václavík. Oba jsou zároveň společníci, žádné další změny ve vedení ani vlastnictví neproběhly."
+    },
+    {
+      "title": "Pravidelné podávání účetních závěrek",
+      "detail": "Účetní závěrky za roky 2022, 2023 a 2024 byly podány včas prostřednictvím správce daně (květen následujícího roku), bez viditelných prodlev nebo opomenutí."
+    },
+    {
+      "title": "Žádné změny v základních údajích",
+      "detail": "Firma nemá zaznamenanou žádnou změnu obchodního jména ani sídla od vzniku, což naznačuje kontinuitu a absenci restrukturalizací."
+    }
+  ],
+  "deep_insights": [
+    {
+      "title": "Chybějící finanční metriky",
+      "detail": "Účetní závěrky jsou v rejstříku dostupné, ale bez extrahovaných čísel (aktiva, výnosy, zisk, závazky) nelze posoudit ekonomickou kondici, trendy růstu ani zadluženost."
+    },
+    {
+      "title": "Rozšíření vedení v roce 2020",
+      "detail": "Přidání Radka Václavíka jako jednatele a společníka v říjnu 2020 může signalizovat kapitálové posílení nebo rozšíření kompetencí, ale bez finančních dat nelze dopad vyhodnotit."
+    },
+    {
+      "title": "Dlouhodobá kontinuita",
+      "detail": "Firma existuje od roku 2009 bez zjevných turbulencí v rejstříku – žádné insolvence, exekuce ani výmazy nejsou v datech zmíněny, což je pozitivní signál stability."
+    }
+  ],
+  "praskac": [
+    {
+      "title": "Žádné červené vlajky v rejstříku",
+      "detail": "V dostupných veřejných záznamech není vidět opožděné podání listin, změny vedení pod tlakem, ani jiné formální nesrovnalosti. Bez finančních dat ale nelze vyloučit skryté problémy."
+    },
+    {
+      "title": "Neprůhledná ekonomická realita",
+      "detail": "Absence strojově čitelných finančních údajů znamená, že nelze ověřit, zda firma generuje zisk, jak je zadlužená, nebo zda má dostatek kapitálu. Pro seriózní due diligence je nutné sehnat plné účetní závěrky."
+    }
+  ],
+  "history_signals": {
+    "name_changes": 0,
+    "address_changes": 0,
+    "management_turnover": 0
+  },
+  "external_checks": {
+    "source_name": "Chytrý rejstřík",
+    "source_url": "https://www.chytryrejstrik.cz/ico-28536061/directcom-s-r-o",
+    "employees_hint": null,
+    "checks": [],
+    "snapshot": {
+      "url": "https://www.chytryrejstrik.cz/ico-28536061/directcom-s-r-o",
+      "assets_mil_czk": 2.78,
+      "profit_mil_czk": null,
+      "employees_hint": null
+    }
+  },
+  "source_links": {
+    "current_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=368257&typ=PLATNY",
+    "full_extract": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=368257&typ=UPLNY",
+    "documents": "https://or.justice.cz/ias/ui/vypis-sl-firma?subjektId=368257",
+    "current_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=368257&typVypisu=PLATNY&full=false",
+    "full_extract_pdf": "https://or.justice.cz/ias/ui/print-pdf?subjektId=368257&typVypisu=UPLNY&full=false",
+    "chytryrejstrik": "https://www.chytryrejstrik.cz/ico-28536061/directcom-s-r-o"
+  },
+  "generated_at": "2026-03-08T12:48:39.429749+00:00",
+  "cache_status": "fresh"
+}

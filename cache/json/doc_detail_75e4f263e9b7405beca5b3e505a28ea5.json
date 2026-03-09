@@ -1,0 +1,17 @@
+{
+  "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=85829930&subjektId=389580&spis=246695",
+  "pdf_url": "https://or.justice.cz/ias/content/download?id=9673b811b4e740c389bc603cb28620b8",
+  "pdf_name": "UZ-451100260020-20250402-134657.pdf (186 kB, počet stran: 4)",
+  "download_links": [
+    {
+      "label": "UZ-451100260020-20250402-134657.xml (3 kB)",
+      "url": "https://or.justice.cz/ias/content/download?id=12962bb72d1b4a93b1b3911c8d318b34",
+      "is_pdf": false
+    },
+    {
+      "label": "UZ-451100260020-20250402-134657.pdf (186 kB, počet stran: 4)",
+      "url": "https://or.justice.cz/ias/content/download?id=9673b811b4e740c389bc603cb28620b8",
+      "is_pdf": true
+    }
+  ]
+}

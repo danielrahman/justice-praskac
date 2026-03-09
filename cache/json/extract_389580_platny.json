@@ -1,0 +1,218 @@
+{
+  "title": "Výpis z obchodního rejstříku",
+  "subtitle": "manGoweb, s.r.o. , C 166681 vedená u Městského soudu v Praze",
+  "basic_info": {
+    "Datum vzniku a zápisu": "1. července 2010",
+    "Spisová značka": "C 166681 vedená u Městského soudu v Praze",
+    "Obchodní firma": "manGoweb, s.r.o.",
+    "Sídlo": "Praha 5 - Jinonice, K Rovinám 538/17, PSČ 15800",
+    "Identifikační číslo": "246 94 401",
+    "Právní forma": "Společnost s ručením omezeným",
+    "Předmět podnikání": ""
+  },
+  "sections": [
+    {
+      "title": "Statutární orgán",
+      "items": []
+    },
+    {
+      "title": "Jednatel",
+      "items": [
+        {
+          "role": null,
+          "text": "ZUZANA STARÁ , dat. nar. 19. srpna 1992 Karlínské náměstí 376/10, Karlín, 186 00 Praha 8 Den vzniku funkce: 23. června 2025",
+          "history": ""
+        },
+        {
+          "role": "Způsob jednání",
+          "text": "Společnost zastupuje jednatel samostatně.",
+          "history": ""
+        }
+      ]
+    },
+    {
+      "title": "Společníci",
+      "items": [
+        {
+          "role": "Společník",
+          "text": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 40 000 ,- Kč Splaceno: 100 % Obchodní podíl: 10 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "VÍT JEŽEK , dat. nar. 16. srpna 1988 Hlaváčova 1162/6, Kobylisy, 182 00 Praha 8",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 40 000 ,- Kč Splaceno: 100 % Obchodní podíl: 10 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "JAN SLÁDEK , dat. nar. 22. září 1988 Litvínovská 521/34, Prosek, 190 00 Praha 9",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 124 000 ,- Kč Splaceno: 100 % Obchodní podíl: 31 %",
+          "history": ""
+        },
+        {
+          "role": "Společník",
+          "text": "ZUZANA STARÁ , dat. nar. 19. srpna 1992 Karlínské náměstí 376/10, Karlín, 186 00 Praha 8",
+          "history": ""
+        },
+        {
+          "role": "Podíl",
+          "text": "Vklad: 196 000 ,- Kč Splaceno: 100 % Obchodní podíl: 49 %",
+          "history": ""
+        },
+        {
+          "role": "Základní kapitál",
+          "text": "400 000 ,- Kč",
+          "history": ""
+        },
+        {
+          "role": "Ostatní skutečnosti",
+          "text": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+          "history": ""
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "label": "Datum vzniku a zápisu:",
+      "value": "1. července 2010",
+      "history": ""
+    },
+    {
+      "label": "Spisová značka:",
+      "value": "C 166681 vedená u Městského soudu v Praze",
+      "history": ""
+    },
+    {
+      "label": "Obchodní firma:",
+      "value": "manGoweb, s.r.o.",
+      "history": ""
+    },
+    {
+      "label": "Sídlo:",
+      "value": "Praha 5 - Jinonice, K Rovinám 538/17, PSČ 15800",
+      "history": ""
+    },
+    {
+      "label": "Identifikační číslo:",
+      "value": "246 94 401",
+      "history": ""
+    },
+    {
+      "label": "Právní forma:",
+      "value": "Společnost s ručením omezeným",
+      "history": ""
+    },
+    {
+      "label": "Předmět podnikání:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona, v oborech: - vydavatelské činnosti, polygrafická výroba, knihařské a kopírovací práce - zprostředkování obchodu a služeb - velkoobchod a maloobchod - poskytování software, poradenství v oblasti informačních technologií, zpracování dat, hostingové a související činnosti a webové portály - poradenská a konzultační činnost, zpracování odborných studií a posudků - příprava a vypracování technických návrhů, grafické a kresličské práce - reklamní činnost, marketing, mediální zastoupení - fotografické služby - mimoškolní výchova a vzdělávání, pořádání kurzů, školení, včetně lektorské činnosti",
+      "history": ""
+    },
+    {
+      "label": "Statutární orgán:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Jednatel:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "ZUZANA STARÁ , dat. nar. 19. srpna 1992 Karlínské náměstí 376/10, Karlín, 186 00 Praha 8 Den vzniku funkce: 23. června 2025",
+      "history": ""
+    },
+    {
+      "label": "Počet členů:",
+      "value": "1",
+      "history": ""
+    },
+    {
+      "label": "Způsob jednání:",
+      "value": "Společnost zastupuje jednatel samostatně.",
+      "history": ""
+    },
+    {
+      "label": "Společníci:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "PAVEL FUCHS , dat. nar. 4. května 1986 č.p. 35, 511 01 Olešnice",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 40 000 ,- Kč Splaceno: 100 % Obchodní podíl: 10 %",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "VÍT JEŽEK , dat. nar. 16. srpna 1988 Hlaváčova 1162/6, Kobylisy, 182 00 Praha 8",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 40 000 ,- Kč Splaceno: 100 % Obchodní podíl: 10 %",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "JAN SLÁDEK , dat. nar. 22. září 1988 Litvínovská 521/34, Prosek, 190 00 Praha 9",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 124 000 ,- Kč Splaceno: 100 % Obchodní podíl: 31 %",
+      "history": ""
+    },
+    {
+      "label": "Společník:",
+      "value": "ZUZANA STARÁ , dat. nar. 19. srpna 1992 Karlínské náměstí 376/10, Karlín, 186 00 Praha 8",
+      "history": ""
+    },
+    {
+      "label": "Podíl:",
+      "value": "Vklad: 196 000 ,- Kč Splaceno: 100 % Obchodní podíl: 49 %",
+      "history": ""
+    },
+    {
+      "label": "Základní kapitál:",
+      "value": "400 000 ,- Kč",
+      "history": ""
+    },
+    {
+      "label": "Ostatní skutečnosti:",
+      "value": "",
+      "history": ""
+    },
+    {
+      "label": "",
+      "value": "Obchodní korporace se podřídila zákonu jako celku postupem podle § 777 odst. 5 zákona č. 90/2012 Sb., o obchodních společnostech a družstvech.",
+      "history": ""
+    }
+  ],
+  "pdf_url": "https://or.justice.cz/ias/ui/print-pdf?subjektId=389580&typVypisu=PLATNY&full=false",
+  "url": "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=389580&typ=PLATNY"
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "document_number": "C 148694/SL7/MSPH",
+    "type": "účetní závěrka [2024] - předána prostřednictvím správce daně z příjmů k 12.05.2025",
+    "created_date": "2025-05-12",
+    "received_date": "2025-05-13",
+    "filed_date": "2025-05-22",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=86491044&subjektId=368257&spis=229577",
+    "document_id": "86491044",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": [
+      2024
+    ]
+  },
+  {
+    "document_number": "C 148694/SL6/MSPH",
+    "type": "účetní závěrka [2023] - předána prostřednictvím správce daně z příjmů k 19.05.2024",
+    "created_date": "2024-05-19",
+    "received_date": "2024-05-19",
+    "filed_date": "2024-05-19",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=81542468&subjektId=368257&spis=229577",
+    "document_id": "81542468",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": [
+      2023
+    ]
+  },
+  {
+    "document_number": "C 148694/SL5/MSPH",
+    "type": "účetní závěrka [2022] - předána prostřednictvím správce daně z příjmů k 21.05.2023",
+    "created_date": "2023-05-21",
+    "received_date": "2023-06-02",
+    "filed_date": "2023-06-14",
+    "pages": 0,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=77208557&subjektId=368257&spis=229577",
+    "document_id": "77208557",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": [
+      2022
+    ]
+  },
+  {
+    "document_number": "C 148694/SL4/MSPH",
+    "type": "zakladatelské dokumenty , notářský zápis [NZ 344/2020] , rozhod. o statut. orgánu",
+    "created_date": "2020-10-08",
+    "received_date": null,
+    "filed_date": "2020-11-03",
+    "pages": 10,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=63868175&subjektId=368257&spis=229577",
+    "document_id": "63868175",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": []
+  },
+  {
+    "document_number": "C 148694/SL3/MSPH",
+    "type": "notářský zápis NZ 141/2009",
+    "created_date": "2009-08-20",
+    "received_date": null,
+    "filed_date": "2009-09-29",
+    "pages": 10,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=13787939&subjektId=368257&spis=229577",
+    "document_id": "13787939",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": []
+  },
+  {
+    "document_number": "C 148694/SL2/MSPH",
+    "type": "podpisové vzory",
+    "created_date": "2009-02-11",
+    "received_date": null,
+    "filed_date": "2009-02-27",
+    "pages": 1,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=13787935&subjektId=368257&spis=229577",
+    "document_id": "13787935",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": []
+  },
+  {
+    "document_number": "C 148694/SL1/MSPH",
+    "type": "zakladatelské dokumenty , notářský zápis NZ 30/2009",
+    "created_date": "2009-02-11",
+    "received_date": null,
+    "filed_date": "2009-02-27",
+    "pages": 17,
+    "detail_url": "https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=13787931&subjektId=368257&spis=229577",
+    "document_id": "13787931",
+    "spis": "229577",
+    "subjekt_id": "368257",
+    "years": []
+  }
+]
