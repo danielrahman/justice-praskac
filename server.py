@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import math
 import os
 import re
@@ -30,6 +31,30 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 from starlette.responses import JSONResponse
 from urllib3.util.retry import Retry
+
+
+# ---------------------------------------------------------------------------
+# Structured JSON logging
+# ---------------------------------------------------------------------------
+class JsonFormatter(logging.Formatter):
+    def format(self, record):
+        log_entry = {
+            "timestamp": self.formatTime(record),
+            "level": record.levelname,
+            "logger": record.name,
+            "message": record.getMessage(),
+        }
+        if record.exc_info and record.exc_info[0]:
+            log_entry["exception"] = self.formatException(record.exc_info)
+        return json.dumps(log_entry, ensure_ascii=False)
+
+
+_log_level = os.environ.get("JUSTICE_LOG_LEVEL", "INFO").upper()
+_handler = logging.StreamHandler()
+_handler.setFormatter(JsonFormatter())
+logging.basicConfig(level=getattr(logging, _log_level, logging.INFO), handlers=[_handler])
+logger = logging.getLogger("justice")
+
 
 BASE_UI = "https://or.justice.cz/ias/ui/"
 BASE_SITE = "https://or.justice.cz"
@@ -207,6 +232,7 @@ def init_db() -> None:
             "CREATE INDEX IF NOT EXISTS idx_shared_company_history_updated ON shared_company_history(updated_at DESC)"
         )
         conn.commit()
+        logger.info("Database initialized")
     finally:
         conn.close()
 
@@ -219,6 +245,7 @@ def get_db() -> sqlite3.Connection:
 
 
 def save_history_entry(visitor_id: str | None, profile: dict[str, Any], query: str | None = None) -> None:
+    subject_id = str(profile.get("subject_id") or "")
     conn = get_db()
     try:
         conn.execute(
@@ -235,7 +262,7 @@ def save_history_entry(visitor_id: str | None, profile: dict[str, Any], query: s
                 last_visitor_id = excluded.last_visitor_id
             """,
             (
-                str(profile.get("subject_id") or ""),
+                subject_id,
                 str(profile.get("ico") or ""),
                 str(profile.get("name") or ""),
                 query,
@@ -244,6 +271,7 @@ def save_history_entry(visitor_id: str | None, profile: dict[str, Any], query: s
             ),
         )
         conn.commit()
+        logger.info(f"save_history_entry subject_id={subject_id}")
     finally:
         conn.close()
 
@@ -301,18 +329,24 @@ def slug_hash(value: str) -> str:
 def load_json_cache(name: str, max_age_seconds: int) -> Any | None:
     path = JSON_DIR / f"{name}.json"
     if not path.exists():
+        logger.info(f"cache miss name={name}")
         return None
     if now_ts() - path.stat().st_mtime > max_age_seconds:
+        logger.info(f"cache miss (expired) name={name}")
         return None
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        logger.info(f"cache hit name={name}")
+        return data
     except Exception:
+        logger.info(f"cache miss (read error) name={name}")
         return None
 
 
 def save_json_cache(name: str, data: Any) -> None:
     path = JSON_DIR / f"{name}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(f"cache write name={name}")
 
 
 def fetch_text(url: str) -> str:
@@ -322,9 +356,11 @@ def fetch_text(url: str) -> str:
             response = SESSION.get(url, timeout=60)
             response.raise_for_status()
             response.encoding = response.encoding or "utf-8"
+            logger.info(f"fetch_text url={url} status={response.status_code}")
             return response.text
         except requests.RequestException as exc:
             last_error = exc
+            logger.error(f"fetch_text error url={url} attempt={attempt + 1} error={exc}")
             if attempt < 2:
                 time.sleep(1.2 * (attempt + 1))
     if last_error:
@@ -368,6 +404,7 @@ def fetch_binary(url: str, path: Path) -> Path:
             if not response_is_pdf(response):
                 raise ValueError(f"URL did not return a PDF: {url}")
             path.write_bytes(response.content)
+            logger.info(f"fetch_binary url={url} size={len(response.content)}")
             return path
         except Exception as exc:
             last_error = exc
@@ -1191,12 +1228,15 @@ def pdf_page_count(pdf_path: Path) -> int:
     try:
         output = subprocess.check_output(["pdfinfo", str(pdf_path)], text=True, errors="ignore")
         match = re.search(r"Pages:\s+(\d+)", output)
-        return int(match.group(1)) if match else 0
+        count = int(match.group(1)) if match else 0
+        logger.info(f"pdf_page_count path={pdf_path} pages={count}")
+        return count
     except Exception:
         return 0
 
 
 def extract_text_digital(pdf_path: Path, txt_path: Path) -> str:
+    logger.info(f"extract_text_digital path={pdf_path}")
     if txt_path.exists() and txt_path.stat().st_size > 0:
         return txt_path.read_text(encoding="utf-8", errors="ignore")
     subprocess.run(["pdftotext", "-layout", str(pdf_path), str(txt_path)], check=False)
@@ -1211,6 +1251,7 @@ def ocr_selected_pages(pdf_path: Path, txt_path: Path) -> str:
     page_count = pdf_page_count(pdf_path)
     if page_count <= 0:
         return ""
+    logger.info(f"ocr_selected_pages path={pdf_path} page_count={page_count}")
     if page_count <= 40:
         selected_pages = list(range(1, page_count + 1))
     elif page_count <= 80:
@@ -2110,17 +2151,26 @@ Payload:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
 """
     client = Anthropic(timeout=AI_TIMEOUT_SECONDS)
-    response = client.messages.create(
-        model=AI_MODEL,
-        max_tokens=1800,
-        temperature=0.2,
-        messages=[{"role": "user", "content": prompt}],
-    )
+    t0 = time.time()
+    try:
+        response = client.messages.create(
+            model=AI_MODEL,
+            max_tokens=1800,
+            temperature=0.2,
+            messages=[{"role": "user", "content": prompt}],
+        )
+    except Exception:
+        logger.exception(f"generate_ai_analysis error model={AI_MODEL}")
+        raise
+    duration = round(time.time() - t0, 2)
     usage = getattr(response, "usage", None)
+    input_tokens = getattr(usage, "input_tokens", None)
+    output_tokens = getattr(usage, "output_tokens", None)
+    logger.info(f"generate_ai_analysis model={AI_MODEL} input_tokens={input_tokens} output_tokens={output_tokens} duration_s={duration}")
     usage_payload = {
         "provider": "anthropic",
-        "input_tokens": getattr(usage, "input_tokens", None),
-        "output_tokens": getattr(usage, "output_tokens", None),
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
         "cache_creation_input_tokens": getattr(usage, "cache_creation_input_tokens", None),
         "cache_read_input_tokens": getattr(usage, "cache_read_input_tokens", None),
         "credits": None,
@@ -2348,6 +2398,7 @@ app = FastAPI(title="Justice Práskač API")
 
 @app.on_event("startup")
 def on_startup():
+    logger.info("Application starting")
     init_db()
 
 
@@ -2382,6 +2433,7 @@ def health() -> dict[str, str]:
 @app.get("/api/search")
 @limiter.limit("30/minute")
 def api_search(request: Request, q: str = Query(..., min_length=2)) -> dict[str, Any]:
+    logger.info(f"api_search q={q}")
     results = search_companies(q)
     return {"query": q, "count": len(results), "results": results}
 
@@ -2389,6 +2441,7 @@ def api_search(request: Request, q: str = Query(..., min_length=2)) -> dict[str,
 @app.get("/api/history")
 def api_history(request: Request) -> dict[str, Any]:
     visitor_id = request.headers.get("X-Visitor-Id")
+    logger.info(f"api_history visitor_id={visitor_id}")
     return {"items": get_history_entries(visitor_id)}
 
 
@@ -2398,10 +2451,12 @@ def api_company(request: Request, subjekt_id: str = Query(..., alias="subjektId"
     subjekt_id = subjekt_id.strip()
     if not subjekt_id or not subjekt_id.isdigit():
         raise HTTPException(status_code=400, detail="Neplatné ID subjektu.")
+    logger.info(f"api_company subjekt_id={subjekt_id} refresh={refresh}")
     visitor_id = request.headers.get("X-Visitor-Id")
     try:
         profile = build_company_profile(subjekt_id, visitor_id=visitor_id, query=q, force_refresh=refresh)
     except Exception as exc:
+        logger.exception(f"api_company error subjekt_id={subjekt_id}")
         raise HTTPException(status_code=422, detail=public_error_message(exc)) from exc
     return profile
 
@@ -2417,6 +2472,7 @@ def inline_pdf_filename(label: str | None, index: int) -> str:
 @app.get("/api/document/resolve")
 @limiter.limit("10/minute")
 def api_document_resolve(request: Request, detail_url: str = Query(..., alias="detailUrl"), index: int = Query(0, ge=0), prefer_pdf: bool = Query(True)) -> FileResponse:
+    logger.info(f"api_document_resolve detail_url={detail_url} index={index}")
     parsed_url = urlparse(detail_url)
     if parsed_url.scheme != "https" or parsed_url.hostname != "or.justice.cz":
         raise HTTPException(status_code=400, detail="Neplatná URL dokumentu.")
@@ -2444,6 +2500,7 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
     subjekt_id = subjekt_id.strip()
     if not subjekt_id or not subjekt_id.isdigit():
         raise HTTPException(status_code=400, detail="Neplatné ID subjektu.")
+    logger.info(f"api_company_stream subjekt_id={subjekt_id} refresh={refresh}")
     visitor_id = request.headers.get("X-Visitor-Id")
 
     def sse_event(event: str, payload: dict[str, Any]) -> str:
@@ -2520,6 +2577,7 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
                         praskac_fallback=praskac,
                     )
                 except Exception:
+                    logger.exception("generate_ai_analysis failed, using fallback")
                     ai_analysis = {
                         "analysis_engine": "fallback",
                         "analysis_model": None,
@@ -2579,6 +2637,7 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
             save_history_entry(visitor_id, profile, query=q)
             yield sse_event("result", profile)
         except Exception as exc:
+            logger.exception(f"api_company_stream error subjekt_id={subjekt_id}")
             yield sse_event("error", {"detail": public_error_message(exc)})
 
     return StreamingResponse(iterator(), media_type="text/event-stream")
