@@ -220,11 +220,19 @@ def load_json_cache(name: str, max_age_seconds: int) -> Any | None:
         return None
 
 
+_cache_write_count = 0
+_EVICTION_INTERVAL = 50
+
+
 def save_json_cache(name: str, data: Any) -> None:
+    global _cache_write_count
     path = JSON_DIR / f"{name}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"cache write name={name}")
-    evict_cache_dir(JSON_DIR)
+    _cache_write_count += 1
+    if _cache_write_count >= _EVICTION_INTERVAL:
+        _cache_write_count = 0
+        evict_cache_dir(JSON_DIR)
 
 
 def parse_czech_date(value: str | None) -> str | None:

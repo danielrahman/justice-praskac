@@ -4,7 +4,6 @@ import json
 import os
 import re
 from datetime import datetime
-from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urlparse
 
@@ -39,6 +38,7 @@ from justice.utils import (
     PDF_DIR,
     PROFILE_CACHE_TTL_SECONDS,
     PROFILE_CACHE_VERSION,
+    ROOT_DIR,
     load_json_cache,
     logger,
     norm_text,
@@ -143,11 +143,12 @@ def api_document_resolve(request: Request, detail_url: str = Query(..., alias="d
         raise HTTPException(status_code=404, detail="Po\u017eadovan\u00fd soubor na detailu listiny nen\u00ed k dispozici.")
     selected = downloads[index]
     pdf_path = fetch_binary(selected.get("url") or "", PDF_DIR / f"{slug_hash(selected.get('url') or '')}.pdf")
+    safe_name = inline_pdf_filename(selected.get("label"), index)
     return FileResponse(
         path=pdf_path,
         media_type="application/pdf",
-        filename=inline_pdf_filename(selected.get("label"), index),
-        headers={"Content-Disposition": f'inline; filename="{inline_pdf_filename(selected.get("label"), index)}"'},
+        filename=safe_name,
+        headers={"Content-Disposition": f'inline; filename="{safe_name}"'},
     )
 
 
@@ -300,17 +301,16 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
     return StreamingResponse(iterator(), media_type="text/event-stream")
 
 
-_static_dir = Path(__file__).resolve().parent.parent
 _STATIC_FILES = {"app.js", "style.css", "base.css"}
 
 
 @app.get("/")
 def serve_index():
-    return FileResponse(_static_dir / "index.html")
+    return FileResponse(ROOT_DIR / "index.html")
 
 
 @app.get("/{filename}")
 def serve_static(filename: str):
     if filename not in _STATIC_FILES:
         raise HTTPException(status_code=404)
-    return FileResponse(_static_dir / filename)
+    return FileResponse(ROOT_DIR / filename)
