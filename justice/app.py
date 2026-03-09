@@ -30,7 +30,6 @@ from justice.extraction import (
     extract_financial_doc_data,
     finalize_financial_timeline,
     merge_doc_year_map,
-    merge_financial_timeline,
 )
 from justice.scraping import clean_ico, fetch_binary, fetch_extract, search_companies
 from justice.utils import (

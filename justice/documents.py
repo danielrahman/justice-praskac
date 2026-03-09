@@ -7,7 +7,9 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
 
-from justice.scraping import fetch_binary, fetch_text, resolve_live_download_url, response_is_pdf
+from bs4 import BeautifulSoup
+
+from justice.scraping import fetch_binary, fetch_text
 from justice.utils import (
     BASE_SITE,
     BASE_UI,
@@ -117,7 +119,6 @@ def parse_document_detail(url: str, force_refresh: bool = False, parent_type: st
                     cached["pdf_name"] = cached["pdf_candidates"][0]["label"]
             return cached
     html = fetch_text(url)
-    from bs4 import BeautifulSoup
     soup = BeautifulSoup(html, "html.parser")
     downloads: list[dict[str, Any]] = []
     seen_urls: set[str] = set()
@@ -157,7 +158,6 @@ def parse_document_list(subjekt_id: str, force_refresh: bool = False) -> list[di
             return cached
     url = f"{BASE_UI}vypis-sl-firma?subjektId={subjekt_id}"
     html = fetch_text(url)
-    from bs4 import BeautifulSoup
     soup = BeautifulSoup(html, "html.parser")
     tables = soup.find_all("table")
     docs: list[dict[str, Any]] = []
