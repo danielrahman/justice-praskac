@@ -4,6 +4,7 @@ import json
 import os
 import re
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urlparse
 
@@ -57,15 +58,16 @@ def on_startup():
     init_db()
 
 
-_cors_origins_env = os.environ.get("JUSTICE_CORS_ORIGINS", "http://localhost:3000")
-_cors_origins = [o.strip() for o in _cors_origins_env.split(",") if o.strip()]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=_cors_origins,
-    allow_methods=["GET", "OPTIONS"],
-    allow_headers=["Accept", "Content-Type"],
-)
+_cors_origins_env = os.environ.get("JUSTICE_CORS_ORIGINS", "")
+if _cors_origins_env:
+    _cors_origins = [o.strip() for o in _cors_origins_env.split(",") if o.strip()]
+    if _cors_origins:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=_cors_origins,
+            allow_methods=["GET", "OPTIONS"],
+            allow_headers=["Accept", "Content-Type"],
+        )
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
@@ -296,3 +298,14 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
             yield sse_event("error", {"detail": public_error_message(exc)})
 
     return StreamingResponse(iterator(), media_type="text/event-stream")
+
+
+from fastapi.staticfiles import StaticFiles
+
+_static_dir = Path(__file__).resolve().parent.parent
+
+@app.get("/")
+def serve_index():
+    return FileResponse(_static_dir / "index.html")
+
+app.mount("/", StaticFiles(directory=str(_static_dir)), name="static")
