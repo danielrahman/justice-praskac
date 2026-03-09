@@ -153,6 +153,29 @@ AI_MODEL = os.getenv("JUSTICE_AI_MODEL", "claude_sonnet_4_5")
 AI_ENABLED = os.getenv("JUSTICE_ENABLE_AI", "1") != "0"
 AI_TIMEOUT_SECONDS = int(os.getenv("JUSTICE_AI_TIMEOUT_SECONDS", "90"))
 
+MAX_CACHE_BYTES = int(os.getenv("JUSTICE_MAX_CACHE_BYTES", str(2 * 1024 * 1024 * 1024)))  # 2 GB default
+
+
+def evict_cache_dir(directory: Path, max_bytes: int = MAX_CACHE_BYTES) -> None:
+    """Remove oldest files in directory until total size is under max_bytes."""
+    try:
+        files = [(f, f.stat()) for f in directory.iterdir() if f.is_file()]
+    except OSError:
+        return
+    total = sum(s.st_size for _, s in files)
+    if total <= max_bytes:
+        return
+    files.sort(key=lambda x: x[1].st_mtime)
+    for f, s in files:
+        if total <= max_bytes:
+            break
+        try:
+            f.unlink()
+            total -= s.st_size
+            logger.info(f"cache evict path={f}")
+        except OSError:
+            pass
+
 
 def now_ts() -> float:
     return time.time()
@@ -201,6 +224,7 @@ def save_json_cache(name: str, data: Any) -> None:
     path = JSON_DIR / f"{name}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"cache write name={name}")
+    evict_cache_dir(JSON_DIR)
 
 
 def parse_czech_date(value: str | None) -> str | None:
