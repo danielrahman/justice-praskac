@@ -45,7 +45,9 @@ Projekt po zadání názvu firmy nebo IČO:
 - Zobrazení trendů v grafu a tabulce let.
 - AI shrnutí nad veřejnými daty s fallbackem na pravidlový výstup.
 - "Práskač" sekce s upozorněními na veřejně viditelné anomálie nebo mezery v datech.
-- Sdílená historie již prověřených firem uložená v SQLite.
+- Sdílená historie již prověřených firem uložená v Turso.
+  Záměrná produktová funkce: historie je sdílená napříč uživateli, nejde o omyl ani leak mezi sessions.
+- Relevantní zpracované PDF a vybraný extrahovaný text uložené v Cloudflare R2.
 - Jednoduché externí porovnání s veřejným snapshotem z Chytrého rejstříku.
 - Průběžné streamování stavu zpracování přes SSE, aby frontend ukazoval postup analýzy.
 
@@ -61,7 +63,7 @@ Projekt po zadání názvu firmy nebo IČO:
 5. Každé PDF zkusí přečíst nejdřív digitálně, případně přes OCR.
 6. Z textu vytáhne finanční metriky a složí časovou řadu.
 7. Nad časovou řadou a rejstříkovými daty vygeneruje shrnutí, deep insights a "práskač" sekci.
-8. Profil uloží do JSON cache a do SQLite historie.
+8. Profil uloží do Turso a relevantní dokumenty do R2.
 
 ## Použitý stack
 
@@ -72,8 +74,9 @@ Projekt po zadání názvu firmy nebo IČO:
 - Uvicorn
 - Requests
 - BeautifulSoup (`bs4`)
-- SQLite (`sqlite3`)
+- Turso / libSQL (`libsql`)
 - Anthropic SDK
+- Cloudflare R2 přes `boto3`
 - `urllib3` retry adaptery pro robustnější HTTP volání
 
 ### Zpracování dokumentů
@@ -99,7 +102,9 @@ Projekt po zadání názvu firmy nebo IČO:
 - `justice/` — hlavní Python balíček
   - `app.py` — FastAPI aplikace, endpointy, CORS, statické soubory
   - `ai.py` — Anthropic AI integrace, analýza, shrnutí
-  - `db.py` — SQLite helpery (init, historie)
+  - `db.py` — DAL pro Turso / SQLite fallback, historie, profily, runs, dokumenty
+  - `pipeline.py` — sdílený cache/refresh flow pro profily firem
+  - `storage_r2.py` — Cloudflare R2 storage layer
   - `documents.py` — zpracování PDF, OCR, parsing listin
   - `extraction.py` — extrakce finančních metrik z textu
   - `scraping.py` — HTTP stahování, parsing HTML z justice.cz
@@ -119,9 +124,11 @@ Projekt po zadání názvu firmy nebo IČO:
 - `GET /api/search?q=...`  
   Vyhledání firem podle názvu nebo IČO.
 - `GET /api/history`  
-  Sdílená historie již prověřených subjektů.
+  Sdílená historie již prověřených subjektů. Záměrná produktová funkce, ne izolovaná per-user historie.
 - `GET /api/company?subjektId=...`  
   Hotový synchronní profil firmy.
+- `POST /api/company/ai?subjektId=...`  
+  AI-only vylepšení nad už uloženým profilem firmy bez nového načítání Sbírky listin a PDF.
 - `GET /api/company/stream?subjektId=...`  
   Streamovaný profil přes `text/event-stream`, vhodný pro průběžný progress v UI.
 - `GET /api/document/resolve?detailUrl=...&index=...`  
@@ -168,20 +175,28 @@ cd justice-praskac
 
 Aplikace běží na `http://localhost:8000` — frontend i API.
 
-Cesty jsou relativní k projektu a konfigurovatelné přes environment proměnné (`JUSTICE_CACHE_DIR`, `JUSTICE_DB_PATH`). Viz `.env.example`.
+Při lokálním spuštění se automaticky načítá kořenový `.env`, pokud proměnné ještě nejsou nastavené v procesu.
 
 ## Environment proměnné
 
-Kompletní seznam s výchozími hodnotami viz `.env.example`. Povinná je pouze `ANTHROPIC_API_KEY`.
+Kompletní seznam s výchozími hodnotami viz `.env.example`.
+
+Pro Railway/Turso/R2 jsou prakticky potřeba:
+
+- `DATABASE_URL`
+- `TURSO_AUTH_TOKEN`
+- `S3_ENDPOINT`
+- `S3_BUCKET`
+- `S3_ACCESS_KEY_ID`
+- `S3_SECRET_ACCESS_KEY`
+- `ANTHROPIC_API_KEY`
 
 ## Deployment na Railway
 
 1. Repozitář pushni na GitHub.
 2. V [Railway](https://railway.com) vytvoř nový projekt a propoj s GitHub repem.
 3. Railway automaticky detekuje `Dockerfile` a buildne image.
-4. V Railway dashboard nastav environment proměnné:
-   - `ANTHROPIC_API_KEY` (povinné)
-   - Ostatní viz `.env.example`
+4. V Railway dashboard nastav environment proměnné z `.env.example`, hlavně Turso a R2 klíče.
 5. V Settings → Networking přidej custom doménu (např. `praskac.xyz`).
 6. Nastav DNS: CNAME záznam pro doménu směřující na Railway.
 
@@ -210,4 +225,8 @@ Railway automaticky nastaví `PORT` a HTTPS.
 
 ## Stav projektu
 
-Repozitář aktuálně obsahuje i pracovní cache, SQLite databázi a logy, takže slouží nejen jako zdroják, ale i jako snapshot vývojového a datového stavu projektu.
+Repozitář má být čistě zdroják. Zdroj pravdy je Turso + R2; lokální disk už nemá sloužit jako persistent storage pro historii ani dokumenty.
+
+## Krátké To-Do
+
+- Pokud se aplikace začne používat ve větším provozu, přidat autentifikaci / autorizaci na API endpointy.

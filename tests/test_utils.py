@@ -6,6 +6,7 @@ import pytest
 from justice.utils import (
     is_probable_year,
     norm_key,
+    normalize_ai_model_name,
     parse_czech_date,
     parse_number_candidates,
     slug_hash,
@@ -161,6 +162,20 @@ class TestNormKey:
 
     def test_empty(self):
         assert norm_key("") == ""
+
+
+# ---------------------------------------------------------------------------
+# normalize_ai_model_name
+# ---------------------------------------------------------------------------
+class TestNormalizeAiModelName:
+    def test_maps_legacy_underscore_alias(self):
+        assert normalize_ai_model_name("claude_sonnet_4_5") == "claude-sonnet-4-20250514"
+
+    def test_maps_legacy_hyphen_alias(self):
+        assert normalize_ai_model_name("claude-sonnet-4-5") == "claude-sonnet-4-20250514"
+
+    def test_preserves_valid_model_name(self):
+        assert normalize_ai_model_name("claude-sonnet-4-20250514") == "claude-sonnet-4-20250514"
 
 
 # ---------------------------------------------------------------------------

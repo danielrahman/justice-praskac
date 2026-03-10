@@ -3,7 +3,14 @@ from __future__ import annotations
 
 import pytest
 
-from justice.ai import build_highlights, extract_history_events
+from justice.ai import (
+    build_analysis_usage_payload,
+    build_highlights,
+    estimate_ai_cost_usd,
+    extract_history_events,
+    extract_json_block,
+    merge_analysis_usage_payloads,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -132,6 +139,12 @@ class TestBuildHighlights:
         has_liability_mention = any("cizích zdrojích" in title.lower() or "závislost" in title.lower() for title in praskac_titles)
         assert has_liability_mention, f"Expected liability-related praskac, got: {praskac_titles}"
 
+    def test_late_filed_documents_are_not_reported(self):
+        docs = [{"years": [2023], "filed_date": "2025-12-31"}]
+        _, deep, praskac = build_highlights([], docs, {})
+        all_titles = [item["title"].lower() for item in [*deep, *praskac]]
+        assert not any("založení podkladů" in title for title in all_titles), all_titles
+
 
 # ---------------------------------------------------------------------------
 # extract_history_events
@@ -172,6 +185,19 @@ class TestExtractHistoryEvents:
         result = extract_history_events(extract)
         assert result["management_turnover"] == 2
 
+    def test_counts_management_turnover_for_unlabeled_rows_after_role_header(self):
+        extract = {
+            "rows": [
+                {"label": "Statutární orgán", "value": "", "history": ""},
+                {"label": "Jednatel", "value": "", "history": ""},
+                {"label": "", "value": "HIEU MINH VU Den vzniku funkce: 5. října 2022", "history": "zapsáno 5. října 2022 vymazáno 12. dubna 2024"},
+                {"label": "", "value": "HIEU MINH VU Den vzniku funkce: 5. října 2022 Den zániku funkce: 18. února 2026", "history": "zapsáno 12. dubna 2024 vymazáno 18. února 2026"},
+                {"label": "Počet členů", "value": "1", "history": ""},
+            ]
+        }
+        result = extract_history_events(extract)
+        assert result["management_turnover"] == 2
+
     def test_no_changes(self):
         extract = {
             "rows": [
@@ -195,3 +221,90 @@ class TestExtractHistoryEvents:
         assert result["name_changes"] == 0
         assert result["address_changes"] == 0
         assert result["management_turnover"] == 0
+
+
+# ---------------------------------------------------------------------------
+# extract_json_block
+# ---------------------------------------------------------------------------
+class TestExtractJsonBlock:
+    def test_parses_fenced_json(self):
+        raw = """```json
+        {"analysis_overview":"ok","data_quality_note":"ok","insight_summary":[],"deep_insights":[],"praskac":[]}
+        ```"""
+        parsed = extract_json_block(raw)
+        assert parsed["analysis_overview"] == "ok"
+
+    def test_parses_json_wrapped_in_text(self):
+        raw = 'text before {"analysis_overview":"ok","data_quality_note":"ok","insight_summary":[],"deep_insights":[],"praskac":[]} text after'
+        parsed = extract_json_block(raw)
+        assert parsed["data_quality_note"] == "ok"
+
+    def test_recovers_trailing_commas(self):
+        raw = """{
+          "analysis_overview": "ok",
+          "data_quality_note": "ok",
+          "insight_summary": [],
+          "deep_insights": [],
+          "praskac": [],
+        }"""
+        parsed = extract_json_block(raw)
+        assert parsed["praskac"] == []
+
+
+class TestAiUsageAccounting:
+    def test_estimates_opus_46_cost(self):
+        cost = estimate_ai_cost_usd(
+            "claude-opus-4-6",
+            input_tokens=4_000,
+            output_tokens=2_000,
+        )
+
+        assert cost is not None
+        assert cost["pricing_model"] == "claude-opus-4.6"
+        assert cost["estimated_cost_usd"] == pytest.approx(0.07, rel=0.01)
+
+    def test_build_usage_payload_includes_totals_and_cost(self):
+        usage = type(
+            "Usage",
+            (),
+            {
+                "input_tokens": 3_500,
+                "output_tokens": 1_200,
+                "cache_creation_input_tokens": None,
+                "cache_read_input_tokens": None,
+            },
+        )()
+
+        payload = build_analysis_usage_payload(usage, "claude-sonnet-4-20250514", duration_seconds=12.5)
+
+        assert payload["total_tokens"] == 4_700
+        assert payload["duration_seconds"] == 12.5
+        assert payload["estimated_cost_usd"] == pytest.approx(0.0285, rel=0.01)
+
+    def test_merge_usage_payloads_sums_repair_request(self):
+        first = {
+            "input_tokens": 1_000,
+            "output_tokens": 500,
+            "cache_creation_input_tokens": None,
+            "cache_read_input_tokens": None,
+            "total_tokens": 1_500,
+            "duration_seconds": 10.0,
+        }
+        second = {
+            "input_tokens": 800,
+            "output_tokens": 200,
+            "cache_creation_input_tokens": None,
+            "cache_read_input_tokens": None,
+            "total_tokens": 1_000,
+            "duration_seconds": 4.0,
+        }
+
+        payload = merge_analysis_usage_payloads([first, second], "claude-opus-4-6")
+
+        assert payload is not None
+        assert payload["request_count"] == 2
+        assert payload["repair_request_used"] is True
+        assert payload["input_tokens"] == 1_800
+        assert payload["output_tokens"] == 700
+        assert payload["total_tokens"] == 2_500
+        assert payload["duration_seconds"] == 14.0

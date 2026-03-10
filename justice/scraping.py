@@ -13,8 +13,6 @@ from urllib3.util.retry import Retry
 from justice.utils import (
     BASE_SITE,
     BASE_UI,
-    CACHE_DIR,
-    TEXT_DIR,
     absolute_ui_url,
     load_json_cache,
     logger,
@@ -103,8 +101,6 @@ def resolve_live_download_url(url: str) -> str | None:
 
 
 def fetch_binary(url: str, path: Path) -> Path:
-    if path.exists() and path.stat().st_size > 0:
-        return path
     last_error: Exception | None = None
     for attempt in range(3):
         try:
@@ -120,6 +116,30 @@ def fetch_binary(url: str, path: Path) -> Path:
             path.write_bytes(response.content)
             logger.info(f"fetch_binary url={url} size={len(response.content)}")
             return path
+        except Exception as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(1.0 * (attempt + 1))
+    if last_error:
+        raise last_error
+    raise RuntimeError(f"Nepodařilo se stáhnout PDF: {url}")
+
+
+def fetch_binary_bytes(url: str) -> bytes:
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            response = SESSION.get(url, timeout=120)
+            response.raise_for_status()
+            if not response_is_pdf(response):
+                resolved = resolve_live_download_url(url)
+                if resolved and resolved != url:
+                    response = SESSION.get(resolved, timeout=120)
+                    response.raise_for_status()
+            if not response_is_pdf(response):
+                raise ValueError(f"URL did not return a PDF: {url}")
+            logger.info(f"fetch_binary_bytes url={url} size={len(response.content)}")
+            return response.content
         except Exception as exc:
             last_error = exc
             if attempt < 2:

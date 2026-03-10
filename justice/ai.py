@@ -9,34 +9,67 @@ from typing import Any
 from anthropic import Anthropic
 
 from justice.db import save_history_entry
-from justice.documents import parse_document_list, pick_recent_financial_docs
 from justice.extraction import (
-    extract_financial_doc_data,
-    finalize_financial_timeline,
-    merge_doc_year_map,
-    merge_financial_timeline,
     pct_change,
     summarize_timeline,
 )
 from justice.scraping import (
     SESSION,
     clean_ico,
-    fetch_extract,
 )
 from justice.utils import (
+    ANTHROPIC_API_KEY,
     AI_ENABLED,
     AI_MODEL,
     AI_TIMEOUT_SECONDS,
-    BASE_UI,
-    PROFILE_CACHE_TTL_SECONDS,
-    PROFILE_CACHE_VERSION,
-    days_between,
-    load_json_cache,
     logger,
     norm_key,
     norm_text,
-    save_json_cache,
     strip_accents,
+)
+
+
+ANTHROPIC_MODEL_PRICING: tuple[tuple[re.Pattern[str], dict[str, float | str]], ...] = (
+    (
+        re.compile(r"^claude-opus-4-6(?:-|$)"),
+        {
+            "pricing_model": "claude-opus-4.6",
+            "input_usd_per_million": 5.0,
+            "output_usd_per_million": 25.0,
+            "cache_write_usd_per_million": 6.25,
+            "cache_read_usd_per_million": 0.5,
+        },
+    ),
+    (
+        re.compile(r"^claude-opus-4(?:-|$)"),
+        {
+            "pricing_model": "claude-opus-4.1",
+            "input_usd_per_million": 15.0,
+            "output_usd_per_million": 75.0,
+            "cache_write_usd_per_million": 18.75,
+            "cache_read_usd_per_million": 1.5,
+        },
+    ),
+    (
+        re.compile(r"^claude-sonnet-4(?:-|$)"),
+        {
+            "pricing_model": "claude-sonnet-4.5",
+            "input_usd_per_million": 3.0,
+            "output_usd_per_million": 15.0,
+            "cache_write_usd_per_million": 3.75,
+            "cache_read_usd_per_million": 0.3,
+        },
+    ),
+    (
+        re.compile(r"^claude-haiku-(?:4|3-5)(?:-|$)"),
+        {
+            "pricing_model": "claude-haiku-4.5",
+            "input_usd_per_million": 1.0,
+            "output_usd_per_million": 5.0,
+            "cache_write_usd_per_million": 1.25,
+            "cache_read_usd_per_million": 0.1,
+        },
+    ),
 )
 
 
@@ -131,15 +164,23 @@ def extract_history_events(full_extract: dict[str, Any]) -> dict[str, Any]:
     name_changes = 0
     address_changes = 0
     management_turnover = 0
+    current_management_role = ""
+    management_labels = ["predseda predstavenstva", "clen predstavenstva", "jednatel", "prokurista"]
     for row in rows:
         label = norm_key(row.get("label", ""))
         history = norm_key(row.get("history", ""))
+        value = norm_key(row.get("value", ""))
+        if any(key in label for key in management_labels):
+            current_management_role = label
+        elif label:
+            current_management_role = ""
+        effective_label = label or current_management_role
         if label == "obchodni firma" and "vymazano" in history:
             name_changes += 1
         if label == "sidlo" and "vymazano" in history:
             address_changes += 1
-        if any(k in label for k in ["predseda predstavenstva", "clen predstavenstva", "jednatel", "prokurista"]):
-            if "vymazano" in history or "zaniku" in norm_key(row.get("value", "")):
+        if any(k in effective_label for k in management_labels):
+            if "vymazano" in history or "zaniku" in value:
                 management_turnover += 1
     return {
         "name_changes": name_changes,
@@ -220,23 +261,6 @@ def build_highlights(timeline: list[dict[str, Any]], docs: list[dict[str, Any]],
                 "detail": f"Ve vybran\u00e9m \u010dasov\u00e9m \u0159et\u011bzci chyb\u00ed v\u00edce let: {years_txt}.",
             })
 
-    for doc in docs:
-        primary_year = (doc.get("years") or [None])[0]
-        if not primary_year:
-            continue
-        year_end = f"{primary_year}-12-31"
-        delay = days_between(year_end, doc.get("filed_date"))
-        if delay and delay > 365:
-            praskac.append({
-                "title": f"Pozdn\u00ed zalo\u017een\u00ed podklad\u016f za {primary_year}",
-                "detail": f"Dokument byl do Sb\u00edrky listin zalo\u017een p\u0159ibli\u017en\u011b {delay} dn\u00ed po konci roku.",
-            })
-        elif delay and delay > 240:
-            deep.append({
-                "title": f"Pomale\u0161\u0161\u00ed zalo\u017een\u00ed podklad\u016f za {primary_year}",
-                "detail": f"Dokument byl do Sb\u00edrky listin zalo\u017een asi {delay} dn\u00ed po konci roku.",
-            })
-
     if history.get("name_changes"):
         deep.append({
             "title": "Zm\u011bny n\u00e1zvu",
@@ -281,10 +305,227 @@ def extract_json_block(raw_text: str) -> dict[str, Any]:
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
-    match = re.search(r"\{.*\}", text, flags=re.S)
-    if not match:
-        raise ValueError("AI response did not contain JSON object")
-    return json.loads(match.group(0))
+
+    candidates: list[str] = []
+    if text.startswith("{") and text.endswith("}"):
+        candidates.append(text)
+
+    start = text.find("{")
+    if start >= 0:
+        depth = 0
+        in_string = False
+        escaped = False
+        for idx in range(start, len(text)):
+            ch = text[idx]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif ch == "\\":
+                    escaped = True
+                elif ch == '"':
+                    in_string = False
+                continue
+            if ch == '"':
+                in_string = True
+                continue
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    candidates.append(text[start:idx + 1])
+                    break
+
+    if not candidates:
+        match = re.search(r"\{.*\}", text, flags=re.S)
+        if match:
+            candidates.append(match.group(0))
+
+    def _attempt_parse(candidate: str) -> dict[str, Any]:
+        normalized = candidate.replace("\u201c", '"').replace("\u201d", '"').replace("\u2018", "'").replace("\u2019", "'")
+        try:
+            return json.loads(normalized)
+        except json.JSONDecodeError:
+            normalized = re.sub(r",(\s*[}\]])", r"\1", normalized)
+            return json.loads(normalized)
+
+    for candidate in candidates:
+        try:
+            return _attempt_parse(candidate)
+        except Exception:
+            continue
+    raise ValueError("AI response did not contain valid JSON object")
+
+
+def get_anthropic_model_pricing(model: str | None) -> dict[str, Any] | None:
+    raw = (model or "").strip().lower()
+    if not raw:
+        return None
+    for pattern, pricing in ANTHROPIC_MODEL_PRICING:
+        if pattern.search(raw):
+            return dict(pricing)
+    return None
+
+
+def _as_int(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def estimate_ai_cost_usd(
+    model: str | None,
+    *,
+    input_tokens: int | None = None,
+    output_tokens: int | None = None,
+    cache_creation_input_tokens: int | None = None,
+    cache_read_input_tokens: int | None = None,
+) -> dict[str, Any] | None:
+    pricing = get_anthropic_model_pricing(model)
+    if not pricing:
+        return None
+
+    def _component(tokens: int | None, usd_per_million: float) -> float:
+        if not tokens:
+            return 0.0
+        return float(tokens) / 1_000_000 * usd_per_million
+
+    input_cost = _component(input_tokens, float(pricing["input_usd_per_million"]))
+    output_cost = _component(output_tokens, float(pricing["output_usd_per_million"]))
+    cache_write_cost = _component(cache_creation_input_tokens, float(pricing["cache_write_usd_per_million"]))
+    cache_read_cost = _component(cache_read_input_tokens, float(pricing["cache_read_usd_per_million"]))
+    total_cost = round(input_cost + output_cost + cache_write_cost + cache_read_cost, 6)
+    return {
+        "pricing_model": pricing["pricing_model"],
+        "estimated_cost_usd": total_cost,
+        "estimated_cost_breakdown": {
+            "input_usd": round(input_cost, 6),
+            "output_usd": round(output_cost, 6),
+            "cache_write_usd": round(cache_write_cost, 6),
+            "cache_read_usd": round(cache_read_cost, 6),
+        },
+        "pricing_basis": "anthropic_official_api_pricing",
+    }
+
+
+def build_analysis_usage_payload(usage: Any, model: str | None, *, duration_seconds: float | None = None) -> dict[str, Any]:
+    input_tokens = _as_int(getattr(usage, "input_tokens", None))
+    output_tokens = _as_int(getattr(usage, "output_tokens", None))
+    cache_creation_input_tokens = _as_int(getattr(usage, "cache_creation_input_tokens", None))
+    cache_read_input_tokens = _as_int(getattr(usage, "cache_read_input_tokens", None))
+    total_tokens = sum(
+        value or 0
+        for value in [input_tokens, output_tokens, cache_creation_input_tokens, cache_read_input_tokens]
+    )
+    cost_payload = estimate_ai_cost_usd(
+        model,
+        input_tokens=input_tokens,
+        output_tokens=output_tokens,
+        cache_creation_input_tokens=cache_creation_input_tokens,
+        cache_read_input_tokens=cache_read_input_tokens,
+    ) or {}
+    return {
+        "provider": "anthropic",
+        "model": model,
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "cache_creation_input_tokens": cache_creation_input_tokens,
+        "cache_read_input_tokens": cache_read_input_tokens,
+        "total_tokens": total_tokens or None,
+        "duration_seconds": duration_seconds,
+        "credits": None,
+        "credits_note": "Přesné kredity nejsou z API dostupné.",
+        **cost_payload,
+    }
+
+
+def merge_analysis_usage_payloads(payloads: list[dict[str, Any]], model: str | None) -> dict[str, Any] | None:
+    clean_payloads = [payload for payload in payloads if payload]
+    if not clean_payloads:
+        return None
+
+    numeric_keys = [
+        "input_tokens",
+        "output_tokens",
+        "cache_creation_input_tokens",
+        "cache_read_input_tokens",
+        "total_tokens",
+        "duration_seconds",
+    ]
+    merged: dict[str, Any] = {
+        "provider": "anthropic",
+        "model": model,
+        "request_count": len(clean_payloads),
+        "repair_request_used": len(clean_payloads) > 1,
+        "credits": None,
+        "credits_note": "Přesné kredity nejsou z API dostupné.",
+    }
+    for key in numeric_keys:
+        values = [payload.get(key) for payload in clean_payloads if payload.get(key) is not None]
+        if not values:
+            merged[key] = None
+        elif key == "duration_seconds":
+            merged[key] = round(sum(values), 2)
+        else:
+            merged[key] = sum(values)
+
+    cost_payload = estimate_ai_cost_usd(
+        model,
+        input_tokens=merged.get("input_tokens"),
+        output_tokens=merged.get("output_tokens"),
+        cache_creation_input_tokens=merged.get("cache_creation_input_tokens"),
+        cache_read_input_tokens=merged.get("cache_read_input_tokens"),
+    )
+    if cost_payload:
+        merged.update(cost_payload)
+    return merged
+
+
+def repair_ai_json(raw_text: str, client: Anthropic) -> dict[str, Any]:
+    repair_prompt = f"""
+Převeď následující odpověď do validního JSON.
+
+Pravidla:
+- vrať pouze validní JSON objekt
+- zachovej význam původního textu
+- nepřidávej žádné nové informace
+- oprav jen syntaxi a strukturu
+- použij přesně tento tvar:
+{{
+  "analysis_overview": "string",
+  "data_quality_note": "string",
+  "insight_summary": [{{"title": "string", "detail": "string"}}],
+  "deep_insights": [{{"title": "string", "detail": "string"}}],
+  "praskac": [{{"title": "string", "detail": "string"}}]
+}}
+
+Původní odpověď:
+{raw_text}
+"""
+    t0 = time.time()
+    response = client.messages.create(
+        model=AI_MODEL,
+        max_tokens=2600,
+        temperature=0,
+        messages=[{"role": "user", "content": repair_prompt}],
+    )
+    duration = round(time.time() - t0, 2)
+    usage = getattr(response, "usage", None)
+    logger.info(
+        "repair_ai_json model=%s input_tokens=%s output_tokens=%s duration_s=%s",
+        AI_MODEL,
+        getattr(usage, "input_tokens", None),
+        getattr(usage, "output_tokens", None),
+        duration,
+    )
+    repaired_text = "\n".join(block.text for block in response.content if getattr(block, "type", None) == "text")
+    return {
+        "parsed": extract_json_block(repaired_text),
+        "usage": build_analysis_usage_payload(usage, AI_MODEL, duration_seconds=duration),
+    }
 
 
 def compact_people_for_ai(items: list[dict[str, Any]], limit: int = 8) -> list[dict[str, Any]]:
@@ -298,7 +539,7 @@ def compact_people_for_ai(items: list[dict[str, Any]], limit: int = 8) -> list[d
     return compact
 
 
-def compact_docs_for_ai(docs: list[dict[str, Any]], limit: int = 6) -> list[dict[str, Any]]:
+def compact_docs_for_ai(docs: list[dict[str, Any]], limit: int = 4) -> list[dict[str, Any]]:
     compact: list[dict[str, Any]] = []
     for doc in docs[:limit]:
         compact.append({
@@ -306,7 +547,6 @@ def compact_docs_for_ai(docs: list[dict[str, Any]], limit: int = 6) -> list[dict
             "type": doc.get("type"),
             "years": doc.get("years"),
             "received_date": doc.get("received_date"),
-            "filed_date": doc.get("filed_date"),
             "pages": doc.get("pages"),
             "page_count": doc.get("page_count"),
             "candidate_file_count": doc.get("candidate_file_count"),
@@ -322,7 +562,7 @@ def compact_docs_for_ai(docs: list[dict[str, Any]], limit: int = 6) -> list[dict
                     "extraction_mode": item.get("extraction_mode"),
                     "metrics_found": item.get("metrics_found"),
                 }
-                for item in (doc.get("candidate_files") or [])[:4]
+                for item in (doc.get("candidate_files") or [])[:2]
             ],
         })
     return compact
@@ -361,6 +601,30 @@ def clean_ai_items(items: Any, fallback: list[dict[str, str]], limit: int) -> li
     return cleaned[:limit] or fallback[:limit]
 
 
+def fallback_ai_analysis(
+    overview_fallback: list[dict[str, str]],
+    deep_fallback: list[dict[str, str]],
+    praskac_fallback: list[dict[str, str]],
+    *,
+    engine: str,
+) -> dict[str, Any]:
+    overview_text = (
+        "AI vrstva je vypnutá. Níže je pravidlový výstup z veřejných podkladů justice.cz."
+        if engine == "disabled"
+        else "Shrnutí běží bez AI vrstvy. Níže je pravidlový výstup z veřejných podkladů justice.cz."
+    )
+    return {
+        "analysis_engine": engine,
+        "analysis_model": None,
+        "analysis_usage": None,
+        "analysis_overview": overview_text,
+        "data_quality_note": "Kvalita dat závisí na čitelnosti veřejných PDF a úplnosti Sbírky listin.",
+        "insight_summary": overview_fallback,
+        "deep_insights": deep_fallback,
+        "praskac": praskac_fallback,
+    }
+
+
 def generate_ai_analysis(
     company_name: str,
     ico: str,
@@ -397,27 +661,33 @@ Pravidla:
 - Kdy\u017e jsou data slab\u00e1 nebo ne\u00fapln\u00e1, \u0159ekni to p\u0159\u00edmo.
 - Pi\u0161 \u010desky, stru\u010dn\u011b, v\u011bcn\u011b a prakticky.
 - Sekce Pr\u00e1ska\u010d m\u00e1 b\u00fdt p\u0159\u00edmo\u010dar\u00e1, ale po\u0159\u00e1d faktick\u00e1 a bez nepodlo\u017een\u00fdch obvin\u011bn\u00ed.
-- Hledej trendy v r\u016fstu, poklesu, ziskovosti, zadlu\u017een\u00ed, kapit\u00e1lu, chyb\u011bj\u00edc\u00edch letech, pozdn\u00edch listin\u00e1ch a zm\u011bn\u00e1ch ve veden\u00ed.
+- Hledej trendy v r\u016fstu, poklesu, ziskovosti, zadlu\u017een\u00ed, kapit\u00e1lu, chyb\u011bj\u00edc\u00edch letech a zm\u011bn\u00e1ch ve veden\u00ed.
 - Pokud nejsou jasn\u00e9 finan\u010dn\u00ed z\u00e1v\u011bry, p\u0159iznej omezen\u00ed m\u00edsto spekulace.
 
 Vra\u0165 pouze JSON v tomto tvaru:
 {{
-  "analysis_overview": "2-4 v\u011bty shrnut\u00ed v jedn\u00e9 kr\u00e1tk\u00e9 odstavcov\u00e9 pas\u00e1\u017ei",
+  "analysis_overview": "max 3 kr\u00e1tk\u00e9 v\u011bty shrnut\u00ed",
   "data_quality_note": "jedna v\u011bta o kvalit\u011b a limitech dat",
   "insight_summary": [{{"title": "...", "detail": "..."}}],
   "deep_insights": [{{"title": "...", "detail": "..."}}],
   "praskac": [{{"title": "...", "detail": "..."}}]
 }}
 
+Dal\u0161\u00ed limity:
+- insight_summary max 4 polo\u017eky
+- deep_insights max 5 polo\u017eek
+- praskac max 5 polo\u017eek
+- title i detail dr\u017e kr\u00e1tk\u00e9 a konkr\u00e9tn\u00ed
+
 Payload:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
 """
-    client = Anthropic(timeout=AI_TIMEOUT_SECONDS)
+    client = Anthropic(api_key=ANTHROPIC_API_KEY, timeout=AI_TIMEOUT_SECONDS)
     t0 = time.time()
     try:
         response = client.messages.create(
             model=AI_MODEL,
-            max_tokens=1800,
+            max_tokens=2600,
             temperature=0.2,
             messages=[{"role": "user", "content": prompt}],
         )
@@ -429,27 +699,69 @@ Payload:
     input_tokens = getattr(usage, "input_tokens", None)
     output_tokens = getattr(usage, "output_tokens", None)
     logger.info(f"generate_ai_analysis model={AI_MODEL} input_tokens={input_tokens} output_tokens={output_tokens} duration_s={duration}")
-    usage_payload = {
-        "provider": "anthropic",
-        "input_tokens": input_tokens,
-        "output_tokens": output_tokens,
-        "cache_creation_input_tokens": getattr(usage, "cache_creation_input_tokens", None),
-        "cache_read_input_tokens": getattr(usage, "cache_read_input_tokens", None),
-        "credits": None,
-        "credits_note": "P\u0159esn\u00e9 kredity nejsou z API dostupn\u00e9.",
-    }
+    usage_payloads = [build_analysis_usage_payload(usage, AI_MODEL, duration_seconds=duration)]
     text = "\n".join(block.text for block in response.content if getattr(block, "type", None) == "text")
-    parsed = extract_json_block(text)
+    try:
+        parsed = extract_json_block(text)
+    except Exception:
+        logger.warning("generate_ai_analysis malformed_json attempting_repair")
+        repair_result = repair_ai_json(text, client)
+        parsed = repair_result["parsed"]
+        usage_payloads.append(repair_result["usage"])
     return {
         "analysis_engine": "ai",
         "analysis_model": AI_MODEL,
-        "analysis_usage": usage_payload,
+        "analysis_usage": merge_analysis_usage_payloads(usage_payloads, AI_MODEL),
         "analysis_overview": norm_text(str(parsed.get("analysis_overview") or "")) or "AI rozbor z ve\u0159ejn\u00fdch listin nen\u00ed k dispozici.",
         "data_quality_note": norm_text(str(parsed.get("data_quality_note") or "")) or "Kvalita dat z\u00e1vis\u00ed na \u010ditelnosti ve\u0159ejn\u00fdch PDF a \u00faplnosti Sb\u00edrky listin.",
         "insight_summary": clean_ai_items(parsed.get("insight_summary"), overview_fallback, 6),
         "deep_insights": clean_ai_items(parsed.get("deep_insights"), deep_fallback, 8),
         "praskac": clean_ai_items(parsed.get("praskac"), praskac_fallback, 8),
     }
+
+
+def resolve_ai_analysis(
+    company_name: str,
+    ico: str,
+    basic_info_items: list[dict[str, str]],
+    executives: list[dict[str, Any]],
+    owners: list[dict[str, Any]],
+    history: dict[str, Any],
+    timeline: list[dict[str, Any]],
+    docs: list[dict[str, Any]],
+    overview_fallback: list[dict[str, str]],
+    deep_fallback: list[dict[str, str]],
+    praskac_fallback: list[dict[str, str]],
+) -> dict[str, Any]:
+    if AI_ENABLED:
+        try:
+            return generate_ai_analysis(
+                company_name=company_name,
+                ico=ico,
+                basic_info_items=basic_info_items,
+                executives=executives,
+                owners=owners,
+                history=history,
+                timeline=timeline,
+                docs=docs,
+                overview_fallback=overview_fallback,
+                deep_fallback=deep_fallback,
+                praskac_fallback=praskac_fallback,
+            )
+        except Exception:
+            logger.exception("generate_ai_analysis failed, using fallback")
+            return fallback_ai_analysis(
+                overview_fallback,
+                deep_fallback,
+                praskac_fallback,
+                engine="fallback",
+            )
+    return fallback_ai_analysis(
+        overview_fallback,
+        deep_fallback,
+        praskac_fallback,
+        engine="disabled",
+    )
 
 
 def build_basic_info(current_extract: dict[str, Any]) -> list[dict[str, str]]:
@@ -557,99 +869,34 @@ def build_external_checks(timeline: list[dict[str, Any]], company_name: str, ico
     }
 
 
-def build_company_profile(subjekt_id: str, visitor_id: str | None = None, query: str | None = None, force_refresh: bool = False) -> dict[str, Any]:
-    cache_name = f"company_profile_{PROFILE_CACHE_VERSION}_{subjekt_id}"
-    if not force_refresh:
-        cached = load_json_cache(cache_name, PROFILE_CACHE_TTL_SECONDS)
-        if cached is not None:
-            cached["cache_status"] = "cached"
-            save_history_entry(visitor_id, cached, query=query)
-            return cached
-
-    current_extract = fetch_extract(subjekt_id, "PLATNY", force_refresh=force_refresh)
-    full_extract = fetch_extract(subjekt_id, "UPLNY", force_refresh=force_refresh)
-    docs = parse_document_list(subjekt_id, force_refresh=force_refresh)
-    relevant_docs = pick_recent_financial_docs(docs, max_years=5, force_refresh_details=force_refresh)
-    timeline, processed_docs = merge_financial_timeline(relevant_docs)
-    people = extract_people_and_owners(current_extract)
-    history = extract_history_events(full_extract)
-    overview, deep, praskac = build_highlights(timeline, processed_docs, history)
-
-    basic_info_items = build_basic_info(current_extract)
-    company_name = current_extract.get("basic_info", {}).get("Obchodn\u00ed firma") or current_extract.get("subtitle") or "Spole\u010dnost"
-    ico = clean_ico(str(current_extract.get("basic_info", {}).get("Identifika\u010dn\u00ed \u010d\u00edslo", "")))
-
-    ai_analysis: dict[str, Any]
-    if AI_ENABLED:
-        try:
-            ai_analysis = generate_ai_analysis(
-                company_name=company_name,
-                ico=ico,
-                basic_info_items=basic_info_items,
-                executives=people["executives"],
-                owners=people["owners"],
-                history=history,
-                timeline=timeline,
-                docs=processed_docs,
-                overview_fallback=overview,
-                deep_fallback=deep,
-                praskac_fallback=praskac,
-            )
-        except Exception:
-            ai_analysis = {
-                "analysis_engine": "fallback",
-                "analysis_model": None,
-                "analysis_usage": None,
-                "analysis_overview": "Shrnut\u00ed b\u011b\u017e\u00ed bez AI vrstvy. N\u00ed\u017ee je pravidlov\u00fd v\u00fdstup z ve\u0159ejn\u00fdch podklad\u016f justice.cz.",
-                "data_quality_note": "Kvalita dat z\u00e1vis\u00ed na \u010ditelnosti ve\u0159ejn\u00fdch PDF a \u00faplnosti Sb\u00edrky listin.",
-                "insight_summary": overview,
-                "deep_insights": deep,
-                "praskac": praskac,
-            }
-    else:
-        ai_analysis = {
-            "analysis_engine": "disabled",
-            "analysis_model": None,
-            "analysis_usage": None,
-            "analysis_overview": "AI vrstva je vypnut\u00e1. N\u00ed\u017ee je pravidlov\u00fd v\u00fdstup z ve\u0159ejn\u00fdch podklad\u016f justice.cz.",
-            "data_quality_note": "Kvalita dat z\u00e1vis\u00ed na \u010ditelnosti ve\u0159ejn\u00fdch PDF a \u00faplnosti Sb\u00edrky listin.",
-            "insight_summary": overview,
-            "deep_insights": deep,
-            "praskac": praskac,
+def enhance_company_profile_with_ai(profile: dict[str, Any], visitor_id: str | None = None, query: str | None = None) -> dict[str, Any]:
+    ai_analysis = resolve_ai_analysis(
+        company_name=str(profile.get("name") or "Společnost"),
+        ico=clean_ico(str(profile.get("ico") or "")),
+        basic_info_items=list(profile.get("basic_info") or []),
+        executives=list(profile.get("executives") or []),
+        owners=list(profile.get("owners") or []),
+        history=dict(profile.get("history_signals") or {}),
+        timeline=list(profile.get("financial_timeline") or []),
+        docs=list(profile.get("financial_documents") or []),
+        overview_fallback=list(profile.get("insight_summary") or []),
+        deep_fallback=list(profile.get("deep_insights") or []),
+        praskac_fallback=list(profile.get("praskac") or []),
+    )
+    updated = dict(profile)
+    updated.update(
+        {
+            "analysis_engine": ai_analysis["analysis_engine"],
+            "analysis_model": ai_analysis.get("analysis_model"),
+            "analysis_usage": ai_analysis.get("analysis_usage"),
+            "analysis_overview": ai_analysis["analysis_overview"],
+            "data_quality_note": ai_analysis["data_quality_note"],
+            "insight_summary": ai_analysis["insight_summary"],
+            "deep_insights": ai_analysis["deep_insights"],
+            "praskac": ai_analysis["praskac"],
+            "generated_at": datetime.now().astimezone().isoformat(),
+            "cache_status": "fresh",
         }
-
-    external_checks = build_external_checks(timeline, company_name, ico)
-    profile = {
-        "subject_id": subjekt_id,
-        "name": company_name,
-        "ico": ico,
-        "basic_info": basic_info_items,
-        "executives": people["executives"],
-        "owners": people["owners"],
-        "statutory_bodies": people["bodies"],
-        "financial_timeline": timeline,
-        "financial_documents": processed_docs,
-        "analysis_engine": ai_analysis["analysis_engine"],
-        "analysis_model": ai_analysis.get("analysis_model"),
-        "analysis_usage": ai_analysis.get("analysis_usage"),
-        "analysis_overview": ai_analysis["analysis_overview"],
-        "data_quality_note": ai_analysis["data_quality_note"],
-        "insight_summary": ai_analysis["insight_summary"],
-        "deep_insights": ai_analysis["deep_insights"],
-        "praskac": ai_analysis["praskac"],
-        "history_signals": history,
-        "external_checks": external_checks,
-        "source_links": {
-            "current_extract": current_extract.get("url"),
-            "full_extract": full_extract.get("url"),
-            "documents": f"{BASE_UI}vypis-sl-firma?subjektId={subjekt_id}",
-            "current_extract_pdf": current_extract.get("pdf_url"),
-            "full_extract_pdf": full_extract.get("pdf_url"),
-            "chytryrejstrik": external_checks.get("source_url") if external_checks else None,
-        },
-        "generated_at": datetime.now().astimezone().isoformat(),
-        "cache_status": "fresh" if force_refresh else "fresh",
-    }
-    save_json_cache(cache_name, profile)
-    save_history_entry(visitor_id, profile, query=query)
-    return profile
+    )
+    save_history_entry(visitor_id, updated, query=query)
+    return updated

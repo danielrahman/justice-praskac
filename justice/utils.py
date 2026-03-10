@@ -8,6 +8,7 @@ import re
 import sys
 import time
 import unicodedata
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -42,16 +43,18 @@ logger = logging.getLogger("justice")
 BASE_UI = "https://or.justice.cz/ias/ui/"
 BASE_SITE = "https://or.justice.cz"
 ROOT_DIR = Path(__file__).resolve().parent.parent
-CACHE_DIR = Path(os.getenv("JUSTICE_CACHE_DIR", str(ROOT_DIR / "cache")))
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
-PDF_DIR = CACHE_DIR / "pdfs"
-PDF_DIR.mkdir(exist_ok=True)
-TEXT_DIR = CACHE_DIR / "text"
-TEXT_DIR.mkdir(exist_ok=True)
-JSON_DIR = CACHE_DIR / "json"
-JSON_DIR.mkdir(exist_ok=True)
 DB_PATH = Path(os.getenv("JUSTICE_DB_PATH", str(ROOT_DIR / "app_state.db")))
-DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+TURSO_AUTH_TOKEN = os.getenv("TURSO_AUTH_TOKEN", "").strip()
+S3_ENDPOINT = os.getenv("S3_ENDPOINT", "").strip()
+S3_BUCKET = os.getenv("S3_BUCKET", "").strip()
+S3_ACCESS_KEY_ID = os.getenv("S3_ACCESS_KEY_ID", "").strip()
+S3_SECRET_ACCESS_KEY = os.getenv("S3_SECRET_ACCESS_KEY", "").strip()
+DB_BACKEND = "turso" if DATABASE_URL and TURSO_AUTH_TOKEN else "sqlite"
+OBJECT_STORAGE_BACKEND = "r2" if S3_ENDPOINT and S3_BUCKET and S3_ACCESS_KEY_ID and S3_SECRET_ACCESS_KEY else "local"
+PROFILE_PARSER_VERSION = "v1_turso_r2_historyfix"
+PROFILE_FRESH_DAYS = 0
 
 MONTHS = {
     "ledna": 1,
@@ -146,14 +149,33 @@ SECTION_PRIORITY = [
     "Prokurista",
 ]
 
-PROFILE_CACHE_VERSION = "v7_all_attachments_redesign"
+PROFILE_CACHE_VERSION = PROFILE_PARSER_VERSION
 OCR_CACHE_VERSION = "v3_all_attachments_refresh"
-PROFILE_CACHE_TTL_SECONDS = int(os.getenv("JUSTICE_PROFILE_CACHE_TTL_SECONDS", str(60 * 60 * 24 * 3)))
-AI_MODEL = os.getenv("JUSTICE_AI_MODEL", "claude_sonnet_4_5")
-AI_ENABLED = os.getenv("JUSTICE_ENABLE_AI", "1") != "0"
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
+
+LEGACY_AI_MODEL_ALIASES = {
+    "claude_sonnet_4_5": "claude-sonnet-4-20250514",
+    "claude-sonnet-4-5": "claude-sonnet-4-20250514",
+}
+
+
+def normalize_ai_model_name(value: str | None) -> str:
+    raw = (value or "").strip()
+    if not raw:
+        return "claude-sonnet-4-20250514"
+    normalized = LEGACY_AI_MODEL_ALIASES.get(raw, raw)
+    if normalized != raw:
+        logger.warning(f"normalize_ai_model_name legacy={raw} normalized={normalized}")
+    return normalized
+
+
+AI_MODEL = normalize_ai_model_name(os.getenv("JUSTICE_AI_MODEL", "claude-sonnet-4-20250514"))
+AI_ENABLED = os.getenv("JUSTICE_ENABLE_AI", "1") != "0" and bool(ANTHROPIC_API_KEY)
 AI_TIMEOUT_SECONDS = int(os.getenv("JUSTICE_AI_TIMEOUT_SECONDS", "90"))
 
 MAX_CACHE_BYTES = int(os.getenv("JUSTICE_MAX_CACHE_BYTES", str(2 * 1024 * 1024 * 1024)))  # 2 GB default
+MEMORY_CACHE_LIMIT = int(os.getenv("JUSTICE_MEMORY_CACHE_LIMIT", "512"))
+_memory_cache: dict[str, tuple[float, Any]] = {}
 
 
 def evict_cache_dir(directory: Path, max_bytes: int = MAX_CACHE_BYTES) -> None:
@@ -203,21 +225,22 @@ def slug_hash(value: str) -> str:
     return hashlib.md5(value.encode("utf-8")).hexdigest()
 
 
+def sha256_bytes(value: bytes) -> str:
+    return hashlib.sha256(value).hexdigest()
+
+
 def load_json_cache(name: str, max_age_seconds: int) -> Any | None:
-    path = JSON_DIR / f"{name}.json"
-    if not path.exists():
+    payload = _memory_cache.get(name)
+    if payload is None:
         logger.info(f"cache miss name={name}")
         return None
-    if now_ts() - path.stat().st_mtime > max_age_seconds:
+    stored_at, data = payload
+    if max_age_seconds >= 0 and now_ts() - stored_at > max_age_seconds:
+        _memory_cache.pop(name, None)
         logger.info(f"cache miss (expired) name={name}")
         return None
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-        logger.info(f"cache hit name={name}")
-        return data
-    except Exception:
-        logger.info(f"cache miss (read error) name={name}")
-        return None
+    logger.info(f"cache hit name={name}")
+    return deepcopy(data)
 
 
 _cache_write_count = 0
@@ -226,13 +249,17 @@ _EVICTION_INTERVAL = 50
 
 def save_json_cache(name: str, data: Any) -> None:
     global _cache_write_count
-    path = JSON_DIR / f"{name}.json"
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    if len(_memory_cache) >= MEMORY_CACHE_LIMIT:
+        oldest_key = min(_memory_cache.items(), key=lambda item: item[1][0])[0]
+        _memory_cache.pop(oldest_key, None)
+    _memory_cache[name] = (now_ts(), deepcopy(data))
     logger.info(f"cache write name={name}")
     _cache_write_count += 1
     if _cache_write_count >= _EVICTION_INTERVAL:
         _cache_write_count = 0
-        evict_cache_dir(JSON_DIR)
+        expired_keys = [key for key, (stored_at, _) in _memory_cache.items() if now_ts() - stored_at > 60 * 60 * 24 * 7]
+        for key in expired_keys:
+            _memory_cache.pop(key, None)
 
 
 def parse_czech_date(value: str | None) -> str | None:

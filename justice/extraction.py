@@ -3,12 +3,14 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from justice.db import upsert_document
 from justice.documents import (
     build_metric_source_text,
     detect_unit_multiplier,
     get_pdf_text,
     parse_document_detail,
 )
+from justice.storage_r2 import upload_document_pdf, upload_document_text
 from justice.utils import (
     METRIC_PATTERNS,
     combine_digit_groups,
@@ -356,7 +358,68 @@ def merge_attachment_year_map(target: dict[int, dict[str, Any]], year_map: dict[
                 slot[f"_{key}_score"] = value_score
 
 
-def extract_financial_doc_data(doc: dict[str, Any]) -> tuple[dict[str, Any], dict[int, dict[str, float]]]:
+def _persist_document_artifacts(
+    *,
+    doc_copy: dict[str, Any],
+    attachment_copy: dict[str, Any],
+    pdf_text: dict[str, Any],
+    metric_text: str,
+    found_metrics: list[str],
+    company_name: str,
+    ico: str,
+) -> None:
+    subject_id = str(doc_copy.get("subjekt_id") or "")
+    detail_url = str(doc_copy.get("detail_url") or "")
+    pdf_bytes = pdf_text.get("pdf_bytes") or b""
+    content_sha256 = str(pdf_text.get("content_sha256") or "")
+    if not subject_id or not detail_url or not pdf_bytes or not content_sha256:
+        return
+    pdf_key = upload_document_pdf(subject_id, content_sha256, pdf_bytes)
+    attachment_copy["content_sha256"] = content_sha256
+    attachment_copy["storage_key"] = pdf_key
+
+    text_key = None
+    text_kind = None
+    selected_text = str(pdf_text.get("text") or "").strip()
+    if selected_text and (str(pdf_text.get("mode") or "") == "ocr" or bool(found_metrics)):
+        text_key = upload_document_text(subject_id, content_sha256, selected_text)
+        text_kind = "ocr" if str(pdf_text.get("mode") or "") == "ocr" else "selected_extract"
+        attachment_copy["text_storage_key"] = text_key
+
+    upsert_document(
+        {
+            "subject_id": subject_id,
+            "ico": ico,
+            "company_name": company_name,
+            "detail_url": detail_url,
+            "pdf_index": attachment_copy.get("pdf_index") or 0,
+            "content_sha256": content_sha256,
+            "source_url": attachment_copy.get("url"),
+            "r2_pdf_key": pdf_key,
+            "r2_text_key": text_key,
+            "text_kind": text_kind,
+            "document_id": doc_copy.get("document_id"),
+            "spis": doc_copy.get("spis"),
+            "document_number": doc_copy.get("document_number"),
+            "doc_type": doc_copy.get("type"),
+            "primary_year": (doc_copy.get("years") or [None])[0],
+            "created_date": doc_copy.get("created_date"),
+            "received_date": doc_copy.get("received_date"),
+            "filed_date": doc_copy.get("filed_date"),
+            "page_count": attachment_copy.get("page_count") or pdf_text.get("page_count") or 0,
+            "extraction_mode": attachment_copy.get("extraction_mode"),
+            "metrics_found": found_metrics,
+            "used_in_profile": True,
+        }
+    )
+
+
+def extract_financial_doc_data(
+    doc: dict[str, Any],
+    *,
+    company_name: str = "",
+    ico: str = "",
+) -> tuple[dict[str, Any], dict[int, dict[str, float]]]:
     doc_copy = dict(doc)
     attachments = list(doc.get("pdf_candidates") or [])
     if not attachments and doc.get("pdf_url"):
@@ -415,6 +478,15 @@ def extract_financial_doc_data(doc: dict[str, Any]) -> tuple[dict[str, Any], dic
             attachment_copy["page_count"] = pdf_text.get("page_count") or attachment.get("page_hint") or 0
             attachment_copy["extraction_mode"] = pdf_text.get("mode")
             attachment_copy["metrics_found"] = found_metrics
+            _persist_document_artifacts(
+                doc_copy=doc_copy,
+                attachment_copy=attachment_copy,
+                pdf_text=pdf_text,
+                metric_text=metric_text,
+                found_metrics=found_metrics,
+                company_name=company_name,
+                ico=ico,
+            )
             if metric_text.strip():
                 combined_parts.append(f"\n\n--- ATTACHMENT {attachment_copy.get('label') or 'PDF'} ---\n{metric_text[:120000]}")
             weight = int(doc_copy.get("doc_quality_score") or 0) + int(attachment.get("candidate_score") or 0)
@@ -446,6 +518,15 @@ def extract_financial_doc_data(doc: dict[str, Any]) -> tuple[dict[str, Any], dic
                     attachment_copy["page_count"] = pdf_text.get("page_count") or attachment.get("page_hint") or 0
                     attachment_copy["extraction_mode"] = pdf_text.get("mode")
                     attachment_copy["metrics_found"] = found_metrics
+                    _persist_document_artifacts(
+                        doc_copy=doc_copy,
+                        attachment_copy=attachment_copy,
+                        pdf_text=pdf_text,
+                        metric_text=metric_text,
+                        found_metrics=found_metrics,
+                        company_name=company_name,
+                        ico=ico,
+                    )
                     if metric_text.strip():
                         combined_parts.append(f"\n\n--- ATTACHMENT {attachment_copy.get('label') or 'PDF'} ---\n{metric_text[:120000]}")
                     weight = int(doc_copy.get("doc_quality_score") or 0) + int(attachment.get("candidate_score") or 0)

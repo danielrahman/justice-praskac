@@ -8,7 +8,13 @@ docs/
 tests/
 .pytest_cache/
 cache/
+.runtime/
+output/
+.playwright-cli/
 app_state.db
+*.db
+*.sqlite
+*.sqlite3
 *.log
 sample_profile.json
 test_company_skate.json

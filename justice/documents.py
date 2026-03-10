@@ -9,15 +9,12 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from justice.scraping import fetch_binary, fetch_text
+from justice.scraping import fetch_binary_bytes, fetch_text
 from justice.utils import (
     BASE_SITE,
     BASE_UI,
-    CACHE_DIR,
     FINANCIAL_DOC_KEYWORDS,
     OCR_CACHE_VERSION,
-    PDF_DIR,
-    TEXT_DIR,
     absolute_ui_url,
     load_json_cache,
     logger,
@@ -26,6 +23,7 @@ from justice.utils import (
     parse_czech_date,
     parse_href_params,
     save_json_cache,
+    sha256_bytes,
     slug_hash,
 )
 
@@ -343,15 +341,17 @@ def ocr_selected_pages(pdf_path: Path, txt_path: Path) -> str:
 
 
 def get_pdf_text(pdf_url: str) -> dict[str, Any]:
-    pdf_id = slug_hash(pdf_url)
-    pdf_path = PDF_DIR / f"{pdf_id}.pdf"
-    text_path = TEXT_DIR / f"{pdf_id}.txt"
-    ocr_path = TEXT_DIR / f"{pdf_id}.{OCR_CACHE_VERSION}.ocr.txt"
-    fetch_binary(pdf_url, pdf_path)
-    digital = extract_text_digital(pdf_path, text_path)
-    useful_len = len(re.sub(r"\s+", "", digital))
-    page_count_val = pdf_page_count(pdf_path)
-    ocr = ocr_selected_pages(pdf_path, ocr_path)
+    pdf_bytes = fetch_binary_bytes(pdf_url)
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir_path = Path(tmpdir)
+        pdf_path = tmpdir_path / "document.pdf"
+        text_path = tmpdir_path / "document.txt"
+        ocr_path = tmpdir_path / f"document.{OCR_CACHE_VERSION}.ocr.txt"
+        pdf_path.write_bytes(pdf_bytes)
+        digital = extract_text_digital(pdf_path, text_path)
+        useful_len = len(re.sub(r"\s+", "", digital))
+        page_count_val = pdf_page_count(pdf_path)
+        ocr = ocr_selected_pages(pdf_path, ocr_path)
     digital_key = norm_key(digital)
     ocr_key = norm_key(ocr)
     if useful_len >= 2500 and not any(token in ocr_key for token in ["aktiva celkem", "vykaz zisku a ztraty", "trzby z prodeje"]):
@@ -361,7 +361,8 @@ def get_pdf_text(pdf_url: str) -> dict[str, Any]:
             "ocr_text": ocr or None,
             "mode": "digital",
             "page_count": page_count_val,
-            "pdf_path": str(pdf_path),
+            "pdf_bytes": pdf_bytes,
+            "content_sha256": sha256_bytes(pdf_bytes),
         }
     preferred_text = ocr or digital
     mode = "ocr" if ocr else "digital"
@@ -377,7 +378,8 @@ def get_pdf_text(pdf_url: str) -> dict[str, Any]:
         "ocr_text": ocr or None,
         "mode": mode,
         "page_count": page_count_val,
-        "pdf_path": str(pdf_path),
+        "pdf_bytes": pdf_bytes,
+        "content_sha256": sha256_bytes(pdf_bytes),
     }
 
 
