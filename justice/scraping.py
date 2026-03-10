@@ -87,18 +87,42 @@ def response_is_pdf(response: requests.Response) -> bool:
     return response.content[:4] == b"%PDF"
 
 
+def _response_is_expired_download(response: requests.Response) -> bool:
+    """Detect expired justice.cz download links (return HTML 'Nenalezeno')."""
+    if response_is_pdf(response):
+        return False
+    if len(response.content) < 2000 and b"Nenalezeno" in response.content:
+        return True
+    return False
+
+
 def resolve_live_download_url(url: str) -> str | None:
     session = get_session()
-    for attempt in range(3):
-        try:
-            response = session.get(url, timeout=45)
-            response.raise_for_status()
-            if response_is_pdf(response):
-                return response.url or url
-        except Exception:
-            if attempt < 2:
-                time.sleep(0.8 * (attempt + 1))
+    try:
+        response = session.get(url, timeout=45)
+        response.raise_for_status()
+        if response_is_pdf(response):
+            return response.url or url
+    except Exception:
+        pass
     return None
+
+
+def _download_pdf_response(url: str, session: requests.Session) -> requests.Response:
+    """Download a PDF, raising ValueError immediately for expired links."""
+    response = session.get(url, timeout=120)
+    response.raise_for_status()
+    if response_is_pdf(response):
+        return response
+    if _response_is_expired_download(response):
+        raise ValueError(f"Download link expired: {url}")
+    resolved = resolve_live_download_url(url)
+    if resolved and resolved != url:
+        response = session.get(resolved, timeout=120)
+        response.raise_for_status()
+    if not response_is_pdf(response):
+        raise ValueError(f"URL did not return a PDF: {url}")
+    return response
 
 
 def fetch_binary(url: str, path: Path) -> Path:
@@ -106,18 +130,12 @@ def fetch_binary(url: str, path: Path) -> Path:
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            response = session.get(url, timeout=120)
-            response.raise_for_status()
-            if not response_is_pdf(response):
-                resolved = resolve_live_download_url(url)
-                if resolved and resolved != url:
-                    response = session.get(resolved, timeout=120)
-                    response.raise_for_status()
-            if not response_is_pdf(response):
-                raise ValueError(f"URL did not return a PDF: {url}")
+            response = _download_pdf_response(url, session)
             path.write_bytes(response.content)
             logger.info(f"fetch_binary url={url} size={len(response.content)}")
             return path
+        except ValueError:
+            raise
         except Exception as exc:
             last_error = exc
             if attempt < 2:
@@ -132,17 +150,11 @@ def fetch_binary_bytes(url: str) -> bytes:
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            response = session.get(url, timeout=120)
-            response.raise_for_status()
-            if not response_is_pdf(response):
-                resolved = resolve_live_download_url(url)
-                if resolved and resolved != url:
-                    response = session.get(resolved, timeout=120)
-                    response.raise_for_status()
-            if not response_is_pdf(response):
-                raise ValueError(f"URL did not return a PDF: {url}")
+            response = _download_pdf_response(url, session)
             logger.info(f"fetch_binary_bytes url={url} size={len(response.content)}")
             return response.content
+        except ValueError:
+            raise
         except Exception as exc:
             last_error = exc
             if attempt < 2:

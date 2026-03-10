@@ -310,6 +310,22 @@ def extract_text_digital(pdf_path: Path, txt_path: Path) -> str:
     return ""
 
 
+def _find_pdftoppm_image(prefix: Path, page: int) -> Path:
+    """Find the image file created by pdftoppm for a given page.
+
+    pdftoppm zero-pads page numbers based on total page count:
+      - 1-9 pages:   page1-1.png
+      - 10-99 pages: page1-01.png, page10-10.png
+      - 100+ pages:  page1-001.png, page10-010.png, page100-100.png
+
+    We use a glob to find any file matching the prefix pattern.
+    """
+    candidates = sorted(prefix.parent.glob(f"{prefix.name}-*.png"))
+    if candidates:
+        return candidates[0]
+    return prefix.parent / f"{prefix.name}-{page}.png"
+
+
 def ocr_selected_pages(pdf_path: Path, txt_path: Path) -> str:
     if txt_path.exists() and txt_path.stat().st_size > 0:
         return txt_path.read_text(encoding="utf-8", errors="ignore")
@@ -336,10 +352,7 @@ def ocr_selected_pages(pdf_path: Path, txt_path: Path) -> str:
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
             )
-            image = Path(f"{prefix}-{page}.png")
-            if not image.exists():
-                alt = Path(f"{prefix}-1.png")
-                image = alt if alt.exists() else image
+            image = _find_pdftoppm_image(prefix, page)
             if not image.exists():
                 continue
             page_text = ""

@@ -1,13 +1,15 @@
 """Tests for justice.documents scoring and classification functions."""
 from __future__ import annotations
 
+import tempfile
 import threading
 import time
+from pathlib import Path
 
 import pytest
 
 import justice.documents as documents_module
-from justice.documents import financial_doc_score, is_financial_document, pick_recent_financial_docs
+from justice.documents import _find_pdftoppm_image, financial_doc_score, is_financial_document, pick_recent_financial_docs
 
 
 # ---------------------------------------------------------------------------
@@ -108,6 +110,59 @@ class TestFinancialDocScore:
         vyrocni = {"type": "Výroční zpráva [2023]", "pages": 10, "years": [2023]}
         zaverka = {"type": "Účetní závěrka [2023]", "pages": 10, "years": [2023]}
         assert financial_doc_score(vyrocni) > financial_doc_score(zaverka)
+
+
+# ---------------------------------------------------------------------------
+# _find_pdftoppm_image
+# ---------------------------------------------------------------------------
+class TestFindPdftoppmImage:
+    def test_zero_padded_single_digit_page(self):
+        """pdftoppm creates page1-01.png for page 1 of a 10+ page doc."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page1"
+            (Path(tmpdir) / "page1-01.png").touch()
+            result = _find_pdftoppm_image(prefix, 1)
+            assert result.name == "page1-01.png"
+
+    def test_non_padded_single_digit_page(self):
+        """pdftoppm creates page1-1.png for page 1 of a <10 page doc."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page1"
+            (Path(tmpdir) / "page1-1.png").touch()
+            result = _find_pdftoppm_image(prefix, 1)
+            assert result.name == "page1-1.png"
+
+    def test_double_digit_page(self):
+        """pdftoppm creates page10-10.png for page 10."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page10"
+            (Path(tmpdir) / "page10-10.png").touch()
+            result = _find_pdftoppm_image(prefix, 10)
+            assert result.name == "page10-10.png"
+
+    def test_triple_padded_page(self):
+        """pdftoppm creates page1-001.png for page 1 of a 100+ page doc."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page1"
+            (Path(tmpdir) / "page1-001.png").touch()
+            result = _find_pdftoppm_image(prefix, 1)
+            assert result.name == "page1-001.png"
+
+    def test_no_file_returns_fallback(self):
+        """When no file exists, returns the non-padded fallback path."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page5"
+            result = _find_pdftoppm_image(prefix, 5)
+            assert result.name == "page5-5.png"
+
+    def test_does_not_match_other_page_prefix(self):
+        """page1-*.png must not match page10-10.png."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            prefix = Path(tmpdir) / "page1"
+            (Path(tmpdir) / "page10-10.png").touch()
+            result = _find_pdftoppm_image(prefix, 1)
+            # Should return fallback, not page10's file
+            assert result.name == "page1-1.png"
 
 
 class TestPickRecentFinancialDocs:

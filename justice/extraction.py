@@ -414,6 +414,34 @@ def _persist_document_artifacts(
     )
 
 
+def _refresh_attachment_urls(doc: dict[str, Any], attachments: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Re-fetch the detail page to get fresh download URLs (justice.cz tokens expire in ~30s)."""
+    detail_url = doc.get("detail_url")
+    if not detail_url:
+        return attachments
+    try:
+        refreshed_detail = parse_document_detail(detail_url, force_refresh=True, parent_type=doc.get("type"))
+        refreshed_candidates = refreshed_detail.get("pdf_candidates") or []
+        if not refreshed_candidates:
+            return attachments
+        refreshed_by_label: dict[str, str] = {}
+        for candidate in refreshed_candidates:
+            label_key = norm_key(str(candidate.get("label") or ""))
+            if label_key and candidate.get("url"):
+                refreshed_by_label[label_key] = candidate["url"]
+        updated = []
+        for attachment in attachments:
+            label_key = norm_key(str(attachment.get("label") or ""))
+            fresh_url = refreshed_by_label.get(label_key)
+            if fresh_url:
+                attachment = dict(attachment)
+                attachment["url"] = fresh_url
+            updated.append(attachment)
+        return updated
+    except Exception:
+        return attachments
+
+
 def extract_financial_doc_data(
     doc: dict[str, Any],
     *,
@@ -454,6 +482,8 @@ def extract_financial_doc_data(
         doc_copy["extraction_scope"] = "all_candidate_files"
         return doc_copy, {}
 
+    attachments = _refresh_attachment_urls(doc, attachments)
+
     attachment_results: list[dict[str, Any]] = []
     merged_year_map: dict[int, dict[str, Any]] = {}
     combined_parts: list[str] = []
@@ -478,15 +508,18 @@ def extract_financial_doc_data(
             attachment_copy["page_count"] = pdf_text.get("page_count") or attachment.get("page_hint") or 0
             attachment_copy["extraction_mode"] = pdf_text.get("mode")
             attachment_copy["metrics_found"] = found_metrics
-            _persist_document_artifacts(
-                doc_copy=doc_copy,
-                attachment_copy=attachment_copy,
-                pdf_text=pdf_text,
-                metric_text=metric_text,
-                found_metrics=found_metrics,
-                company_name=company_name,
-                ico=ico,
-            )
+            try:
+                _persist_document_artifacts(
+                    doc_copy=doc_copy,
+                    attachment_copy=attachment_copy,
+                    pdf_text=pdf_text,
+                    metric_text=metric_text,
+                    found_metrics=found_metrics,
+                    company_name=company_name,
+                    ico=ico,
+                )
+            except Exception as persist_exc:
+                logger.warning("persist_document_artifacts failed: %s", persist_exc)
             if metric_text.strip():
                 combined_parts.append(f"\n\n--- ATTACHMENT {attachment_copy.get('label') or 'PDF'} ---\n{metric_text[:120000]}")
             weight = int(doc_copy.get("doc_quality_score") or 0) + int(attachment.get("candidate_score") or 0)
@@ -518,15 +551,18 @@ def extract_financial_doc_data(
                     attachment_copy["page_count"] = pdf_text.get("page_count") or attachment.get("page_hint") or 0
                     attachment_copy["extraction_mode"] = pdf_text.get("mode")
                     attachment_copy["metrics_found"] = found_metrics
-                    _persist_document_artifacts(
-                        doc_copy=doc_copy,
-                        attachment_copy=attachment_copy,
-                        pdf_text=pdf_text,
-                        metric_text=metric_text,
-                        found_metrics=found_metrics,
-                        company_name=company_name,
-                        ico=ico,
-                    )
+                    try:
+                        _persist_document_artifacts(
+                            doc_copy=doc_copy,
+                            attachment_copy=attachment_copy,
+                            pdf_text=pdf_text,
+                            metric_text=metric_text,
+                            found_metrics=found_metrics,
+                            company_name=company_name,
+                            ico=ico,
+                        )
+                    except Exception as persist_exc:
+                        logger.warning("persist_document_artifacts failed (retry): %s", persist_exc)
                     if metric_text.strip():
                         combined_parts.append(f"\n\n--- ATTACHMENT {attachment_copy.get('label') or 'PDF'} ---\n{metric_text[:120000]}")
                     weight = int(doc_copy.get("doc_quality_score") or 0) + int(attachment.get("candidate_score") or 0)
