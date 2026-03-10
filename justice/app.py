@@ -257,7 +257,7 @@ def api_company_stream(request: Request, subjekt_id: str = Query(..., alias="sub
     )
 
 
-_STATIC_FILES = {"app.js", "style.css", "base.css", "praskac-icon.png"}
+_STATIC_FILES = {"app.js", "style.css", "base.css", "praskac-icon.png", "praskac-icon-sm.png", "og-image.png"}
 
 
 @app.get("/")

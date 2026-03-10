@@ -6,7 +6,16 @@ const API = "";
 const HISTORY_PAGE_SIZE = 20;
 const HISTORY_RECENT_LIMIT = 3;
 const LOADING_STATUS_LIMIT = 3;
-const LOADING_STATUS_PLACEHOLDER = "Čtu veřejný výpis, Sbírku listin a finanční podklady.";
+const LOADING_STATUS_MESSAGES = [
+  "Stahuji výpis z justice.cz a zpracovávám finanční podklady.",
+  "Prohledávám veřejné rejstříky a sbírky listin…",
+  "Analyzuji dostupné účetní závěrky…",
+  "Procházím obchodní rejstřík a insolvenční záznam…",
+  "Shromažďuji data z veřejných zdrojů…",
+];
+function randomLoadingMessage() {
+  return LOADING_STATUS_MESSAGES[Math.floor(Math.random() * LOADING_STATUS_MESSAGES.length)];
+}
 
 // ---- State ----
 const state = {
@@ -67,12 +76,12 @@ const AI_PRICING = [
 ];
 
 const fmtM = (v) => {
-  if (v == null || Number.isNaN(v)) return "—";
+  if (v == null || !isFinite(v)) return "—";
   return (Math.abs(v) >= 100 ? _fmtCZ0 : _fmtCZ2).format(v) + " mil.";
 };
 
 const fmtPct = (v) => {
-  if (v == null || Number.isNaN(v)) return "—";
+  if (v == null || !isFinite(v)) return "—";
   return _fmtPct1.format(v) + " %";
 };
 
@@ -196,7 +205,7 @@ function pushStatusLog(label) {
 function visibleStatusLog() {
   return state.statusLog.length
     ? state.statusLog
-    : [{ id: "status-placeholder", label: LOADING_STATUS_PLACEHOLDER }];
+    : [{ id: "status-placeholder", label: randomLoadingMessage() }];
 }
 
 function getExpandKeys(key) {
@@ -249,7 +258,6 @@ async function openLoadedProfile(id, profile, requestToken) {
   const historyUpdated = await refreshHistoryPage(0, { updateRecent: true });
   ensureActiveRequest(requestToken);
   if (historyUpdated) renderHistory();
-  render();
 }
 
 function nextRequestToken() {
@@ -395,18 +403,18 @@ function playPendingSearchStageAnimation() {
 
 function searchBrandMarkup({ compact = false, subtitle = "" } = {}) {
   const iconClass = compact
-    ? "w-14 h-14 rounded-2xl mb-3 mx-auto"
-    : "w-20 h-20 rounded-2xl mb-4 mx-auto";
+    ? "w-14 h-14 mb-3 mx-auto"
+    : "w-20 h-20 mb-4 mx-auto";
   const titleClass = compact
-    ? "text-xl sm:text-2xl font-bold tracking-tight text-slate-900"
-    : "text-2xl sm:text-3xl font-bold tracking-tight text-slate-900";
+    ? "text-xl sm:text-2xl font-bold tracking-tight text-ink-950"
+    : "text-2xl sm:text-3xl font-bold tracking-tight text-ink-950";
 
   return `
     <div class="search-brand-mark ${compact ? "search-brand-mark-compact" : ""}" data-search-brand-mark>
-      <img src="/praskac-icon.png" alt="Justice Práskač" class="${iconClass}">
+      <img src="/praskac-icon-sm.png" alt="Justice Práskač" class="${iconClass}">
       <h1 class="${titleClass}">Justice Práskač</h1>
     </div>
-    ${subtitle ? `<p class="mt-2 text-sm text-slate-500">${esc(subtitle)}</p>` : ""}`;
+    ${subtitle ? `<p class="mt-2 text-sm font-mono text-ink-400">${esc(subtitle)}</p>` : ""}`;
 }
 
 const FALLBACK_SENTENCE_ABBREVIATIONS = [
@@ -472,26 +480,33 @@ function severityOf(item) {
   return "low";
 }
 
-const SEV_DOT = { high: "bg-red-500", medium: "bg-amber-400", low: "bg-slate-300" };
+const SEV_DOT = { high: "bg-red-500", medium: "bg-amber-400", low: "bg-ink-300" };
 
 // ---- Shared Tailwind class strings ----
-const CLS_CARD = "bg-white rounded-xl ring-1 ring-slate-200/60 shadow-sm";
-const CLS_SECTION_HEADING = "text-sm font-semibold text-slate-900";
-const CLS_LABEL_XS = "text-[10px] text-slate-400 uppercase tracking-wider";
+const CLS_CARD = "bg-ink-50 border border-ink-200";
+const CLS_SECTION_HEADING = "text-lg font-bold text-ink-900 tracking-tight";
+const CLS_LABEL_XS = "text-[10px] font-mono text-ink-400 uppercase tracking-widest";
 const CLS_BADGE_SM = "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium ring-1";
-const SEV_TONE = { high: "bg-red-400", medium: "bg-amber-500", low: "bg-neutral-500" };
-const MODE_COLOR = { digital: "text-emerald-700 bg-emerald-50 ring-emerald-200/60", ocr: "text-amber-700 bg-amber-50 ring-amber-200/60", mixed: "text-slate-600 bg-slate-50 ring-slate-200/60" };
+const CLS_SUBSECTION_HEADING = "text-sm font-mono font-semibold text-ink-500 uppercase tracking-widest";
+const MODE_COLOR = { digital: "text-emerald-700 bg-emerald-50 ring-emerald-200/60", ocr: "text-amber-700 bg-amber-50 ring-amber-200/60", mixed: "text-ink-600 bg-ink-100 ring-ink-200/60" };
+
+function valColor(v, { neutral = "text-ink-950", zero = "text-ink-950" } = {}) {
+  if (v == null || !isFinite(v)) return neutral;
+  if (v > 0) return "text-emerald-700";
+  if (v < 0) return "text-red-600";
+  return zero;
+}
 
 // ---- History rendering ----
 function historyItemHtml(item, variant = "rail") {
   const isHero = variant === "hero";
   const buttonClass = isHero
-    ? "w-full text-left px-3.5 py-3 rounded-xl bg-white ring-1 ring-slate-200/70 shadow-sm hover:ring-slate-300 hover:shadow transition-all group"
-    : "w-full text-left px-3 py-2 rounded-lg text-sm hover:bg-slate-50 transition-colors group";
+    ? `w-full text-left px-3.5 py-3 ${CLS_CARD} hover:bg-ink-100 transition-colors group`
+    : "w-full text-left px-3 py-2.5 text-sm hover:bg-ink-100 transition-colors group";
   return `<button type="button" data-pick-id="${esc(item.subject_id)}" data-pick-query="${esc(item.query || item.ico || item.name || "")}"
     class="${buttonClass}">
-    <div class="font-medium text-slate-800 truncate group-hover:text-neutral-700 leading-snug">${esc(item.name || "Firma")}</div>
-    <div class="text-[11px] text-slate-400 truncate mt-0.5">${esc(item.ico || "")}${item.updated_at ? " · " + fmtRelative(item.updated_at) : ""}</div>
+    <div class="font-medium text-ink-900 truncate group-hover:text-ink-950 leading-snug">${esc(item.name || "Firma")}</div>
+    <div class="text-[11px] font-mono text-ink-400 truncate mt-0.5">${esc(item.ico || "")}${item.updated_at ? " · " + fmtRelative(item.updated_at) : ""}</div>
   </button>`;
 }
 
@@ -514,12 +529,12 @@ function historyPaginationHtml(variant = "rail") {
   if (!state.historyTotal) return "";
   const isHero = variant === "hero";
   const btnClass = isHero
-    ? "inline-flex items-center justify-center min-w-[88px] px-3 py-2 rounded-lg bg-white text-xs font-medium text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-slate-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-    : "inline-flex items-center justify-center min-w-[78px] px-2.5 py-1.5 rounded-lg bg-white text-[11px] font-medium text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-slate-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed";
+    ? "inline-flex items-center justify-center min-w-[88px] px-3 py-2 bg-ink-50 text-xs font-mono font-medium text-ink-600 border border-ink-200 hover:bg-ink-100 hover:text-ink-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+    : "inline-flex items-center justify-center min-w-[78px] px-2.5 py-1.5 bg-ink-50 text-[11px] font-mono font-medium text-ink-600 border border-ink-200 hover:bg-ink-100 hover:text-ink-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed";
 
   return `
     <div class="${isHero ? "mt-3 flex items-center justify-between gap-2" : "mt-2 px-1 flex items-center justify-between gap-2"}">
-      ${!isHero ? `<div class="text-[11px] text-slate-400">${esc(historyRangeText())}</div>` : '<div class="text-[11px] text-slate-400">Stránkování historie</div>'}
+      ${!isHero ? `<div class="text-[11px] font-mono text-ink-400">${esc(historyRangeText())}</div>` : '<div class="text-[11px] font-mono text-ink-400">Stránkování historie</div>'}
       <div class="flex items-center gap-2">
         <button type="button" data-history-page="prev" class="${btnClass}" ${historyHasPrevPage() ? "" : "disabled"}>Novější</button>
         <button type="button" data-history-page="next" class="${btnClass}" ${historyHasNextPage() ? "" : "disabled"}>Starší</button>
@@ -529,7 +544,7 @@ function historyPaginationHtml(variant = "rail") {
 
 function historySidebarHtml() {
   if (!state.history.length) {
-    return '<div class="px-3 py-4 text-xs text-slate-400">Historie se začne plnit po prvním prověření.</div>';
+    return '<div class="px-3 py-4 text-xs font-mono text-ink-400">Historie se začne plnit po prvním prověření.</div>';
   }
 
   return `
@@ -541,14 +556,14 @@ function historySidebarHtml() {
 
 function historyHeroHtml() {
   return `
-    <div class="mt-8 pt-6 border-t border-slate-100 lg:hidden">
+    <div class="mt-8 pt-6 border-t border-ink-200 lg:hidden">
       <div class="flex items-center justify-between gap-3 mb-3">
-        <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Historie prověření</div>
-        ${state.historyTotal ? `<div class="text-[11px] text-slate-400">${esc(historyRangeText())}</div>` : ""}
+        <div class="${CLS_LABEL_XS}">Historie prověření</div>
+        ${state.historyTotal ? `<div class="text-[11px] font-mono text-ink-400">${esc(historyRangeText())}</div>` : ""}
       </div>
       ${state.history.length
         ? `<div class="space-y-2">${state.history.map((item) => historyItemHtml(item, "hero")).join("")}</div>`
-        : '<div class="rounded-xl bg-white ring-1 ring-slate-200/70 shadow-sm px-4 py-4 text-sm text-slate-400">Historie se začne plnit po prvním prověření.</div>'}
+        : `<div class="${CLS_CARD} px-4 py-4 text-sm font-mono text-ink-400">Historie se začne plnit po prvním prověření.</div>`}
       ${state.historyTotal ? historyPaginationHtml("hero") : ""}
     </div>`;
 }
@@ -587,16 +602,16 @@ function renderAutocomplete(dropdownId = "hero-autocomplete") {
 function autocompleteHtml(results, activeIndex = -1) {
   if (!results.length) return "";
   return `
-  <div class="autocomplete-dropdown bg-white rounded-xl ring-1 ring-slate-200 shadow-lg overflow-hidden max-h-[320px] overflow-y-auto" role="listbox" aria-label="Nalezené firmy">
+  <div class="autocomplete-dropdown bg-ink-50 border border-ink-900 overflow-hidden max-h-[320px] overflow-y-auto" role="listbox" aria-label="Nalezené firmy">
     ${results.map((m, index) => `
       <button type="button" data-pick-id="${esc(m.subject_id)}" data-pick-query="${esc(m.name || m.ico || "")}"
         data-autocomplete-index="${index}" role="option" aria-selected="${index === activeIndex ? "true" : "false"}"
-        class="autocomplete-option ${index === activeIndex ? "is-active" : ""} w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition-colors text-left group border-b border-slate-50 last:border-0">
+        class="autocomplete-option ${index === activeIndex ? "is-active" : ""} w-full flex items-center justify-between px-4 py-3 hover:bg-ink-100 transition-colors text-left group border-b border-ink-200 last:border-0">
         <div class="min-w-0">
-          <div class="text-sm font-medium text-slate-900 group-hover:text-neutral-700 truncate">${esc(m.name)}</div>
-          <div class="text-xs text-slate-400 mt-0.5 truncate">IČO ${esc(m.ico_display || m.ico)}${m.address ? " · " + esc(m.address) : ""}</div>
+          <div class="text-sm font-medium text-ink-900 group-hover:text-ink-950 truncate">${esc(m.name)}</div>
+          <div class="text-xs font-mono text-ink-400 mt-0.5 truncate">IČO ${esc(m.ico_display || m.ico)}${m.address ? " · " + esc(m.address) : ""}</div>
         </div>
-        <svg class="w-4 h-4 text-slate-300 group-hover:text-neutral-500 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+        <svg class="w-4 h-4 text-ink-300 group-hover:text-ink-600 flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
       </button>`).join("")}
   </div>`;
 }
@@ -643,12 +658,12 @@ function setStatus(text, type) {
   if ($statusText) $statusText.textContent = text;
   if ($statusDot) {
     $statusDot.className = "w-1.5 h-1.5 rounded-full flex-shrink-0 " + ({
-      ready: "bg-slate-300",
-      running: "bg-neutral-500 status-running",
+      ready: "bg-ink-300",
+      running: "bg-ink-500 status-running",
       done: "bg-emerald-500",
       error: "bg-red-400",
       waiting: "bg-amber-400",
-    }[type] || "bg-slate-300");
+    }[type] || "bg-ink-300");
   }
 }
 
@@ -670,13 +685,13 @@ function heroView(animation = "") {
       <form id="hero-search-form" class="relative">
         <div class="relative">
           <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
-            <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+            <svg class="h-5 w-5 text-ink-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
           </div>
-          <input id="hero-input" type="text" placeholder="Název firmy nebo IČO..." autocomplete="off"
+          <input id="hero-input" type="text" placeholder="Název firmy nebo IČO..." autocomplete="off" aria-label="Název firmy nebo IČO"
             value="${esc(state.query)}"
-            class="block w-full rounded-xl border-0 bg-white py-3.5 pl-12 pr-24 text-base text-slate-900 ring-1 ring-inset ring-slate-200 shadow-sm placeholder:text-slate-400 focus:ring-2 focus:ring-neutral-500 transition-colors">
+            class="block w-full border border-ink-900 bg-ink-50 py-3.5 pl-11 pr-[5.5rem] sm:pl-12 sm:pr-24 text-base text-ink-950 placeholder:text-ink-400 focus:ring-2 focus:ring-ink-900 focus:ring-offset-0 transition-colors">
           <div class="absolute inset-y-0 right-0 flex items-center pr-2">
-            <button type="submit" class="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 transition-colors">
+            <button type="submit" class="bg-ink-900 px-4 py-2 text-sm font-mono font-semibold text-ink-50 hover:bg-ink-950 transition-colors">
               Prověřit
             </button>
           </div>
@@ -686,14 +701,14 @@ function heroView(animation = "") {
       </form>
       ${historyHeroHtml()}
       ${recent.length ? `
-      <div class="hidden lg:block mt-8 pt-6 border-t border-slate-100">
-        <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-3 text-center">Poslední prověření</div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+      <div class="hidden lg:block mt-8 pt-6 border-t border-ink-200">
+        <div class="${CLS_LABEL_XS} mb-3 text-center">Poslední prověření</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-ink-200 border border-ink-200">
           ${recent.map((item) => `
             <button type="button" data-pick-id="${esc(item.subject_id)}" data-pick-query="${esc(item.query || item.ico || item.name || "")}"
-              class="text-left px-3.5 py-3 rounded-xl bg-white ring-1 ring-slate-200/60 shadow-sm hover:ring-slate-300 hover:shadow transition-all group">
-              <div class="text-sm font-medium text-slate-800 truncate group-hover:text-neutral-700">${esc(item.name || "Firma")}</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">${esc(item.ico || "")}${item.updated_at ? " · " + fmtRelative(item.updated_at) : ""}</div>
+              class="text-left px-3.5 py-3 bg-ink-50 hover:bg-ink-100 transition-colors group">
+              <div class="text-sm font-medium text-ink-900 truncate group-hover:text-ink-950">${esc(item.name || "Firma")}</div>
+              <div class="text-[11px] font-mono text-ink-400 mt-0.5 truncate">${esc(item.ico || "")}${item.updated_at ? " · " + fmtRelative(item.updated_at) : ""}</div>
             </button>`).join("")}
         </div>
       </div>` : ""}
@@ -801,21 +816,21 @@ function loadingView(previewOrText, log, opts = {}) {
     <div class="text-center mb-6">
       ${searchBrandMarkup({
         compact: true,
-        subtitle: "Sbírám výpis, listiny a finanční podklady.",
+        subtitle: "Stahuji data z justice.cz a zpracovávám podklady.",
       })}
     </div>
     <div data-search-stage-body class="${CLS_CARD} overflow-hidden">
       ${preview ? `
-      <div class="px-5 py-4 border-b border-slate-100">
+      <div class="px-5 py-4 border-b border-ink-200">
         <div>
-          <div class="text-sm font-semibold text-slate-900">${esc(preview.name || "Načítaná firma")}</div>
-          <div class="text-xs text-slate-400">IČO ${esc(preview.ico || "—")}</div>
+          <div class="text-sm font-semibold text-ink-900">${esc(preview.name || "Načítám firmu")}</div>
+          <div class="text-xs font-mono text-ink-400">IČO ${esc(preview.ico || "—")}</div>
         </div>
       </div>` : `
-      <div class="px-5 py-4 border-b border-slate-100">
+      <div class="px-5 py-4 border-b border-ink-200">
         <div>
-          <div class="text-sm font-semibold text-slate-900">Sbírám veřejná data</div>
-          <div class="text-xs text-slate-400">Justice.cz, Sbírka listin a veřejná PDF</div>
+          <div class="text-sm font-semibold text-ink-900">Zpracovávám veřejné rejstříky</div>
+          <div class="text-xs font-mono text-ink-400">Justice.cz, sbírka listin, finanční výkazy</div>
         </div>
       </div>`}
       <div class="px-5 py-4">
@@ -824,10 +839,10 @@ function loadingView(previewOrText, log, opts = {}) {
         </div>
       </div>
       ${preview && (preview.basic_info || []).length ? `
-      <div class="border-t border-slate-100 px-5 py-4">
+      <div class="border-t border-ink-200 px-5 py-4">
         <div class="grid grid-cols-2 gap-2">
           ${(preview.basic_info || []).slice(0, 4).map((i) => `
-            <div class="text-xs"><span class="text-slate-400">${esc(i.label)}:</span> <span class="text-slate-600">${esc(i.value)}</span></div>
+            <div class="text-xs font-mono"><span class="text-ink-400">${esc(i.label)}:</span> <span class="text-ink-600">${esc(i.value)}</span></div>
           `).join("")}
         </div>
       </div>` : ""}
@@ -839,12 +854,12 @@ function errorView(text) {
   return `
   <div class="max-w-lg mx-auto px-4 sm:px-6 py-12 text-center view-enter">
     <div class="${CLS_CARD} p-6">
-      <div class="w-10 h-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-3">
+      <div class="w-10 h-10 border border-red-300 bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-3">
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"/></svg>
       </div>
-      <h2 class="text-lg font-semibold text-slate-900 mb-1">Něco se nepovedlo</h2>
-      <p class="text-sm text-slate-500 mb-4">${esc(text)}</p>
-      <button data-retry class="inline-flex items-center px-4 py-2 rounded-lg bg-neutral-900 text-white text-sm font-semibold hover:bg-neutral-800 transition-colors">Zkusit znovu</button>
+      <h2 class="text-lg font-bold text-ink-900 mb-1">Načtení se nezdařilo</h2>
+      <p class="text-sm text-ink-500 mb-4">${esc(text)}</p>
+      <button data-retry class="inline-flex items-center px-4 py-2 bg-ink-900 text-ink-50 text-sm font-mono font-semibold hover:bg-ink-950 transition-colors">Zkusit znovu</button>
     </div>
   </div>`;
 }
@@ -856,19 +871,18 @@ function errorView(text) {
 function sectionNav() {
   const tabs = [
     ["overview", "Přehled"],
-    ["insights", "Signály"],
+    ["analysis", "Analýza"],
     ["finance", "Finance"],
     ["people", "Osoby"],
-    ["documents", "Listiny"],
     ["sources", "Zdroje"],
   ];
   return `
-  <nav id="section-nav" class="sticky top-16 z-30 border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-sm lg:top-0">
-    <div class="px-4 py-3 sm:px-6">
-      <div class="flex gap-2 overflow-x-auto scrollbar-hide">
+  <nav id="section-nav" class="sticky top-14 z-30 border-b border-ink-900 bg-ink-50 lg:top-0">
+    <div class="px-4 py-2 sm:px-6">
+      <div class="flex gap-0 overflow-x-auto scrollbar-hide">
       ${tabs.map(([id, label]) => `
-        <button data-nav="${id}" class="px-3.5 py-2 text-sm font-medium rounded-xl whitespace-nowrap transition-colors
-          ${id === "overview" ? "bg-neutral-900 text-white shadow-sm" : "bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-700"}">${esc(label)}</button>
+        <button data-nav="${id}" class="px-3 py-2.5 sm:py-1.5 text-sm font-mono font-medium whitespace-nowrap transition-colors border-b-2
+          ${id === "overview" ? "border-ink-900 text-ink-900" : "border-transparent text-ink-400 hover:text-ink-700 hover:border-ink-300"}">${esc(label)}</button>
       `).join("")}
       </div>
     </div>
@@ -880,129 +894,65 @@ function profileHero(p) {
   const latest = tl[tl.length - 1];
   const prev = tl.length >= 2 ? tl[tl.length - 2] : null;
   const yoy = latest && prev && latest.revenue && prev.revenue
-    ? ((latest.revenue - prev.revenue) / Math.abs(prev.revenue)) * 100 : null;
+    ? ((latest.revenue - prev.revenue) / (Math.abs(prev.revenue) || 1)) * 100 : null;
 
   const legalForm = getInfo(p, "právní forma") || "";
   const city = getInfo(p, "sídlo") || "";
-  const yearsCovered = tl.length ? `${tl[0].year}–${tl[tl.length - 1].year}` : "—";
+  const created = getInfo(p, "datum") || "";
 
-  const metrics = [
-    { label: "Aktiva", value: fmtM(latest?.assets), sub: latest ? `${latest.year}` : "—" },
-    { label: "Čistý zisk", value: fmtM(latest?.net_profit), sub: latest ? `marže ${fmtPct(latest.net_margin_pct)}` : "—" },
-    { label: "Kapitál", value: fmtPct(latest?.equity_ratio_pct), sub: latest ? `${latest.year}` : "—" },
-  ];
-  if (latest?.revenue != null) metrics.unshift({ label: "Tržby", value: fmtM(latest.revenue), sub: latest ? `${latest.year}` : "—" });
-  if (yoy != null && isFinite(yoy)) metrics.push({ label: "Růst tržeb", value: fmtPct(yoy), sub: prev ? `${prev.year} → ${latest.year}` : "—" });
-  if (latest?.debt != null) metrics.push({ label: "Dluh", value: fmtM(latest.debt), sub: latest ? `${latest.year}` : "—" });
-  metrics.push({ label: "Pokrytí", value: `${tl.length} let`, sub: yearsCovered });
+  const { lead } = getExecutiveSummaryContent(p);
 
-  const isAi = p.analysis_engine === "ai";
-  const isAiDisabled = p.analysis_engine === "disabled";
-  const isCached = p.cache_status === "cached";
+  // Key metrics only — the essentials
+  const metrics = [];
+  if (latest?.revenue != null) metrics.push({ label: "Tržby", value: fmtM(latest.revenue), sub: `${latest.year}`, color: "text-ink-950" });
+  metrics.push({ label: "Čistý zisk", value: fmtM(latest?.net_profit), sub: latest ? `zisková marže ${fmtPct(latest.net_margin_pct)}` : "—", color: valColor(latest?.net_profit) });
+  metrics.push({ label: "Vlastní kapitál", value: fmtPct(latest?.equity_ratio_pct), sub: latest ? `podíl vlastních zdrojů` : "—", color: latest?.equity_ratio_pct != null ? (latest.equity_ratio_pct >= 30 ? "text-emerald-700" : latest.equity_ratio_pct >= 10 ? "text-amber-600" : "text-red-600") : "text-ink-950" });
+  if (yoy != null && isFinite(yoy)) metrics.push({ label: "Růst tržeb", value: fmtPct(yoy), sub: `${prev.year} → ${latest.year}`, color: valColor(yoy) });
+  if (!metrics.some((m) => m.label === "Růst tržeb") && latest?.debt != null) {
+    metrics.push({ label: "Dluh", value: fmtM(latest.debt), sub: `${latest.year}`, color: "text-ink-950" });
+  }
+
   const isAiRetryOnly = p.analysis_engine === "fallback";
-  const rerunLabel = isAi ? "Aktualizovat" : "Aktualizovat data";
-  const rerunClasses = isAi || isAiDisabled
-    ? "flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-slate-700 transition-colors"
-    : "flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-neutral-900 hover:bg-neutral-800 shadow-sm transition-colors";
-  const actionButtons = isAiRetryOnly
-    ? `
-      <div class="flex flex-wrap items-center gap-2">
-        <button data-run-ai="${esc(p.subject_id)}" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-neutral-900 hover:bg-neutral-800 shadow-sm transition-colors">
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"/></svg>
-          Zkusit AI znovu
-        </button>
-        <button data-rerun="${esc(p.subject_id)}" class="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-slate-700 transition-colors">
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/></svg>
-          Aktualizovat data
-        </button>
-      </div>`
-    : `
-      <button data-rerun="${esc(p.subject_id)}" class="${rerunClasses}">
-        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/></svg>
-        ${esc(rerunLabel)}
-      </button>`;
+  const rerunClasses = "inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-3 sm:py-1.5 text-xs font-mono font-medium text-ink-500 border border-ink-300 hover:bg-ink-100 hover:text-ink-900 transition-colors";
+  const aiRunClasses = "inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-3 sm:py-1.5 text-xs font-mono font-medium text-ink-50 bg-ink-900 hover:bg-ink-950 transition-colors";
 
   return `
   <section id="section-overview" data-section="overview" class="scroll-mt-32 lg:scroll-mt-24">
+    <!-- Identity -->
     <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
       <div class="min-w-0">
-        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 leading-tight">${esc(p.name)}</h1>
-        <div class="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-slate-500">
-          <span>IČO ${esc(p.ico || "—")}</span>
-          ${legalForm ? `<span class="text-slate-300">·</span><span>${esc(legalForm)}</span>` : ""}
-          ${city ? `<span class="text-slate-300">·</span><span class="truncate max-w-[200px]">${esc(city.split(",")[0])}</span>` : ""}
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-950 leading-none break-words">${esc(p.name)}</h1>
+        <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-sm text-ink-500">
+          <span class="font-mono text-ink-400">IČO ${esc(p.ico || "—")}</span>
+          ${legalForm ? `<span class="text-ink-300">·</span><span>${esc(legalForm)}</span>` : ""}
+          ${city ? `<span class="text-ink-300">·</span><span class="truncate max-w-[220px]">${esc(city.split(",")[0])}</span>` : ""}
+          ${created ? `<span class="text-ink-300">·</span><span class="font-mono text-ink-400">${esc(created)}</span>` : ""}
         </div>
       </div>
-      ${actionButtons}
+      <div class="flex flex-wrap items-center gap-2 flex-shrink-0">
+        ${isAiRetryOnly ? `
+          <button data-run-ai="${esc(p.subject_id)}" class="${aiRunClasses}">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z"/></svg>
+            Spustit AI analýzu
+          </button>` : ""}
+        <button data-rerun="${esc(p.subject_id)}" class="${rerunClasses}">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"/></svg>
+          Načíst znovu
+        </button>
+      </div>
     </div>
-    <!-- Status chips -->
-    <div class="flex flex-wrap gap-1.5 mb-5">
-      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200/60">
-        <span class="w-1 h-1 rounded-full bg-emerald-500"></span>Aktivní
-      </span>
-      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-50 text-slate-500 ring-1 ring-slate-200/60">Veřejná data</span>
-      ${isAi ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-neutral-100 text-neutral-700 ring-1 ring-neutral-300/60">AI analýza</span>` : ""}
-      ${isAiDisabled ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-50 text-slate-500 ring-1 ring-slate-200/60">AI vypnuto</span>` : ""}
-      ${p.analysis_engine === "fallback" ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-50 text-amber-700 ring-1 ring-amber-200/60">AI fallback</span>` : ""}
-      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-50 text-slate-500 ring-1 ring-slate-200/60">${isCached ? "Z mezipaměti" : "Čerstvé"}</span>
-      ${p.generated_at ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-slate-50 text-slate-400 ring-1 ring-slate-200/60">${fmtRelative(p.generated_at) || fmtDate(p.generated_at)}</span>` : ""}
-    </div>
-    <!-- Metric cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+    <!-- AI summary — the most important sentence -->
+    ${lead ? `<p class="text-base text-ink-600 leading-relaxed mb-6 max-w-2xl">${esc(lead)}</p>` : ""}
+    <!-- Key metrics -->
+    ${metrics.length ? `
+    <div class="grid grid-cols-2 sm:grid-cols-${Math.min(metrics.length, 4)} gap-px bg-ink-200 border border-ink-200">
       ${metrics.map((m) => `
-        <div class="${CLS_CARD} px-4 py-3.5">
-          <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider mb-1">${esc(m.label)}</div>
-          <div class="text-lg font-bold tracking-tight text-slate-900 tabular-nums leading-tight">${esc(m.value)}</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">${esc(m.sub)}</div>
+        <div class="px-4 py-3.5 bg-ink-50">
+          <div class="${CLS_LABEL_XS} mb-1">${esc(m.label)}</div>
+          <div class="text-xl font-bold tracking-tight ${m.color || "text-ink-950"} font-mono tabular-nums leading-tight">${esc(m.value)}</div>
+          <div class="text-[11px] font-mono text-ink-400 mt-0.5">${esc(m.sub)}</div>
         </div>`).join("")}
-    </div>
-  </section>`;
-}
-
-function executiveSummary(p) {
-  const { lead, followUps, items } = getExecutiveSummaryContent(p);
-
-  const hasSummaryContent = lead || followUps.length || items.length;
-
-  return `
-  <section class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-    <div class="px-4 py-6 sm:px-6">
-      <h2 class="text-base/7 font-semibold text-gray-900">Shrnutí</h2>
-      <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">Rychlé čtení toho nejdůležitějšího z veřejných dat.</p>
-    </div>
-    <div class="border-t border-gray-100 px-4 py-5 sm:px-6">
-      ${hasSummaryContent ? `
-        <div class="space-y-4">
-          ${lead ? `
-            <div class="rounded-xl bg-slate-50 px-4 py-4 ring-1 ring-inset ring-slate-200">
-              <div class="text-[11px] font-medium uppercase tracking-wider text-slate-500">V kostce</div>
-              <p class="mt-2 text-sm/6 text-slate-700">${esc(lead)}</p>
-            </div>` : ""}
-          ${followUps.length ? `
-            <div class="rounded-xl bg-white px-4 py-4 ring-1 ring-slate-200">
-              <div class="text-sm font-semibold text-gray-900">Co z toho plyne</div>
-              <ul role="list" class="mt-3 space-y-3">
-                ${followUps.map((sentence) => `
-                  <li class="flex items-start gap-3">
-                    <span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-300"></span>
-                    <p class="min-w-0 text-sm/6 text-gray-700">${esc(sentence)}</p>
-                  </li>`).join("")}
-              </ul>
-            </div>` : ""}
-          ${items.length ? `
-            <div class="rounded-xl bg-white px-4 py-4 ring-1 ring-slate-200">
-              <div class="text-sm font-semibold text-gray-900">Hlavní body</div>
-              <ul role="list" class="mt-3 divide-y divide-gray-100">
-                ${items.slice(0, 4).map((item) => `
-                  <li class="py-3 first:pt-0 last:pb-0">
-                    <p class="text-sm font-semibold text-gray-900">${esc(item.title)}</p>
-                    <p class="mt-1 text-sm/6 text-gray-600">${esc(item.detail)}</p>
-                  </li>`).join("")}
-              </ul>
-            </div>` : ""}
-        </div>`
-      : '<div class="text-sm text-gray-400">Shrnutí zatím není k dispozici.</div>'}
-    </div>
+    </div>` : ""}
   </section>`;
 }
 
@@ -1012,7 +962,7 @@ function financialOverview(p) {
     return `
     <section id="section-finance" data-section="finance" class="scroll-mt-32 lg:scroll-mt-24">
       <div class="${CLS_CARD} p-5 text-center">
-        <p class="text-sm text-slate-400">Z veřejných PDF se nepodařilo vytáhnout spolehlivou časovou řadu.</p>
+        <p class="text-sm font-mono text-ink-400">Finanční data nejsou k dispozici — veřejné výkazy neobsahují strojově čitelné údaje.</p>
       </div>
     </section>`;
   }
@@ -1023,15 +973,15 @@ function financialOverview(p) {
   return `
   <section id="section-finance" data-section="finance" class="scroll-mt-32 lg:scroll-mt-24 space-y-4">
     <div class="flex items-center justify-between">
-      <h2 class="${CLS_SECTION_HEADING}">Finanční vývoj</h2>
-      <span class="text-[11px] text-slate-400">${sorted[0].year}–${sorted[sorted.length - 1].year} · ${sorted.length} let</span>
+      <h2 class="${CLS_SECTION_HEADING}">Finance</h2>
+      <span class="text-sm font-mono text-ink-400">${sorted[0].year}–${sorted[sorted.length - 1].year}</span>
     </div>
     <!-- Chart -->
-    <div class="${CLS_CARD} p-4">
+    <div class="border border-ink-200 p-4">
       <div class="chart-wrap"><canvas id="finance-chart" aria-label="Graf finančního vývoje"></canvas></div>
     </div>
     <!-- Stats strip -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-ink-200 border border-ink-200">
       ${(() => {
         const last = sorted[sorted.length - 1];
         const first = sorted[0];
@@ -1039,43 +989,43 @@ function financialOverview(p) {
         const strips = [];
         if (hasRevenue && last.revenue != null && first.revenue != null && yrs > 1) {
           const cagr = (Math.pow(last.revenue / first.revenue, 1 / (yrs - 1)) - 1) * 100;
-          strips.push(["CAGR tržeb", isFinite(cagr) ? fmtPct(cagr) : "—"]);
+          strips.push(["Průměrný růst", isFinite(cagr) ? fmtPct(cagr) : "—", valColor(isFinite(cagr) ? cagr : null, { neutral: "text-ink-900" })]);
         }
-        if (last.equity_ratio_pct != null) strips.push(["VK/aktiva", fmtPct(last.equity_ratio_pct)]);
-        if (last.net_margin_pct != null) strips.push(["Marže", fmtPct(last.net_margin_pct)]);
-        strips.push(["Roky", `${yrs}`]);
-        return strips.map(([l, v]) => `
-          <div class="bg-white rounded-lg px-3 py-2 ring-1 ring-slate-200/60 shadow-sm">
+        if (last.equity_ratio_pct != null) strips.push(["Vlastní kapitál", fmtPct(last.equity_ratio_pct), last.equity_ratio_pct >= 30 ? "text-emerald-700" : last.equity_ratio_pct >= 10 ? "text-amber-600" : "text-red-600"]);
+        if (last.net_margin_pct != null) strips.push(["Marže", fmtPct(last.net_margin_pct), valColor(last.net_margin_pct, { neutral: "text-ink-900" })]);
+        strips.push(["Období", `${yrs} let`, "text-ink-900"]);
+        return strips.map(([l, v, c]) => `
+          <div class="bg-ink-50 px-3 py-2">
             <div class="${CLS_LABEL_XS}">${esc(l)}</div>
-            <div class="text-sm font-semibold text-slate-900 tabular-nums mt-0.5">${esc(v)}</div>
+            <div class="text-sm font-bold font-mono ${c || "text-ink-900"} tabular-nums mt-0.5">${esc(v)}</div>
           </div>`).join("");
       })()}
     </div>
     <!-- Table -->
-    <div class="${CLS_CARD} overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-sm fin-table">
+    <div class="border border-ink-200 overflow-hidden">
+      <div class="fin-table-wrap">
+        <table class="min-w-full text-sm font-mono fin-table">
           <thead>
-            <tr class="border-b border-slate-200 text-[11px] font-medium text-slate-400 uppercase tracking-wider">
-              <th class="py-2.5 px-3 text-left bg-slate-50">Rok</th>
-              ${hasRevenue ? '<th class="py-2.5 px-3 text-right bg-slate-50">Tržby</th>' : ""}
-              <th class="py-2.5 px-3 text-right bg-slate-50">Zisk</th>
-              <th class="py-2.5 px-3 text-right bg-slate-50">Aktiva</th>
-              <th class="py-2.5 px-3 text-right bg-slate-50">VK</th>
-              <th class="py-2.5 px-3 text-right bg-slate-50">Dluh</th>
-              <th class="py-2.5 px-3 text-right bg-slate-50">Marže</th>
+            <tr class="border-b border-ink-900 ${CLS_LABEL_XS} text-ink-500">
+              <th class="py-2 px-3 text-left bg-ink-100">Rok</th>
+              ${hasRevenue ? '<th class="py-2 px-3 text-right bg-ink-100">Tržby</th>' : ""}
+              <th class="py-2 px-3 text-right bg-ink-100">Zisk</th>
+              <th class="py-2 px-3 text-right bg-ink-100">Aktiva</th>
+              <th class="py-2 px-3 text-right bg-ink-100">Vl. kapitál</th>
+              <th class="py-2 px-3 text-right bg-ink-100">Dluh</th>
+              <th class="py-2 px-3 text-right bg-ink-100">Marže</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-50">
+          <tbody class="divide-y divide-ink-100">
             ${sorted.map((r) => `
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="py-2 px-3 font-medium text-slate-900 tabular-nums">${esc(r.year)}</td>
-                ${hasRevenue ? `<td class="py-2 px-3 text-right tabular-nums text-slate-700">${fmtM(r.revenue)}</td>` : ""}
-                <td class="py-2 px-3 text-right tabular-nums ${(r.net_profit ?? 0) < 0 ? "text-red-600" : "text-slate-700"}">${fmtM(r.net_profit)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-slate-700">${fmtM(r.assets)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-slate-700">${fmtM(r.equity)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-slate-700">${fmtM(r.debt)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-slate-500">${fmtPct(r.net_margin_pct)}</td>
+              <tr class="hover:bg-ink-100 transition-colors">
+                <td class="py-2 px-3 font-semibold text-ink-900 tabular-nums">${esc(r.year)}</td>
+                ${hasRevenue ? `<td class="py-2 px-3 text-right tabular-nums text-ink-700">${fmtM(r.revenue)}</td>` : ""}
+                <td class="py-2 px-3 text-right tabular-nums ${valColor(r.net_profit, { neutral: "text-ink-700", zero: "text-ink-700" })} ${(r.net_profit ?? 0) < 0 ? "font-semibold" : ""}">${fmtM(r.net_profit)}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-ink-700">${fmtM(r.assets)}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-ink-700">${fmtM(r.equity)}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-ink-700">${fmtM(r.debt)}</td>
+                <td class="py-2 px-3 text-right tabular-nums ${valColor(r.net_margin_pct, { neutral: "text-ink-500", zero: "text-ink-500" })}">${fmtPct(r.net_margin_pct)}</td>
               </tr>`).join("")}
           </tbody>
         </table>
@@ -1084,77 +1034,62 @@ function financialOverview(p) {
   </section>`;
 }
 
-function aiInsightsSection(p) {
+function analysisSection(p) {
   const praskac = p.praskac || [];
   const deep = p.deep_insights || [];
-  if (!praskac.length && !deep.length) return "";
+  const { followUps, items, note } = getExecutiveSummaryContent(p);
+  const hasContent = praskac.length || deep.length || followUps.length || items.length;
+  if (!hasContent) return "";
 
   return `
-  <section id="section-insights" data-section="insights" class="scroll-mt-32 lg:scroll-mt-24">
-    <div class="border-b border-gray-200 pb-5">
-      <h2 class="text-base font-semibold text-gray-900">Signály a postřehy</h2>
-      <p class="mt-2 max-w-4xl text-sm text-gray-500">Nejdůležitější veřejné signály a interpretace nad rejstříkem a účetními podklady.</p>
-    </div>
-    <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
-      ${deep.length ? `
-      <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-sm">
-        <div class="px-4 py-5 sm:px-6">
-          <h3 class="text-base font-semibold text-gray-900">Postřehy</h3>
-          <p class="mt-1 text-sm text-gray-500">Interpretace trendů, anomálií a kontextu v datech.</p>
-        </div>
-        <ul role="list" class="divide-y divide-gray-100">
-          ${deep.slice(0, state.expandedPanels.has("all-insights") ? 999 : 3).map((item, index) => `
-            <li class="px-4 py-5 sm:px-6${shouldAnimatePanelReveal("all-insights", index) ? " panel-reveal-item" : ""}"${shouldAnimatePanelReveal("all-insights", index) ? ` data-panel-reveal="all-insights" style="animation-delay:${panelRevealDelay(index)}ms"` : ""}>
-              <div class="flex items-start gap-x-4">
-                <div class="mt-2 h-2.5 w-2.5 rounded-full bg-gray-300"></div>
-                <div class="min-w-0">
-                  <p class="text-sm font-semibold text-gray-900">${esc(item.title)}</p>
-                  <p class="mt-1 text-sm/6 text-gray-600">${esc(item.detail)}</p>
-                </div>
-              </div>
-            </li>`).join("")}
-        </ul>
-        ${deep.length > 3 && !state.expandedPanels.has("all-insights") ? `
-          <div class="border-t border-gray-200 px-4 py-4 sm:px-6">
-            <button type="button" data-expand="all-insights-bundle" class="text-sm font-semibold text-slate-700 hover:text-slate-600">Zobrazit všech ${deep.length} postřehů →</button>
-          </div>` : ""}
-      </div>` : ""}
-      ${praskac.length ? `
-      <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-inset ring-red-200">
-        <div class="border-b border-red-200 px-4 py-5 sm:px-6">
-          <div class="flex items-start gap-3">
-            <div class="flex min-w-0 items-start gap-3">
-              <div class="mt-0.5 shrink-0">
-                <div class="rounded-md bg-red-100 p-2 ring-1 ring-inset ring-red-200">
-                  <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9.303 3.376c.866 1.5-.217 3.374-1.948 3.374H4.645c-1.73 0-2.813-1.874-1.948-3.374L10.051 3.378c.866-1.5 3.032-1.5 3.898 0l7.354 12.748ZM12 15.75h.007v.008H12v-.008Z"/></svg>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-base font-semibold text-red-900">Práskač</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ul role="list" class="divide-y divide-red-200/80">
-          ${praskac.slice(0, state.expandedPanels.has("all-praskac") ? 999 : 3).map((item, index) => {
-            return `
-            <li class="px-4 py-5 sm:px-6${shouldAnimatePanelReveal("all-praskac", index) ? " panel-reveal-item" : ""}"${shouldAnimatePanelReveal("all-praskac", index) ? ` data-panel-reveal="all-praskac" style="animation-delay:${panelRevealDelay(index)}ms"` : ""}>
-              <div class="flex items-start gap-x-4">
-                <div class="mt-2 h-2.5 w-2.5 rounded-full ${SEV_DOT[severityOf(item)]}"></div>
-                <div class="min-w-0">
-                  <p class="text-sm font-semibold text-gray-900">${esc(item.title)}</p>
-                  <p class="mt-1 text-sm/6 text-gray-700">${esc(item.detail)}</p>
-                </div>
-              </div>
-            </li>`;
-          }).join("")}
-        </ul>
-        ${praskac.length > 3 && !state.expandedPanels.has("all-praskac") ? `
-          <div class="border-t border-red-200 px-4 py-4 sm:px-6">
-            <button type="button" data-expand="all-insights-bundle" class="text-sm font-semibold text-red-700 hover:text-red-600">Zobrazit všech ${praskac.length} signálů →</button>
-          </div>` : ""}
-      </div>` : ""}
-    </div>
+  <section id="section-analysis" data-section="analysis" class="scroll-mt-32 lg:scroll-mt-24 space-y-6">
+    <h2 class="${CLS_SECTION_HEADING}">Analýza</h2>
+    ${followUps.length ? `
+    <ul class="space-y-2 border-l-2 border-ink-200 pl-4">
+      ${followUps.map((sentence) => `
+        <li class="text-sm text-ink-700 leading-relaxed">${esc(sentence)}</li>`).join("")}
+    </ul>` : ""}
+    ${items.length ? `
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-ink-200 border border-ink-200">
+      ${items.slice(0, 4).map((item) => `
+        <div class="bg-ink-50 px-4 py-3 min-w-0">
+          <div class="text-sm font-semibold text-ink-900 truncate">${esc(item.title)}</div>
+          <div class="mt-1 text-sm text-ink-600 leading-relaxed break-words">${esc(item.detail)}</div>
+        </div>`).join("")}
+    </div>` : ""}
+    ${deep.length ? `
+    <div>
+      <h3 class="${CLS_SUBSECTION_HEADING} mb-3">Detailní zjištění</h3>
+      <div class="space-y-0 divide-y divide-ink-200 border-y border-ink-200">
+        ${deep.slice(0, state.expandedPanels.has("all-insights") ? 999 : 4).map((item) => `
+          <div class="px-4 py-3">
+            <div class="text-sm font-semibold text-ink-900">${esc(item.title)}</div>
+            <div class="mt-1 text-sm text-ink-600 leading-relaxed break-words">${esc(item.detail)}</div>
+          </div>`).join("")}
+      </div>
+      ${deep.length > 4 && !state.expandedPanels.has("all-insights") ? `
+        <button type="button" data-expand="all-insights-bundle" class="mt-2 px-3 py-2 text-sm font-mono font-medium text-ink-500 hover:text-ink-900 hover:bg-ink-100 transition-colors">+ ${deep.length - 4} dalších</button>` : ""}
+    </div>` : ""}
+    ${praskac.length ? `
+    <div>
+      <h3 class="${CLS_SUBSECTION_HEADING} mb-3">Upozornění z veřejných zdrojů</h3>
+      <div class="space-y-0 divide-y divide-ink-200 border-y border-ink-200">
+        ${praskac.slice(0, state.expandedPanels.has("all-praskac") ? 999 : 4).map((item) => {
+          const sev = severityOf(item);
+          const sevBorder = sev === "high" ? "border-l-3 border-l-red-500"
+            : sev === "medium" ? "border-l-3 border-l-amber-500"
+            : "";
+          return `
+          <div class="px-4 py-3 ${sevBorder}">
+            <div class="text-sm font-semibold text-ink-900">${esc(item.title)}</div>
+            <div class="mt-1 text-sm text-ink-600 leading-relaxed break-words">${esc(item.detail)}</div>
+          </div>`;
+        }).join("")}
+      </div>
+      ${praskac.length > 4 && !state.expandedPanels.has("all-praskac") ? `
+        <button type="button" data-expand="all-insights-bundle" class="mt-2 px-3 py-2 text-sm font-mono font-medium text-ink-500 hover:text-ink-900 hover:bg-ink-100 transition-colors">+ ${praskac.length - 4} dalších</button>` : ""}
+    </div>` : ""}
+    ${note ? `<p class="text-xs font-mono text-ink-400 leading-relaxed">${esc(note)}</p>` : ""}
   </section>`;
 }
 
@@ -1172,50 +1107,50 @@ function peopleSection(p) {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Management -->
       <div class="${CLS_CARD} overflow-hidden">
-        <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
-          <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Vedení</h3>
-          ${execs.length ? `<span class="text-[10px] text-slate-400">${execs.length} osob</span>` : ""}
+        <div class="px-4 py-3 border-b border-ink-200 flex items-center justify-between">
+          <h3 class="${CLS_LABEL_XS}">Vedení</h3>
+          ${execs.length ? `<span class="text-[10px] font-mono text-ink-400">${execs.length} osob</span>` : ""}
         </div>
         ${execs.length ? `
-        <div class="divide-y divide-slate-50">
+        <div class="divide-y divide-ink-100">
           ${execs.slice(0, state.expandedPanels.has("all-execs") ? 999 : 5).map((e) => `
             <div class="px-4 py-2.5">
-              <div class="text-sm font-medium text-slate-800">${esc(e.name || "—")}</div>
-              <div class="text-xs text-slate-500 mt-0.5">${esc(e.role || "Statutární role")}${e.birth_date ? ` · nar. ${esc(e.birth_date)}` : ""}</div>
+              <div class="text-sm font-medium text-ink-900 truncate">${esc(e.name || "—")}</div>
+              <div class="text-xs font-mono text-ink-500 mt-0.5 truncate">${esc(e.role || "Člen statutárního orgánu")}${e.birth_date ? ` · nar. ${esc(e.birth_date)}` : ""}</div>
             </div>`).join("")}
         </div>
         ${execs.length > 5 && !state.expandedPanels.has("all-execs") ? `
-          <div class="px-4 py-2 border-t border-slate-50">
-            <button data-expand="all-execs" class="text-xs font-medium text-neutral-600 hover:text-neutral-700">Zobrazit všech ${execs.length} →</button>
+          <div class="border-t border-ink-200">
+            <button data-expand="all-execs" class="w-full text-left px-4 py-3 text-xs font-mono font-medium text-ink-500 hover:text-ink-900 hover:bg-ink-100 transition-colors">+ ${execs.length - 5} dalších</button>
           </div>` : ""}
-        ` : '<div class="p-4 text-xs text-slate-400">Ve výpisu nebyly nalezeny osoby ve vedení.</div>'}
+        ` : '<div class="p-4 text-xs font-mono text-ink-400">Ve veřejném výpisu nejsou uvedeny osoby ve vedení.</div>'}
       </div>
       <!-- Ownership -->
       <div class="${CLS_CARD} overflow-hidden">
-        <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
-          <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Vlastníci a orgány</h3>
+        <div class="px-4 py-3 border-b border-ink-200 flex items-center justify-between">
+          <h3 class="${CLS_LABEL_XS}">Vlastníci a orgány</h3>
         </div>
         ${owners.length ? `
-        <div class="divide-y divide-slate-50">
+        <div class="divide-y divide-ink-100">
           ${owners.slice(0, 6).map((o) => `
             <div class="px-4 py-2.5">
-              <div class="text-sm font-medium text-slate-800">${esc(o.role || "Vlastnická položka")}</div>
-              <div class="text-xs text-slate-500 mt-0.5 line-clamp-2">${esc(o.raw || "")}</div>
+              <div class="text-sm font-medium text-ink-900 truncate">${esc(o.role || "Vlastník / společník")}</div>
+              <div class="text-xs font-mono text-ink-500 mt-0.5 line-clamp-2">${esc(o.raw || "")}</div>
             </div>`).join("")}
         </div>
         ` : bodies.length ? `
-        <div class="divide-y divide-slate-50">
+        <div class="divide-y divide-ink-100">
           ${bodies.slice(0, 4).map((b) => `
             <div class="px-4 py-2.5">
-              <div class="text-sm font-medium text-slate-800">${esc(b.title)}</div>
-              <div class="text-xs text-slate-500 mt-0.5">${(b.items || []).length} položek ve výpisu</div>
+              <div class="text-sm font-medium text-ink-900 truncate">${esc(b.title)}</div>
+              <div class="text-xs font-mono text-ink-500 mt-0.5">${(b.items || []).length} položek ve výpisu</div>
             </div>`).join("")}
         </div>
-        ` : '<div class="p-4 text-xs text-slate-400">Vlastnické údaje nejsou ve výpisu rozepsané.</div>'}
+        ` : '<div class="p-4 text-xs font-mono text-ink-400">Vlastnická struktura není ve výpisu detailně rozepsána.</div>'}
         ${(signals.name_changes != null || signals.address_changes != null || signals.management_turnover != null) ? `
-        <div class="px-4 py-3 border-t border-slate-100 bg-slate-50/50">
-          <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wider mb-2">Historické změny</div>
-          <div class="flex flex-wrap gap-3 text-xs text-slate-600">
+        <div class="px-4 py-3 border-t border-ink-200 bg-ink-100/50">
+          <div class="${CLS_LABEL_XS} mb-2">Historické změny</div>
+          <div class="flex flex-wrap gap-3 text-xs font-mono text-ink-600">
             ${signals.name_changes != null ? `<span>Název: <strong>${esc(signals.name_changes)}</strong></span>` : ""}
             ${signals.address_changes != null ? `<span>Sídlo: <strong>${esc(signals.address_changes)}</strong></span>` : ""}
             ${signals.management_turnover != null ? `<span>Vedení: <strong>${esc(signals.management_turnover)}</strong></span>` : ""}
@@ -1226,90 +1161,11 @@ function peopleSection(p) {
   </section>`;
 }
 
-function documentsSection(p) {
-  const docs = p.financial_documents || [];
-  if (!docs.length) {
-    return `
-    <section id="section-documents" data-section="documents" class="scroll-mt-32 lg:scroll-mt-24">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="${CLS_SECTION_HEADING}">Listiny a dokumenty</h2>
-      </div>
-      <div class="${CLS_CARD} p-5 text-center">
-        <p class="text-sm text-slate-400">Nebyly nalezeny relevantní finanční listiny.</p>
-      </div>
-    </section>`;
-  }
-
-  return `
-  <section id="section-documents" data-section="documents" class="scroll-mt-32 lg:scroll-mt-24">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="${CLS_SECTION_HEADING}">Listiny a dokumenty</h2>
-      <span class="text-[11px] text-slate-400">${docs.length} listin</span>
-    </div>
-    <div class="${CLS_CARD} overflow-hidden divide-y divide-slate-100">
-      ${docs.map((doc) => {
-        const files = doc.candidate_files || [];
-        const metrics = doc.metrics_found || [];
-        const yr = (doc.years || ["?"])[0];
-        const mode = doc.extraction_mode || "?";
-        const modeClass = MODE_COLOR[mode] || MODE_COLOR.mixed;
-        const key = `doc-${doc.document_number || doc.document_id || yr}`;
-        const isOpen = state.expandedAccordions.has(key);
-
-        return `
-        <div>
-          <button data-accordion="${esc(key)}" class="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50/50 transition-colors text-left ${isOpen ? "accordion-open bg-slate-50/30" : ""}">
-            <div class="flex items-center gap-3 min-w-0">
-              <span class="text-sm font-semibold text-slate-900 tabular-nums w-10 flex-shrink-0">${esc(yr)}</span>
-              <span class="text-sm text-slate-600 truncate">${esc(doc.type || "Listina")}</span>
-            </div>
-            <div class="flex items-center gap-2 flex-shrink-0 ml-3">
-              <span class="${CLS_BADGE_SM} ${modeClass}">${esc(mode)}</span>
-              <span class="text-[11px] text-slate-400 tabular-nums">${files.length} PDF</span>
-              <span class="text-[11px] text-slate-400 tabular-nums">${metrics.length} metrik</span>
-              <svg class="w-4 h-4 text-slate-400 transition-transform duration-200 accordion-chevron ${isOpen ? "rotate-180" : ""}" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
-            </div>
-          </button>
-          <div id="${esc(key)}" class="${isOpen ? "" : "hidden"} border-t border-slate-100 bg-slate-50/30">
-            <div class="px-4 py-3 space-y-2">
-              ${metrics.length ? `
-              <div class="flex flex-wrap gap-1">
-                ${metrics.map((m) => `<span class="${CLS_BADGE_SM} bg-neutral-100 text-neutral-700 ring-neutral-300/60">${esc(metricLabel(m))}</span>`).join("")}
-              </div>` : ""}
-              ${files.length ? `
-              <div class="space-y-1.5">
-                ${files.map((f) => {
-                  const openUrl = `${API}/api/document/resolve?detailUrl=${encodeURIComponent(doc.detail_url || "")}&index=${encodeURIComponent(f.pdf_index ?? 0)}&prefer_pdf=true`;
-                  const fMode = f.extraction_mode || "?";
-                  const fMetrics = f.metrics_found || [];
-                  return `
-                  <div class="flex items-center justify-between gap-3 px-3 py-2 rounded-lg bg-white ring-1 ring-slate-200/60">
-                    <div class="min-w-0">
-                      <div class="text-xs font-medium text-slate-700 truncate">${esc(f.label || "PDF příloha")}</div>
-                      <div class="text-[11px] text-slate-400 mt-0.5">${esc(fMode)} · ${esc(String(f.page_count || "?"))} stran${fMetrics.length ? ` · ${fMetrics.length} metrik` : ""}</div>
-                    </div>
-                    <a href="${esc(openUrl)}" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 text-xs font-medium text-neutral-600 hover:text-neutral-700 whitespace-nowrap">PDF →</a>
-                  </div>`;
-                }).join("")}
-              </div>` : '<div class="text-xs text-slate-400">Žádná PDF příloha.</div>'}
-              ${doc.detail_url ? `<a href="${esc(doc.detail_url)}" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-medium text-slate-500 hover:text-slate-700 mt-1">Detail listiny →</a>` : ""}
-            </div>
-          </div>
-        </div>`;
-      }).join("")}
-    </div>
-  </section>`;
-}
-
-function coverageSection(p) {
+function documentsAndSourcesSection(p) {
   const docs = p.financial_documents || [];
   const tl = p.financial_timeline || [];
   const links = p.source_links || {};
-  const withOcr = docs.filter((d) => d.extraction_mode === "ocr").length;
-  const withDigital = docs.filter((d) => d.extraction_mode === "digital").length;
-  const firstYear = tl.length ? tl[0].year : "—";
-  const lastYear = tl.length ? tl[tl.length - 1].year : "—";
-
+  const aiUsage = getAiUsageSummary(p);
   const extChecks = p.external_checks;
 
   const sourceLabels = {
@@ -1321,165 +1177,112 @@ function coverageSection(p) {
     chytryrejstrik: "Chytrý rejstřík",
   };
 
-  return `
-  <section id="section-sources" data-section="sources" class="scroll-mt-32 lg:scroll-mt-24 space-y-4">
-    <div class="flex items-center justify-between">
-      <h2 class="${CLS_SECTION_HEADING}">Pokrytí dat a zdroje</h2>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
-      ${[
-        ["Listiny", docs.length],
-        ["Roky", `${esc(firstYear)} – ${esc(lastYear)}`],
-        ["Digitální PDF", withDigital],
-        ["OCR listiny", withOcr],
-      ].map(([label, value]) => `
-        <div class="${CLS_CARD} px-4 py-3">
-          <div class="${CLS_LABEL_XS}">${label}</div>
-          <div class="text-lg font-bold text-slate-900 tabular-nums">${value}</div>
-        </div>`).join("")}
-    </div>
-    ${extChecks && (extChecks.checks || []).length ? `
-    <div class="${CLS_CARD} overflow-hidden">
-      <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
-        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Externí kontrola</h3>
-        ${extChecks.source_name ? `<a href="${esc(extChecks.source_url || "#")}" target="_blank" rel="noopener noreferrer" class="text-[10px] text-neutral-600 hover:text-neutral-700">${esc(extChecks.source_name)} →</a>` : ""}
-      </div>
-      <div class="divide-y divide-slate-50">
-        ${(extChecks.checks || []).map((c) => `
-          <div class="px-4 py-2.5 flex items-center justify-between">
-            <div class="text-sm text-slate-700">${esc(c.label)}</div>
-            <div class="flex items-center gap-2 text-xs">
-              <span class="text-slate-500">${fmtM(c.app_value)}</span>
-              <span class="text-slate-300">vs</span>
-              <span class="${c.status === "warning" ? "text-amber-600 font-medium" : "text-slate-500"}">${fmtM(c.external_value)}</span>
-              ${c.status === "warning" ? '<svg class="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>' : ""}
-            </div>
-          </div>`).join("")}
-      </div>
-    </div>` : ""}
-    <!-- Source links -->
-    <div class="${CLS_CARD} px-4 py-3">
-      <div class="text-[10px] font-medium text-slate-400 uppercase tracking-wider mb-2">Zdroje</div>
-      <div class="flex flex-wrap gap-2">
-        ${Object.entries(links)
-          .filter(([, url]) => !!url)
-          .map(([key, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50 hover:text-neutral-700 transition-colors">${esc(sourceLabels[key] || key)} →</a>`).join("")}
-      </div>
-    </div>
-    <!-- Footer -->
-    <div class="text-center text-[11px] text-slate-400 py-4">
-      Screening jen z veřejných podkladů justice.cz. Není to právní ani investiční doporučení.
-    </div>
-  </section>`;
-}
+  const sourceLinks = Object.entries(links).filter(([, url]) => !!url);
 
-function contextRailCards(p) {
-  const praskac = p.praskac || [];
-  const tl = p.financial_timeline || [];
-  const latest = tl[tl.length - 1];
-  const docs = p.financial_documents || [];
-  const aiUsage = getAiUsageSummary(p);
-  const withOcr = docs.filter((d) => d.extraction_mode === "ocr").length;
-  const withDigital = docs.filter((d) => d.extraction_mode === "digital").length;
-  const { lead, note } = getExecutiveSummaryContent(p);
-
-  const legalForm = getInfo(p, "právní forma") || "—";
-  const city = getInfo(p, "sídlo") || "—";
-  const created = getInfo(p, "datum") || "—";
-  const fileNo = getInfo(p, "spisová") || "—";
-  const coverageLabel = tl.length ? `${tl[0].year}–${latest.year}` : "bez časové řady";
-  const extractionLabel = withOcr && withDigital
-    ? `${withDigital} dig. · ${withOcr} OCR`
-    : withOcr
-      ? `${withOcr} OCR`
-      : withDigital
-        ? `${withDigital} digitálně`
-        : "bez PDF";
-  const qualityAlert = note
-    || (!docs.length
-      ? "Chybí finanční listiny ze Sbírky listin."
-      : !tl.length
-        ? "Listiny jsou, ale nepodařilo se z nich složit spolehlivou časovou řadu."
-        : tl.length < 3
-          ? `K dispozici jsou jen ${tl.length} roky finančních dat.`
-          : withOcr > withDigital && withOcr > 0
-            ? "Většina čísel jde z OCR, přesnost může kolísat."
-            : "");
+  if (!docs.length && !sourceLinks.length) {
+    return `
+    <section id="section-sources" data-section="sources" class="scroll-mt-32 lg:scroll-mt-24">
+      <h2 class="${CLS_SECTION_HEADING} mb-4">Zdroje</h2>
+      <p class="text-sm font-mono text-ink-400">Ve sbírce listin nebyly nalezeny finanční dokumenty.</p>
+    </section>`;
+  }
 
   return `
-    <!-- Quick summary -->
-    <div class="${CLS_CARD} p-4">
-      <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">AI a pokrytí dat</div>
-      ${lead
-        ? `<p class="text-sm text-slate-700 leading-relaxed">${esc(lead)}</p>`
-        : '<p class="text-xs text-slate-400 leading-relaxed">Krátké shrnutí zatím není k dispozici.</p>'}
-      <dl class="mt-4 space-y-2 text-xs">
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Pokrytí</dt><dd class="text-right font-medium text-slate-700">${esc(coverageLabel)}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Listiny</dt><dd class="text-right font-medium ${docs.length ? "text-slate-700" : "text-amber-700"}">${docs.length ? esc(String(docs.length)) : "chybí"}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Extrakce</dt><dd class="text-right font-medium text-slate-700">${esc(extractionLabel)}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Analýza</dt><dd class="text-right font-medium text-slate-700">${p.analysis_engine === "ai" ? "AI" : (p.analysis_engine === "disabled" ? "AI vypnuto" : "Fallback")}</dd></div>
-        ${aiUsage?.model ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Model</dt><dd class="text-right font-medium text-slate-700 truncate max-w-[140px]">${esc(aiUsage.model)}</dd></div>` : ""}
-        ${aiUsage?.totalTokens != null ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Tokeny</dt><dd class="text-right font-medium text-slate-700">${esc(fmtInt(aiUsage.totalTokens))}</dd></div>` : ""}
-        ${aiUsage?.costLabel ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Cena</dt><dd class="text-right font-medium text-slate-700">${esc(aiUsage.costLabel)}</dd></div>` : ""}
-      </dl>
-      ${qualityAlert ? `
-        <div class="mt-3 rounded-lg bg-amber-50 px-3 py-2.5 ring-1 ring-inset ring-amber-200">
-          <p class="text-xs leading-relaxed text-amber-900">${esc(qualityAlert)}</p>
-        </div>` : ""}
-    </div>
-    <!-- Risk summary -->
-    ${praskac.length ? `
-    <div class="bg-white rounded-xl ring-1 ring-red-100 shadow-sm p-4">
-      <div class="text-[10px] font-semibold text-red-600 uppercase tracking-wider mb-2.5">Rizikové signály</div>
-      <div class="space-y-2">
-        ${praskac.slice(0, 3).map((item) => {
+  <section id="section-sources" data-section="sources" class="scroll-mt-32 lg:scroll-mt-24 space-y-5">
+    <h2 class="${CLS_SECTION_HEADING}">Zdroje</h2>
+    ${docs.length ? `
+    <!-- Documents — simplified -->
+    <div>
+      <h3 class="${CLS_SUBSECTION_HEADING} mb-2">Listiny <span class="font-normal text-ink-400">(${docs.length})</span></h3>
+      <div class="divide-y divide-ink-200 border border-ink-200 overflow-hidden">
+        ${docs.map((doc) => {
+          const files = doc.candidate_files || [];
+          const yr = (doc.years || ["?"])[0];
+          const key = `doc-${doc.document_number || doc.document_id || yr}`;
+          const isOpen = state.expandedAccordions.has(key);
+          const firstFile = files[0];
+          const pdfUrl = firstFile ? `${API}/api/document/resolve?detailUrl=${encodeURIComponent(doc.detail_url || "")}&index=${encodeURIComponent(firstFile.pdf_index ?? 0)}&prefer_pdf=true` : "";
+
           return `
-          <div class="flex gap-2">
-            <div class="w-1.5 h-1.5 rounded-full ${SEV_DOT[severityOf(item)]} mt-1.5 flex-shrink-0"></div>
-            <div class="text-xs text-slate-700 leading-relaxed">${esc(item.title)}</div>
+          <div class="${isOpen ? "bg-ink-100/30" : ""}">
+            <button data-accordion="${esc(key)}" class="w-full flex items-center justify-between px-4 py-3 sm:py-2.5 hover:bg-ink-100/50 transition-colors text-left ${isOpen ? "accordion-open" : ""}">
+              <div class="flex items-center gap-3 min-w-0">
+                <span class="text-sm font-mono font-medium text-ink-900 tabular-nums w-10 flex-shrink-0">${esc(yr)}</span>
+                <span class="text-sm text-ink-600 truncate">${esc(doc.type || "Listina")}</span>
+              </div>
+              <div class="flex items-center gap-2 flex-shrink-0 ml-3">
+                ${pdfUrl ? `<a href="${esc(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs font-mono font-medium text-ink-500 hover:text-ink-900" onclick="event.stopPropagation()">PDF</a>` : ""}
+                <svg class="w-4 h-4 text-ink-400 transition-transform duration-200 accordion-chevron ${isOpen ? "rotate-180" : ""}" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </div>
+            </button>
+            <div id="${esc(key)}" class="accordion-body ${isOpen ? "accordion-body-open" : ""}">
+              <div class="accordion-body-inner border-t border-ink-200 divide-y divide-ink-100">
+              ${files.map((f) => {
+                const openUrl = `${API}/api/document/resolve?detailUrl=${encodeURIComponent(doc.detail_url || "")}&index=${encodeURIComponent(f.pdf_index ?? 0)}&prefer_pdf=true`;
+                return `
+                <a href="${esc(openUrl)}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-ink-100/50 transition-colors no-underline">
+                  <span class="text-xs font-mono text-ink-600 truncate">${esc(f.label || "PDF příloha")} · ${esc(String(f.page_count || "?"))} stran</span>
+                  <span class="text-xs font-mono font-medium text-ink-500 flex-shrink-0">Otevřít &rarr;</span>
+                </a>`;
+              }).join("")}
+              ${doc.detail_url ? `<a href="${esc(doc.detail_url)}" target="_blank" rel="noopener noreferrer" class="block px-4 py-2.5 text-xs font-mono text-ink-400 hover:text-ink-700 hover:bg-ink-100/50 transition-colors no-underline">Detail na justice.cz &rarr;</a>` : ""}
+              </div>
+            </div>
           </div>`;
         }).join("")}
       </div>
     </div>` : ""}
-    <!-- Quick facts -->
-    <div class="${CLS_CARD} p-4">
-      <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">Základní údaje</div>
-      <dl class="space-y-2 text-xs">
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Právní forma</dt><dd class="text-slate-700 text-right truncate max-w-[140px]">${esc(legalForm)}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Sídlo</dt><dd class="text-slate-700 text-right truncate max-w-[140px]">${esc(city.split(",")[0])}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Zapsáno</dt><dd class="text-slate-700">${esc(created)}</dd></div>
-        <div class="flex justify-between gap-2"><dt class="text-slate-400">Spisová zn.</dt><dd class="text-slate-700 truncate max-w-[140px]">${esc(fileNo)}</dd></div>
-      </dl>
-    </div>`;
+    ${extChecks && (extChecks.checks || []).length ? `
+    <!-- External cross-check -->
+    <div>
+      <h3 class="${CLS_SUBSECTION_HEADING} mb-2">
+        Externí kontrola
+        ${extChecks.source_name ? `<a href="${esc(extChecks.source_url || "#")}" target="_blank" rel="noopener noreferrer" class="font-normal text-xs font-mono text-ink-400 hover:text-ink-700 ml-1">${esc(extChecks.source_name)} &rarr;</a>` : ""}
+      </h3>
+      <div class="divide-y divide-ink-200 border border-ink-200 overflow-hidden">
+        ${(extChecks.checks || []).map((c) => `
+          <div class="px-4 py-2.5 flex items-center justify-between gap-3 text-sm">
+            <span class="text-ink-700 truncate min-w-0">${esc(c.label)}</span>
+            <span class="font-mono tabular-nums flex-shrink-0 ${c.status === "warning" ? "text-amber-600 font-medium" : "text-ink-500"}">${fmtM(c.app_value)} vs ${fmtM(c.external_value)}</span>
+          </div>`).join("")}
+      </div>
+    </div>` : ""}
+    <!-- Source links -->
+    ${sourceLinks.length ? `
+    <div>
+      <h3 class="${CLS_SUBSECTION_HEADING} mb-2">Odkazy</h3>
+      <div class="flex flex-wrap gap-2">
+        ${sourceLinks.map(([key, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-2 sm:px-2.5 sm:py-1.5 text-xs font-mono font-medium text-ink-600 border border-ink-200 hover:bg-ink-100 hover:text-ink-900 transition-colors">${esc(sourceLabels[key] || key)} &rarr;</a>`).join("")}
+      </div>
+    </div>` : ""}
+    <!-- AI transparency + footer -->
+    <div class="pt-4 border-t border-ink-200 space-y-2">
+      ${aiUsage ? `
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-ink-400">
+        ${p.analysis_engine === "ai" ? '<span>AI analýza</span>' : ""}
+        ${aiUsage.model ? `<span>${esc(aiUsage.model)}</span>` : ""}
+        ${aiUsage.totalLabel ? `<span>${esc(aiUsage.totalLabel)}</span>` : ""}
+        ${aiUsage.costLabel ? `<span>${esc(aiUsage.costLabel)}</span>` : ""}
+        ${p.generated_at ? `<span>${esc(fmtRelative(p.generated_at) || fmtDate(p.generated_at))}</span>` : ""}
+      </div>` : ""}
+      <div class="text-[11px] font-mono text-ink-400">
+        Pouze z veřejných zdrojů justice.cz. Nenahrazuje právní ani finanční poradenství.
+      </div>
+    </div>
+  </section>`;
 }
 
 function profileView(p) {
-  const railHtml = contextRailCards(p);
   return `
   <div class="view-enter">
     ${sectionNav()}
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-28 sm:pb-32">
-      <div class="xl:grid xl:grid-cols-[1fr_260px] xl:gap-6 xl:items-start">
-        <!-- Main column -->
-        <div class="space-y-6 min-w-0">
-          ${profileHero(p)}
-          <!-- Context cards inline for <xl -->
-          <div class="xl:hidden grid grid-cols-1 sm:grid-cols-3 gap-3">
-            ${railHtml}
-          </div>
-          ${aiInsightsSection(p)}
-          ${executiveSummary(p)}
-          ${financialOverview(p)}
-          ${peopleSection(p)}
-          ${documentsSection(p)}
-          ${coverageSection(p)}
-        </div>
-        <!-- Context rail for xl+ -->
-        <div class="hidden xl:block">
-          <div class="sticky top-24 space-y-3">
-            ${railHtml}
-          </div>
-        </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-5 pb-28 sm:pb-32">
+      <div class="space-y-8 min-w-0">
+        ${profileHero(p)}
+        ${analysisSection(p)}
+        ${financialOverview(p)}
+        ${peopleSection(p)}
+        ${documentsAndSourcesSection(p)}
       </div>
     </div>
   </div>`;
@@ -1523,6 +1326,13 @@ function render() {
 
   if (!state.loading) renderHistory();
 
+  // Determine current view type and scroll to top on view change
+  const nextView = state.loading ? "loading" : state.error ? "error" : state.profile ? "profile" : "home";
+  if (render._lastView && render._lastView !== nextView) {
+    window.scrollTo(0, 0);
+  }
+  render._lastView = nextView;
+
   // Content
   if (state.loading) {
     const statusEl = $content.querySelector("#loading-status-lines");
@@ -1544,6 +1354,7 @@ function render() {
     $content.innerHTML = profileView(state.profile);
     drawFinanceChart(state.profile.financial_timeline || []);
     initScrollSpy();
+    initTableScrollHint();
   } else {
     const pendingHeroAnimation = state.pendingHeroAnimation;
     state.pendingHeroAnimation = null;
@@ -1566,7 +1377,7 @@ function render() {
 
 async function fetchJson(url, fallback, init = {}) {
   let res;
-  try { res = await fetch(url, init); } catch { throw new Error("Síťové spojení se nepovedlo."); }
+  try { res = await fetch(url, init); } catch { throw new Error("Připojení k serveru selhalo. Zkontrolujte internetové připojení."); }
   let data = null;
   try { data = await res.json(); } catch { data = null; }
   if (!res.ok) {
@@ -1578,7 +1389,7 @@ async function fetchJson(url, fallback, init = {}) {
 }
 
 async function searchCompanies(q) {
-  return fetchJson(`${API}/api/search?q=${encodeURIComponent(q)}`, "Hledání se nepovedlo.");
+  return fetchJson(`${API}/api/search?q=${encodeURIComponent(q)}`, "Hledání v rejstříku se nezdařilo. Zkuste to znovu.");
 }
 
 async function loadHistoryData(offset = state.historyOffset, limit = state.historyLimit) {
@@ -1608,21 +1419,21 @@ async function refreshHistoryPage(offset = state.historyOffset, opts = {}) {
 async function loadCompanySnapshot(id, refresh) {
   return fetchJson(
     `${API}/api/company?subjektId=${encodeURIComponent(id)}&q=${encodeURIComponent(state.query || "")}${refresh ? "&refresh=true" : ""}`,
-    "Nepodařilo se načíst detail firmy."
+    "Načtení detailu firmy se nezdařilo. Zkuste to znovu."
   );
 }
 
 async function loadStoredCompanyProfile(id) {
   return fetchJson(
     `${API}/api/company/stored?subjektId=${encodeURIComponent(id)}&q=${encodeURIComponent(state.query || "")}`,
-    "Profil firmy zatím není uložený."
+    "Profil firmy zatím není k dispozici."
   );
 }
 
 async function loadCompanyAi(id) {
   return fetchJson(
     `${API}/api/company/ai?subjektId=${encodeURIComponent(id)}&q=${encodeURIComponent(state.query || "")}`,
-    "Nepodařilo se dopsat AI analýzu.",
+    "AI analýza se nezdařila. Zkuste to znovu.",
     { method: "POST" }
   );
 }
@@ -1630,9 +1441,9 @@ async function loadCompanyAi(id) {
 async function loadCompanyStream(id, refresh, requestToken) {
   const url = `${API}/api/company/stream?subjektId=${encodeURIComponent(id)}&q=${encodeURIComponent(state.query || "")}${refresh ? "&refresh=true" : ""}`;
   let res;
-  try { res = await fetch(url, { headers: { Accept: "text/event-stream" } }); } catch { throw new Error("Síťové spojení se nepovedlo."); }
+  try { res = await fetch(url, { headers: { Accept: "text/event-stream" } }); } catch { throw new Error("Připojení k serveru selhalo. Zkontrolujte internetové připojení."); }
   if (!res.ok || !res.body) {
-    let detail = "Nepodařilo se načíst detail firmy.";
+    let detail = "Načtení detailu firmy se nezdařilo.";
     try { const p = await res.json(); detail = p?.detail || detail; } catch {}
     throw new Error(detail);
   }
@@ -1667,12 +1478,12 @@ async function loadCompanyStream(id, refresh, requestToken) {
         render();
       }
       if (msg.event === "preview") { state.preview = msg.payload; render(); }
-      if (msg.event === "error") throw new Error(msg.payload?.detail || "Načítání se nepodařilo.");
+      if (msg.event === "error") throw new Error(msg.payload?.detail || "Zpracování dat se nezdařilo.");
       if (msg.event === "result") return msg.payload;
     }
     if (done) break;
   }
-  throw new Error("Načítání skončilo předčasně.");
+  throw new Error("Spojení se serverem bylo přerušeno. Zkuste to znovu.");
 }
 
 // ============================================================
@@ -1688,7 +1499,7 @@ async function handleSearch(query) {
   state.profile = null;
   state.preview = null;
   state.pendingHeroAnimation = null;
-  resetStatusLog(["Hledám firmu podle názvu nebo IČO"]);
+  resetStatusLog(["Hledám firmu v obchodním rejstříku"]);
   state.expandedAccordions.clear();
   state.expandedPanels.clear();
   render();
@@ -1698,7 +1509,7 @@ async function handleSearch(query) {
     const results = data.results || [];
     if (!results.length) {
       state.loading = false;
-      state.error = "Nic jsem nenašel. Zkus přesnější název nebo osmimístné IČO.";
+      state.error = "Žádná firma nenalezena. Zkuste přesnější název nebo celé osmimístné IČO.";
       render(); return;
     }
     if (results.length === 1) {
@@ -1713,7 +1524,7 @@ async function handleSearch(query) {
   } catch (e) {
     if (isStaleRequestError(e)) return;
     state.loading = false;
-    state.error = e.message || "Hledání se nepovedlo.";
+    state.error = e.message || "Hledání v rejstříku se nezdařilo. Zkuste to znovu.";
     render();
   }
 }
@@ -1752,7 +1563,7 @@ async function handlePick(id, opts = {}) {
 
     state.loading = true;
     state.profile = null;
-    resetStatusLog([refresh ? "Spouštím novou extrakci" : "Otevírám detail firmy"]);
+    resetStatusLog([refresh ? "Stahuji aktuální data z justice.cz" : "Načítám profil firmy"]);
     render();
 
     let profile;
@@ -1762,7 +1573,7 @@ async function handlePick(id, opts = {}) {
     } catch (streamErr) {
       if (isStaleRequestError(streamErr)) return;
       console.warn("Stream failed:", streamErr);
-      pushStatusLog("Stream vypadl, zkouším záložní načtení");
+      pushStatusLog("Zkouším alternativní způsob načtení");
       render();
       profile = await loadCompanySnapshot(id, refresh);
       ensureActiveRequest(requestToken);
@@ -1773,7 +1584,7 @@ async function handlePick(id, opts = {}) {
     state.loading = false;
     state.preview = null;
     state.statusLog = [];
-    state.error = e.message || "Nepodařilo se načíst detail firmy.";
+    state.error = e.message || "Načtení detailu firmy se nezdařilo. Zkuste to znovu.";
     render();
   }
 }
@@ -1794,7 +1605,7 @@ async function handleAiEnhance(id) {
       }
     : null;
   state.pendingHeroAnimation = null;
-  resetStatusLog(["Pouštím AI vrstvu nad uloženým profilem"]);
+  resetStatusLog(["Spouštím AI analýzu profilu"]);
   render();
   try {
     state.profile = cacheProfile(await loadCompanyAi(id));
@@ -1809,7 +1620,7 @@ async function handleAiEnhance(id) {
     state.loading = false;
     state.preview = null;
     state.statusLog = [];
-    state.error = e.message || "Nepodařilo se dopsat AI analýzu.";
+    state.error = e.message || "AI analýza se nezdařila. Zkuste to znovu.";
     if (existingProfile) state.profile = existingProfile;
     render();
   }
@@ -1832,34 +1643,45 @@ function drawFinanceChart(rows) {
     datasets.push({
       label: "Tržby",
       data: sorted.map((r) => r.revenue ?? null),
-      borderColor: "#171717",
-      backgroundColor: "rgba(23,23,23,0.08)",
+      borderColor: "#1c1917",
+      backgroundColor: "rgba(28,25,23,0.06)",
       borderWidth: 2,
       tension: 0.3,
       pointRadius: 3,
-      pointBackgroundColor: "#171717",
+      pointBackgroundColor: "#1c1917",
     });
   }
+  const profitData = sorted.map((r) => r.net_profit ?? null);
+  const profitColors = profitData.map((v) => v != null && v < 0 ? "#dc2626" : "#047857");
   datasets.push({
     label: "Čistý zisk",
-    data: sorted.map((r) => r.net_profit ?? null),
-    borderColor: "#ef4444",
-    backgroundColor: "rgba(239,68,68,0.08)",
+    data: profitData,
+    borderColor: "#047857",
+    backgroundColor: "rgba(4,120,87,0.04)",
     borderWidth: 2,
     tension: 0.3,
     pointRadius: 3,
-    pointBackgroundColor: "#ef4444",
+    pointBackgroundColor: profitColors,
+    segment: {
+      borderColor: (ctx) => {
+        const prev = ctx.p0.parsed.y;
+        const next = ctx.p1.parsed.y;
+        if (prev < 0 && next < 0) return "#dc2626";
+        if (prev < 0 || next < 0) return "#a8a29e";
+        return "#047857";
+      },
+    },
   });
   datasets.push({
     label: "Aktiva",
     data: sorted.map((r) => r.assets ?? null),
-    borderColor: "#6366f1",
-    backgroundColor: "rgba(99,102,241,0.05)",
+    borderColor: "#78716c",
+    backgroundColor: "rgba(120,113,108,0.04)",
     borderWidth: 1.5,
     borderDash: [4, 3],
     tension: 0.3,
     pointRadius: 2,
-    pointBackgroundColor: "#6366f1",
+    pointBackgroundColor: "#78716c",
   });
 
   chartInstance = new Chart(canvas, {
@@ -1870,17 +1692,17 @@ function drawFinanceChart(rows) {
       maintainAspectRatio: false,
       interaction: { intersect: false, mode: "index" },
       scales: {
-        x: { ticks: { color: "#94a3b8", font: { size: 11 } }, grid: { color: "rgba(148,163,184,0.1)" } },
-        y: { ticks: { color: "#94a3b8", font: { size: 11 }, callback: (v) => `${v}` }, grid: { color: "rgba(148,163,184,0.1)" } },
+        x: { ticks: { color: "#a8a29e", font: { size: 11, family: "JetBrains Mono" } }, grid: { color: "rgba(168,162,158,0.12)" } },
+        y: { ticks: { color: "#a8a29e", font: { size: 11, family: "JetBrains Mono" }, callback: (v) => `${v}` }, grid: { color: "rgba(168,162,158,0.12)" } },
       },
       plugins: {
-        legend: { labels: { color: "#475569", font: { size: 11 }, boxWidth: 12, padding: 16 } },
+        legend: { labels: { color: "#57534e", font: { size: 11, family: "JetBrains Mono" }, boxWidth: 12, padding: 16 } },
         tooltip: {
-          backgroundColor: "#1e293b",
-          titleFont: { size: 12 },
-          bodyFont: { size: 11 },
+          backgroundColor: "#1c1917",
+          titleFont: { size: 12, family: "JetBrains Mono" },
+          bodyFont: { size: 11, family: "JetBrains Mono" },
           padding: 10,
-          cornerRadius: 8,
+          cornerRadius: 0,
           callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtM(ctx.raw)}` },
         },
       },
@@ -1897,8 +1719,8 @@ let scrollSpyResizeHandler = null;
 let scrollSpyRaf = 0;
 
 function navButtonClasses(isActive) {
-  return `px-3.5 py-2 text-sm font-medium rounded-xl whitespace-nowrap transition-colors ${
-    isActive ? "bg-neutral-900 text-white shadow-sm" : "bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-700"
+  return `px-3 py-2.5 sm:py-1.5 text-sm font-mono font-medium whitespace-nowrap transition-colors border-b-2 ${
+    isActive ? "border-ink-900 text-ink-900" : "border-transparent text-ink-400 hover:text-ink-700 hover:border-ink-300"
   }`;
 }
 
@@ -1908,12 +1730,18 @@ function setActiveSectionNav(sectionId) {
   });
 }
 
-function getSectionNavOffset() {
+let _cachedNavOffset = 0;
+
+function computeSectionNavOffset() {
   const nav = document.getElementById("section-nav");
   if (!nav) return window.innerWidth >= 1024 ? 96 : 132;
   const navTop = Number.parseFloat(window.getComputedStyle(nav).top || "0") || 0;
   const navHeight = nav.getBoundingClientRect().height || 0;
   return navTop + navHeight + 12;
+}
+
+function getSectionNavOffset() {
+  return _cachedNavOffset;
 }
 
 function updateActiveSectionNavFromScroll() {
@@ -1961,6 +1789,7 @@ function initScrollSpy() {
   const navBtns = document.querySelectorAll("[data-nav]");
   if (!sections.length || !navBtns.length) return;
 
+  _cachedNavOffset = computeSectionNavOffset();
   updateActiveSectionNavFromScroll();
 
   scrollSpyScrollHandler = () => {
@@ -1971,10 +1800,35 @@ function initScrollSpy() {
     });
   };
 
-  scrollSpyResizeHandler = () => updateActiveSectionNavFromScroll();
+  scrollSpyResizeHandler = () => {
+    _cachedNavOffset = computeSectionNavOffset();
+    updateActiveSectionNavFromScroll();
+  };
 
   window.addEventListener("scroll", scrollSpyScrollHandler, { passive: true });
   window.addEventListener("resize", scrollSpyResizeHandler);
+}
+
+let _tableScrollHandler = null;
+function initTableScrollHint() {
+  const wrap = document.querySelector(".fin-table-wrap");
+  if (_tableScrollHandler && _tableScrollHandler.el) {
+    _tableScrollHandler.el.removeEventListener("scroll", _tableScrollHandler.fn);
+    _tableScrollHandler = null;
+  }
+  if (!wrap) return;
+  let raf = 0;
+  const check = () => {
+    const atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 2;
+    wrap.classList.toggle("scrolled-end", atEnd);
+  };
+  check();
+  const handler = () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => { raf = 0; check(); });
+  };
+  wrap.addEventListener("scroll", handler, { passive: true });
+  _tableScrollHandler = { el: wrap, fn: handler };
 }
 
 function resetHomeState({ animate = false } = {}) {
@@ -2047,13 +1901,15 @@ function initEvents() {
 
     const historyPage = e.target.closest("[data-history-page]");
     if (historyPage) {
-      if (state.loading) return;
+      if (state.loading || state._historyPaging) return;
       const direction = historyPage.dataset.historyPage;
       const nextOffset = direction === "prev"
         ? Math.max(0, state.historyOffset - state.historyLimit)
         : state.historyOffset + state.historyLimit;
       if ((direction === "prev" && !historyHasPrevPage()) || (direction === "next" && !historyHasNextPage())) return;
+      state._historyPaging = true;
       refreshHistoryPage(nextOffset).then((ok) => {
+        state._historyPaging = false;
         if (!ok) return;
         if (!state.loading && !state.profile && !state.error) render();
         else renderHistory();
@@ -2085,9 +1941,10 @@ function initEvents() {
       const isOpen = state.expandedAccordions.has(key);
       if (isOpen) state.expandedAccordions.delete(key);
       else state.expandedAccordions.add(key);
-      target.classList.toggle("hidden", isOpen);
+      target.classList.toggle("accordion-body-open", !isOpen);
       acc.classList.toggle("accordion-open", !isOpen);
-      acc.classList.toggle("bg-slate-50/30", !isOpen);
+      const wrapper = acc.parentElement;
+      if (wrapper) wrapper.classList.toggle("bg-ink-100/30", !isOpen);
       const chev = acc.querySelector(".accordion-chevron");
       if (chev) chev.classList.toggle("rotate-180", !isOpen);
       return;
@@ -2161,11 +2018,37 @@ function initEvents() {
         renderAutocomplete();
         return;
       }
+
+      if (e.key === "Enter" && state.autocompleteActiveIndex >= 0) {
+        e.preventDefault();
+        const match = state.autocompleteResults[state.autocompleteActiveIndex];
+        if (match) {
+          state.query = match.name || match.ico || "";
+          clearAutocomplete();
+          handlePick(match.subject_id);
+        }
+        return;
+      }
     }
 
     if (e.key === "Escape") {
       if (state.autocompleteOpen) { clearAutocomplete(); return; }
       if (state.drawerOpen) closeDrawer();
+    }
+
+    // Cmd+K / Ctrl+K — quick-focus search
+    if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      e.preventDefault();
+      if (state.profile || state.error) {
+        navigateHome();
+        requestAnimationFrame(() => {
+          const inp = document.getElementById("hero-input");
+          if (inp) { inp.focus(); inp.select(); }
+        });
+      } else {
+        const inp = document.getElementById("hero-input");
+        if (inp) { inp.focus(); inp.select(); }
+      }
     }
   });
 
@@ -2181,6 +2064,7 @@ function initEvents() {
   document.addEventListener("submit", (e) => {
     if (e.target.id === "hero-search-form") {
       e.preventDefault();
+      if (state.loading) return;
       const heroInput = document.getElementById("hero-input");
       const q = heroInput ? heroInput.value.trim() : "";
       const match = activeAutocompleteMatch();
@@ -2236,6 +2120,12 @@ function init() {
   $railHistory = document.getElementById("rail-history");
   $drawerHistory = document.getElementById("drawer-history");
   $drawer = document.getElementById("history-drawer");
+
+  console.log(
+    "%cJustice Práskač%c\nScreening českých firem z veřejných zdrojů.\nhttps://praskac.xyz",
+    "font-weight:bold;font-size:14px;font-family:monospace;color:#1c1917",
+    "font-size:11px;font-family:monospace;color:#78716c"
+  );
 
   initEvents();
 
