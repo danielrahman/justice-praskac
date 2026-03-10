@@ -6,6 +6,7 @@ import logging
 import os
 import re
 import sys
+import threading
 import time
 import unicodedata
 from copy import deepcopy
@@ -173,9 +174,24 @@ AI_MODEL = normalize_ai_model_name(os.getenv("JUSTICE_AI_MODEL", "claude-sonnet-
 AI_ENABLED = os.getenv("JUSTICE_ENABLE_AI", "1") != "0" and bool(ANTHROPIC_API_KEY)
 AI_TIMEOUT_SECONDS = int(os.getenv("JUSTICE_AI_TIMEOUT_SECONDS", "90"))
 
+
+def clamp_int_env(name: str, default: int, minimum: int, maximum: int) -> int:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return default
+    try:
+        value = int(raw)
+    except ValueError:
+        return default
+    return max(minimum, min(value, maximum))
+
+
+JUSTICE_DOCUMENT_WORKERS = clamp_int_env("JUSTICE_DOCUMENT_WORKERS", 4, 1, 8)
+
 MAX_CACHE_BYTES = int(os.getenv("JUSTICE_MAX_CACHE_BYTES", str(2 * 1024 * 1024 * 1024)))  # 2 GB default
 MEMORY_CACHE_LIMIT = int(os.getenv("JUSTICE_MEMORY_CACHE_LIMIT", "512"))
 _memory_cache: dict[str, tuple[float, Any]] = {}
+_cache_lock = threading.RLock()
 
 
 def evict_cache_dir(directory: Path, max_bytes: int = MAX_CACHE_BYTES) -> None:
@@ -230,17 +246,18 @@ def sha256_bytes(value: bytes) -> str:
 
 
 def load_json_cache(name: str, max_age_seconds: int) -> Any | None:
-    payload = _memory_cache.get(name)
-    if payload is None:
-        logger.info(f"cache miss name={name}")
-        return None
-    stored_at, data = payload
-    if max_age_seconds >= 0 and now_ts() - stored_at > max_age_seconds:
-        _memory_cache.pop(name, None)
-        logger.info(f"cache miss (expired) name={name}")
-        return None
-    logger.info(f"cache hit name={name}")
-    return deepcopy(data)
+    with _cache_lock:
+        payload = _memory_cache.get(name)
+        if payload is None:
+            logger.info(f"cache miss name={name}")
+            return None
+        stored_at, data = payload
+        if max_age_seconds >= 0 and now_ts() - stored_at > max_age_seconds:
+            _memory_cache.pop(name, None)
+            logger.info(f"cache miss (expired) name={name}")
+            return None
+        logger.info(f"cache hit name={name}")
+        return deepcopy(data)
 
 
 _cache_write_count = 0
@@ -249,17 +266,18 @@ _EVICTION_INTERVAL = 50
 
 def save_json_cache(name: str, data: Any) -> None:
     global _cache_write_count
-    if len(_memory_cache) >= MEMORY_CACHE_LIMIT:
-        oldest_key = min(_memory_cache.items(), key=lambda item: item[1][0])[0]
-        _memory_cache.pop(oldest_key, None)
-    _memory_cache[name] = (now_ts(), deepcopy(data))
-    logger.info(f"cache write name={name}")
-    _cache_write_count += 1
-    if _cache_write_count >= _EVICTION_INTERVAL:
-        _cache_write_count = 0
-        expired_keys = [key for key, (stored_at, _) in _memory_cache.items() if now_ts() - stored_at > 60 * 60 * 24 * 7]
-        for key in expired_keys:
-            _memory_cache.pop(key, None)
+    with _cache_lock:
+        if len(_memory_cache) >= MEMORY_CACHE_LIMIT:
+            oldest_key = min(_memory_cache.items(), key=lambda item: item[1][0])[0]
+            _memory_cache.pop(oldest_key, None)
+        _memory_cache[name] = (now_ts(), deepcopy(data))
+        logger.info(f"cache write name={name}")
+        _cache_write_count += 1
+        if _cache_write_count >= _EVICTION_INTERVAL:
+            _cache_write_count = 0
+            expired_keys = [key for key, (stored_at, _) in _memory_cache.items() if now_ts() - stored_at > 60 * 60 * 24 * 7]
+            for key in expired_keys:
+                _memory_cache.pop(key, None)
 
 
 def parse_czech_date(value: str | None) -> str | None:

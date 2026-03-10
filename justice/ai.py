@@ -14,8 +14,8 @@ from justice.extraction import (
     summarize_timeline,
 )
 from justice.scraping import (
-    SESSION,
     clean_ico,
+    get_session,
 )
 from justice.utils import (
     ANTHROPIC_API_KEY,
@@ -798,7 +798,7 @@ def fetch_chytryrejstrik_snapshot(company_name: str, ico: str) -> dict[str, Any]
         return None
     url = f"https://www.chytryrejstrik.cz/ico-{ico_clean}/{slug}"
     try:
-        response = SESSION.get(url, timeout=30)
+        response = get_session().get(url, timeout=30)
         if response.status_code != 200:
             return None
         html = response.text

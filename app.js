@@ -41,6 +41,7 @@ let _acController = null;
 let _statusSeq = 0;
 let _activeRequestToken = 0;
 let _pendingSearchStageAnimation = null;
+let _pendingPanelRevealKeys = null;
 const _profileCache = new Map();
 
 // ---- Utilities ----
@@ -196,6 +197,20 @@ function visibleStatusLog() {
   return state.statusLog.length
     ? state.statusLog
     : [{ id: "status-placeholder", label: LOADING_STATUS_PLACEHOLDER }];
+}
+
+function getExpandKeys(key) {
+  return key === "all-insights-bundle"
+    ? ["all-insights", "all-praskac"]
+    : [key];
+}
+
+function shouldAnimatePanelReveal(key, index) {
+  return index >= 3 && !!_pendingPanelRevealKeys?.has(key);
+}
+
+function panelRevealDelay(index) {
+  return Math.min((index - 3) * 36, 144);
 }
 
 function prefersReducedMotion() {
@@ -780,14 +795,13 @@ function loadingView(previewOrText, log, opts = {}) {
   const items = (log || []).length ? log : visibleStatusLog();
   const preview = typeof previewOrText === "object" ? previewOrText : null;
   const animateIn = opts.animateIn !== false;
-  const activeLabel = preview?.name || state.query || "vybranou firmu";
 
   return `
   <div id="loading-view" data-has-preview="${preview ? '1' : '0'}" class="max-w-2xl mx-auto px-4 sm:px-6 py-12 ${animateIn ? "view-enter" : ""}">
     <div class="text-center mb-6">
       ${searchBrandMarkup({
         compact: true,
-        subtitle: `Prověřuji ${activeLabel}. Sbírám výpis, listiny a finanční podklady.`,
+        subtitle: "Sbírám výpis, listiny a finanční podklady.",
       })}
     </div>
     <div data-search-stage-body class="${CLS_CARD} overflow-hidden">
@@ -805,10 +819,6 @@ function loadingView(previewOrText, log, opts = {}) {
         </div>
       </div>`}
       <div class="px-5 py-4">
-        <div class="flex items-center justify-between gap-3 mb-3">
-          <div class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Poslední 3 kroky</div>
-          <div class="text-[11px] text-slate-400">Live výpis</div>
-        </div>
         <div id="loading-status-lines" class="loading-status-list" aria-live="polite" aria-relevant="additions text">
           ${renderStatusLines(items)}
         </div>
@@ -1093,8 +1103,8 @@ function aiInsightsSection(p) {
           <p class="mt-1 text-sm text-gray-500">Interpretace trendů, anomálií a kontextu v datech.</p>
         </div>
         <ul role="list" class="divide-y divide-gray-100">
-          ${deep.slice(0, state.expandedPanels.has("all-insights") ? 999 : 3).map((item) => `
-            <li class="px-4 py-5 sm:px-6">
+          ${deep.slice(0, state.expandedPanels.has("all-insights") ? 999 : 3).map((item, index) => `
+            <li class="px-4 py-5 sm:px-6${shouldAnimatePanelReveal("all-insights", index) ? " panel-reveal-item" : ""}"${shouldAnimatePanelReveal("all-insights", index) ? ` data-panel-reveal="all-insights" style="animation-delay:${panelRevealDelay(index)}ms"` : ""}>
               <div class="flex items-start gap-x-4">
                 <div class="mt-2 h-2.5 w-2.5 rounded-full bg-gray-300"></div>
                 <div class="min-w-0">
@@ -1106,13 +1116,13 @@ function aiInsightsSection(p) {
         </ul>
         ${deep.length > 3 && !state.expandedPanels.has("all-insights") ? `
           <div class="border-t border-gray-200 px-4 py-4 sm:px-6">
-            <button data-expand="all-insights" class="text-sm font-semibold text-slate-700 hover:text-slate-600">Zobrazit všech ${deep.length} postřehů →</button>
+            <button type="button" data-expand="all-insights-bundle" class="text-sm font-semibold text-slate-700 hover:text-slate-600">Zobrazit všech ${deep.length} postřehů →</button>
           </div>` : ""}
       </div>` : ""}
       ${praskac.length ? `
       <div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-inset ring-red-200">
         <div class="border-b border-red-200 px-4 py-5 sm:px-6">
-          <div class="flex items-start justify-between gap-3">
+          <div class="flex items-start gap-3">
             <div class="flex min-w-0 items-start gap-3">
               <div class="mt-0.5 shrink-0">
                 <div class="rounded-md bg-red-100 p-2 ring-1 ring-inset ring-red-200">
@@ -1121,16 +1131,14 @@ function aiInsightsSection(p) {
               </div>
               <div>
                 <h3 class="text-base font-semibold text-red-900">Práskač</h3>
-                <p class="mt-1 text-sm text-red-800/80">Jen veřejně viditelné signály, bez spekulací nad neveřejnými daty.</p>
               </div>
             </div>
-            <span class="inline-flex items-center rounded-md bg-white px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200">Veřejné signály</span>
           </div>
         </div>
         <ul role="list" class="divide-y divide-red-200/80">
-          ${praskac.slice(0, state.expandedPanels.has("all-praskac") ? 999 : 3).map((item) => {
+          ${praskac.slice(0, state.expandedPanels.has("all-praskac") ? 999 : 3).map((item, index) => {
             return `
-            <li class="px-4 py-5 sm:px-6">
+            <li class="px-4 py-5 sm:px-6${shouldAnimatePanelReveal("all-praskac", index) ? " panel-reveal-item" : ""}"${shouldAnimatePanelReveal("all-praskac", index) ? ` data-panel-reveal="all-praskac" style="animation-delay:${panelRevealDelay(index)}ms"` : ""}>
               <div class="flex items-start gap-x-4">
                 <div class="mt-2 h-2.5 w-2.5 rounded-full ${SEV_DOT[severityOf(item)]}"></div>
                 <div class="min-w-0">
@@ -1143,7 +1151,7 @@ function aiInsightsSection(p) {
         </ul>
         ${praskac.length > 3 && !state.expandedPanels.has("all-praskac") ? `
           <div class="border-t border-red-200 px-4 py-4 sm:px-6">
-            <button data-expand="all-praskac" class="text-sm font-semibold text-red-700 hover:text-red-600">Zobrazit všech ${praskac.length} signálů →</button>
+            <button type="button" data-expand="all-insights-bundle" class="text-sm font-semibold text-red-700 hover:text-red-600">Zobrazit všech ${praskac.length} signálů →</button>
           </div>` : ""}
       </div>` : ""}
     </div>
@@ -1370,6 +1378,7 @@ function contextRailCards(p) {
   const tl = p.financial_timeline || [];
   const latest = tl[tl.length - 1];
   const docs = p.financial_documents || [];
+  const aiUsage = getAiUsageSummary(p);
   const withOcr = docs.filter((d) => d.extraction_mode === "ocr").length;
   const withDigital = docs.filter((d) => d.extraction_mode === "digital").length;
   const { lead, note } = getExecutiveSummaryContent(p);
@@ -1400,7 +1409,7 @@ function contextRailCards(p) {
   return `
     <!-- Quick summary -->
     <div class="${CLS_CARD} p-4">
-      <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">Na první pohled</div>
+      <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2.5">AI a pokrytí dat</div>
       ${lead
         ? `<p class="text-sm text-slate-700 leading-relaxed">${esc(lead)}</p>`
         : '<p class="text-xs text-slate-400 leading-relaxed">Krátké shrnutí zatím není k dispozici.</p>'}
@@ -1409,6 +1418,9 @@ function contextRailCards(p) {
         <div class="flex justify-between gap-2"><dt class="text-slate-400">Listiny</dt><dd class="text-right font-medium ${docs.length ? "text-slate-700" : "text-amber-700"}">${docs.length ? esc(String(docs.length)) : "chybí"}</dd></div>
         <div class="flex justify-between gap-2"><dt class="text-slate-400">Extrakce</dt><dd class="text-right font-medium text-slate-700">${esc(extractionLabel)}</dd></div>
         <div class="flex justify-between gap-2"><dt class="text-slate-400">Analýza</dt><dd class="text-right font-medium text-slate-700">${p.analysis_engine === "ai" ? "AI" : (p.analysis_engine === "disabled" ? "AI vypnuto" : "Fallback")}</dd></div>
+        ${aiUsage?.model ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Model</dt><dd class="text-right font-medium text-slate-700 truncate max-w-[140px]">${esc(aiUsage.model)}</dd></div>` : ""}
+        ${aiUsage?.totalTokens != null ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Tokeny</dt><dd class="text-right font-medium text-slate-700">${esc(fmtInt(aiUsage.totalTokens))}</dd></div>` : ""}
+        ${aiUsage?.costLabel ? `<div class="flex justify-between gap-2"><dt class="text-slate-400">Cena</dt><dd class="text-right font-medium text-slate-700">${esc(aiUsage.costLabel)}</dd></div>` : ""}
       </dl>
       ${qualityAlert ? `
         <div class="mt-3 rounded-lg bg-amber-50 px-3 py-2.5 ring-1 ring-inset ring-amber-200">
@@ -1428,7 +1440,6 @@ function contextRailCards(p) {
           </div>`;
         }).join("")}
       </div>
-      ${praskac.length > 3 ? `<div class="text-[10px] text-red-500 mt-2">+ ${praskac.length - 3} dalších</div>` : ""}
     </div>` : ""}
     <!-- Quick facts -->
     <div class="${CLS_CARD} p-4">
@@ -1545,6 +1556,7 @@ function render() {
     }
   }
 
+  _pendingPanelRevealKeys = null;
   playPendingSearchStageAnimation();
 }
 
@@ -2085,17 +2097,35 @@ function initEvents() {
     const expand = e.target.closest("[data-expand]");
     if (expand) {
       const key = expand.dataset.expand;
-      state.expandedPanels.add(key);
+      const keys = getExpandKeys(key);
+      const nextKeys = keys.filter((item) => !state.expandedPanels.has(item));
+      const sectionId = expand.dataset.expandSection;
+
+      if (!nextKeys.length) {
+        if (sectionId) scrollToSection(sectionId);
+        return;
+      }
+
+      nextKeys.forEach((item) => state.expandedPanels.add(item));
+      _pendingPanelRevealKeys = new Set(nextKeys);
+
       // Try local DOM toggle first (for panels that exist but are hidden)
       const target = document.getElementById(key);
       if (target) {
+        _pendingPanelRevealKeys = null;
         target.classList.remove("hidden");
         const wrapper = expand.parentElement;
         if (wrapper && wrapper !== $content) wrapper.remove();
         else expand.remove();
+        if (sectionId) scrollToSection(sectionId);
       } else {
         // Slice-based expands (all-praskac, all-execs) need re-render
         render();
+        if (sectionId) {
+          requestAnimationFrame(() => {
+            scrollToSection(sectionId);
+          });
+        }
       }
       return;
     }

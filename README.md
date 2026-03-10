@@ -191,6 +191,10 @@ Pro Railway/Turso/R2 jsou prakticky potřeba:
 - `S3_SECRET_ACCESS_KEY`
 - `ANTHROPIC_API_KEY`
 
+Volitelné ladění výkonu:
+
+- `JUSTICE_DOCUMENT_WORKERS` - počet paralelně zpracovávaných listin v jednom refreshi, výchozí `4`, rozsah `1-8`
+
 ## Deployment na Railway
 
 1. Repozitář pushni na GitHub.

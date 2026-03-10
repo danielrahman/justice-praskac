@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import json
 from datetime import datetime, timedelta
@@ -29,7 +30,7 @@ from justice.extraction import (
     merge_doc_year_map,
 )
 from justice.scraping import clean_ico, fetch_extract
-from justice.utils import BASE_UI, PROFILE_FRESH_DAYS, PROFILE_PARSER_VERSION, logger
+from justice.utils import BASE_UI, JUSTICE_DOCUMENT_WORKERS, PROFILE_FRESH_DAYS, PROFILE_PARSER_VERSION, logger, public_error_message
 
 
 ProgressCallback = Callable[[str, dict[str, Any]], None]
@@ -42,6 +43,52 @@ def _emit(on_progress: ProgressCallback | None, event: str, payload: dict[str, A
 
 def _current_iso() -> str:
     return datetime.now().astimezone().isoformat()
+
+
+def _document_title(doc: dict[str, Any]) -> str:
+    return str(doc.get("document_number") or doc.get("type") or "listina")
+
+
+def _document_progress_label(doc: dict[str, Any]) -> str:
+    year_hint = (doc.get("years") or [None])[0]
+    candidate_count = len(doc.get("pdf_candidates") or [])
+    label = f"{_document_title(doc)} · soubory {candidate_count}"
+    if year_hint:
+        label = f"{_document_title(doc)} · rok {year_hint} · soubory {candidate_count}"
+    return label
+
+
+def _failed_financial_doc_result(doc: dict[str, Any], exc: Exception) -> tuple[dict[str, Any], dict[int, dict[str, float]]]:
+    error_message = public_error_message(exc)
+    attachment_results: list[dict[str, Any]] = []
+    for attachment in list(doc.get("pdf_candidates") or []):
+        attachment_results.append(
+            {
+                "label": attachment.get("label"),
+                "url": attachment.get("url"),
+                "pdf_index": attachment.get("pdf_index"),
+                "page_hint": attachment.get("page_hint"),
+                "candidate_score": attachment.get("candidate_score") or 0,
+                "page_count": attachment.get("page_hint") or 0,
+                "extraction_mode": "failed",
+                "metrics_found": [],
+                "error": error_message,
+            }
+        )
+    doc_copy = dict(doc)
+    doc_copy["download_links"] = doc.get("download_links") or []
+    doc_copy["candidate_files"] = attachment_results
+    doc_copy["candidate_file_count"] = len(doc.get("pdf_candidates") or [])
+    doc_copy["combined_metrics_found"] = []
+    doc_copy["metrics_found"] = []
+    doc_copy["page_count"] = sum(int(item.get("page_count") or 0) for item in attachment_results) or doc.get("pages", 0)
+    doc_copy["extraction_scope"] = "all_candidate_files"
+    doc_copy["extraction_mode"] = "failed" if attachment_results else "missing"
+    if attachment_results:
+        best_attachment = max(attachment_results, key=lambda item: (item.get("candidate_score") or 0, item.get("page_count") or 0))
+        doc_copy["pdf_url"] = best_attachment.get("url")
+        doc_copy["pdf_name"] = best_attachment.get("label")
+    return doc_copy, {}
 
 
 def _compute_source_hash(
@@ -181,34 +228,54 @@ def run_company_pipeline(
         )
 
         timeline_map: dict[int, dict[str, Any]] = {}
-        processed_docs: list[dict[str, Any]] = []
         total_docs = len(relevant_docs)
-        for idx, doc in enumerate(relevant_docs, start=1):
-            year_hint = (doc.get("years") or [None])[0]
-            doc_title = doc.get("document_number") or doc.get("type") or "listina"
-            candidate_count = len(doc.get("pdf_candidates") or [])
-            label = f"Čtu listinu {idx}/{total_docs}: {doc_title} · soubory {candidate_count}"
-            if year_hint:
-                label = f"Čtu listinu {idx}/{total_docs}: {doc_title} · rok {year_hint} · soubory {candidate_count}"
-            _emit(on_progress, "status", {"label": label})
-            doc_copy, year_map = extract_financial_doc_data(
-                doc,
-                company_name=company_name,
-                ico=ico,
-            )
-            processed_docs.append(doc_copy)
-            merge_doc_year_map(timeline_map, doc_copy, year_map)
-            metric_count = len(doc_copy.get("metrics_found") or [])
-            if metric_count:
-                _emit(on_progress, "status", {"label": f"Z listiny {idx}/{total_docs} jsem vytáhl {metric_count} metrik"})
-            else:
-                _emit(on_progress, "status", {"label": f"Listina {idx}/{total_docs} má slabší čitelnost, zkouším další podklady"})
+        processed_docs: list[dict[str, Any]] = []
+        if total_docs:
+            max_workers = min(JUSTICE_DOCUMENT_WORKERS, total_docs)
+            _emit(on_progress, "status", {"label": f"Zpracovávám až {max_workers} listiny paralelně"})
+            results_by_index: list[tuple[dict[str, Any], dict[int, dict[str, float]]] | None] = [None] * total_docs
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                future_map = {
+                    executor.submit(
+                        extract_financial_doc_data,
+                        doc,
+                        company_name=company_name,
+                        ico=ico,
+                    ): (index, doc)
+                    for index, doc in enumerate(relevant_docs)
+                }
+                completed_docs = 0
+                for future in as_completed(future_map):
+                    index, doc = future_map[future]
+                    try:
+                        doc_copy, year_map = future.result()
+                    except Exception as exc:
+                        logger.exception(
+                            "run_company_pipeline document failed subjekt_id=%s detail_url=%s",
+                            subjekt_id,
+                            doc.get("detail_url"),
+                        )
+                        doc_copy, year_map = _failed_financial_doc_result(doc, exc)
+                    results_by_index[index] = (doc_copy, year_map)
+                    completed_docs += 1
+                    metric_count = len(doc_copy.get("metrics_found") or [])
+                    if metric_count:
+                        label = f"Hotovo {completed_docs}/{total_docs}: {_document_progress_label(doc)} · {metric_count} metrik"
+                    else:
+                        label = f"Hotovo {completed_docs}/{total_docs}: {_document_progress_label(doc)} · bez čitelných metrik"
+                    _emit(on_progress, "status", {"label": label})
+            for result in results_by_index:
+                if result is None:
+                    continue
+                doc_copy, year_map = result
+                processed_docs.append(doc_copy)
+                merge_doc_year_map(timeline_map, doc_copy, year_map)
 
         timeline = finalize_financial_timeline(timeline_map)
         overview, deep, praskac = build_highlights(timeline, processed_docs, history)
 
         _emit(on_progress, "status", {"label": "Kontroluji trendy, díry v letech a veřejné signály"})
-        _emit(on_progress, "status", {"label": "Sestavuji finální profil a doplňuji shrnutí"})
+        _emit(on_progress, "status", {"label": "Claude AI sestavuje finální profil a doplňuje shrnutí"})
         ai_analysis = resolve_ai_analysis(
             company_name=company_name,
             ico=ico,

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import threading
 import time
 from pathlib import Path
 from typing import Any
@@ -26,14 +27,16 @@ from justice.utils import (
 )
 
 
-SESSION = requests.Session()
-SESSION.headers.update({
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",
-    "Accept-Language": "cs-CZ,cs;q=0.9,en;q=0.8",
-})
-SESSION.mount(
-    "https://",
-    HTTPAdapter(
+_session_local = threading.local()
+
+
+def _build_session() -> requests.Session:
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36",
+        "Accept-Language": "cs-CZ,cs;q=0.9,en;q=0.8",
+    })
+    adapter = HTTPAdapter(
         max_retries=Retry(
             total=3,
             connect=3,
@@ -43,29 +46,26 @@ SESSION.mount(
             allowed_methods=["GET", "HEAD"],
             raise_on_status=False,
         )
-    ),
-)
-SESSION.mount(
-    "http://",
-    HTTPAdapter(
-        max_retries=Retry(
-            total=3,
-            connect=3,
-            read=3,
-            backoff_factor=0.6,
-            status_forcelist=[429, 500, 502, 503, 504],
-            allowed_methods=["GET", "HEAD"],
-            raise_on_status=False,
-        )
-    ),
-)
+    )
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
+
+
+def get_session() -> requests.Session:
+    session = getattr(_session_local, "session", None)
+    if session is None:
+        session = _build_session()
+        _session_local.session = session
+    return session
 
 
 def fetch_text(url: str) -> str:
+    session = get_session()
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            response = SESSION.get(url, timeout=60)
+            response = session.get(url, timeout=60)
             response.raise_for_status()
             response.encoding = response.encoding or "utf-8"
             logger.info(f"fetch_text url={url} status={response.status_code}")
@@ -88,9 +88,10 @@ def response_is_pdf(response: requests.Response) -> bool:
 
 
 def resolve_live_download_url(url: str) -> str | None:
+    session = get_session()
     for attempt in range(3):
         try:
-            response = SESSION.get(url, timeout=45)
+            response = session.get(url, timeout=45)
             response.raise_for_status()
             if response_is_pdf(response):
                 return response.url or url
@@ -101,15 +102,16 @@ def resolve_live_download_url(url: str) -> str | None:
 
 
 def fetch_binary(url: str, path: Path) -> Path:
+    session = get_session()
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            response = SESSION.get(url, timeout=120)
+            response = session.get(url, timeout=120)
             response.raise_for_status()
             if not response_is_pdf(response):
                 resolved = resolve_live_download_url(url)
                 if resolved and resolved != url:
-                    response = SESSION.get(resolved, timeout=120)
+                    response = session.get(resolved, timeout=120)
                     response.raise_for_status()
             if not response_is_pdf(response):
                 raise ValueError(f"URL did not return a PDF: {url}")
@@ -126,15 +128,16 @@ def fetch_binary(url: str, path: Path) -> Path:
 
 
 def fetch_binary_bytes(url: str) -> bytes:
+    session = get_session()
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            response = SESSION.get(url, timeout=120)
+            response = session.get(url, timeout=120)
             response.raise_for_status()
             if not response_is_pdf(response):
                 resolved = resolve_live_download_url(url)
                 if resolved and resolved != url:
-                    response = SESSION.get(resolved, timeout=120)
+                    response = session.get(resolved, timeout=120)
                     response.raise_for_status()
             if not response_is_pdf(response):
                 raise ValueError(f"URL did not return a PDF: {url}")

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import re
 import subprocess
 import tempfile
@@ -14,6 +15,7 @@ from justice.utils import (
     BASE_SITE,
     BASE_UI,
     FINANCIAL_DOC_KEYWORDS,
+    JUSTICE_DOCUMENT_WORKERS,
     OCR_CACHE_VERSION,
     absolute_ui_url,
     load_json_cache,
@@ -218,7 +220,20 @@ def financial_doc_score(doc: dict[str, Any]) -> int:
     return score
 
 
-def pick_recent_financial_docs(docs: list[dict[str, Any]], max_years: int = 5, force_refresh_details: bool = False) -> list[dict[str, Any]]:
+def _sort_recent_financial_docs(docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        docs,
+        key=lambda d: (
+            (d.get("years") or [0])[0],
+            d.get("doc_quality_score") or 0,
+            d.get("candidate_file_count") or 0,
+            d.get("filed_date") or "",
+        ),
+        reverse=True,
+    )
+
+
+def _select_recent_financial_doc_bases(docs: list[dict[str, Any]], max_years: int) -> list[dict[str, Any]]:
     selected: list[dict[str, Any]] = []
     covered_years: list[int] = []
     candidates = [doc for doc in docs if is_financial_document(doc)]
@@ -239,23 +254,39 @@ def pick_recent_financial_docs(docs: list[dict[str, Any]], max_years: int = 5, f
             continue
         if primary_year not in covered_years and len(covered_years) >= max_years:
             continue
-        enriched = dict(doc)
-        enriched.update(parse_document_detail(doc["detail_url"], force_refresh=force_refresh_details, parent_type=doc.get("type")))
-        enriched["doc_quality_score"] = financial_doc_score(enriched)
-        enriched["candidate_file_count"] = len(enriched.get("pdf_candidates") or [])
-        selected.append(enriched)
+        selected_doc = dict(doc)
+        selected_doc["doc_quality_score"] = financial_doc_score(selected_doc)
+        selected.append(selected_doc)
         if primary_year not in covered_years:
             covered_years.append(primary_year)
-    selected.sort(
-        key=lambda d: (
-            (d.get("years") or [0])[0],
-            d.get("doc_quality_score") or 0,
-            d.get("candidate_file_count") or 0,
-            d.get("filed_date") or "",
-        ),
-        reverse=True,
-    )
     return selected
+
+
+def _enrich_recent_financial_doc(doc: dict[str, Any], force_refresh_details: bool) -> dict[str, Any]:
+    enriched = dict(doc)
+    enriched.update(parse_document_detail(doc["detail_url"], force_refresh=force_refresh_details, parent_type=doc.get("type")))
+    enriched["candidate_file_count"] = len(enriched.get("pdf_candidates") or [])
+    return enriched
+
+
+def pick_recent_financial_docs(docs: list[dict[str, Any]], max_years: int = 5, force_refresh_details: bool = False) -> list[dict[str, Any]]:
+    selected = _select_recent_financial_doc_bases(docs, max_years)
+    if not selected:
+        return []
+    if JUSTICE_DOCUMENT_WORKERS <= 1 or len(selected) == 1:
+        enriched_docs = [_enrich_recent_financial_doc(doc, force_refresh_details) for doc in selected]
+        return _sort_recent_financial_docs(enriched_docs)
+
+    enriched_docs: list[dict[str, Any] | None] = [None] * len(selected)
+    max_workers = min(JUSTICE_DOCUMENT_WORKERS, len(selected))
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_map = {
+            executor.submit(_enrich_recent_financial_doc, doc, force_refresh_details): index
+            for index, doc in enumerate(selected)
+        }
+        for future in as_completed(future_map):
+            enriched_docs[future_map[future]] = future.result()
+    return _sort_recent_financial_docs([doc for doc in enriched_docs if doc is not None])
 
 
 def pdf_page_count(pdf_path: Path) -> int:

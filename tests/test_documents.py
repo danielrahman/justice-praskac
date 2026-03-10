@@ -1,9 +1,13 @@
 """Tests for justice.documents scoring and classification functions."""
 from __future__ import annotations
 
+import threading
+import time
+
 import pytest
 
-from justice.documents import financial_doc_score, is_financial_document
+import justice.documents as documents_module
+from justice.documents import financial_doc_score, is_financial_document, pick_recent_financial_docs
 
 
 # ---------------------------------------------------------------------------
@@ -104,3 +108,49 @@ class TestFinancialDocScore:
         vyrocni = {"type": "Výroční zpráva [2023]", "pages": 10, "years": [2023]}
         zaverka = {"type": "Účetní závěrka [2023]", "pages": 10, "years": [2023]}
         assert financial_doc_score(vyrocni) > financial_doc_score(zaverka)
+
+
+class TestPickRecentFinancialDocs:
+    def test_parallel_detail_enrichment_preserves_sorted_order(self, monkeypatch):
+        monkeypatch.setattr(documents_module, "JUSTICE_DOCUMENT_WORKERS", 4)
+        docs = [
+            {"document_number": "C 1/SL1", "type": "Výroční zpráva [2024]", "pages": 20, "years": [2024], "detail_url": "https://or.justice.cz/doc/1", "filed_date": "2025-01-02"},
+            {"document_number": "C 1/SL2", "type": "Zpráva auditora [2024]", "pages": 6, "years": [2024], "detail_url": "https://or.justice.cz/doc/2", "filed_date": "2025-01-01"},
+            {"document_number": "C 1/SL3", "type": "Účetní závěrka [2023]", "pages": 12, "years": [2023], "detail_url": "https://or.justice.cz/doc/3", "filed_date": "2024-01-01"},
+        ]
+        started_together = threading.Event()
+        state = {"active": 0, "peak": 0}
+        lock = threading.Lock()
+        delays = {
+            "https://or.justice.cz/doc/1": 0.04,
+            "https://or.justice.cz/doc/2": 0.01,
+            "https://or.justice.cz/doc/3": 0.02,
+        }
+
+        def fake_parse_document_detail(url: str, force_refresh: bool = False, parent_type: str | None = None):
+            with lock:
+                state["active"] += 1
+                state["peak"] = max(state["peak"], state["active"])
+                if state["active"] >= 2:
+                    started_together.set()
+            assert started_together.wait(0.5)
+            time.sleep(delays[url])
+            with lock:
+                state["active"] -= 1
+            return {
+                "detail_url": url,
+                "pdf_candidates": [{"label": f"{url}.pdf", "url": f"{url}.pdf", "pdf_index": 0}],
+                "download_links": [],
+            }
+
+        monkeypatch.setattr(documents_module, "parse_document_detail", fake_parse_document_detail)
+
+        selected = pick_recent_financial_docs(docs, max_years=2)
+
+        assert state["peak"] >= 2
+        assert [doc["detail_url"] for doc in selected] == [
+            "https://or.justice.cz/doc/1",
+            "https://or.justice.cz/doc/2",
+            "https://or.justice.cz/doc/3",
+        ]
+        assert [doc["candidate_file_count"] for doc in selected] == [1, 1, 1]
